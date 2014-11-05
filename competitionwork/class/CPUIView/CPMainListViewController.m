@@ -37,7 +37,8 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *normalCellId = @"xiaoquCell";
-    CPListCellCommonEntiy *cellEntity = [self listDataEntityAndKey:[self listDataEntityAtIndex:indexPath]];
+    NSDictionary *cellEntityDict = [self listDataEntityAndKey:[self listDataEntityAtIndex:indexPath]];
+    CPListCellCommonEntiy * cellEntity = [self listDataEntityAtIndex:indexPath];
     
     switch (cellEntity.cellStyle) {
         case CPPostListCellStyleNormal:
@@ -49,8 +50,8 @@
                 cell = [[CPMainListCellTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:normalCellId];
                 
             }
-            cell.textLabel.text = cellEntity.title;
-
+            cell.content = cellEntityDict;
+            
 //            GetPostListCellFormate *formate = [GetPostListCellFormate shareFormate];
 //            cell.content = [formate cellDictionaryForListWithContent:cellEntity.dataEntity withMasterId:GJMasterIdFangchan_7 withMajorId:101];
             
@@ -79,17 +80,52 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
-//    return [GJListCell heightForCell:GJMasterIdFangchan_7 withMajorId:101];
 }
 
--(CPListCellCommonEntiy *)listDataEntityAndKey:(CPListCellCommonEntiy *)entiy
+-(NSDictionary *)listDataEntityAndKey:(CPListCellCommonEntiy *)entiy
 {
     NSDictionary * dictEntiy = entiy.dataEntity;
-    entiy.title = [dictEntiy objectForKey:@"contest_name"];
-    entiy.title = [dictEntiy objectForKey:@"contest_name"];
+    NSMutableDictionary * dict = [NSMutableDictionary dictionary];
+    [dict setValue:[dictEntiy objectForKey:@"contest_name"] forKey:@"left1"];
+    [dict setValue:[dictEntiy objectForKey:@"organiser"] forKey:@"left2"];
+    [dict setValue:[self registTimeFor:dictEntiy] forKey:@"left3"];
+    [dict setValue:[self contestTimeFor:dictEntiy] forKey:@"left4"];
 
     
-    return entiy;
+    return dict;
+}
+
+
+-(NSString *)registTimeFor:(NSDictionary*)Item{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYYMMdd"];
+    
+    NSDate* registStart = [NSDate dateWithTimeIntervalSince1970:[[Item objectForKey:@"regist_start_time"] intValue]];
+    NSString* startStr = [dateFormatter stringFromDate:registStart];
+    
+    NSDate* registEnd = [NSDate dateWithTimeIntervalSince1970:[[Item objectForKey:@"regist_end_time"] intValue]];
+    NSString* endStr = [dateFormatter stringFromDate:registEnd];
+    
+    NSString * str = [NSString stringWithFormat:@"报名时间:%@-%@",startStr,endStr];
+    
+    return str;
+}
+
+-(NSString *)contestTimeFor:(NSDictionary*)Item{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYYMMdd"];
+    
+    NSDate* registStart = [NSDate dateWithTimeIntervalSince1970:[[Item objectForKey:@"contest_start_time"] intValue]];
+    NSString* startStr = [dateFormatter stringFromDate:registStart];
+    
+    NSDate* registEnd = [NSDate dateWithTimeIntervalSince1970:[[Item objectForKey:@"contest_end_time"] intValue]];
+    NSString* endStr = [dateFormatter stringFromDate:registEnd];
+    
+    NSString * str = [NSString stringWithFormat:@"竞赛时间:%@-%@",startStr,endStr];
+    
+    return str;
 }
 
 @end

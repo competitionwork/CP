@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AttentionView.h"
+
 
 @interface CPMainListCellTableViewCell : UITableViewCell
 
@@ -30,6 +32,8 @@
 @property (nonatomic, strong) UILabel *left3Label;
 
 @property (nonatomic, strong) UILabel *left4Label;
+
+@property (nonatomic, strong) AttentionView * attentionView;
 
 
 

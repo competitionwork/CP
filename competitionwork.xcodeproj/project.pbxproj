@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F12E1A08DC440067CAED /* CPBaseModeObject.m */; };
 		0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1311A08DCE90067CAED /* CPMainListCellModel.m */; };
+		0417F1351A0A6F560067CAED /* filterManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1341A0A6F560067CAED /* filterManage.m */; };
+		0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1371A0A863D0067CAED /* UIButton+Block.m */; };
+		0417F13B1A0A86800067CAED /* AttentionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F13A1A0A86800067CAED /* AttentionView.m */; };
 		0425014819F7F3A20038E188 /* CPMastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425014719F7F3A20038E188 /* CPMastViewController.m */; };
 		0425014C19F7F86D0038E188 /* CPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425014A19F7F86D0038E188 /* CPMainViewController.m */; };
 		0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0425014B19F7F86D0038E188 /* CPMainViewController.xib */; };
@@ -98,6 +101,12 @@
 		0417F12E1A08DC440067CAED /* CPBaseModeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseModeObject.m; path = CPUIView/Model/CPBaseModeObject.m; sourceTree = "<group>"; };
 		0417F1301A08DCE90067CAED /* CPMainListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellModel.h; path = CPUIView/Model/CPMainListCellModel.h; sourceTree = "<group>"; };
 		0417F1311A08DCE90067CAED /* CPMainListCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPMainListCellModel.m; path = CPUIView/Model/CPMainListCellModel.m; sourceTree = "<group>"; };
+		0417F1331A0A6F560067CAED /* filterManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = filterManage.h; path = competitionwork/class/CPUIView/filterManage.h; sourceTree = SOURCE_ROOT; };
+		0417F1341A0A6F560067CAED /* filterManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = filterManage.m; path = competitionwork/class/CPUIView/filterManage.m; sourceTree = SOURCE_ROOT; };
+		0417F1361A0A863D0067CAED /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		0417F1371A0A863D0067CAED /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
+		0417F1391A0A86800067CAED /* AttentionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttentionView.h; path = competitionwork/class/CPUIView/AttentionView.h; sourceTree = SOURCE_ROOT; };
+		0417F13A1A0A86800067CAED /* AttentionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttentionView.m; path = competitionwork/class/CPUIView/AttentionView.m; sourceTree = SOURCE_ROOT; };
 		0425014619F7F3A20038E188 /* CPMastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMastViewController.h; path = CPUIView/CPMastViewController.h; sourceTree = "<group>"; };
 		0425014719F7F3A20038E188 /* CPMastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPMastViewController.m; path = CPUIView/CPMastViewController.m; sourceTree = "<group>"; };
 		0425014919F7F86D0038E188 /* CPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainViewController.h; path = CPUIView/CPMainViewController.h; sourceTree = "<group>"; };
@@ -292,6 +301,10 @@
 				04AF384D1A060A3C008958C7 /* CPListCellCommonEntiy.m */,
 				04AF385C1A062E96008958C7 /* CPMainListCellTableViewCell.h */,
 				04AF385D1A062E96008958C7 /* CPMainListCellTableViewCell.m */,
+				0417F1391A0A86800067CAED /* AttentionView.h */,
+				0417F13A1A0A86800067CAED /* AttentionView.m */,
+				0417F1331A0A6F560067CAED /* filterManage.h */,
+				0417F1341A0A6F560067CAED /* filterManage.m */,
 			);
 			name = baseView;
 			path = CPUIView/baseView;
@@ -556,6 +569,8 @@
 				04CAC1FF19F7EFBF005291D3 /* UIButton+eventHandler.m */,
 				04CAC20019F7EFBF005291D3 /* UIView+borders.h */,
 				04CAC20119F7EFBF005291D3 /* UIView+borders.m */,
+				0417F1361A0A863D0067CAED /* UIButton+Block.h */,
+				0417F1371A0A863D0067CAED /* UIButton+Block.m */,
 				049667611A04B6AA0090EE5E /* Global.h */,
 				0496675B1A04AB1F0090EE5E /* Constant.h */,
 				0496675C1A04AB1F0090EE5E /* Constant.m */,
@@ -688,6 +703,7 @@
 				04CAC21019F7EFBF005291D3 /* AFPropertyListRequestOperation.m in Sources */,
 				04CAC22319F7EFBF005291D3 /* POViewFrameBuilder.m in Sources */,
 				04CAC22119F7EFBF005291D3 /* UIButton+eventHandler.m in Sources */,
+				0417F1351A0A6F560067CAED /* filterManage.m in Sources */,
 				04A0DA471A04D48D008C4E12 /* yajl_lex.c in Sources */,
 				04A0DA491A04D48D008C4E12 /* NSObject+YAJL.m in Sources */,
 				04A0DA461A04D48D008C4E12 /* yajl_gen.c in Sources */,
@@ -706,6 +722,7 @@
 				04CAC21119F7EFBF005291D3 /* AFURLConnectionOperation.m in Sources */,
 				04AF38521A06182C008958C7 /* GJBaseAPIInvokeCondition.m in Sources */,
 				04CAC21F19F7EFBF005291D3 /* GJCommonWidgetHelper.m in Sources */,
+				0417F13B1A0A86800067CAED /* AttentionView.m in Sources */,
 				04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */,
 				04CAC21D19F7EFBF005291D3 /* GJFilterView.m in Sources */,
 				04A0DA4A1A04D48D008C4E12 /* YAJL_GTMBase64.m in Sources */,
@@ -736,6 +753,7 @@
 				0425016019F804270038E188 /* GJError.m in Sources */,
 				04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */,
 				04CAC20B19F7EFBF005291D3 /* AFHTTPClient.m in Sources */,
+				0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */,
 				04CAC22419F7EFBF005291D3 /* UIView+POViewFrameBuilder.m in Sources */,
 				04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */,
 				0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */,

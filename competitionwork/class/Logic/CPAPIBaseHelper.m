@@ -86,14 +86,14 @@
 //    NSString *url=[[NSString stringWithFormat:@"%@?%@%@",path,mutableString,paramsMutableString] stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];//中文转义
 
 
-    
-//    NSMutableDictionary* headers = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-//                                    @"json2",@"contentformat",
-//                                    nil];
-    path = @"http://dev.worldjingsai.com/api/contest/lists?uid=1&page=1&c_class=1&c_level=1&univs_id=1001&limit=20&token=5416A7D7024A3E7D0F25541590F3DF59&appid=1001&time=1414827313";
+    /*
+    NSMutableDictionary* headers = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                    @"json2",@"contentformat",
+                                    nil];
+//    path = @"http://dev.worldjingsai.com/api/contest/lists?uid=1&page=1&c_class=1&c_level=1&univs_id=1001&limit=20&token=5416A7D7024A3E7D0F25541590F3DF59&appid=1001&time=1414827313";
 //    url = @"http://dev.worldjingsai.com/api/contest/lists?&uid=1&page=1&c_class=1&c_level=1&univs_id=1001&limit=20&token=5416A7D7024A3E7D0F25541590F3DF59&appid=1001&time=414827313";
     
-    /*
+    
     NSMutableURLRequest *req=[self.httpClient requestWithMethod:@"POST" path:path parameters:normalParams];
     [req setAllHTTPHeaderFields:headers];
     AFHTTPRequestOperation *operation=[[AFHTTPRequestOperation alloc]initWithRequest:req];
@@ -112,8 +112,8 @@
     
     
     return;
-    */
     
+    */
     
     
     /*
@@ -183,7 +183,7 @@
     }];
     
     [operation start];
-     
+    
     
     /*
      [self.httpClient postPath:path parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -232,6 +232,27 @@
      }];
      }];
      */
+}
+
+-(void)starwith:(NSString *)url{
+    
+    NSMutableDictionary* headers = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                    @"json2",@"contentformat",
+                                    nil];
+
+    
+    NSMutableURLRequest *req=[self.httpClient requestWithMethod:@"GET" path:url parameters:nil];
+    [req setAllHTTPHeaderFields:headers];
+    AFHTTPRequestOperation *operation=[[AFHTTPRequestOperation alloc]initWithRequest:req];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+        DLog(@"%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+    
+    [operation start];
+
 }
 
 -(NSString*)getRequestTime{

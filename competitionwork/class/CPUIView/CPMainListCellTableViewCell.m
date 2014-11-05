@@ -67,7 +67,9 @@ static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
         self.left4Label.font = GrayFont;
         self.left4Label.textColor = GrayColor;
         [self.contentView addSubview:self.left4Label];
-
+        
+        self.attentionView = [[AttentionView alloc]initWithFrame:CGRectMake(0, 0, 64, 85)];
+        [self.contentView addSubview:self.attentionView];
         
     }
     return self;
@@ -98,6 +100,7 @@ static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
     [super layoutSubviews];
     //默认隐藏
     [self hiddenSubviewDefault];
+    [self layoutWitDefal];
     
 }
 
@@ -116,11 +119,17 @@ static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
     CGFloat width3 = [self widthForLabel:_left3Label withText:[_content objectForKey:@"left3"]];
     _left3Label.text = labelText;
     [[[_left3Label.po_frameBuilder setSizeWithWidth:width3 height:16] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self yForLabelOfLine3:_content]];
+    
+    labelText = _content[@"left4"];
+    CGFloat width4 = [self widthForLabel:_left4Label withText:[_content objectForKey:@"left4"]];
+    _left4Label.text = labelText;
+    [[[_left4Label.po_frameBuilder setSizeWithWidth:width4 height:16] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self yForLabelOfLine3:_content] +20];
+        
+    [_attentionView.po_frameBuilder alignRightInSuperviewWithInset:SpaceToRight];
 
 }
 
 - (void)hiddenSubviewDefault {
-    self.left4Label.hidden = YES;
 }
 
 #pragma mark -
