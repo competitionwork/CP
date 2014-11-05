@@ -7,6 +7,8 @@
 //
 
 #import "AttentionView.h"
+#import "UIButton+Block.h"
+
 @interface AttentionView ()
 
 @property (nonatomic) NSDictionary *content;
@@ -28,16 +30,35 @@
         [[self.AttentionButton.po_frameBuilder setWidth:63.5] setX:0.5];
         [self.AttentionButton setImage:[UIImage imageNamed:@"列表页-电话"] forState:UIControlStateNormal];
         [self.AttentionButton setImage:[UIImage imageNamed:@"列表页-电话-点击"] forState:UIControlStateHighlighted];
-        self.AttentionButton.backgroundColor = [UIColor blackColor];
+        self.AttentionButton.backgroundColor = [UIColor grayColor];
     }
     return self;
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+- (UIImage *)buttonHightlightedImage {
+    UIImageView *view = [[UIImageView alloc] initWithFrame:(CGRect){0,0,64,85}];
+    view.backgroundColor = GJColor(229, 229, 229, 1);
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
-*/
+
+-(void)setContent:(NSDictionary *)content{
+    _content = content;
+    [self setNeedsLayout];
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    [self.AttentionButton setAction:kUIButtonBlockTouchInside withBlock:^{
+        DLog(@"点击关注");
+    }];
+}
+
++ (CGFloat)widthForPhoneView:(NSDictionary *)aContent {
+    return 64;
+}
 
 @end
