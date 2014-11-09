@@ -295,18 +295,7 @@
 		0425015319F7F9CB0038E188 /* baseView */ = {
 			isa = PBXGroup;
 			children = (
-				04AF38461A060907008958C7 /* CPBaseList.h */,
-				04AF38471A060907008958C7 /* CPBaseList.m */,
-				04AF38491A060976008958C7 /* CPMainListViewController.h */,
-				04AF384A1A060976008958C7 /* CPMainListViewController.m */,
-				04AF384C1A060A3C008958C7 /* CPListCellCommonEntiy.h */,
-				04AF384D1A060A3C008958C7 /* CPListCellCommonEntiy.m */,
-				04AF385C1A062E96008958C7 /* CPMainListCellTableViewCell.h */,
-				04AF385D1A062E96008958C7 /* CPMainListCellTableViewCell.m */,
-				0417F1391A0A86800067CAED /* AttentionView.h */,
-				0417F13A1A0A86800067CAED /* AttentionView.m */,
-				0417F1331A0A6F560067CAED /* filterManage.h */,
-				0417F1341A0A6F560067CAED /* filterManage.m */,
+				049DF56B1A0F5F6800F12447 /* mainView */,
 			);
 			name = baseView;
 			path = CPUIView/baseView;
@@ -350,6 +339,25 @@
 			children = (
 			);
 			path = oldImage;
+			sourceTree = "<group>";
+		};
+		049DF56B1A0F5F6800F12447 /* mainView */ = {
+			isa = PBXGroup;
+			children = (
+				04AF38461A060907008958C7 /* CPBaseList.h */,
+				04AF38471A060907008958C7 /* CPBaseList.m */,
+				04AF38491A060976008958C7 /* CPMainListViewController.h */,
+				04AF384A1A060976008958C7 /* CPMainListViewController.m */,
+				04AF384C1A060A3C008958C7 /* CPListCellCommonEntiy.h */,
+				04AF384D1A060A3C008958C7 /* CPListCellCommonEntiy.m */,
+				04AF385C1A062E96008958C7 /* CPMainListCellTableViewCell.h */,
+				04AF385D1A062E96008958C7 /* CPMainListCellTableViewCell.m */,
+				0417F1391A0A86800067CAED /* AttentionView.h */,
+				0417F13A1A0A86800067CAED /* AttentionView.m */,
+				0417F1331A0A6F560067CAED /* filterManage.h */,
+				0417F1341A0A6F560067CAED /* filterManage.m */,
+			);
+			name = mainView;
 			sourceTree = "<group>";
 		};
 		04A0DA231A04D48D008C4E12 /* YAJL */ = {

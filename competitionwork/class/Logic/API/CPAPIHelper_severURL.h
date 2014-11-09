@@ -13,4 +13,5 @@
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(lists)
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(add_follow)
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(cancle_follow)
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(view)
 @end

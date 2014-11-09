@@ -10,6 +10,6 @@
 
 @interface filterManage : NSObject
 
--(NSArray*)returnFilterData;
+- (NSArray *)nodesFromFilterData:(NSArray *)filterData;
 
 @end
