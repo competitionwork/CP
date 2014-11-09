@@ -14,6 +14,7 @@
 #import "CPPostDataRequestParam.h"
 #import "CPListCellCommonEntiy.h"
 #import "CPMainListCellModel.h"
+#import "filterManage.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate>
 
@@ -22,6 +23,9 @@
 @property (nonatomic, assign) UINavigationController * pushController;
 
 @property(nonatomic,strong) NSMutableArray *postData;
+
+@property(nonatomic,retain) GJOptionNode *rootFilterNode;
+
 
 
 
@@ -85,6 +89,15 @@
 //        DLog(@">>>>>>> : %@",@"加载筛选项数据失败");
 //        
 //    }];
+    
+    
+    
+    NSArray *nodes=[self nodesFromFilterData:nil];
+    self.rootNode=[GJOptionNode nodeWithText:@"rootNode" value:nil];
+    self.rootNode.subNodes=nodes;
+    self.filterView.rootNode=self.rootNode;
+    [self.filterView reloadData];
+    
     [self refreashData];
     
 }
@@ -145,20 +158,23 @@
 
 - (NSArray *)nodesFromFilterData:(NSArray *)filterData
 {
+    
+    filterData = @[@"type",@"leve",@"time"];
+    
     NSInteger count=filterData.count;
     
-    /* 更多按钮不通过数据来决定
-     if ([filterData.lastObject isEqualToString:@"more"]) {
-     count-=1;
-     */
+    
+    filterManage * filer = [[filterManage alloc]init];
+    NSArray * arrayFiler = [filer returnFilterData];
+
     
     NSMutableArray *nodeArray=[NSMutableArray arrayWithCapacity:count];
     for (int idx=0 ; idx < count; idx++) {
         __block GJOptionNode *tobeSelectedNode=nil;
-        NSArray *filterItem=@[];//[self rerurnFilterArrayWithIndex:idx];
-        NSString *filterItemKey=@"";//filterData[idx];
-        NSString *filterItemTitle=@"";//[self getQuickFilterTitle:filterItemKey];
-        NSDictionary *filterItemDictionary =@{};// arrayFilters[idx];
+        NSArray *filterItem=arrayFiler[idx][@"vs"];
+        NSString *filterItemKey=filterData[idx];
+        NSString *filterItemTitle=arrayFiler[idx][@"n"];
+        NSDictionary *filterItemDictionary =arrayFiler[idx];
         __block NSString *filterItemValue = [filterItemDictionary[@"v"] description];
         
 
@@ -221,8 +237,9 @@
         }
         return znode;
     };
-    BOOL multiLevel = [[nodeArray.lastObject objectForKey:@"c"] count] > 0;
+    BOOL multiLevel =  [[nodeArray.lastObject objectForKey:@"c"] count] > 0;
     NSMutableArray *nodes=[NSMutableArray arrayWithCapacity:nodeArray.count];
+    
     [nodeArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         NSDictionary *nodeDic=obj;
         GJOptionNode *node=[[GJOptionNode alloc] init];

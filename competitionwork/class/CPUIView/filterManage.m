@@ -11,7 +11,15 @@
 @implementation filterManage
 
 -(NSArray*)returnFilterData{
-    return @[];
+    
+    NSString * path = [[NSBundle mainBundle]pathForResource:@"CPfilters" ofType:@"plist"];
+    
+    NSDictionary * dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    NSArray * array = dict[@"2"][@"filter"];
+    
+    return array;
+    
 }
 
 @end

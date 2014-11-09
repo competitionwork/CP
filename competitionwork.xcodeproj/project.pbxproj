@@ -22,6 +22,7 @@
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
+		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
 		04A0DA441A04D48D008C4E12 /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2D1A04D48D008C4E12 /* yajl_buf.c */; };
@@ -126,6 +127,7 @@
 		0496675B1A04AB1F0090EE5E /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		0496675C1A04AB1F0090EE5E /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		049667611A04B6AA0090EE5E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
 		04A0DA281A04D48D008C4E12 /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_gen.h; sourceTree = "<group>"; };
@@ -334,6 +336,22 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		049DF5671A0F493C00F12447 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				049DF5681A0F493C00F12447 /* CPfilters.plist */,
+				049DF5691A0F493C00F12447 /* oldImage */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		049DF5691A0F493C00F12447 /* oldImage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = oldImage;
+			sourceTree = "<group>";
+		};
 		04A0DA231A04D48D008C4E12 /* YAJL */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +468,7 @@
 				04CAC1A819F7EF82005291D3 /* AppDelegate.m */,
 				04CAC1AD19F7EF82005291D3 /* Images.xcassets */,
 				04CAC1AA19F7EF82005291D3 /* competitionwork.xcdatamodeld */,
+				049DF5671A0F493C00F12447 /* resources */,
 				04CAC19F19F7EF82005291D3 /* Supporting Files */,
 			);
 			path = competitionwork;
@@ -677,6 +696,7 @@
 			files = (
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
 				04CAC1AE19F7EF82005291D3 /* Images.xcassets in Resources */,
+				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
 				0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */,
 			);
