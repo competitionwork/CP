@@ -12,6 +12,11 @@
 
 @property (nonatomic, assign) id target;
 
+@property (nonatomic, assign) BOOL isFollow;
+
+@property (nonatomic) NSDictionary *content;
+
+
 + (CGFloat)widthForPhoneView:(NSDictionary *)aContent;
 
 @end

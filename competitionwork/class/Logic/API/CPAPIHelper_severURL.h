@@ -11,4 +11,6 @@
 @interface CPAPIHelper_severURL : CPAPIBaseHelper
 + (instancetype)sharedInstance;
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(lists)
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(add_follow)
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(cancle_follow)
 @end

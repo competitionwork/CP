@@ -79,6 +79,7 @@ static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
 #pragma mark - 设置数据
 - (void)setContent:(NSDictionary *)aContent {
     _content = aContent;
+    _attentionView.content = _content[@"entiyDict"];
     [self setNeedsLayout];
 }
 

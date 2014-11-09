@@ -90,6 +90,7 @@
     [dict setValue:[dictEntiy objectForKey:@"organiser"] forKey:@"left2"];
     [dict setValue:[self registTimeFor:dictEntiy] forKey:@"left3"];
     [dict setValue:[self contestTimeFor:dictEntiy] forKey:@"left4"];
+    [dict setValue:dictEntiy forKey:@"entiyDict"];
 
     
     return dict;

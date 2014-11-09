@@ -10,4 +10,8 @@
 
 @implementation filterManage
 
+-(NSArray*)returnFilterData{
+    return @[];
+}
+
 @end

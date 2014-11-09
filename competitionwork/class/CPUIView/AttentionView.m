@@ -8,10 +8,10 @@
 
 #import "AttentionView.h"
 #import "UIButton+Block.h"
+#import "CPAPIHelper_severURL.h"
 
 @interface AttentionView ()
 
-@property (nonatomic) NSDictionary *content;
 
 @property (nonatomic) UIButton *AttentionButton;
 
@@ -52,8 +52,43 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
+    
+   __weak typeof(self) weakSelf = self;
+    
+    
+    
     [self.AttentionButton setAction:kUIButtonBlockTouchInside withBlock:^{
-        DLog(@"点击关注");
+        
+        
+        NSDictionary * params = @{@"uid":weakSelf.content[@"contest_id"],
+                                  @"c_id":@""
+                                  };
+        
+        DLog(@"点击关注%@",weakSelf.content);
+        
+        if (weakSelf.isFollow) {
+            
+            [[CPAPIHelper_severURL sharedInstance]api_add_follow_withParams:params whenSuccess:^(id result) {
+                
+                weakSelf.isFollow = !weakSelf.isFollow;
+                
+            } andFailed:^(id err) {
+                
+            }];
+
+        }else{
+            
+            [[CPAPIHelper_severURL sharedInstance]api_cancle_follow_withParams:params whenSuccess:^(id result) {
+                
+                weakSelf.isFollow = !weakSelf.isFollow;
+
+                
+            } andFailed:^(id err) {
+                
+            }];
+        }
+        
+        
     }];
 }
 
