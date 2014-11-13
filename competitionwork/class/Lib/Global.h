@@ -25,3 +25,9 @@
 
 #define TitleColor [UIColor colorWithRed:0x33/255.0 green:0x33/255.0 blue:0x33/255.0 alpha:1.0]
 #define GrayColor [UIColor colorWithRed:0x99/255.0 green:0x99/255.0 blue:0x99/255.0 alpha:1.0]
+
+
+typedef enum {
+    GJData_PostList         = 1,// 列表页
+    GJData_Detail           = 2,// 详情页
+} GJData_Type;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0411B7011A0F684D005DB3C8 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411B7001A0F684D005DB3C8 /* DetailView.m */; };
 		0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F12E1A08DC440067CAED /* CPBaseModeObject.m */; };
 		0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1311A08DCE90067CAED /* CPMainListCellModel.m */; };
 		0417F1351A0A6F560067CAED /* filterManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1341A0A6F560067CAED /* filterManage.m */; };
@@ -19,6 +20,12 @@
 		0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0425015019F7F8E50038E188 /* CPDynamicViewController.xib */; };
 		0425015D19F8031E0038E188 /* CPAPIBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015C19F8031E0038E188 /* CPAPIBaseHelper.m */; };
 		0425016019F804270038E188 /* GJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015F19F804270038E188 /* GJError.m */; };
+		0478C17C1A13AE0D00552707 /* CPDetailViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C17B1A13AE0D00552707 /* CPDetailViewItem.m */; };
+		0478C17F1A13B16F00552707 /* CPImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C17E1A13B16F00552707 /* CPImageScrollView.m */; };
+		0478C1821A13B5ED00552707 /* GJCoreTextLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1811A13B5ED00552707 /* GJCoreTextLabel.m */; };
+		0478C1851A13B6A900552707 /* GJSystemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1841A13B6A900552707 /* GJSystemUtil.m */; };
+		0478C1881A13B7EB00552707 /* GJListTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1871A13B7EB00552707 /* GJListTagView.m */; };
+		0478C18B1A13B88000552707 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C18A1A13B88000552707 /* UIView+Addition.m */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -98,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0411B6FF1A0F684D005DB3C8 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailView.h; path = competitionwork/class/CPUIView/DetailView.h; sourceTree = SOURCE_ROOT; };
+		0411B7001A0F684D005DB3C8 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailView.m; path = competitionwork/class/CPUIView/DetailView.m; sourceTree = SOURCE_ROOT; };
 		0417F12D1A08DC440067CAED /* CPBaseModeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseModeObject.h; path = CPUIView/Model/CPBaseModeObject.h; sourceTree = "<group>"; };
 		0417F12E1A08DC440067CAED /* CPBaseModeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseModeObject.m; path = CPUIView/Model/CPBaseModeObject.m; sourceTree = "<group>"; };
 		0417F1301A08DCE90067CAED /* CPMainListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellModel.h; path = CPUIView/Model/CPMainListCellModel.h; sourceTree = "<group>"; };
@@ -120,6 +129,18 @@
 		0425015C19F8031E0038E188 /* CPAPIBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAPIBaseHelper.m; sourceTree = "<group>"; };
 		0425015E19F804270038E188 /* GJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJError.h; sourceTree = "<group>"; };
 		0425015F19F804270038E188 /* GJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJError.m; sourceTree = "<group>"; };
+		0478C17A1A13AE0D00552707 /* CPDetailViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPDetailViewItem.h; path = competitionwork/class/CPUIView/CPDetailViewItem.h; sourceTree = SOURCE_ROOT; };
+		0478C17B1A13AE0D00552707 /* CPDetailViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPDetailViewItem.m; path = competitionwork/class/CPUIView/CPDetailViewItem.m; sourceTree = SOURCE_ROOT; };
+		0478C17D1A13B16F00552707 /* CPImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPImageScrollView.h; path = competitionwork/class/CPUIView/CPImageScrollView.h; sourceTree = SOURCE_ROOT; };
+		0478C17E1A13B16F00552707 /* CPImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPImageScrollView.m; path = competitionwork/class/CPUIView/CPImageScrollView.m; sourceTree = SOURCE_ROOT; };
+		0478C1801A13B5ED00552707 /* GJCoreTextLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GJCoreTextLabel.h; path = competitionwork/class/CPUIView/GJCoreTextLabel.h; sourceTree = SOURCE_ROOT; };
+		0478C1811A13B5ED00552707 /* GJCoreTextLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GJCoreTextLabel.m; path = competitionwork/class/CPUIView/GJCoreTextLabel.m; sourceTree = SOURCE_ROOT; };
+		0478C1831A13B6A900552707 /* GJSystemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJSystemUtil.h; sourceTree = "<group>"; };
+		0478C1841A13B6A900552707 /* GJSystemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJSystemUtil.m; sourceTree = "<group>"; };
+		0478C1861A13B7EB00552707 /* GJListTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GJListTagView.h; path = competitionwork/class/CPUIView/GJListTagView.h; sourceTree = SOURCE_ROOT; };
+		0478C1871A13B7EB00552707 /* GJListTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GJListTagView.m; path = competitionwork/class/CPUIView/GJListTagView.m; sourceTree = SOURCE_ROOT; };
+		0478C1891A13B88000552707 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		0478C18A1A13B88000552707 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -275,6 +296,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0411B6FB1A0F677D005DB3C8 /* InforView */ = {
+			isa = PBXGroup;
+			children = (
+				0411B6FF1A0F684D005DB3C8 /* DetailView.h */,
+				0411B7001A0F684D005DB3C8 /* DetailView.m */,
+				0478C17A1A13AE0D00552707 /* CPDetailViewItem.h */,
+				0478C17B1A13AE0D00552707 /* CPDetailViewItem.m */,
+				0478C17D1A13B16F00552707 /* CPImageScrollView.h */,
+				0478C17E1A13B16F00552707 /* CPImageScrollView.m */,
+				0478C1801A13B5ED00552707 /* GJCoreTextLabel.h */,
+				0478C1811A13B5ED00552707 /* GJCoreTextLabel.m */,
+				0478C1861A13B7EB00552707 /* GJListTagView.h */,
+				0478C1871A13B7EB00552707 /* GJListTagView.m */,
+			);
+			name = InforView;
+			sourceTree = "<group>";
+		};
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +333,7 @@
 		0425015319F7F9CB0038E188 /* baseView */ = {
 			isa = PBXGroup;
 			children = (
+				0411B6FB1A0F677D005DB3C8 /* InforView */,
 				049DF56B1A0F5F6800F12447 /* mainView */,
 			);
 			name = baseView;
@@ -601,6 +640,10 @@
 				049667611A04B6AA0090EE5E /* Global.h */,
 				0496675B1A04AB1F0090EE5E /* Constant.h */,
 				0496675C1A04AB1F0090EE5E /* Constant.m */,
+				0478C1831A13B6A900552707 /* GJSystemUtil.h */,
+				0478C1841A13B6A900552707 /* GJSystemUtil.m */,
+				0478C1891A13B88000552707 /* UIView+Addition.h */,
+				0478C18A1A13B88000552707 /* UIView+Addition.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -733,6 +776,7 @@
 				04CAC22119F7EFBF005291D3 /* UIButton+eventHandler.m in Sources */,
 				0417F1351A0A6F560067CAED /* filterManage.m in Sources */,
 				04A0DA471A04D48D008C4E12 /* yajl_lex.c in Sources */,
+				0478C17C1A13AE0D00552707 /* CPDetailViewItem.m in Sources */,
 				04A0DA491A04D48D008C4E12 /* NSObject+YAJL.m in Sources */,
 				04A0DA461A04D48D008C4E12 /* yajl_gen.c in Sources */,
 				0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */,
@@ -746,23 +790,28 @@
 				04A0DA421A04D48D008C4E12 /* yajl.c in Sources */,
 				0496675D1A04AB1F0090EE5E /* Constant.m in Sources */,
 				04CAC22019F7EFBF005291D3 /* NSArray+linq.m in Sources */,
+				0411B7011A0F684D005DB3C8 /* DetailView.m in Sources */,
 				0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */,
 				04CAC21119F7EFBF005291D3 /* AFURLConnectionOperation.m in Sources */,
 				04AF38521A06182C008958C7 /* GJBaseAPIInvokeCondition.m in Sources */,
 				04CAC21F19F7EFBF005291D3 /* GJCommonWidgetHelper.m in Sources */,
 				0417F13B1A0A86800067CAED /* AttentionView.m in Sources */,
 				04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */,
+				0478C1851A13B6A900552707 /* GJSystemUtil.m in Sources */,
 				04CAC21D19F7EFBF005291D3 /* GJFilterView.m in Sources */,
 				04A0DA4A1A04D48D008C4E12 /* YAJL_GTMBase64.m in Sources */,
 				049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */,
 				04CAC21219F7EFBF005291D3 /* AFXMLRequestOperation.m in Sources */,
 				04CAC22219F7EFBF005291D3 /* UIView+borders.m in Sources */,
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
+				0478C18B1A13B88000552707 /* UIView+Addition.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
 				04CAC20E19F7EFBF005291D3 /* AFJSONRequestOperation.m in Sources */,
+				0478C1881A13B7EB00552707 /* GJListTagView.m in Sources */,
 				04CAC21519F7EFBF005291D3 /* GJFilterBar.m in Sources */,
 				04CAC21319F7EFBF005291D3 /* UIImageView+AFNetworking.m in Sources */,
 				04CAC21619F7EFBF005291D3 /* GJFilterBarItem.m in Sources */,
+				0478C1821A13B5ED00552707 /* GJCoreTextLabel.m in Sources */,
 				04CAC20F19F7EFBF005291D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04CAC20C19F7EFBF005291D3 /* AFHTTPRequestOperation.m in Sources */,
 				0425014819F7F3A20038E188 /* CPMastViewController.m in Sources */,
@@ -779,6 +828,7 @@
 				04CAC21A19F7EFBF005291D3 /* GJFilterOptionListHotBrandCell.m in Sources */,
 				04CAC21E19F7EFBF005291D3 /* GJOptionNode.m in Sources */,
 				0425016019F804270038E188 /* GJError.m in Sources */,
+				0478C17F1A13B16F00552707 /* CPImageScrollView.m in Sources */,
 				04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */,
 				04CAC20B19F7EFBF005291D3 /* AFHTTPClient.m in Sources */,
 				0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */,

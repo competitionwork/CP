@@ -15,6 +15,8 @@
 #import "CPListCellCommonEntiy.h"
 #import "CPMainListCellModel.h"
 #import "filterManage.h"
+#import "DetailView.h"
+#import "DetailView.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate>
 
@@ -55,6 +57,12 @@
     self.tabelView.dataSource = self.listController;
     self.tabelView.delegate = self.listController;
     
+    __weak typeof(self) weakself = self;
+    
+    [self.listController setClickIndex:^(CPListCellCommonEntiy * entiy) {
+        [weakself clickListVeiwWithEntiy:entiy];
+    }];
+    
     [self reloadData];
     
     [self layoutSubvies];
@@ -75,23 +83,8 @@
 
 -(void)loadFilterData
 {
-    //筛选数据源
-//    [self.filterDataLoader loadFilterOptionsByParam:self.listDataRequestParam.filterParams whenSuccess:^(NSArray *filterOptions) {
-//
-//        DLog(@">>>>>>> : %@",@"加载筛选项数据成功!");
-//        self.filterView.rootNode = [self.filterDataLoader filterNodeFromFilterOptions:filterOptions];
-//        [self.filterView reloadData];
-//        self.listDataRequestParam.queryParams.filterNode = self.filterView.rootNode;
-//        [self refreashData];
-//        
-//    } andFailed:^(GJError *error) {
-//        
-//        DLog(@">>>>>>> : %@",@"加载筛选项数据失败");
-//        
-//    }];
     
     filterManage * filterMg = [[filterManage alloc]init];
-    
     
     NSArray *nodes=[filterMg nodesFromFilterData:nil];
     self.rootNode=[GJOptionNode nodeWithText:@"rootNode" value:nil];
@@ -100,6 +93,17 @@
     [self.filterView reloadData];
     
     [self refreashData];
+    
+    
+}
+
+
+-(void)clickListVeiwWithEntiy:(CPListCellCommonEntiy *)entiy {
+    DLog(@"点击");
+    
+    DetailView * detalView = [[DetailView alloc]init];
+    
+    [self.navigationController pushViewController:detalView animated:YES];
     
 }
 
@@ -171,6 +175,8 @@
     self.tabelView.dataSource = _listController;
     self.tabelView.delegate = _listController;
     
+
+    
 }
 
 
@@ -204,7 +210,7 @@
     [[CPAPIHelper_severURL sharedInstance] api_lists_withParams:params whenSuccess:^(NSDictionary * result) {
         
         DLog(@">>>>>>> : %@",@"获取数据成功!");
-
+        
         DLog(@"%@",result);
         
         for (int i = 0; i< [result[@"contests"] count]; i++) {
@@ -219,6 +225,7 @@
         
         
         [self loadDataSuccess:result forPageIndex:0];
+        
         
     } andFailed:^(id err) {
         
@@ -293,13 +300,6 @@
         [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];
     }
 }
-
-
-
-
-
-
-
 
 
 

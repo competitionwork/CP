@@ -12,12 +12,18 @@
 
 @implementation CPMainListViewController
 
+@synthesize clickIndex;
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     
     CPListCellCommonEntiy *cellEntity = [self listDataEntityAtIndex:indexPath];
     NSDictionary *dic = cellEntity.dataEntity;
+    
+    if (clickIndex) {
+        clickIndex(cellEntity);
+    }
     
     
 }
@@ -52,10 +58,6 @@
             }
             cell.content = cellEntityDict;
             
-//            GetPostListCellFormate *formate = [GetPostListCellFormate shareFormate];
-//            cell.content = [formate cellDictionaryForListWithContent:cellEntity.dataEntity withMasterId:GJMasterIdFangchan_7 withMajorId:101];
-            
-            //            cell.textLabel.text = NSStringFromFormat(@"%d", indexPath.row);
             return cell;
             
         }

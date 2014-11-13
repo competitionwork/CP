@@ -7,6 +7,9 @@
 //
 
 #import "CPBaseList.h"
+
 @interface CPMainListViewController : CPBaseList<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, copy) void(^clickIndex)(CPListCellCommonEntiy * clickEntiy);
 
 @end
