@@ -19,6 +19,8 @@
 		0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0425015019F7F8E50038E188 /* CPDynamicViewController.xib */; };
 		0425015D19F8031E0038E188 /* CPAPIBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015C19F8031E0038E188 /* CPAPIBaseHelper.m */; };
 		0425016019F804270038E188 /* GJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015F19F804270038E188 /* GJError.m */; };
+		0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C18E1A14FBF800552707 /* CPDetailViewController.m */; };
+		0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1911A1500D700552707 /* CPDetailEntiy.m */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -120,6 +122,10 @@
 		0425015C19F8031E0038E188 /* CPAPIBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAPIBaseHelper.m; sourceTree = "<group>"; };
 		0425015E19F804270038E188 /* GJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJError.h; sourceTree = "<group>"; };
 		0425015F19F804270038E188 /* GJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJError.m; sourceTree = "<group>"; };
+		0478C18D1A14FBF800552707 /* CPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailViewController.h; sourceTree = "<group>"; };
+		0478C18E1A14FBF800552707 /* CPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailViewController.m; sourceTree = "<group>"; };
+		0478C1901A1500D700552707 /* CPDetailEntiy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailEntiy.h; sourceTree = "<group>"; };
+		0478C1911A1500D700552707 /* CPDetailEntiy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailEntiy.m; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -278,6 +284,7 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
+				0478C18C1A14FBC500552707 /* CPDetailView */,
 				04AF384F1A061802008958C7 /* Model */,
 				0425015319F7F9CB0038E188 /* baseView */,
 				0425014619F7F3A20038E188 /* CPMastViewController.h */,
@@ -315,6 +322,18 @@
 			name = Logic;
 			path = competitionwork/class/Logic;
 			sourceTree = SOURCE_ROOT;
+		};
+		0478C18C1A14FBC500552707 /* CPDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				0478C18D1A14FBF800552707 /* CPDetailViewController.h */,
+				0478C18E1A14FBF800552707 /* CPDetailViewController.m */,
+				0478C1901A1500D700552707 /* CPDetailEntiy.h */,
+				0478C1911A1500D700552707 /* CPDetailEntiy.m */,
+			);
+			name = CPDetailView;
+			path = CPUIView/CPDetailView;
+			sourceTree = "<group>";
 		};
 		049667541A04A6390090EE5E /* API */ = {
 			isa = PBXGroup;
@@ -749,6 +768,8 @@
 				0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */,
 				04CAC21119F7EFBF005291D3 /* AFURLConnectionOperation.m in Sources */,
 				04AF38521A06182C008958C7 /* GJBaseAPIInvokeCondition.m in Sources */,
+				0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */,
+				0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */,
 				04CAC21F19F7EFBF005291D3 /* GJCommonWidgetHelper.m in Sources */,
 				0417F13B1A0A86800067CAED /* AttentionView.m in Sources */,
 				04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */,

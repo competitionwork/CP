@@ -9,8 +9,11 @@
 #import "CPMainListViewController.h"
 #import "CPListCellCommonEntiy.h"
 #import "CPMainListCellTableViewCell.h"
+#import "CPDetailViewController.h"
 
 @implementation CPMainListViewController
+
+@synthesize clickIndex;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -19,6 +22,11 @@
     CPListCellCommonEntiy *cellEntity = [self listDataEntityAtIndex:indexPath];
     NSDictionary *dic = cellEntity.dataEntity;
     
+
+    if (clickIndex) {
+        clickIndex(cellEntity);
+    }
+
     
 }
 
