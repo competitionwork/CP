@@ -27,7 +27,7 @@
     // Do any additional setup after loading the view.
     
     [self.view addSubview:self.mainScrollView];
-    [[[mainScrollView.po_frameBuilder alignToTopInSuperviewWithInset:64]setWidth:MainScreenWidth]setHeight:MainScreenHeight - 64];
+    [[[mainScrollView.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:MainScreenHeight];
     mainScrollView.backgroundColor = [UIColor yellowColor];
     
     [self dowloadViewdata];
@@ -64,12 +64,14 @@
     UIImageView * imageV = [[UIImageView alloc]initWithImage:nil];
     imageV.backgroundColor = [UIColor blueColor];
     [self.mainScrollView addSubview:imageV];
-    [[[imageV.po_frameBuilder alignToTopInSuperviewWithInset:-64]setWidth:MainScreenWidth]setHeight:170];
+    [[[imageV.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:170];
 
-    [self formatDetailData];
+    NSInteger high =[self formatDetailData];
+    
+    [self.mainScrollView setContentSize:CGSizeMake(MainScreenWidth, high)];
 }
 
--(NSMutableDictionary *)formatDetailData{
+-(NSInteger)formatDetailData{
     
     NSMutableDictionary * dictAttrs = [NSMutableDictionary dictionaryWithCapacity:0];
     NSMutableArray * arrayAttrs = [NSMutableArray arrayWithCapacity:0];
@@ -90,6 +92,8 @@
     [AttrsView1.po_frameBuilder alignToTopInSuperviewWithInset:140];
     
     [self addLineView:588/2 top:AttrsView1.bottom];
+    
+    [arrayAttrs removeAllObjects];
 
     //
     if (_inforDataEntiy.benefit) {
@@ -115,6 +119,8 @@
 
     [self addLineView:588/2 top:AttrsView2.bottom];
     
+    [arrayAttrs removeAllObjects];
+    
     ///
     if (_inforDataEntiy.benefit) {
         [arrayAttrs addObject:@{@"关键词":_inforDataEntiy.contest_keyword}];
@@ -136,6 +142,8 @@
     
     [self addLineView:588/2 top:AttrsView3.bottom];
     
+    [arrayAttrs removeAllObjects];
+    
     ///
     if (_inforDataEntiy.benefit) {
         [arrayAttrs addObject:@{@"竞赛简介":_inforDataEntiy.contest_name}];
@@ -150,7 +158,7 @@
     [AttrsView4.po_frameBuilder alignToBottomOfView:AttrsView3 offset:20];
     
 
-    return dictAttrs;
+    return (AttrsView4.origin.y + AttrsView4.frame.size.height);
 }
 
 /**
