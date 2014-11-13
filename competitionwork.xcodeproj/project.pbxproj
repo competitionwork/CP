@@ -21,6 +21,9 @@
 		0425016019F804270038E188 /* GJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015F19F804270038E188 /* GJError.m */; };
 		0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C18E1A14FBF800552707 /* CPDetailViewController.m */; };
 		0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1911A1500D700552707 /* CPDetailEntiy.m */; };
+		0478C1951A150E3400552707 /* CPEntersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1941A150E3400552707 /* CPEntersView.m */; };
+		0478C1981A15118700552707 /* CPDetailItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1971A15118700552707 /* CPDetailItemView.m */; };
+		0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C19A1A1512D500552707 /* UIView+Addition.m */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -126,6 +129,12 @@
 		0478C18E1A14FBF800552707 /* CPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailViewController.m; sourceTree = "<group>"; };
 		0478C1901A1500D700552707 /* CPDetailEntiy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailEntiy.h; sourceTree = "<group>"; };
 		0478C1911A1500D700552707 /* CPDetailEntiy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailEntiy.m; sourceTree = "<group>"; };
+		0478C1931A150E3400552707 /* CPEntersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPEntersView.h; sourceTree = "<group>"; };
+		0478C1941A150E3400552707 /* CPEntersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPEntersView.m; sourceTree = "<group>"; };
+		0478C1961A15118700552707 /* CPDetailItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailItemView.h; sourceTree = "<group>"; };
+		0478C1971A15118700552707 /* CPDetailItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailItemView.m; sourceTree = "<group>"; };
+		0478C1991A1512D500552707 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		0478C19A1A1512D500552707 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -284,8 +293,8 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
-				0478C18C1A14FBC500552707 /* CPDetailView */,
-				04AF384F1A061802008958C7 /* Model */,
+				0478C18C1A14FBC500552707 /* CPDetailView(详情页) */,
+				04AF384F1A061802008958C7 /* Model（模型） */,
 				0425015319F7F9CB0038E188 /* baseView */,
 				0425014619F7F3A20038E188 /* CPMastViewController.h */,
 				0425014719F7F3A20038E188 /* CPMastViewController.m */,
@@ -302,7 +311,7 @@
 		0425015319F7F9CB0038E188 /* baseView */ = {
 			isa = PBXGroup;
 			children = (
-				049DF56B1A0F5F6800F12447 /* mainView */,
+				049DF56B1A0F5F6800F12447 /* mainView（列表页） */,
 			);
 			name = baseView;
 			path = CPUIView/baseView;
@@ -311,7 +320,7 @@
 		0425015A19F8031E0038E188 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				049667541A04A6390090EE5E /* API */,
+				049667541A04A6390090EE5E /* API（接口） */,
 				0425015E19F804270038E188 /* GJError.h */,
 				0425015F19F804270038E188 /* GJError.m */,
 				049667581A04A8E20090EE5E /* CPDESCode.h */,
@@ -323,25 +332,29 @@
 			path = competitionwork/class/Logic;
 			sourceTree = SOURCE_ROOT;
 		};
-		0478C18C1A14FBC500552707 /* CPDetailView */ = {
+		0478C18C1A14FBC500552707 /* CPDetailView(详情页) */ = {
 			isa = PBXGroup;
 			children = (
 				0478C18D1A14FBF800552707 /* CPDetailViewController.h */,
 				0478C18E1A14FBF800552707 /* CPDetailViewController.m */,
 				0478C1901A1500D700552707 /* CPDetailEntiy.h */,
 				0478C1911A1500D700552707 /* CPDetailEntiy.m */,
+				0478C1931A150E3400552707 /* CPEntersView.h */,
+				0478C1941A150E3400552707 /* CPEntersView.m */,
+				0478C1961A15118700552707 /* CPDetailItemView.h */,
+				0478C1971A15118700552707 /* CPDetailItemView.m */,
 			);
-			name = CPDetailView;
+			name = "CPDetailView(详情页)";
 			path = CPUIView/CPDetailView;
 			sourceTree = "<group>";
 		};
-		049667541A04A6390090EE5E /* API */ = {
+		049667541A04A6390090EE5E /* API（接口） */ = {
 			isa = PBXGroup;
 			children = (
 				049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */,
 				049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */,
 			);
-			name = API;
+			name = "API（接口）";
 			sourceTree = "<group>";
 		};
 		049DF5671A0F493C00F12447 /* resources */ = {
@@ -360,7 +373,7 @@
 			path = oldImage;
 			sourceTree = "<group>";
 		};
-		049DF56B1A0F5F6800F12447 /* mainView */ = {
+		049DF56B1A0F5F6800F12447 /* mainView（列表页） */ = {
 			isa = PBXGroup;
 			children = (
 				04AF38461A060907008958C7 /* CPBaseList.h */,
@@ -376,7 +389,7 @@
 				0417F1331A0A6F560067CAED /* filterManage.h */,
 				0417F1341A0A6F560067CAED /* filterManage.m */,
 			);
-			name = mainView;
+			name = "mainView（列表页）";
 			sourceTree = "<group>";
 		};
 		04A0DA231A04D48D008C4E12 /* YAJL */ = {
@@ -437,7 +450,7 @@
 			path = YAJL_OBC;
 			sourceTree = "<group>";
 		};
-		04AF384F1A061802008958C7 /* Model */ = {
+		04AF384F1A061802008958C7 /* Model（模型） */ = {
 			isa = PBXGroup;
 			children = (
 				04AF38501A06182C008958C7 /* GJBaseAPIInvokeCondition.h */,
@@ -451,7 +464,7 @@
 				0417F1301A08DCE90067CAED /* CPMainListCellModel.h */,
 				0417F1311A08DCE90067CAED /* CPMainListCellModel.m */,
 			);
-			name = Model;
+			name = "Model（模型）";
 			sourceTree = "<group>";
 		};
 		04CAC18A19F7EF82005291D3 = {
@@ -562,15 +575,15 @@
 			children = (
 				0425015A19F8031E0038E188 /* Logic */,
 				0425014219F7F0910038E188 /* CPUIView */,
-				04CAC1E019F7EFBF005291D3 /* GJFilterView */,
-				04CAC1F919F7EFBF005291D3 /* Lib */,
+				04CAC1E019F7EFBF005291D3 /* GJFilterView（筛选项） */,
+				04CAC1F919F7EFBF005291D3 /* Lib（第三方工具） */,
 				04CAC20219F7EFBF005291D3 /* POViewFrameBuilder */,
 			);
 			name = class;
 			path = competitionwork/class;
 			sourceTree = "<group>";
 		};
-		04CAC1E019F7EFBF005291D3 /* GJFilterView */ = {
+		04CAC1E019F7EFBF005291D3 /* GJFilterView（筛选项） */ = {
 			isa = PBXGroup;
 			children = (
 				04CAC1E119F7EFBF005291D3 /* GJChooseButton.h */,
@@ -598,10 +611,11 @@
 				04CAC1F719F7EFBF005291D3 /* GJOptionNode.h */,
 				04CAC1F819F7EFBF005291D3 /* GJOptionNode.m */,
 			);
+			name = "GJFilterView（筛选项）";
 			path = GJFilterView;
 			sourceTree = "<group>";
 		};
-		04CAC1F919F7EFBF005291D3 /* Lib */ = {
+		04CAC1F919F7EFBF005291D3 /* Lib（第三方工具） */ = {
 			isa = PBXGroup;
 			children = (
 				04A0DA231A04D48D008C4E12 /* YAJL */,
@@ -617,10 +631,13 @@
 				04CAC20119F7EFBF005291D3 /* UIView+borders.m */,
 				0417F1361A0A863D0067CAED /* UIButton+Block.h */,
 				0417F1371A0A863D0067CAED /* UIButton+Block.m */,
+				0478C1991A1512D500552707 /* UIView+Addition.h */,
+				0478C19A1A1512D500552707 /* UIView+Addition.m */,
 				049667611A04B6AA0090EE5E /* Global.h */,
 				0496675B1A04AB1F0090EE5E /* Constant.h */,
 				0496675C1A04AB1F0090EE5E /* Constant.m */,
 			);
+			name = "Lib（第三方工具）";
 			path = Lib;
 			sourceTree = "<group>";
 		};
@@ -744,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */,
 				04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
@@ -758,6 +776,7 @@
 				04A0DA481A04D48D008C4E12 /* yajl_parser.c in Sources */,
 				04CAC21C19F7EFBF005291D3 /* GJFilterSingleLevelWithSectionOptionSelectorView.m in Sources */,
 				04AF385B1A061A30008958C7 /* CPPostDataRequestParam.m in Sources */,
+				0478C1981A15118700552707 /* CPDetailItemView.m in Sources */,
 				04CAC1A919F7EF82005291D3 /* AppDelegate.m in Sources */,
 				04CAC21419F7EFBF005291D3 /* GJChooseButton.m in Sources */,
 				04A0DA451A04D48D008C4E12 /* yajl_encode.c in Sources */,
@@ -800,6 +819,7 @@
 				04CAC21A19F7EFBF005291D3 /* GJFilterOptionListHotBrandCell.m in Sources */,
 				04CAC21E19F7EFBF005291D3 /* GJOptionNode.m in Sources */,
 				0425016019F804270038E188 /* GJError.m in Sources */,
+				0478C1951A150E3400552707 /* CPEntersView.m in Sources */,
 				04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */,
 				04CAC20B19F7EFBF005291D3 /* AFHTTPClient.m in Sources */,
 				0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */,

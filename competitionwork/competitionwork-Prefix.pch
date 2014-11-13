@@ -18,6 +18,7 @@
     #import "JSONKit.h"
     #import "Constant.h"
     #import "Global.h"
+    #import "UIView+Addition.h"
 #endif
 
 
