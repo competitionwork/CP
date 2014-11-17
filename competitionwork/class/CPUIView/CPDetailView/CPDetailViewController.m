@@ -26,9 +26,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
     [self.view addSubview:self.mainScrollView];
     [[[mainScrollView.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:MainScreenHeight];
-    mainScrollView.backgroundColor = [UIColor yellowColor];
+    mainScrollView.backgroundColor = MainBackColor;
     
     [self dowloadViewdata];
 }
@@ -60,18 +62,38 @@
 
 -(void)CreateDefaultDetailInfo{
     
+    NSInteger high = 0;
     
     UIImageView * imageV = [[UIImageView alloc]initWithImage:nil];
     imageV.backgroundColor = [UIColor blueColor];
     [self.mainScrollView addSubview:imageV];
     [[[imageV.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:170];
+    
+    high += [self EntersViewItemView:imageV.height];
 
-    NSInteger high =[self formatDetailData];
+    high +=[self formatDetailDataWithHight:270];
     
     [self.mainScrollView setContentSize:CGSizeMake(MainScreenWidth, high)];
 }
 
--(NSInteger)formatDetailData{
+-(NSInteger)EntersViewItemView:(NSInteger)height{
+    
+    if (_inforDataEntiy.enters) {
+        
+        CPDetailEntersView * entersView = [[CPDetailEntersView alloc]initWithData:_inforDataEntiy.enters];
+        
+        [self.mainScrollView addSubview:entersView];
+        
+        [entersView.po_frameBuilder alignToTopInSuperviewWithInset:height];
+        
+        return entersView.height;
+
+    }
+    
+    return 0;
+}
+
+-(NSInteger)formatDetailDataWithHight:(NSInteger)hight{
     
     NSMutableDictionary * dictAttrs = [NSMutableDictionary dictionaryWithCapacity:0];
     NSMutableArray * arrayAttrs = [NSMutableArray arrayWithCapacity:0];
@@ -89,7 +111,7 @@
     
     [self.mainScrollView addSubview:AttrsView1];
     
-    [AttrsView1.po_frameBuilder alignToTopInSuperviewWithInset:140];
+    [AttrsView1.po_frameBuilder alignToTopInSuperviewWithInset:hight];
     
     [self addLineView:588/2 top:AttrsView1.bottom];
     
@@ -115,7 +137,7 @@
     
     [self.mainScrollView addSubview:AttrsView2];
     
-    [AttrsView2.po_frameBuilder alignToBottomOfView:AttrsView1 offset:20];
+    [AttrsView2.po_frameBuilder alignToBottomOfView:AttrsView1 offset:1];
 
     [self addLineView:588/2 top:AttrsView2.bottom];
     
@@ -138,7 +160,7 @@
     
     [self.mainScrollView addSubview:AttrsView3];
     
-    [AttrsView3.po_frameBuilder alignToBottomOfView:AttrsView2 offset:20];
+    [AttrsView3.po_frameBuilder alignToBottomOfView:AttrsView2 offset:1];
     
     [self addLineView:588/2 top:AttrsView3.bottom];
     
@@ -155,7 +177,7 @@
     
     [self.mainScrollView addSubview:AttrsView4];
     
-    [AttrsView4.po_frameBuilder alignToBottomOfView:AttrsView3 offset:20];
+    [AttrsView4.po_frameBuilder alignToBottomOfView:AttrsView3 offset:1];
     
 
     return (AttrsView4.origin.y + AttrsView4.frame.size.height);

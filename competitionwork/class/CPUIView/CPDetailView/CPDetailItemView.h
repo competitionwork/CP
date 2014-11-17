@@ -18,3 +18,14 @@
 - (instancetype)initWithData:(NSMutableDictionary *)dataDict;
 
 @end
+
+@interface CPDetailEntersView : UIView
+
+@property (nonatomic, strong) UILabel *labelNumber;
+
+@property (nonatomic, strong) NSArray * EntersDict;
+
+-(instancetype)initWithData:(NSArray *)dataDict;
+
+
+@end

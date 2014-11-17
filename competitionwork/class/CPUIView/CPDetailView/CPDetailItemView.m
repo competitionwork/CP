@@ -8,6 +8,8 @@
 
 #import "CPDetailItemView.h"
 #import "UIView+Addition.h"
+#import "UIImageView+AFNetworking.h"
+#import <QuartzCore/QuartzCore.h>
 #define InfoColor [UIColor colorWithRed:0x33/255.0 green:0x33/255.0 blue:0x33/255.0 alpha:1.0f]
 #define GrayColor [UIColor colorWithRed:0x99/255.0 green:0x99/255.0 blue:0x99/255.0 alpha:1.0f]
 #define OrangeColor [UIColor colorWithRed:0xf7/255.0 green:0x7f/255.0 blue:0x00/255.0 alpha:1.0f]
@@ -80,3 +82,82 @@
 }
 
 @end
+
+@implementation CPDetailEntersView
+
+
+
+-(instancetype)initWithData:(NSArray *)dataDict{
+    if (self = [super initWithFrame:CGRectMake(0, 0, MainScreenWidth, 100)]) {
+        self.backgroundColor = [UIColor yellowColor];
+        
+        self.EntersDict = dataDict;
+        
+        _labelNumber = [[UILabel alloc]init];
+        
+        [self addSubview:_labelNumber];
+        
+        UILabel * moreLabel = [[UILabel alloc]init];
+        
+        moreLabel.text = @"查看更多";
+        
+        [moreLabel sizeToFit];
+        
+        [self addSubview:moreLabel];
+        
+        [[moreLabel.po_frameBuilder alignToTopInSuperviewWithInset:8]alignRightInSuperviewWithInset:8];
+        
+        
+    }
+    return self;
+}
+
+-(void)layoutSubviews{
+    
+    _labelNumber.text =  [NSString stringWithFormat:@"已经报名参加%lu个人",(unsigned long)self.EntersDict.count];
+    [_labelNumber sizeToFit];
+    [_labelNumber.po_frameBuilder alignToTopInSuperviewWithInset:8];
+    
+    [self.EntersDict enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL *stop) {
+        
+        UIImageView * imageFace = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+        NSString * url = self.EntersDict[idx][@"avatar"];
+        [imageFace setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@""]];
+        
+        [self addSubview:imageFace];
+        
+        imageFace.layer.masksToBounds = YES;
+        imageFace.layer.cornerRadius = 25.0;
+        
+        [[imageFace.po_frameBuilder alignToTopInSuperviewWithInset:35] setX:8+(imageFace.width + 8) * idx];
+        
+    }];
+    
+}
+
+
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

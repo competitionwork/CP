@@ -137,4 +137,31 @@
     return str;
 }
 
+// -----------------------------------------------------------------------
+#pragma mark - ScrollViewDelegate
+// -----------------------------------------------------------------------
+
+// 刚拖动的时候
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (self.scrollViewWillBeginDragging) {
+        _scrollViewWillBeginDragging(scrollView);
+    }
+}
+
+// 拖动过程中
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (_scrollViewDidScroll) {
+        _scrollViewDidScroll(scrollView);
+    }
+}
+
+// 拖动结束后
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (_scrollViewDidEndDraggingWillDecelerate) {
+        _scrollViewDidEndDraggingWillDecelerate(scrollView,decelerate);
+    }
+}
+
+
+
 @end

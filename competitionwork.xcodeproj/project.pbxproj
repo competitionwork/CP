@@ -40,6 +40,20 @@
 		04A0DA4B1A04D48D008C4E12 /* YAJLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA3D1A04D48D008C4E12 /* YAJLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA3F1A04D48D008C4E12 /* YAJLGen.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA411A04D48D008C4E12 /* YAJLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523CE1A1A3B1000FE9500 /* RefreshView.m */; };
+		04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */; };
+		04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */; };
+		04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */; };
+		04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */; };
+		04A523E41A1A419100FE9500 /* xiaolvAnimation4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D91A1A419000FE9500 /* xiaolvAnimation4@2x.png */; };
+		04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DA1A1A419000FE9500 /* xiaolvAnimation5@2x.png */; };
+		04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DB1A1A419000FE9500 /* xiaolvAnimation6@2x.png */; };
+		04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DC1A1A419000FE9500 /* xiaolvAnimation7@2x.png */; };
+		04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DD1A1A419000FE9500 /* 跑1@2x.png */; };
+		04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DE1A1A419000FE9500 /* 跑2@2x.png */; };
+		04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DF1A1A419000FE9500 /* 跑3@2x.png */; };
+		04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523E01A1A419000FE9500 /* 跑4@2x.png */; };
+		04A523ED1A1A5ABD00FE9500 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */; };
 		04AF38481A060907008958C7 /* CPBaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF38471A060907008958C7 /* CPBaseList.m */; };
 		04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF384A1A060976008958C7 /* CPMainListViewController.m */; };
 		04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF384D1A060A3C008958C7 /* CPListCellCommonEntiy.m */; };
@@ -170,6 +184,22 @@
 		04A0DA3F1A04D48D008C4E12 /* YAJLGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAJLGen.m; sourceTree = "<group>"; };
 		04A0DA401A04D48D008C4E12 /* YAJLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJLParser.h; sourceTree = "<group>"; };
 		04A0DA411A04D48D008C4E12 /* YAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAJLParser.m; sourceTree = "<group>"; };
+		04A523CD1A1A3B1000FE9500 /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
+		04A523CE1A1A3B1000FE9500 /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
+		04A523D11A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+xiaolvAnimation.h"; sourceTree = "<group>"; };
+		04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+xiaolvAnimation.m"; sourceTree = "<group>"; };
+		04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation1@2x.png"; sourceTree = "<group>"; };
+		04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation2@2x.png"; sourceTree = "<group>"; };
+		04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation3@2x.png"; sourceTree = "<group>"; };
+		04A523D91A1A419000FE9500 /* xiaolvAnimation4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation4@2x.png"; sourceTree = "<group>"; };
+		04A523DA1A1A419000FE9500 /* xiaolvAnimation5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation5@2x.png"; sourceTree = "<group>"; };
+		04A523DB1A1A419000FE9500 /* xiaolvAnimation6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation6@2x.png"; sourceTree = "<group>"; };
+		04A523DC1A1A419000FE9500 /* xiaolvAnimation7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation7@2x.png"; sourceTree = "<group>"; };
+		04A523DD1A1A419000FE9500 /* 跑1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑1@2x.png"; sourceTree = "<group>"; };
+		04A523DE1A1A419000FE9500 /* 跑2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑2@2x.png"; sourceTree = "<group>"; };
+		04A523DF1A1A419000FE9500 /* 跑3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑3@2x.png"; sourceTree = "<group>"; };
+		04A523E01A1A419000FE9500 /* 跑4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑4@2x.png"; sourceTree = "<group>"; };
+		04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		04AF38461A060907008958C7 /* CPBaseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseList.h; path = competitionwork/class/CPUIView/CPBaseList.h; sourceTree = SOURCE_ROOT; };
 		04AF38471A060907008958C7 /* CPBaseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseList.m; path = competitionwork/class/CPUIView/CPBaseList.m; sourceTree = SOURCE_ROOT; };
 		04AF38491A060976008958C7 /* CPMainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListViewController.h; path = competitionwork/class/CPUIView/CPMainListViewController.h; sourceTree = SOURCE_ROOT; };
@@ -269,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A523ED1A1A5ABD00FE9500 /* QuartzCore.framework in Frameworks */,
 				04CAC19919F7EF82005291D3 /* CoreGraphics.framework in Frameworks */,
 				04CAC19D19F7EF82005291D3 /* CoreData.framework in Frameworks */,
 				04CAC19B19F7EF82005291D3 /* UIKit.framework in Frameworks */,
@@ -360,17 +391,10 @@
 		049DF5671A0F493C00F12447 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				04A523D51A1A419000FE9500 /* OldImage */,
 				049DF5681A0F493C00F12447 /* CPfilters.plist */,
-				049DF5691A0F493C00F12447 /* oldImage */,
 			);
 			path = resources;
-			sourceTree = "<group>";
-		};
-		049DF5691A0F493C00F12447 /* oldImage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = oldImage;
 			sourceTree = "<group>";
 		};
 		049DF56B1A0F5F6800F12447 /* mainView（列表页） */ = {
@@ -450,6 +474,56 @@
 			path = YAJL_OBC;
 			sourceTree = "<group>";
 		};
+		04A523CA1A1A3B1000FE9500 /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				04A523CD1A1A3B1000FE9500 /* RefreshView.h */,
+				04A523CE1A1A3B1000FE9500 /* RefreshView.m */,
+			);
+			path = RefreshView;
+			sourceTree = "<group>";
+		};
+		04A523D41A1A401800FE9500 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				04CAC1FC19F7EFBF005291D3 /* NSArray+linq.h */,
+				04CAC1FD19F7EFBF005291D3 /* NSArray+linq.m */,
+				04AF38561A06195A008958C7 /* NSObject+GJExtand.h */,
+				04AF38571A06195A008958C7 /* NSObject+GJExtand.m */,
+				04CAC1FE19F7EFBF005291D3 /* UIButton+eventHandler.h */,
+				04CAC1FF19F7EFBF005291D3 /* UIButton+eventHandler.m */,
+				04CAC20019F7EFBF005291D3 /* UIView+borders.h */,
+				04CAC20119F7EFBF005291D3 /* UIView+borders.m */,
+				0417F1361A0A863D0067CAED /* UIButton+Block.h */,
+				0417F1371A0A863D0067CAED /* UIButton+Block.m */,
+				0478C1991A1512D500552707 /* UIView+Addition.h */,
+				0478C19A1A1512D500552707 /* UIView+Addition.m */,
+				04A523D11A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.h */,
+				04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */,
+				04CAC1FA19F7EFBF005291D3 /* GJCommonWidgetHelper.h */,
+				04CAC1FB19F7EFBF005291D3 /* GJCommonWidgetHelper.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		04A523D51A1A419000FE9500 /* OldImage */ = {
+			isa = PBXGroup;
+			children = (
+				04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */,
+				04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */,
+				04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */,
+				04A523D91A1A419000FE9500 /* xiaolvAnimation4@2x.png */,
+				04A523DA1A1A419000FE9500 /* xiaolvAnimation5@2x.png */,
+				04A523DB1A1A419000FE9500 /* xiaolvAnimation6@2x.png */,
+				04A523DC1A1A419000FE9500 /* xiaolvAnimation7@2x.png */,
+				04A523DD1A1A419000FE9500 /* 跑1@2x.png */,
+				04A523DE1A1A419000FE9500 /* 跑2@2x.png */,
+				04A523DF1A1A419000FE9500 /* 跑3@2x.png */,
+				04A523E01A1A419000FE9500 /* 跑4@2x.png */,
+			);
+			path = OldImage;
+			sourceTree = "<group>";
+		};
 		04AF384F1A061802008958C7 /* Model（模型） */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +566,7 @@
 		04CAC19519F7EF82005291D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */,
 				04CAC19619F7EF82005291D3 /* Foundation.framework */,
 				04CAC19819F7EF82005291D3 /* CoreGraphics.framework */,
 				04CAC19A19F7EF82005291D3 /* UIKit.framework */,
@@ -618,21 +693,9 @@
 		04CAC1F919F7EFBF005291D3 /* Lib（第三方工具） */ = {
 			isa = PBXGroup;
 			children = (
+				04A523CA1A1A3B1000FE9500 /* RefreshView */,
 				04A0DA231A04D48D008C4E12 /* YAJL */,
-				04CAC1FA19F7EFBF005291D3 /* GJCommonWidgetHelper.h */,
-				04CAC1FB19F7EFBF005291D3 /* GJCommonWidgetHelper.m */,
-				04CAC1FC19F7EFBF005291D3 /* NSArray+linq.h */,
-				04CAC1FD19F7EFBF005291D3 /* NSArray+linq.m */,
-				04AF38561A06195A008958C7 /* NSObject+GJExtand.h */,
-				04AF38571A06195A008958C7 /* NSObject+GJExtand.m */,
-				04CAC1FE19F7EFBF005291D3 /* UIButton+eventHandler.h */,
-				04CAC1FF19F7EFBF005291D3 /* UIButton+eventHandler.m */,
-				04CAC20019F7EFBF005291D3 /* UIView+borders.h */,
-				04CAC20119F7EFBF005291D3 /* UIView+borders.m */,
-				0417F1361A0A863D0067CAED /* UIButton+Block.h */,
-				0417F1371A0A863D0067CAED /* UIButton+Block.m */,
-				0478C1991A1512D500552707 /* UIView+Addition.h */,
-				0478C19A1A1512D500552707 /* UIView+Addition.m */,
+				04A523D41A1A401800FE9500 /* Categories */,
 				049667611A04B6AA0090EE5E /* Global.h */,
 				0496675B1A04AB1F0090EE5E /* Constant.h */,
 				0496675C1A04AB1F0090EE5E /* Constant.m */,
@@ -740,8 +803,19 @@
 			files = (
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
 				04CAC1AE19F7EF82005291D3 /* Images.xcassets in Resources */,
+				04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */,
+				04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */,
+				04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */,
+				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
+				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
+				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
+				04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
+				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
+				04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */,
+				04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */,
+				04A523E41A1A419100FE9500 /* xiaolvAnimation4@2x.png in Resources */,
 				0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -799,6 +873,7 @@
 				04CAC22219F7EFBF005291D3 /* UIView+borders.m in Sources */,
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
+				04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */,
 				04CAC20E19F7EFBF005291D3 /* AFJSONRequestOperation.m in Sources */,
 				04CAC21519F7EFBF005291D3 /* GJFilterBar.m in Sources */,
 				04CAC21319F7EFBF005291D3 /* UIImageView+AFNetworking.m in Sources */,
@@ -806,6 +881,7 @@
 				04CAC20F19F7EFBF005291D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04CAC20C19F7EFBF005291D3 /* AFHTTPRequestOperation.m in Sources */,
 				0425014819F7F3A20038E188 /* CPMastViewController.m in Sources */,
+				04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */,
 				04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */,
 				04CAC21819F7EFBF005291D3 /* GJFilterMultilevelOptionSelectorView.m in Sources */,
 				0425015D19F8031E0038E188 /* CPAPIBaseHelper.m in Sources */,
