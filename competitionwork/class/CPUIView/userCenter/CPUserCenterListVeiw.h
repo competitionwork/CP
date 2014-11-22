@@ -12,6 +12,17 @@
 @interface CPUserCenterListVeiw : UIView<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSArray * listData;
-@property (nonatomic ,strong) CPListCellEntity * entity;
+
+@property (nonatomic, strong) CPListCellEntity * entity;
+
+@property (nonatomic, strong) UITableView * tableView;
+
+@property (nonatomic, getter=isGroupedStyle) BOOL groupedStyle;
+
+@property(nonatomic,copy) void(^listDidClick)(CPListCellEntity *cellEntity,NSIndexPath *indexpath);
+
+
+
+-(void)reloadDate;
 
 @end

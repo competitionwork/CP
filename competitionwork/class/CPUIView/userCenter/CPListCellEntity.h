@@ -24,7 +24,6 @@
 +(instancetype)listCellWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imgName imageURL:(NSString *)imgurl andTime:(NSString*)time target:(id)target callback:(SEL)callback userinfo:(NSDictionary *)uinfo;
 
 +(instancetype)listCellWithTitle:(NSString *)title imageName:(NSString *)imgName target:(id)target callback:(SEL)callback userinfo:(NSDictionary *)uinfo;
-+(instancetype)listCellWithTitle:(NSString *)title imageName:(NSString *)imgName imageURL:(NSString *)imgurl target:(id)target callback:(SEL)callback userinfo:(NSDictionary *)uinfo;
 
 +(instancetype)listCellWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imgName target:(id)target callback:(SEL)callback userinfo:(NSDictionary *)uinfo;
 +(instancetype)listCellWithTitle:(NSString *)title subTitle:(NSString *)subTitle imageName:(NSString *)imgName imageURL:(NSString *)imgurl target:(id)target callback:(SEL)callback userinfo:(NSDictionary *)uinfo;
