@@ -24,6 +24,7 @@
 		0478C1951A150E3400552707 /* CPEntersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1941A150E3400552707 /* CPEntersView.m */; };
 		0478C1981A15118700552707 /* CPDetailItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1971A15118700552707 /* CPDetailItemView.m */; };
 		0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C19A1A1512D500552707 /* UIView+Addition.m */; };
+		047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -41,7 +42,6 @@
 		04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA3F1A04D48D008C4E12 /* YAJLGen.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA411A04D48D008C4E12 /* YAJLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04A1984B1A2053AB00EC6587 /* CPUserCenterListVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1984A1A2053AB00EC6587 /* CPUserCenterListVeiw.m */; };
-		04A198511A20865100EC6587 /* CPListCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A198501A20865100EC6587 /* CPListCellEntity.m */; };
 		04A198541A2091B100EC6587 /* GJUserCenterListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A198531A2091B100EC6587 /* GJUserCenterListViewCell.m */; };
 		04A198571A209AAC00EC6587 /* CPUserCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A198561A209AAB00EC6587 /* CPUserCenterVC.m */; };
 		04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523CE1A1A3B1000FE9500 /* RefreshView.m */; };
@@ -153,6 +153,8 @@
 		0478C1971A15118700552707 /* CPDetailItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailItemView.m; sourceTree = "<group>"; };
 		0478C1991A1512D500552707 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
 		0478C19A1A1512D500552707 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		047CB77E1A20BC9C00D693C8 /* CPListCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPListCellEntity.h; sourceTree = "<group>"; };
+		047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPListCellEntity.m; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -190,8 +192,6 @@
 		04A0DA411A04D48D008C4E12 /* YAJLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAJLParser.m; sourceTree = "<group>"; };
 		04A198491A2053AB00EC6587 /* CPUserCenterListVeiw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUserCenterListVeiw.h; sourceTree = "<group>"; };
 		04A1984A1A2053AB00EC6587 /* CPUserCenterListVeiw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUserCenterListVeiw.m; sourceTree = "<group>"; };
-		04A1984F1A20865100EC6587 /* CPListCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPListCellEntity.h; sourceTree = "<group>"; };
-		04A198501A20865100EC6587 /* CPListCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPListCellEntity.m; sourceTree = "<group>"; };
 		04A198521A2091B100EC6587 /* GJUserCenterListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJUserCenterListViewCell.h; sourceTree = "<group>"; };
 		04A198531A2091B100EC6587 /* GJUserCenterListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJUserCenterListViewCell.m; sourceTree = "<group>"; };
 		04A198551A209AAA00EC6587 /* CPUserCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPUserCenterVC.h; path = CPUIView/CPUserCenterVC.h; sourceTree = "<group>"; };
@@ -496,8 +496,8 @@
 				04A1984A1A2053AB00EC6587 /* CPUserCenterListVeiw.m */,
 				04A198521A2091B100EC6587 /* GJUserCenterListViewCell.h */,
 				04A198531A2091B100EC6587 /* GJUserCenterListViewCell.m */,
-				04A1984F1A20865100EC6587 /* CPListCellEntity.h */,
-				04A198501A20865100EC6587 /* CPListCellEntity.m */,
+				047CB77E1A20BC9C00D693C8 /* CPListCellEntity.h */,
+				047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */,
 			);
 			name = "userCenter（个人中心）";
 			path = competitionwork/class/CPUIView/userCenter;
@@ -867,6 +867,7 @@
 				0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */,
 				04A1984B1A2053AB00EC6587 /* CPUserCenterListVeiw.m in Sources */,
 				04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */,
+				047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
 				04CAC21019F7EFBF005291D3 /* AFPropertyListRequestOperation.m in Sources */,
@@ -881,7 +882,6 @@
 				04CAC21C19F7EFBF005291D3 /* GJFilterSingleLevelWithSectionOptionSelectorView.m in Sources */,
 				04AF385B1A061A30008958C7 /* CPPostDataRequestParam.m in Sources */,
 				0478C1981A15118700552707 /* CPDetailItemView.m in Sources */,
-				04A198511A20865100EC6587 /* CPListCellEntity.m in Sources */,
 				04CAC1A919F7EF82005291D3 /* AppDelegate.m in Sources */,
 				04CAC21419F7EFBF005291D3 /* GJChooseButton.m in Sources */,
 				04A0DA451A04D48D008C4E12 /* yajl_encode.c in Sources */,
