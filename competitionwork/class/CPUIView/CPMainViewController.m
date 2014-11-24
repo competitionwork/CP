@@ -16,8 +16,9 @@
 #import "CPMainListCellModel.h"
 #import "filterManage.h"
 #import "CPDetailViewController.h"
-
 #import "RefreshView.h"
+#import "CPUIViewControllerClassify.h"
+#import "CPLoginView.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
 {
@@ -51,6 +52,8 @@
     self.view.backgroundColor = MainBackColor;
     
     self.title = @"竞赛";
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"按钮" style:UIBarButtonItemStyleDone target:self action:@selector(push)];
     
     [self.view addSubview:self.filterView];
     
@@ -96,7 +99,10 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-
+-(void)push{
+    CPLoginView * login = [[CPLoginView alloc]init];
+    [self.navigationController pushViewController:login animated:YES];
+}
 
 - (void)refresh {
     

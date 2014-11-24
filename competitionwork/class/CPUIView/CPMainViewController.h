@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GJFilterView.h"
 #import "CPMainListViewController.h"
-@interface CPMainViewController : UIViewController
+@interface CPMainViewController : CPBaseViewController
 
 @property (nonatomic,strong) GJFilterView *filterView;
 

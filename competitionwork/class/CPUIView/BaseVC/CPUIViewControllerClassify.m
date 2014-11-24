@@ -8,12 +8,9 @@
 
 #import "CPUIViewControllerClassify.h"
 
-@implementation CPUIViewControllerClassify
-
-@end
 
 
-@interface UIViewController (Navigation)
+@interface UIViewController(Navigation)
 
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withImage:(NSString *)imgName withHImgae:(NSString *)hImageName;
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withTitle:(NSString *)titleString;

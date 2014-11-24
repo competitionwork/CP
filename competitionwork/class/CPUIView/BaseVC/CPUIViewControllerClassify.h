@@ -8,12 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CPUIViewControllerClassify : NSObject
 
-@end
-
-
-@implementation UIViewController (Navigation)
+@implementation UIViewController(Navigation)
 
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withImage:(NSString *)imgName withHImgae:(NSString *)hImageName {
     UIImage *iconClickBg = [UIImage imageNamed:@"icon点击背景"];
