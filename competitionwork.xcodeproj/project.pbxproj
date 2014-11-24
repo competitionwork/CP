@@ -44,6 +44,10 @@
 		04A1984B1A2053AB00EC6587 /* CPUserCenterListVeiw.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1984A1A2053AB00EC6587 /* CPUserCenterListVeiw.m */; };
 		04A198541A2091B100EC6587 /* GJUserCenterListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A198531A2091B100EC6587 /* GJUserCenterListViewCell.m */; };
 		04A198571A209AAC00EC6587 /* CPUserCenterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A198561A209AAB00EC6587 /* CPUserCenterVC.m */; };
+		04A3422E1A2398F7003D4F85 /* CPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3422B1A2398F7003D4F85 /* CPBaseViewController.m */; };
+		04A3422F1A2398F7003D4F85 /* CPUIViewControllerClassify.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */; };
+		04A342351A239913003D4F85 /* CPBaseLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A342321A239913003D4F85 /* CPBaseLoginView.m */; };
+		04A342361A239913003D4F85 /* CPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A342341A239913003D4F85 /* CPLoginView.m */; };
 		04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523CE1A1A3B1000FE9500 /* RefreshView.m */; };
 		04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */; };
 		04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */; };
@@ -196,6 +200,14 @@
 		04A198531A2091B100EC6587 /* GJUserCenterListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJUserCenterListViewCell.m; sourceTree = "<group>"; };
 		04A198551A209AAA00EC6587 /* CPUserCenterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPUserCenterVC.h; path = CPUIView/CPUserCenterVC.h; sourceTree = "<group>"; };
 		04A198561A209AAB00EC6587 /* CPUserCenterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPUserCenterVC.m; path = CPUIView/CPUserCenterVC.m; sourceTree = "<group>"; };
+		04A3422A1A2398F7003D4F85 /* CPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseViewController.h; sourceTree = "<group>"; };
+		04A3422B1A2398F7003D4F85 /* CPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseViewController.m; sourceTree = "<group>"; };
+		04A3422C1A2398F7003D4F85 /* CPUIViewControllerClassify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUIViewControllerClassify.h; sourceTree = "<group>"; };
+		04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUIViewControllerClassify.m; sourceTree = "<group>"; };
+		04A342311A239913003D4F85 /* CPBaseLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseLoginView.h; sourceTree = "<group>"; };
+		04A342321A239913003D4F85 /* CPBaseLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseLoginView.m; sourceTree = "<group>"; };
+		04A342331A239913003D4F85 /* CPLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLoginView.h; sourceTree = "<group>"; };
+		04A342341A239913003D4F85 /* CPLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLoginView.m; sourceTree = "<group>"; };
 		04A523CD1A1A3B1000FE9500 /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
 		04A523CE1A1A3B1000FE9500 /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
 		04A523D11A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+xiaolvAnimation.h"; sourceTree = "<group>"; };
@@ -336,6 +348,7 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
+				04A342301A239912003D4F85 /* loginView */,
 				04A198481A20533700EC6587 /* userCenter（个人中心） */,
 				0478C18C1A14FBC500552707 /* CPDetailView(详情页) */,
 				04AF384F1A061802008958C7 /* Model（模型） */,
@@ -357,6 +370,7 @@
 		0425015319F7F9CB0038E188 /* baseView */ = {
 			isa = PBXGroup;
 			children = (
+				04A342291A2398F7003D4F85 /* BaseVC */,
 				049DF56B1A0F5F6800F12447 /* mainView（列表页） */,
 			);
 			name = baseView;
@@ -502,6 +516,30 @@
 			name = "userCenter（个人中心）";
 			path = competitionwork/class/CPUIView/userCenter;
 			sourceTree = SOURCE_ROOT;
+		};
+		04A342291A2398F7003D4F85 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				04A3422A1A2398F7003D4F85 /* CPBaseViewController.h */,
+				04A3422B1A2398F7003D4F85 /* CPBaseViewController.m */,
+				04A3422C1A2398F7003D4F85 /* CPUIViewControllerClassify.h */,
+				04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */,
+			);
+			name = BaseVC;
+			path = competitionwork/class/CPUIView/BaseVC;
+			sourceTree = SOURCE_ROOT;
+		};
+		04A342301A239912003D4F85 /* loginView */ = {
+			isa = PBXGroup;
+			children = (
+				04A342311A239913003D4F85 /* CPBaseLoginView.h */,
+				04A342321A239913003D4F85 /* CPBaseLoginView.m */,
+				04A342331A239913003D4F85 /* CPLoginView.h */,
+				04A342341A239913003D4F85 /* CPLoginView.m */,
+			);
+			name = loginView;
+			path = CPUIView/loginView;
+			sourceTree = "<group>";
 		};
 		04A523CA1A1A3B1000FE9500 /* RefreshView */ = {
 			isa = PBXGroup;
@@ -892,6 +930,8 @@
 				0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */,
 				04CAC21119F7EFBF005291D3 /* AFURLConnectionOperation.m in Sources */,
 				04AF38521A06182C008958C7 /* GJBaseAPIInvokeCondition.m in Sources */,
+				04A3422E1A2398F7003D4F85 /* CPBaseViewController.m in Sources */,
+				04A3422F1A2398F7003D4F85 /* CPUIViewControllerClassify.m in Sources */,
 				0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */,
 				0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */,
 				04CAC21F19F7EFBF005291D3 /* GJCommonWidgetHelper.m in Sources */,
@@ -913,6 +953,7 @@
 				04CAC21619F7EFBF005291D3 /* GJFilterBarItem.m in Sources */,
 				04CAC20F19F7EFBF005291D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04CAC20C19F7EFBF005291D3 /* AFHTTPRequestOperation.m in Sources */,
+				04A342361A239913003D4F85 /* CPLoginView.m in Sources */,
 				0425014819F7F3A20038E188 /* CPMastViewController.m in Sources */,
 				04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */,
 				04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */,
@@ -931,6 +972,7 @@
 				0478C1951A150E3400552707 /* CPEntersView.m in Sources */,
 				04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */,
 				04CAC20B19F7EFBF005291D3 /* AFHTTPClient.m in Sources */,
+				04A342351A239913003D4F85 /* CPBaseLoginView.m in Sources */,
 				0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */,
 				04CAC22419F7EFBF005291D3 /* UIView+POViewFrameBuilder.m in Sources */,
 				04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */,
