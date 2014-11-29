@@ -17,7 +17,6 @@
 #import "filterManage.h"
 #import "CPDetailViewController.h"
 #import "RefreshView.h"
-#import "CPUIViewControllerClassify.h"
 #import "CPLoginView.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>

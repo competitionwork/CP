@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    CPBaseLoginView * loginView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(100, 100, 200, 50) andEntity:nil withModel:CPTEXEVIEWONE];
+    CPBaseLoginView * loginView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth, 50) andEntity:nil withModel:CPTEXEVIEWONE];
     [self.view addSubview:loginView];
     
 }

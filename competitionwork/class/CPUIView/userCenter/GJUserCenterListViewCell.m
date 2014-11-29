@@ -33,7 +33,7 @@
     if (!_bottomBorder) {
         _bottomBorder = [[GJCommonWidgetHelper sharedGJCommonWidgetHelper] createNormalBorderView];
         _bottomBorder.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin;
-        [_bottomBorder.po_frameBuilder setWidth:320 - 54];
+        [_bottomBorder.po_frameBuilder setWidth:MainScreenWidth - 54];
     }
     return _bottomBorder;
 }

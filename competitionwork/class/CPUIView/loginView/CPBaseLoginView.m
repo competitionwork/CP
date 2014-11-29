@@ -7,6 +7,7 @@
 //
 
 #import "CPBaseLoginView.h"
+#import "GJCommonWidgetHelper.h"
 
 @interface CPBaseLoginView ()
 
@@ -20,6 +21,8 @@
 
 @property (nonatomic, strong) CPBaseLoginViewModel * entity;
 
+@property (nonatomic, strong) UIView* bottomBorder;
+
 @end
 
 @implementation CPBaseLoginView
@@ -30,9 +33,11 @@
         self.image.image = entity.image;
         self.pleceHolde = entity.pleceHolde;
         self.model = model;
-        
+        self.backgroundColor = [UIColor clearColor];
         self.image.image = [UIImage imageNamed:@"tabbar_home_selected"];
         self.textField.placeholder = @"xxxxx";
+        
+        [self addSubview:self.bottomBorder];
         
         [self addSubview:self.image];
         
@@ -40,6 +45,16 @@
         
     }
     return self;
+}
+
+-(UIView *)bottomBorder{
+    
+    if (!_bottomBorder) {
+        _bottomBorder = [[GJCommonWidgetHelper sharedGJCommonWidgetHelper]createNormalBorderView];
+        _bottomBorder.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleLeftMargin;
+        [_bottomBorder.po_frameBuilder setWidth:MainScreenWidth];
+    }
+    return _bottomBorder;
 }
 
 -(UITextField *)textField{
@@ -62,7 +77,7 @@
 
 -(void)layoutSubviews{
     
-    [[[self.image.po_frameBuilder alignRightInSuperviewWithInset:8]setWidth:30]setHeight:30];
+    [[[self.image.po_frameBuilder alignLeftInSuperviewWithInset:8]setWidth:30]setHeight:30];
     
     [[[self.textField.po_frameBuilder alignRightOfView:self.image offset:3]setHeight:44]setWidth:(self.width-self.image.width)];
     
@@ -70,6 +85,17 @@
     
     if (self.model == CPTEXEVIEWONE) {
         
+    }
+    switch (_model) {
+        case CPTEXEVIEWUP:
+            [_bottomBorder.po_frameBuilder setHeight:0.5];
+            [[_bottomBorder.po_frameBuilder alignToBottomInSuperviewWithInset:0]alignRightInSuperviewWithInset:0];
+            break;
+        case CPTEXEVIEWONE:
+            break;
+            
+        default:
+            break;
     }
     
 }
