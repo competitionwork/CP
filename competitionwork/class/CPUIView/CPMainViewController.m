@@ -18,6 +18,7 @@
 #import "CPDetailViewController.h"
 #import "RefreshView.h"
 #import "CPLoginView.h"
+#import "CPResingVC.h"
 #import "CPUIViewControllerClassify.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
@@ -55,6 +56,7 @@
     
     
     [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
+    [self setNavigationLeftButton:self withSelector:@selector(resing) withTitle:@"注册"];
     
     [self.view addSubview:self.filterView];
     
@@ -105,6 +107,12 @@
                                                        bundle:nil];
     
     [self.navigationController pushViewController:login animated:YES];
+}
+
+-(void)resing{
+    CPResingVC * resing = [[CPResingVC alloc]initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:resing animated:YES];
 }
 
 - (void)refresh {

@@ -22,6 +22,8 @@ typedef enum {
 @interface CPBaseTextFileCell : UIView
 -(instancetype)initWithFrame:(CGRect)frame andEntity:(CPBaseLabelCellModel*)entity withModel:(CPTEXEVIEMODEL)model;
 -(NSString *)textString;
+-(void)setTextFontMunber:(int)number;
+
 
 @end
 

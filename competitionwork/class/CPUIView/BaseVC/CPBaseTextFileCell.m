@@ -36,8 +36,10 @@
         self.pleceHolde = entity.pleceHolde;
         self.model = model;
         self.backgroundColor = [UIColor clearColor];
-        self.image.image = entity.image?entity.image:[UIImage imageNamed:@"tabbar_home_selected"];
-        self.textField.placeholder = entity.pleceHolde?entity.pleceHolde:@"xxxxx";
+        self.image.image = entity.image;
+        [self.image sizeToFit];
+        
+        self.textField.placeholder = entity.pleceHolde?entity.pleceHolde:@"";
         
         [self addSubview:self.backImage];
         
@@ -79,16 +81,20 @@
     return _textField;
 }
 
+-(void)setTextFontMunber:(int)number{
+    self.textField.font = [UIFont systemFontOfSize:number];
+}
+
 -(UIImageView *)image{
     if (!_image) {
-        _image = [[UIImageView alloc]init];
+        _image = [[UIImageView alloc]initWithFrame:CGRectZero];
     }
     return _image;
 }
 
 -(void)layoutSubviews{
     
-    [[[[self.image.po_frameBuilder alignLeftInSuperviewWithInset:8]setWidth:30]setHeight:30] centerVerticallyInSuperview];
+    [[[[self.image.po_frameBuilder alignLeftInSuperviewWithInset:8]setWidth:_image.size.width]setHeight:_image.size.width] centerVerticallyInSuperview];
     
     [[[[self.textField.po_frameBuilder alignRightOfView:self.image offset:3]setHeight:44]setWidth:(self.width-self.image.width)] centerVerticallyInSuperview];
     
@@ -97,6 +103,7 @@
             [_bottomBorder.po_frameBuilder setHeight:0.5];
             [[_bottomBorder.po_frameBuilder alignToBottomInSuperviewWithInset:0]alignRightInSuperviewWithInset:0];
             self.backImage.image = [self getBackgroundImage:_model];
+            
             break;
         case CPTEXEVIEWMIN:
             [_bottomBorder.po_frameBuilder setHeight:0.5];
@@ -107,11 +114,13 @@
         case CPTEXEVIEWDOWN:
             
             self.backImage.image = [self getBackgroundImage:_model];
+            self.bottomBorder.hidden = YES;
             
             break;
         case CPTEXEVIEWONE:
             
             self.backImage.image = [self getBackgroundImage:_model];
+            self.bottomBorder.hidden = YES;
             
             break;
         default:
@@ -123,7 +132,8 @@
 -(UIImage*)getBackgroundImage:(CPTEXEVIEMODEL)model{
     
     UIImage * backGroundImage = [UIImage imageNamed:@"登陆注册输入框"];
-    
+//    UIImage * backGroundImage = [UIImage imageNamed:@""];
+
     return [backGroundImage stretchableImageWithLeftCapWidth:backGroundImage.size.width/2 topCapHeight:backGroundImage.size.height/2];
     
 }

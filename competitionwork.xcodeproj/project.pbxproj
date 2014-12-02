@@ -120,6 +120,7 @@
 		04FA58CE1A2DB90D00BAA19E /* CPResingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58CD1A2DB90D00BAA19E /* CPResingVC.m */; };
 		04FA58D11A2DBC2D00BAA19E /* CPResingBaseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */; };
 		04FA58D41A2DBC6E00BAA19E /* CPBaseTextFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */; };
+		04FF96651A2E0261005CCAEF /* CPBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF96641A2E0261005CCAEF /* CPBaseButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +337,8 @@
 		04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPResingBaseCellView.m; sourceTree = "<group>"; };
 		04FA58D21A2DBC6E00BAA19E /* CPBaseTextFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseTextFileCell.h; sourceTree = "<group>"; };
 		04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseTextFileCell.m; sourceTree = "<group>"; };
+		04FF96631A2E0261005CCAEF /* CPBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseButton.h; sourceTree = "<group>"; };
+		04FF96641A2E0261005CCAEF /* CPBaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,6 +552,8 @@
 				04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */,
 				04FA58D21A2DBC6E00BAA19E /* CPBaseTextFileCell.h */,
 				04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */,
+				04FF96631A2E0261005CCAEF /* CPBaseButton.h */,
+				04FF96641A2E0261005CCAEF /* CPBaseButton.m */,
 			);
 			name = BaseVC;
 			path = competitionwork/class/CPUIView/BaseVC;
@@ -991,6 +996,7 @@
 				04A198571A209AAC00EC6587 /* CPUserCenterVC.m in Sources */,
 				04CAC21219F7EFBF005291D3 /* AFXMLRequestOperation.m in Sources */,
 				04CAC22219F7EFBF005291D3 /* UIView+borders.m in Sources */,
+				04FF96651A2E0261005CCAEF /* CPBaseButton.m in Sources */,
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
 				04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */,
