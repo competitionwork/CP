@@ -58,7 +58,7 @@
     
     [self.view addSubview:self.filterView];
     
-    [self.filterView.po_frameBuilder alignToTopInSuperviewWithInset:64];
+    [self.filterView.po_frameBuilder alignToTopInSuperviewWithInset:0];
     
     //    [self download];
     
@@ -103,6 +103,7 @@
 -(void)push{
     CPLoginView * login = [[CPLoginView alloc]initWithNibName:nil
                                                        bundle:nil];
+    
     [self.navigationController pushViewController:login animated:YES];
 }
 
@@ -380,7 +381,7 @@
     [self.view bringSubviewToFront:_filterView];
     
     if (1) {
-        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44] setY:104];
+        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44]alignToBottomOfView:self.filterView offset:0];
     }
     else {
         [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];

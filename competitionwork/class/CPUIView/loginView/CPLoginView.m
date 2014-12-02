@@ -34,10 +34,10 @@
     UIImageView * imageTitleView = [[UIImageView alloc]initWithImage:nil];
     imageTitleView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:imageTitleView];
-    [[[[imageTitleView.po_frameBuilder setHeight:100]setWidth:200]alignToTopInSuperviewWithInset:70] centerHorizontallyInSuperview];
+    [[[[imageTitleView.po_frameBuilder setHeight:100]setWidth:200]alignToTopInSuperviewWithInset:20] centerHorizontallyInSuperview];
     
     
-    CPBaseLoginViewModel * name = [[CPBaseLoginViewModel alloc]init];
+    CPBaseLabelCellModel * name = [[CPBaseLabelCellModel alloc]init];
     name.pleceHolde = @"用户名称";
     name.image = [UIImage imageNamed:@"tabbar_home_selected"];
     self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-50, 50) andEntity:name withModel:CPTEXEVIEWUP];
@@ -45,7 +45,7 @@
     [[self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:20]centerHorizontallyInSuperview];
     
     
-    CPBaseLoginViewModel * password = [[CPBaseLoginViewModel alloc]init];
+    CPBaseLabelCellModel * password = [[CPBaseLabelCellModel alloc]init];
     password.pleceHolde = @"密码";
     password.image = [UIImage imageNamed:@"tabbar_home_selected"];
     self.passwordView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-50, 50) andEntity:password withModel:CPTEXEVIEWDOWN];

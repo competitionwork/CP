@@ -116,6 +116,10 @@
 		04CAC22419F7EFBF005291D3 /* UIView+POViewFrameBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAC20719F7EFBF005291D3 /* UIView+POViewFrameBuilder.m */; };
 		04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAC20A19F7EFBF005291D3 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		04FA58C81A2D782800BAA19E /* 登陆注册输入框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FA58C71A2D782800BAA19E /* 登陆注册输入框@2x.png */; };
+		04FA58CA1A2DA45C00BAA19E /* title平铺X64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FA58C91A2DA45C00BAA19E /* title平铺X64@2x.png */; };
+		04FA58CE1A2DB90D00BAA19E /* CPResingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58CD1A2DB90D00BAA19E /* CPResingVC.m */; };
+		04FA58D11A2DBC2D00BAA19E /* CPResingBaseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */; };
+		04FA58D41A2DBC6E00BAA19E /* CPBaseTextFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -325,6 +329,13 @@
 		04CAC20919F7EFBF005291D3 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		04CAC20A19F7EFBF005291D3 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		04FA58C71A2D782800BAA19E /* 登陆注册输入框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登陆注册输入框@2x.png"; sourceTree = "<group>"; };
+		04FA58C91A2DA45C00BAA19E /* title平铺X64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title平铺X64@2x.png"; sourceTree = "<group>"; };
+		04FA58CC1A2DB90D00BAA19E /* CPResingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPResingVC.h; sourceTree = "<group>"; };
+		04FA58CD1A2DB90D00BAA19E /* CPResingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPResingVC.m; sourceTree = "<group>"; };
+		04FA58CF1A2DBC2D00BAA19E /* CPResingBaseCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPResingBaseCellView.h; sourceTree = "<group>"; };
+		04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPResingBaseCellView.m; sourceTree = "<group>"; };
+		04FA58D21A2DBC6E00BAA19E /* CPBaseTextFileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseTextFileCell.h; sourceTree = "<group>"; };
+		04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseTextFileCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,7 +368,8 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
-				04A342301A239912003D4F85 /* loginView */,
+				04FA58CB1A2DB83200BAA19E /* resingView(注册) */,
+				04A342301A239912003D4F85 /* loginView(登录) */,
 				04A198481A20533700EC6587 /* userCenter（个人中心） */,
 				0478C18C1A14FBC500552707 /* CPDetailView(详情页) */,
 				04AF384F1A061802008958C7 /* Model（模型） */,
@@ -535,12 +547,14 @@
 				04A3422B1A2398F7003D4F85 /* CPBaseViewController.m */,
 				04A3422C1A2398F7003D4F85 /* CPUIViewControllerClassify.h */,
 				04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */,
+				04FA58D21A2DBC6E00BAA19E /* CPBaseTextFileCell.h */,
+				04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */,
 			);
 			name = BaseVC;
 			path = competitionwork/class/CPUIView/BaseVC;
 			sourceTree = SOURCE_ROOT;
 		};
-		04A342301A239912003D4F85 /* loginView */ = {
+		04A342301A239912003D4F85 /* loginView(登录) */ = {
 			isa = PBXGroup;
 			children = (
 				04A342311A239913003D4F85 /* CPBaseLoginView.h */,
@@ -548,7 +562,7 @@
 				04A342331A239913003D4F85 /* CPLoginView.h */,
 				04A342341A239913003D4F85 /* CPLoginView.m */,
 			);
-			name = loginView;
+			name = "loginView(登录)";
 			path = CPUIView/loginView;
 			sourceTree = "<group>";
 		};
@@ -587,6 +601,7 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
+				04FA58C91A2DA45C00BAA19E /* title平铺X64@2x.png */,
 				04FA58C71A2D782800BAA19E /* 登陆注册输入框@2x.png */,
 				04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */,
 				04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */,
@@ -807,6 +822,18 @@
 			path = competitionwork/JSONKit;
 			sourceTree = "<group>";
 		};
+		04FA58CB1A2DB83200BAA19E /* resingView(注册) */ = {
+			isa = PBXGroup;
+			children = (
+				04FA58CC1A2DB90D00BAA19E /* CPResingVC.h */,
+				04FA58CD1A2DB90D00BAA19E /* CPResingVC.m */,
+				04FA58CF1A2DBC2D00BAA19E /* CPResingBaseCellView.h */,
+				04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */,
+			);
+			name = "resingView(注册)";
+			path = CPUIView/resingView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -889,6 +916,7 @@
 				04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */,
 				04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */,
 				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
+				04FA58CA1A2DA45C00BAA19E /* title平铺X64@2x.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
 				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
 				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
@@ -943,6 +971,7 @@
 				0425014C19F7F86D0038E188 /* CPMainViewController.m in Sources */,
 				04A0DA421A04D48D008C4E12 /* yajl.c in Sources */,
 				0496675D1A04AB1F0090EE5E /* Constant.m in Sources */,
+				04FA58D11A2DBC2D00BAA19E /* CPResingBaseCellView.m in Sources */,
 				04CAC22019F7EFBF005291D3 /* NSArray+linq.m in Sources */,
 				0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */,
 				04CAC21119F7EFBF005291D3 /* AFURLConnectionOperation.m in Sources */,
@@ -954,6 +983,7 @@
 				04CAC21F19F7EFBF005291D3 /* GJCommonWidgetHelper.m in Sources */,
 				0417F13B1A0A86800067CAED /* AttentionView.m in Sources */,
 				04A198541A2091B100EC6587 /* GJUserCenterListViewCell.m in Sources */,
+				04FA58D41A2DBC6E00BAA19E /* CPBaseTextFileCell.m in Sources */,
 				04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */,
 				04CAC21D19F7EFBF005291D3 /* GJFilterView.m in Sources */,
 				04A0DA4A1A04D48D008C4E12 /* YAJL_GTMBase64.m in Sources */,
@@ -994,6 +1024,7 @@
 				04CAC22419F7EFBF005291D3 /* UIView+POViewFrameBuilder.m in Sources */,
 				04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */,
 				0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */,
+				04FA58CE1A2DB90D00BAA19E /* CPResingVC.m in Sources */,
 				04AF38481A060907008958C7 /* CPBaseList.m in Sources */,
 				04CAC21719F7EFBF005291D3 /* GJFilterFullOptionListViewController.m in Sources */,
 				04AF385E1A062E96008958C7 /* CPMainListCellTableViewCell.m in Sources */,

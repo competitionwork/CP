@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPDynamicViewController : UIViewController
+@interface CPDynamicViewController : CPBaseViewController
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CPLoginView : UIViewController
+#import "CPBaseViewController.h"
+@interface CPLoginView : CPBaseViewController
 
 @end
