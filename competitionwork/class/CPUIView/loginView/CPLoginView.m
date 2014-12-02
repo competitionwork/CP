@@ -40,17 +40,17 @@
     CPBaseLoginViewModel * name = [[CPBaseLoginViewModel alloc]init];
     name.pleceHolde = @"用户名称";
     name.image = [UIImage imageNamed:@"tabbar_home_selected"];
-    self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth, 50) andEntity:name withModel:CPTEXEVIEWUP];
+    self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-50, 50) andEntity:name withModel:CPTEXEVIEWUP];
     [self.view addSubview:self.userNameView];
-    [self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:20];
+    [[self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:20]centerHorizontallyInSuperview];
     
     
     CPBaseLoginViewModel * password = [[CPBaseLoginViewModel alloc]init];
     password.pleceHolde = @"密码";
     password.image = [UIImage imageNamed:@"tabbar_home_selected"];
-    self.passwordView = [[CPBaseLoginView alloc]initWithFrame:CGRectZero andEntity:password withModel:CPTEXEVIEWDOWN];
+    self.passwordView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-50, 50) andEntity:password withModel:CPTEXEVIEWDOWN];
     [self.view addSubview:self.passwordView];
-    [[[self.passwordView.po_frameBuilder alignToBottomOfView:self.userNameView offset:1]setHeight:50]setWidth:MainScreenWidth];
+    [[[[self.passwordView.po_frameBuilder alignToBottomOfView:self.userNameView offset:1]setHeight:50]setWidth:MainScreenWidth - 50]centerHorizontallyInSuperview];
     
     self.logonButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _logonButton.frame = CGRectMake(13, 22, MainScreenWidth - 26, 40);
@@ -64,7 +64,7 @@
     [_logonButton setTitle:@"登录" forState:UIControlStateNormal];
     [_logonButton addTarget:self action:@selector(loginPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_logonButton];
-    [self.logonButton.po_frameBuilder alignToBottomOfView:self.passwordView offset:30];
+    [[self.logonButton.po_frameBuilder alignToBottomOfView:self.passwordView offset:30]centerHorizontallyInSuperview];
 
 }
 
