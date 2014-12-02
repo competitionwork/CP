@@ -34,8 +34,8 @@
         self.pleceHolde = entity.pleceHolde;
         self.model = model;
         self.backgroundColor = [UIColor clearColor];
-        self.image.image = [UIImage imageNamed:@"tabbar_home_selected"];
-        self.textField.placeholder = @"xxxxx";
+        self.image.image = entity.image?entity.image:[UIImage imageNamed:@"tabbar_home_selected"];
+        self.textField.placeholder = entity.pleceHolde?entity.pleceHolde:@"xxxxx";
         
         [self addSubview:self.bottomBorder];
         
@@ -81,25 +81,30 @@
     
     [[[self.textField.po_frameBuilder alignRightOfView:self.image offset:3]setHeight:44]setWidth:(self.width-self.image.width)];
     
-    
-    
-    if (self.model == CPTEXEVIEWONE) {
-        
-    }
     switch (_model) {
         case CPTEXEVIEWUP:
             [_bottomBorder.po_frameBuilder setHeight:0.5];
             [[_bottomBorder.po_frameBuilder alignToBottomInSuperviewWithInset:0]alignRightInSuperviewWithInset:0];
             break;
-        case CPTEXEVIEWONE:
+        case CPTEXEVIEWMIN:
+            [_bottomBorder.po_frameBuilder setHeight:0.5];
+            [[_bottomBorder.po_frameBuilder alignToBottomInSuperviewWithInset:0]alignRightInSuperviewWithInset:0];
             break;
+        case CPTEXEVIEWDOWN:
             
+            break;
+        case CPTEXEVIEWONE:
+            
+            break;
         default:
             break;
     }
     
 }
 
+-(NSString *)textString{
+    return self.textField.text;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

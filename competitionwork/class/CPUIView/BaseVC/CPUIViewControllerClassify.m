@@ -10,7 +10,7 @@
 
 
 
-@interface UIViewController(Navigation)
+@interface UIViewController(CPNavigation)
 
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withImage:(NSString *)imgName withHImgae:(NSString *)hImageName;
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withTitle:(NSString *)titleString;

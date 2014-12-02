@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@implementation UIViewController(Navigation)
+@implementation UIViewController(CPNavigation)
 
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withImage:(NSString *)imgName withHImgae:(NSString *)hImageName {
     UIImage *iconClickBg = [UIImage imageNamed:@"icon点击背景"];

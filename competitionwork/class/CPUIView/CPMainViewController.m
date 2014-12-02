@@ -18,6 +18,7 @@
 #import "CPDetailViewController.h"
 #import "RefreshView.h"
 #import "CPLoginView.h"
+#import "CPUIViewControllerClassify.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
 {
@@ -52,7 +53,8 @@
     
     self.title = @"竞赛";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"按钮" style:UIBarButtonItemStyleDone target:self action:@selector(push)];
+    
+    [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
     
     [self.view addSubview:self.filterView];
     
@@ -99,7 +101,8 @@
 }
 
 -(void)push{
-    CPLoginView * login = [[CPLoginView alloc]init];
+    CPLoginView * login = [[CPLoginView alloc]initWithNibName:nil
+                                                       bundle:nil];
     [self.navigationController pushViewController:login animated:YES];
 }
 

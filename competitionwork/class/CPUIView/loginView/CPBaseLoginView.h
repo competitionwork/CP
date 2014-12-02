@@ -20,7 +20,7 @@ typedef enum {
 @interface CPBaseLoginView : UIView
 
 -(instancetype)initWithFrame:(CGRect)frame andEntity:(CPBaseLoginViewModel*)entity withModel:(CPTEXEVIEMODEL)model;
-
+-(NSString *)textString;
 
 
 @end

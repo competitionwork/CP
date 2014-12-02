@@ -19,6 +19,9 @@
 		0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0425015019F7F8E50038E188 /* CPDynamicViewController.xib */; };
 		0425015D19F8031E0038E188 /* CPAPIBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015C19F8031E0038E188 /* CPAPIBaseHelper.m */; };
 		0425016019F804270038E188 /* GJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425015F19F804270038E188 /* GJError.m */; };
+		04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */; };
+		04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */; };
+		04372B0A1A2C2E2B007DCBAD /* CPAPIHelper_userURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */; };
 		0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C18E1A14FBF800552707 /* CPDetailViewController.m */; };
 		0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1911A1500D700552707 /* CPDetailEntiy.m */; };
 		0478C1951A150E3400552707 /* CPEntersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1941A150E3400552707 /* CPEntersView.m */; };
@@ -147,6 +150,10 @@
 		0425015C19F8031E0038E188 /* CPAPIBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAPIBaseHelper.m; sourceTree = "<group>"; };
 		0425015E19F804270038E188 /* GJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJError.h; sourceTree = "<group>"; };
 		0425015F19F804270038E188 /* GJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJError.m; sourceTree = "<group>"; };
+		04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮-绿-点击@3x.png"; sourceTree = "<group>"; };
+		04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮-绿@3x.png"; sourceTree = "<group>"; };
+		04372B081A2C2E2B007DCBAD /* CPAPIHelper_userURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_userURL.h; path = API/CPAPIHelper_userURL.h; sourceTree = "<group>"; };
+		04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_userURL.m; path = API/CPAPIHelper_userURL.m; sourceTree = "<group>"; };
 		0478C18D1A14FBF800552707 /* CPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailViewController.h; sourceTree = "<group>"; };
 		0478C18E1A14FBF800552707 /* CPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailViewController.m; sourceTree = "<group>"; };
 		0478C1901A1500D700552707 /* CPDetailEntiy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailEntiy.h; sourceTree = "<group>"; };
@@ -413,6 +420,8 @@
 			children = (
 				049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */,
 				049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */,
+				04372B081A2C2E2B007DCBAD /* CPAPIHelper_userURL.h */,
+				04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */,
 			);
 			name = "API（接口）";
 			sourceTree = "<group>";
@@ -576,6 +585,8 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
+				04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */,
+				04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */,
 				04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */,
 				04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */,
 				04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */,
@@ -878,7 +889,9 @@
 				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
 				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
 				04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */,
+				04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
+				04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */,
 				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
 				04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */,
 				04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */,
@@ -980,6 +993,7 @@
 				04AF38481A060907008958C7 /* CPBaseList.m in Sources */,
 				04CAC21719F7EFBF005291D3 /* GJFilterFullOptionListViewController.m in Sources */,
 				04AF385E1A062E96008958C7 /* CPMainListCellTableViewCell.m in Sources */,
+				04372B0A1A2C2E2B007DCBAD /* CPAPIHelper_userURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
