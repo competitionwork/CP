@@ -9,8 +9,11 @@
 #import "CPResingVC.h"
 #import "CPResingBaseCellView.h"
 #import "CPBaseButton.h"
+#import "CPUserHeadPictureView.h"
 
 @interface CPResingVC ()
+
+@property (nonatomic,strong) CPUserHeadPictureView *headView;
 
 @property (nonatomic, strong) CPResingBaseCellView * maneView;
 
@@ -36,6 +39,19 @@
 }
 
 -(void)creatTheUI{
+    
+    self.headView = [[CPUserHeadPictureView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 100)];
+    
+    [self.headView setBlock:^(UIImageView * image){
+        
+    }];
+    
+    [self.view addSubview:self.headView];
+    
+    
+    
+    
+    
     NSArray * arrayPleceholde = @[@"请输入真实姓名",
                                   @"请输入验证码",
                                   @"请输入密码",

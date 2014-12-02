@@ -121,6 +121,9 @@
 		04FA58D11A2DBC2D00BAA19E /* CPResingBaseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */; };
 		04FA58D41A2DBC6E00BAA19E /* CPBaseTextFileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */; };
 		04FF96651A2E0261005CCAEF /* CPBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF96641A2E0261005CCAEF /* CPBaseButton.m */; };
+		04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FF96661A2E268F005CCAEF /* 个人中心-头像@2x.png */; };
+		04FF966A1A2E26F7005CCAEF /* CPUserHeadPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FF96691A2E26F7005CCAEF /* CPUserHeadPictureView.m */; };
+		04FF966C1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FF966B1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +342,10 @@
 		04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseTextFileCell.m; sourceTree = "<group>"; };
 		04FF96631A2E0261005CCAEF /* CPBaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseButton.h; sourceTree = "<group>"; };
 		04FF96641A2E0261005CCAEF /* CPBaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseButton.m; sourceTree = "<group>"; };
+		04FF96661A2E268F005CCAEF /* 个人中心-头像@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人中心-头像@2x.png"; sourceTree = "<group>"; };
+		04FF96681A2E26F7005CCAEF /* CPUserHeadPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUserHeadPictureView.h; sourceTree = "<group>"; };
+		04FF96691A2E26F7005CCAEF /* CPUserHeadPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUserHeadPictureView.m; sourceTree = "<group>"; };
+		04FF966B1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人中心-头像列表@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -606,6 +613,8 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
+				04FF966B1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png */,
+				04FF96661A2E268F005CCAEF /* 个人中心-头像@2x.png */,
 				04FA58C91A2DA45C00BAA19E /* title平铺X64@2x.png */,
 				04FA58C71A2D782800BAA19E /* 登陆注册输入框@2x.png */,
 				04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */,
@@ -834,6 +843,8 @@
 				04FA58CD1A2DB90D00BAA19E /* CPResingVC.m */,
 				04FA58CF1A2DBC2D00BAA19E /* CPResingBaseCellView.h */,
 				04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */,
+				04FF96681A2E26F7005CCAEF /* CPUserHeadPictureView.h */,
+				04FF96691A2E26F7005CCAEF /* CPUserHeadPictureView.m */,
 			);
 			name = "resingView(注册)";
 			path = CPUIView/resingView;
@@ -920,9 +931,11 @@
 				04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */,
 				04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */,
 				04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */,
+				04FF966C1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png in Resources */,
 				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
 				04FA58CA1A2DA45C00BAA19E /* title平铺X64@2x.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
+				04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */,
 				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
 				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
 				04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */,
@@ -1033,6 +1046,7 @@
 				04FA58CE1A2DB90D00BAA19E /* CPResingVC.m in Sources */,
 				04AF38481A060907008958C7 /* CPBaseList.m in Sources */,
 				04CAC21719F7EFBF005291D3 /* GJFilterFullOptionListViewController.m in Sources */,
+				04FF966A1A2E26F7005CCAEF /* CPUserHeadPictureView.m in Sources */,
 				04AF385E1A062E96008958C7 /* CPMainListCellTableViewCell.m in Sources */,
 				04372B0A1A2C2E2B007DCBAD /* CPAPIHelper_userURL.m in Sources */,
 			);
