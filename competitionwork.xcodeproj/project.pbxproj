@@ -73,6 +73,8 @@
 		04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF38571A06195A008958C7 /* NSObject+GJExtand.m */; };
 		04AF385B1A061A30008958C7 /* CPPostDataRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF385A1A061A30008958C7 /* CPPostDataRequestParam.m */; };
 		04AF385E1A062E96008958C7 /* CPMainListCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF385D1A062E96008958C7 /* CPMainListCellTableViewCell.m */; };
+		04C885A51A2EB90500E441CA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C885A41A2EB90500E441CA /* AssetsLibrary.framework */; };
+		04C885A81A2EE2C300E441CA /* CPAPIHelper_setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */; };
 		04CAC19719F7EF82005291D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CAC19619F7EF82005291D3 /* Foundation.framework */; };
 		04CAC19919F7EF82005291D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CAC19819F7EF82005291D3 /* CoreGraphics.framework */; };
 		04CAC19B19F7EF82005291D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CAC19A19F7EF82005291D3 /* UIKit.framework */; };
@@ -256,6 +258,9 @@
 		04AF385A1A061A30008958C7 /* CPPostDataRequestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPPostDataRequestParam.m; path = CPUIView/Model/CPPostDataRequestParam.m; sourceTree = "<group>"; };
 		04AF385C1A062E96008958C7 /* CPMainListCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellTableViewCell.h; path = competitionwork/class/CPUIView/CPMainListCellTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		04AF385D1A062E96008958C7 /* CPMainListCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPMainListCellTableViewCell.m; path = competitionwork/class/CPUIView/CPMainListCellTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		04C885A41A2EB90500E441CA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		04C885A61A2EE2C300E441CA /* CPAPIHelper_setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_setting.h; path = API/CPAPIHelper_setting.h; sourceTree = "<group>"; };
+		04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_setting.m; path = API/CPAPIHelper_setting.m; sourceTree = "<group>"; };
 		04CAC19319F7EF82005291D3 /* competitionwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = competitionwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CAC19619F7EF82005291D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04CAC19819F7EF82005291D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -353,6 +358,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C885A51A2EB90500E441CA /* AssetsLibrary.framework in Frameworks */,
 				04A523ED1A1A5ABD00FE9500 /* QuartzCore.framework in Frameworks */,
 				04CAC19919F7EF82005291D3 /* CoreGraphics.framework in Frameworks */,
 				04CAC19D19F7EF82005291D3 /* CoreData.framework in Frameworks */,
@@ -446,6 +452,8 @@
 				049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */,
 				04372B081A2C2E2B007DCBAD /* CPAPIHelper_userURL.h */,
 				04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */,
+				04C885A61A2EE2C300E441CA /* CPAPIHelper_setting.h */,
+				04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */,
 			);
 			name = "API（接口）";
 			sourceTree = "<group>";
@@ -676,6 +684,7 @@
 		04CAC19519F7EF82005291D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04C885A41A2EB90500E441CA /* AssetsLibrary.framework */,
 				04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */,
 				04CAC19619F7EF82005291D3 /* Foundation.framework */,
 				04CAC19819F7EF82005291D3 /* CoreGraphics.framework */,
@@ -1014,6 +1023,7 @@
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
 				04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */,
 				04CAC20E19F7EFBF005291D3 /* AFJSONRequestOperation.m in Sources */,
+				04C885A81A2EE2C300E441CA /* CPAPIHelper_setting.m in Sources */,
 				04CAC21519F7EFBF005291D3 /* GJFilterBar.m in Sources */,
 				04CAC21319F7EFBF005291D3 /* UIImageView+AFNetworking.m in Sources */,
 				04CAC21619F7EFBF005291D3 /* GJFilterBarItem.m in Sources */,

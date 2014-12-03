@@ -10,6 +10,7 @@
 #import "CPResingBaseCellView.h"
 #import "CPBaseButton.h"
 #import "CPUserHeadPictureView.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface CPResingVC ()
 
@@ -24,6 +25,9 @@
 @property (nonatomic,strong) CPResingBaseCellView *PasswordAgain;
 
 @property (nonatomic,strong) CPBaseButton *resingButton;
+
+@property (nonatomic,strong) UIImagePickerController *pickerController;
+
 
 @end
 
@@ -42,7 +46,11 @@
     
     self.headView = [[CPUserHeadPictureView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 100)];
     
+    __weak typeof(*&self) weakSelf = self;
+    
     [self.headView setBlock:^(UIImageView * image){
+        
+        [weakSelf touchHeadView];
         
     }];
     
@@ -129,7 +137,6 @@
     self.resingButton = [CPBaseButton buttonWithType:UIButtonTypeCustom];
     [self.resingButton setStylesWithTitle:@"注册"];
     
-    __weak typeof(*&self) weakSelf = self;
     
     [self.resingButton setBlock:^(UIButton * btn){
         [weakSelf touchResing:btn];
@@ -141,6 +148,66 @@
     
 }
 
+-(void)touchHeadView{
+    
+    __weak typeof(*&self) weakSelf = self;
+    
+    UIActionSheet * action = [[UIActionSheet alloc]initWithTitle:nil delegate:weakSelf cancelButtonTitle:@"取消" destructiveButtonTitle:@"拍照" otherButtonTitles:@"从相册选择照片", nil];
+    [action showInView:[[UIApplication sharedApplication]keyWindow]];
+    
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+
+    
+    if (buttonIndex == 0) {
+
+        self.pickerController = [[UIImagePickerController alloc]init];
+        self.pickerController.delegate = self;
+        self.pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
+        self.pickerController.allowsEditing = YES;
+        [self.pickerController viewWillAppear:YES];
+        [self.pickerController viewWillDisappear:YES];
+        [self.navigationController presentViewController:self.pickerController animated:YES completion:^{
+            
+        }];
+        
+        
+    }else if (buttonIndex == 1){
+        
+        int status = [ALAssetsLibrary authorizationStatus];
+        if (status == ALAuthorizationStatusDenied) {
+        }
+        
+        self.pickerController = [[UIImagePickerController alloc]init];
+        self.pickerController.delegate = self;
+        self.pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        self.pickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
+        self.pickerController.allowsEditing = YES;
+        [self.pickerController viewWillAppear:YES];
+        [self.pickerController viewWillDisappear:YES];
+        [self.navigationController presentViewController:self.pickerController animated:YES completion:^{
+            
+        }];
+
+        
+    }
+}
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    self.pickerController.allowsEditing = NO;
+    UIImage                 *headImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+    
+    [self.headView setHeadWithImage:headImage];
+    [self.pickerController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    
+}
 
 -(void)touchResing:(id)sender{
     

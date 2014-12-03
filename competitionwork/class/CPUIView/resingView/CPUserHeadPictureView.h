@@ -14,4 +14,14 @@ typedef void (^HeadBlock)(UIImageView * image);
 
 @property (nonatomic,copy) HeadBlock Block;
 
+-(UIImageView*)getHeadView;
+
+-(void)setHeadWithImage:(UIImage*)image;
+
+-(void)startAnimating;
+
+-(void)stopAnimating;
+
+
+
 @end
