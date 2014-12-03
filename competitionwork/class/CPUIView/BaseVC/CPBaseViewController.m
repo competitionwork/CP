@@ -7,7 +7,7 @@
 //
 
 #import "CPBaseViewController.h"
-
+#import "CPUIViewControllerClassify.h"
 @interface CPBaseViewController ()
 
 @end
@@ -16,8 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavigationBackButton:self withSelector:@selector(goBack)];
+    
     [self.navigationController.navigationBar setBackgroundImage:getimagePINGPU([UIImage imageNamed:@"title平铺X64"]) forBarMetrics:UIBarMetricsDefault];
     // Do any additional setup after loading the view.
+}
+
+-(void)goBack{
+    
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {

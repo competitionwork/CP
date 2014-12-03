@@ -18,7 +18,8 @@
 #import "CPDetailViewController.h"
 #import "RefreshView.h"
 #import "CPLoginView.h"
-#import "CPResingVC.h"
+//#import "CPResingVC.h"
+#import "CPPersonalInformationVC.h"
 #import "CPUIViewControllerClassify.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
@@ -110,7 +111,7 @@
 }
 
 -(void)resing{
-    CPResingVC * resing = [[CPResingVC alloc]initWithNibName:nil bundle:nil];
+    CPPersonalInformationVC * resing = [[CPPersonalInformationVC alloc]initWithNibName:nil bundle:nil];
     
     [self.navigationController pushViewController:resing animated:YES];
 }

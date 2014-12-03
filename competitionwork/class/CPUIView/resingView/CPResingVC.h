@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CPBaseViewController.h"
+
 @interface CPResingVC : CPBaseViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end

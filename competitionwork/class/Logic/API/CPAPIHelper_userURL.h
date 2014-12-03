@@ -12,4 +12,5 @@
 + (instancetype)sharedInstance;
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(login);
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(reg);
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(regprofile);
 @end

@@ -101,6 +101,20 @@
     [self setNavigationRightView:backButtonView];
 }
 
+-(void)setNavigationBackButton:(UIViewController *)target withSelector:(SEL)selector
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *iconImg = [UIImage imageNamed:@"标题栏-icon-左箭头-返回.png"];
+    [btn setExclusiveTouch:YES];
+    btn.tag = 4582;
+    
+    [btn setFrame:CGRectMake(-5, 0, 30, 32)];
+    [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    [btn setImage:iconImg forState:UIControlStateNormal];
+    target.navigationItem.backBarButtonItem = nil;
+    [self setNavigationLeftView:btn];
+}
+
 
 -(void)setNavigationLeftView:(UIView *)lView
 {

@@ -15,6 +15,7 @@
 -(void)setNavigationLeftButton:(UIViewController *)target withSelector:(SEL)selector withTitle:(NSString *)titleString;
 -(void)setNavigationRightButton:(UIViewController *)target withSelector:(SEL)selector withTitle:(NSString *)titleString;
 -(void)setNavigationRightButton:(UIViewController *)target withSelector:(SEL)selector withImage:(NSString *)imgName withHImgae:(NSString *)hImageName;
+-(void)setNavigationBackButton:(UIViewController *)target withSelector:(SEL)selector;
 
 @end
 

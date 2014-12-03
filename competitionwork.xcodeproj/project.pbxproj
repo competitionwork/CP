@@ -28,6 +28,16 @@
 		0478C1981A15118700552707 /* CPDetailItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1971A15118700552707 /* CPDetailItemView.m */; };
 		0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C19A1A1512D500552707 /* UIView+Addition.m */; };
 		047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */; };
+		048742C51A2F051400CC92DE /* CPPersonalInformationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 048742C41A2F051400CC92DE /* CPPersonalInformationVC.m */; };
+		048742C81A2F0C8600CC92DE /* CPPersonalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048742C71A2F0C8600CC92DE /* CPPersonalTableViewCell.m */; };
+		048742CB1A2F122E00CC92DE /* CPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 048742CA1A2F122E00CC92DE /* CPUtil.m */; };
+		048742CE1A2F181900CC92DE /* 单条点击.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742CC1A2F181900CC92DE /* 单条点击.png */; };
+		048742CF1A2F181900CC92DE /* 单条点击@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742CD1A2F181900CC92DE /* 单条点击@2x.png */; };
+		048742D21A2F185100CC92DE /* 向下展开.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D01A2F185100CC92DE /* 向下展开.png */; };
+		048742D31A2F185100CC92DE /* 向下展开@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D11A2F185100CC92DE /* 向下展开@2x.png */; };
+		048742D51A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D41A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png */; };
+		048742D71A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */; };
+		048742D91A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -180,6 +190,19 @@
 		0478C19A1A1512D500552707 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
 		047CB77E1A20BC9C00D693C8 /* CPListCellEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPListCellEntity.h; sourceTree = "<group>"; };
 		047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPListCellEntity.m; sourceTree = "<group>"; };
+		048742C31A2F051400CC92DE /* CPPersonalInformationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPersonalInformationVC.h; sourceTree = "<group>"; };
+		048742C41A2F051400CC92DE /* CPPersonalInformationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPersonalInformationVC.m; sourceTree = "<group>"; };
+		048742C61A2F0C8600CC92DE /* CPPersonalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPersonalTableViewCell.h; sourceTree = "<group>"; };
+		048742C71A2F0C8600CC92DE /* CPPersonalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPersonalTableViewCell.m; sourceTree = "<group>"; };
+		048742C91A2F122E00CC92DE /* CPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUtil.h; sourceTree = "<group>"; };
+		048742CA1A2F122E00CC92DE /* CPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUtil.m; sourceTree = "<group>"; };
+		048742CC1A2F181900CC92DE /* 单条点击.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单条点击.png"; sourceTree = "<group>"; };
+		048742CD1A2F181900CC92DE /* 单条点击@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单条点击@2x.png"; sourceTree = "<group>"; };
+		048742D01A2F185100CC92DE /* 向下展开.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向下展开.png"; sourceTree = "<group>"; };
+		048742D11A2F185100CC92DE /* 向下展开@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向下展开@2x.png"; sourceTree = "<group>"; };
+		048742D41A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10%透明点击态蒙层@2x.png"; sourceTree = "<group>"; };
+		048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "右箭头-icon-灰@3x.png"; sourceTree = "<group>"; };
+		048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标题栏-icon-左箭头-返回@3x.png"; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -629,6 +652,13 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
+				048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */,
+				048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */,
+				048742D41A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png */,
+				048742D01A2F185100CC92DE /* 向下展开.png */,
+				048742D11A2F185100CC92DE /* 向下展开@2x.png */,
+				048742CC1A2F181900CC92DE /* 单条点击.png */,
+				048742CD1A2F181900CC92DE /* 单条点击@2x.png */,
 				04C885AD1A2EEF3A00E441CA /* 投递简历-未选中@2x.png */,
 				04C885AE1A2EEF3A00E441CA /* 投递简历-选中@2x.png */,
 				04FF966B1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png */,
@@ -836,6 +866,8 @@
 				04A0DA231A04D48D008C4E12 /* YAJL */,
 				04A523D41A1A401800FE9500 /* Categories */,
 				049667611A04B6AA0090EE5E /* Global.h */,
+				048742C91A2F122E00CC92DE /* CPUtil.h */,
+				048742CA1A2F122E00CC92DE /* CPUtil.m */,
 				0496675B1A04AB1F0090EE5E /* Constant.h */,
 				0496675C1A04AB1F0090EE5E /* Constant.m */,
 			);
@@ -874,6 +906,10 @@
 				04FA58D01A2DBC2D00BAA19E /* CPResingBaseCellView.m */,
 				04FF96681A2E26F7005CCAEF /* CPUserHeadPictureView.h */,
 				04FF96691A2E26F7005CCAEF /* CPUserHeadPictureView.m */,
+				048742C31A2F051400CC92DE /* CPPersonalInformationVC.h */,
+				048742C41A2F051400CC92DE /* CPPersonalInformationVC.m */,
+				048742C61A2F0C8600CC92DE /* CPPersonalTableViewCell.h */,
+				048742C71A2F0C8600CC92DE /* CPPersonalTableViewCell.m */,
 			);
 			name = "resingView(注册)";
 			path = CPUIView/resingView;
@@ -954,9 +990,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048742D21A2F185100CC92DE /* 向下展开.png in Resources */,
 				04FA58C81A2D782800BAA19E /* 登陆注册输入框@2x.png in Resources */,
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
 				04CAC1AE19F7EF82005291D3 /* Images.xcassets in Resources */,
+				048742D71A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png in Resources */,
 				04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */,
 				04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */,
 				04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */,
@@ -964,12 +1002,17 @@
 				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
 				04FA58CA1A2DA45C00BAA19E /* title平铺X64@2x.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
+				048742CE1A2F181900CC92DE /* 单条点击.png in Resources */,
 				04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */,
+				048742D31A2F185100CC92DE /* 向下展开@2x.png in Resources */,
 				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
 				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
 				04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */,
 				04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */,
+				048742CF1A2F181900CC92DE /* 单条点击@2x.png in Resources */,
+				048742D51A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
+				048742D91A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png in Resources */,
 				04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */,
 				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
 				04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */,
@@ -999,6 +1042,7 @@
 				0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */,
 				04A1984B1A2053AB00EC6587 /* CPUserCenterListVeiw.m in Sources */,
 				04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */,
+				048742C51A2F051400CC92DE /* CPPersonalInformationVC.m in Sources */,
 				047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
@@ -1007,6 +1051,7 @@
 				04CAC22119F7EFBF005291D3 /* UIButton+eventHandler.m in Sources */,
 				0417F1351A0A6F560067CAED /* filterManage.m in Sources */,
 				04A0DA471A04D48D008C4E12 /* yajl_lex.c in Sources */,
+				048742CB1A2F122E00CC92DE /* CPUtil.m in Sources */,
 				04A0DA491A04D48D008C4E12 /* NSObject+YAJL.m in Sources */,
 				04A0DA461A04D48D008C4E12 /* yajl_gen.c in Sources */,
 				0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */,
@@ -1041,6 +1086,7 @@
 				04A198571A209AAC00EC6587 /* CPUserCenterVC.m in Sources */,
 				04CAC21219F7EFBF005291D3 /* AFXMLRequestOperation.m in Sources */,
 				04CAC22219F7EFBF005291D3 /* UIView+borders.m in Sources */,
+				048742C81A2F0C8600CC92DE /* CPPersonalTableViewCell.m in Sources */,
 				04FF96651A2E0261005CCAEF /* CPBaseButton.m in Sources */,
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
