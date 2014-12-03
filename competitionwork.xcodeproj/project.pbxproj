@@ -38,6 +38,8 @@
 		048742D51A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D41A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png */; };
 		048742D71A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */; };
 		048742D91A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */; };
+		048742DD1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048742DC1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m */; };
+		048742E01A2F5C1100CC92DE /* UIView+SnapTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 048742DF1A2F5C1100CC92DE /* UIView+SnapTools.m */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -203,6 +205,10 @@
 		048742D41A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10%透明点击态蒙层@2x.png"; sourceTree = "<group>"; };
 		048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "右箭头-icon-灰@3x.png"; sourceTree = "<group>"; };
 		048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标题栏-icon-左箭头-返回@3x.png"; sourceTree = "<group>"; };
+		048742DB1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJHRDMCustomModalViewController.h; sourceTree = "<group>"; };
+		048742DC1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJHRDMCustomModalViewController.m; sourceTree = "<group>"; };
+		048742DE1A2F5C1100CC92DE /* UIView+SnapTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SnapTools.h"; sourceTree = "<group>"; };
+		048742DF1A2F5C1100CC92DE /* UIView+SnapTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SnapTools.m"; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -476,6 +482,15 @@
 			path = CPUIView/CPDetailView;
 			sourceTree = "<group>";
 		};
+		048742DA1A2F5B8000CC92DE /* common */ = {
+			isa = PBXGroup;
+			children = (
+				048742DB1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.h */,
+				048742DC1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		049667541A04A6390090EE5E /* API（接口） */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +644,8 @@
 		04A523D41A1A401800FE9500 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				048742DE1A2F5C1100CC92DE /* UIView+SnapTools.h */,
+				048742DF1A2F5C1100CC92DE /* UIView+SnapTools.m */,
 				04CAC1FC19F7EFBF005291D3 /* NSArray+linq.h */,
 				04CAC1FD19F7EFBF005291D3 /* NSArray+linq.m */,
 				04AF38561A06195A008958C7 /* NSObject+GJExtand.h */,
@@ -862,6 +879,7 @@
 		04CAC1F919F7EFBF005291D3 /* Lib（第三方工具） */ = {
 			isa = PBXGroup;
 			children = (
+				048742DA1A2F5B8000CC92DE /* common */,
 				04A523CA1A1A3B1000FE9500 /* RefreshView */,
 				04A0DA231A04D48D008C4E12 /* YAJL */,
 				04A523D41A1A401800FE9500 /* Categories */,
@@ -962,6 +980,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = hjj;
 				TargetAttributes = {
+					04CAC19219F7EF82005291D3 = {
+						DevelopmentTeam = 98S4JCHLA8;
+					};
 					04CAC1B219F7EF82005291D3 = {
 						TestTargetID = 04CAC19219F7EF82005291D3;
 					};
@@ -1042,6 +1063,7 @@
 				0478C19B1A1512D500552707 /* UIView+Addition.m in Sources */,
 				04A1984B1A2053AB00EC6587 /* CPUserCenterListVeiw.m in Sources */,
 				04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */,
+				048742DD1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m in Sources */,
 				048742C51A2F051400CC92DE /* CPPersonalInformationVC.m in Sources */,
 				047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
@@ -1087,6 +1109,7 @@
 				04CAC21219F7EFBF005291D3 /* AFXMLRequestOperation.m in Sources */,
 				04CAC22219F7EFBF005291D3 /* UIView+borders.m in Sources */,
 				048742C81A2F0C8600CC92DE /* CPPersonalTableViewCell.m in Sources */,
+				048742E01A2F5C1100CC92DE /* UIView+SnapTools.m in Sources */,
 				04FF96651A2E0261005CCAEF /* CPBaseButton.m in Sources */,
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
@@ -1246,10 +1269,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1259,10 +1285,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

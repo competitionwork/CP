@@ -11,6 +11,7 @@
 #import "GJCommonWidgetHelper.h"
 #import "CPBaseButton.h"
 #import "CPAPIHelper_userURL.h"
+#import "AppDelegate.h"
 
 @interface CPPersonalInformationVC ()
 
@@ -19,6 +20,8 @@
 @property (nonatomic,strong) NSArray *DataArray;
 
 @property (nonatomic,strong) CPBaseButton *personalButton;
+
+@property (nonatomic,strong)  UIPickerView *pickView;
 
 @end
 
@@ -120,11 +123,40 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
+    [self showViewWith:indexPath];
+    
+}
+
+-(void)showViewWith:(NSIndexPath*)indexPath{
+    
+    UIViewController * con = [[UIViewController alloc]initWithNibName:nil
+                                                               bundle:nil];
+    con.view.backgroundColor = [UIColor yellowColor];
+    
+    UINavigationController * navController = [[UINavigationController alloc]initWithRootViewController:con];
+    navController.navigationBarHidden = YES;
+    
+    AppDelegate * app = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    
+    GJHRDMCustomModalViewController * model = [[GJHRDMCustomModalViewController alloc] initWithRootViewController:navController  parentViewController:app.window.rootViewController];
+    model.delegate = self;
+    [model presentRootViewControllerWithPresentationStyle:GJHRDMCustomModalViewControllerPresentPartScreen controllercompletion:^{
+        
+    }];
+    
+
 }
 
 
 -(void)uploadThePersonalinformation{
     DLog(@"按钮按下");
+    
+//    self.pickView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, self.view.frame.size.height)];
+//    self.pickView.delegate = self;
+//    self.pickView.dataSource = self;
+//    self.pickView.backgroundColor = [UIColor clearColor];
+//    
+//    [self.view addSubview:self.pickView];
     
     NSDictionary * param = @{@"uid":@"2345",
                              @"utoken":@"143436sfds",
@@ -150,6 +182,30 @@
                       ];
 }
 
+
+#define mark UIPickerViewDelegate
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return 1;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    return @"aaaa";
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    return 160;
+}
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+    return 60;
+}
 
 
 @end

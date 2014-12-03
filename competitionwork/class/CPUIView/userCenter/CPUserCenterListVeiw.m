@@ -11,6 +11,7 @@
 #import "CPListCellEntity.h"
 #import "UIView+borders.h"
 
+
 #define KCELLHIGHT 60
 
 @implementation CPUserCenterListVeiw
@@ -98,7 +99,10 @@
     cell.textLabel.text = entity.title;
     cell.imageView.image = entity.image;
     
+    cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
+    
     cell.hiddenBottomBorder = [self isLastCellInSection:indexPath];
+    cell.hiddenDownBorder = ![self isLastCellInSection:indexPath];
     
     //    [cell setBorderIn:UIViewBorderPositionBottom];
     
@@ -121,23 +125,10 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 20)];
     label.text = @" ";
     label.backgroundColor = [UIColor clearColor];
-    UIView *topBorder =[[GJCommonWidgetHelper sharedGJCommonWidgetHelper] createNormalBorderView];
-    UIView *bottomBorder = [[GJCommonWidgetHelper sharedGJCommonWidgetHelper] createNormalBorderView];
-    [label addSubview:bottomBorder];
-    [topBorder.po_frameBuilder alignToTopInSuperviewWithInset:0];
-    [bottomBorder.po_frameBuilder alignToBottomInSuperviewWithInset:0];
+    
     return label;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 0.5;
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [[GJCommonWidgetHelper sharedGJCommonWidgetHelper] createNormalBorderView];
-}
 
 -(void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section
 {

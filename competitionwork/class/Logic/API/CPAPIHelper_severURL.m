@@ -90,7 +90,7 @@
 
 +(NSString *)baseURL
 {
-    return @"http://dev.worldjingsai.com/api/contest/";
+    return @"http://www.worldjingsai.com/api/contest/";
 }
 
 @end

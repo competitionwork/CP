@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CPPersonalInformationVC : CPBaseViewController<UITableViewDelegate,UITableViewDataSource>
+#import "GJHRDMCustomModalViewController.h"
+@interface CPPersonalInformationVC : CPBaseViewController<UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,GJHRDMCustomViewControllerDelegate>
 
 @end

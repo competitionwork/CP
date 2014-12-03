@@ -191,13 +191,13 @@
 
 -(void)creatTheUI{
     
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+//    self.selectionStyle = UITableViewCellSelectionStyleNone;
     
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, kLeftZoneWidth, 43)];
     _titleLabel.backgroundColor = [UIColor clearColor];
     _titleLabel.font = [UIFont systemFontOfSize:14];
     _titleLabel.textColor = [UIColor colorWithRed:85 / 255.0 green:187 / 255.0 blue:34 / 255.0 alpha:1.0];
-    self.detailTextLabel.textColor = self.detailTextLabel.highlightedTextColor = [UIColor colorWithRed:0x33 / 255.0 green:0x33 / 255. blue:0x33 / 255. alpha:1.0];
+    self.detailTextLabel.textColor = self.detailTextLabel.highlightedTextColor = [UIColor blackColor];
     _titleLabel.tag = 112120;
     self.detailTextLabel.font = [UIFont systemFontOfSize:14];
     [self.contentView addSubview:_titleLabel];
@@ -208,6 +208,13 @@
     _textInput.textAlignment = NSTextAlignmentLeft;
     _textInput.backgroundColor = [UIColor clearColor];
     [self.contentView addSubview:_textInput];
+    
+    UIImage     *grayArrow = [CPUtil getRightGrayArrowImage];
+    UIImageView *indicator = [[UIImageView alloc] initWithImage:grayArrow];
+    indicator.frame = CGRectMake(MainScreenWidth - 18.5, 16.5, grayArrow.size.width, grayArrow.size.height);
+    [self.contentView addSubview:indicator];
+
+    /*
     self.chooseBtn = [GJChooseButton buttonWithType:UIButtonTypeCustom];
     self.chooseBtn.exclusiveTouch = YES;
     [self.chooseBtn addTarget:self action:@selector(chooseBtnAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -230,6 +237,7 @@
     UIImageView *shuLine = [[UIImageView alloc] initWithFrame:(CGRect) {81, 13, 0.5, 20}];
     shuLine.backgroundColor = GJColor(216, 216, 216, 1);
     [self.contentView addSubview:shuLine];
+     */
 }
  // Configure the view for the selected state
 
