@@ -10,11 +10,15 @@
 #import "CPResingBaseCellView.h"
 #import "CPBaseButton.h"
 #import "CPUserHeadPictureView.h"
+#import "CPCheckBox.h"
+#import "CPAPIHelper_setting.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface CPResingVC ()
 
 @property (nonatomic,strong) CPUserHeadPictureView *headView;
+
+@property (nonatomic,strong) CPResingBaseCellView *mailView;
 
 @property (nonatomic, strong) CPResingBaseCellView * maneView;
 
@@ -60,8 +64,9 @@
     
     
     
-    NSArray * arrayPleceholde = @[@"请输入真实姓名",
-                                  @"请输入验证码",
+    NSArray * arrayPleceholde = @[@"请输入邮箱",
+                                  @"请输入真实姓名",
+                                  @"请输入手机号码",
                                   @"请输入密码",
                                   @"请再次输入密码",
                                   ];
@@ -90,21 +95,27 @@
         
         switch (idx) {
             case 0:{
-                self.maneView = resingView;
-                [[self.maneView.po_frameBuilder alignToTopInSuperviewWithInset:110]centerHorizontallyInSuperview];
+                self.mailView = resingView;
+                [[self.mailView.po_frameBuilder alignToTopInSuperviewWithInset:110]centerHorizontallyInSuperview];
+
             }
                 break;
             case 1:{
+                self.maneView = resingView;
+                [[self.maneView.po_frameBuilder alignToBottomOfView:self.mailView offset:1]centerHorizontallyInSuperview];
+            }
+                break;
+            case 2:{
                 self.ConfirmationView = resingView;
                 [[self.ConfirmationView.po_frameBuilder alignToBottomOfView:self.maneView offset:1]centerHorizontallyInSuperview];
             }
                 break;
-            case 2:{
+            case 3:{
                 self.Password = resingView;
                 [[self.Password.po_frameBuilder alignToBottomOfView:self.ConfirmationView offset:1]centerHorizontallyInSuperview];
             }
                 break;
-            case 3:{
+            case 4:{
                 self.PasswordAgain = resingView;
                 [[self.PasswordAgain.po_frameBuilder alignToBottomOfView:self.Password  offset:1]centerHorizontallyInSuperview];
             }
@@ -115,6 +126,8 @@
 
         
     }];
+    
+
     
     
     UILabel * textLabel = [[UILabel alloc]init];
@@ -133,6 +146,10 @@
     
     [self.view addSubview:textColocrLabel];
     [[textColocrLabel.po_frameBuilder alignRightOfView:textLabel offset:20]setY:textLabel.frame.origin.y];
+    
+    /*选择按钮*/
+    CPCheckBox * checkBox = [[CPCheckBox alloc]initWithFrame:CGRectMake(8, textLabel.frame.origin.y, 15, 15)];
+    [self.view addSubview:checkBox];
     
     self.resingButton = [CPBaseButton buttonWithType:UIButtonTypeCustom];
     [self.resingButton setStylesWithTitle:@"注册"];
@@ -193,7 +210,6 @@
             
         }];
 
-        
     }
 }
 
@@ -211,6 +227,30 @@
 
 -(void)touchResing:(id)sender{
     
+    NSMutableDictionary * dictParmars = [NSMutableDictionary dictionaryWithCapacity:0];
+    
+    [dictParmars setObject:@"email" forKey:[[self.mailView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:@"real_name" forKey:[[self.maneView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:@"tel" forKey:[[self.ConfirmationView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:@"password" forKey:[[self.Password textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:@"password_c" forKey:[[self.PasswordAgain textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+
+    [dictParmars setObject:@"sex" forKey:@"1"];
+    
+    [dictParmars setObject:@"email" forKey:@"12345@qq.com"];
+    [dictParmars setObject:@"real_name" forKey:@"张三"];
+    [dictParmars setObject:@"tel" forKey:@"13000000000"];
+    [dictParmars setObject:@"password" forKey:@"h123456"];
+    [dictParmars setObject:@"password_c" forKey:@"h123456"];
+    
+    
+    
+    [[CPAPIHelper_setting sharedInstance]api_reg_withParams:dictParmars whenSuccess:^(id result) {
+        DLog(@"reg==%@",result);
+    } andFailed:^(id err) {
+        
+    }];
+
 }
 
 

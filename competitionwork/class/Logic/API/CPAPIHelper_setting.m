@@ -36,6 +36,21 @@
 
 }
 
+-(void)api_reg_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
+    
+    NSString * URL = [NSString stringWithFormat:@"%@reg/",[self.class baseURL]];
+    [self postDataFromPath:URL params:params whenSuccess:^(id result) {
+        if (success) {
+            success(result);
+        }
+    } andFailed:^(id err) {
+        if (failed) {
+            failed(err);
+        }
+    }];
+
+}
+
 +(NSString *)baseURL
 {
     return @"http://dev.worldjingsai.com/api/settings/";

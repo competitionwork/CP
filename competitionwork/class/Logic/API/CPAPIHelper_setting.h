@@ -13,5 +13,6 @@
 +(instancetype)sharedInstance;
 
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(ajax_avatar);
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(reg);
 
 @end

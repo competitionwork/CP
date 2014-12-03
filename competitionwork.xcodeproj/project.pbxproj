@@ -75,6 +75,9 @@
 		04AF385E1A062E96008958C7 /* CPMainListCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF385D1A062E96008958C7 /* CPMainListCellTableViewCell.m */; };
 		04C885A51A2EB90500E441CA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C885A41A2EB90500E441CA /* AssetsLibrary.framework */; };
 		04C885A81A2EE2C300E441CA /* CPAPIHelper_setting.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */; };
+		04C885AC1A2EED3B00E441CA /* CPCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C885AB1A2EED3B00E441CA /* CPCheckBox.m */; };
+		04C885AF1A2EEF3A00E441CA /* 投递简历-未选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C885AD1A2EEF3A00E441CA /* 投递简历-未选中@2x.png */; };
+		04C885B01A2EEF3A00E441CA /* 投递简历-选中@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C885AE1A2EEF3A00E441CA /* 投递简历-选中@2x.png */; };
 		04CAC19719F7EF82005291D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CAC19619F7EF82005291D3 /* Foundation.framework */; };
 		04CAC19919F7EF82005291D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CAC19819F7EF82005291D3 /* CoreGraphics.framework */; };
 		04CAC19B19F7EF82005291D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CAC19A19F7EF82005291D3 /* UIKit.framework */; };
@@ -261,6 +264,10 @@
 		04C885A41A2EB90500E441CA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		04C885A61A2EE2C300E441CA /* CPAPIHelper_setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_setting.h; path = API/CPAPIHelper_setting.h; sourceTree = "<group>"; };
 		04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_setting.m; path = API/CPAPIHelper_setting.m; sourceTree = "<group>"; };
+		04C885AA1A2EED3B00E441CA /* CPCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCheckBox.h; sourceTree = "<group>"; };
+		04C885AB1A2EED3B00E441CA /* CPCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCheckBox.m; sourceTree = "<group>"; };
+		04C885AD1A2EEF3A00E441CA /* 投递简历-未选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "投递简历-未选中@2x.png"; sourceTree = "<group>"; };
+		04C885AE1A2EEF3A00E441CA /* 投递简历-选中@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "投递简历-选中@2x.png"; sourceTree = "<group>"; };
 		04CAC19319F7EF82005291D3 /* competitionwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = competitionwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CAC19619F7EF82005291D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04CAC19819F7EF82005291D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -407,6 +414,7 @@
 		0425015319F7F9CB0038E188 /* baseView */ = {
 			isa = PBXGroup;
 			children = (
+				04C885A91A2EEC8800E441CA /* ToolVIew */,
 				04A342291A2398F7003D4F85 /* BaseVC */,
 				049DF56B1A0F5F6800F12447 /* mainView（列表页） */,
 			);
@@ -621,6 +629,8 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
+				04C885AD1A2EEF3A00E441CA /* 投递简历-未选中@2x.png */,
+				04C885AE1A2EEF3A00E441CA /* 投递简历-选中@2x.png */,
 				04FF966B1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png */,
 				04FF96661A2E268F005CCAEF /* 个人中心-头像@2x.png */,
 				04FA58C91A2DA45C00BAA19E /* title平铺X64@2x.png */,
@@ -658,6 +668,16 @@
 			);
 			name = "Model（模型）";
 			sourceTree = "<group>";
+		};
+		04C885A91A2EEC8800E441CA /* ToolVIew */ = {
+			isa = PBXGroup;
+			children = (
+				04C885AA1A2EED3B00E441CA /* CPCheckBox.h */,
+				04C885AB1A2EED3B00E441CA /* CPCheckBox.m */,
+			);
+			name = ToolVIew;
+			path = competitionwork/class/CPUIView/ToolVIew;
+			sourceTree = SOURCE_ROOT;
 		};
 		04CAC18A19F7EF82005291D3 = {
 			isa = PBXGroup;
@@ -953,6 +973,8 @@
 				04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */,
 				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
 				04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */,
+				04C885B01A2EEF3A00E441CA /* 投递简历-选中@2x.png in Resources */,
+				04C885AF1A2EEF3A00E441CA /* 投递简历-未选中@2x.png in Resources */,
 				04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */,
 				04A523E41A1A419100FE9500 /* xiaolvAnimation4@2x.png in Resources */,
 				0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */,
@@ -999,6 +1021,7 @@
 				04A0DA421A04D48D008C4E12 /* yajl.c in Sources */,
 				0496675D1A04AB1F0090EE5E /* Constant.m in Sources */,
 				04FA58D11A2DBC2D00BAA19E /* CPResingBaseCellView.m in Sources */,
+				04C885AC1A2EED3B00E441CA /* CPCheckBox.m in Sources */,
 				04CAC22019F7EFBF005291D3 /* NSArray+linq.m in Sources */,
 				0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */,
 				04CAC21119F7EFBF005291D3 /* AFURLConnectionOperation.m in Sources */,
