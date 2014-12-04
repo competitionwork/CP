@@ -20,6 +20,7 @@
     
     [self.navigationController.navigationBar setBackgroundImage:getimagePINGPU([UIImage imageNamed:@"title平铺X64"]) forBarMetrics:UIBarMetricsDefault];
     // Do any additional setup after loading the view.
+    
 }
 
 -(void)goBack{

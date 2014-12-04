@@ -124,3 +124,11 @@ typedef void (^GJHRDMModalDidCloseCompletion)();
 - (void)dismissRootViewControllerWithCompletion:(void (^)(void))completion;
 @end
 
+/*下面为添加的扩展找到弹出的UIVIewController*/
+@interface UIViewController (ganjiUIViewControllerCustomModalItem)
+
+@property (nonatomic, strong, readonly) id customModalViewController;
+
+@property (nonatomic, strong, readonly) UIView *modalView;
+
+@end

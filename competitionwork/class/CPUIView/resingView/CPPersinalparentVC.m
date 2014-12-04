@@ -8,6 +8,7 @@
 
 #import "CPPersinalparentVC.h"
 #import "GJHRDMCustomModalViewController.h"
+#import "CPUIViewControllerClassify.h"
 
 @interface CPPersinalparentVC ()
 
@@ -20,9 +21,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self.view addSubview:self.tableView];
 }
 
+-(void)goBack{
+    
+    if (self.customModalViewController) {
+        [self.customModalViewController dismissRootViewControllerWithCompletion:^{
+            
+        }];
+        
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+ 
+    }
+}
 
 -(UITableView *)tableView{
     if (!_tableView) {

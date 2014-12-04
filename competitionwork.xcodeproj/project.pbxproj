@@ -44,6 +44,8 @@
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
 		0498889D1A300DE0001FA97F /* CPPersinalparentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */; };
+		049888A11A303282001FA97F /* CPUserInforCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 049888A01A303282001FA97F /* CPUserInforCenter.m */; };
+		049888A31A304EDD001FA97F /* 文字点击态高度固定48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */; };
 		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
@@ -219,6 +221,9 @@
 		049667611A04B6AA0090EE5E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		0498889B1A300DE0001FA97F /* CPPersinalparentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPersinalparentVC.h; sourceTree = "<group>"; };
 		0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPersinalparentVC.m; sourceTree = "<group>"; };
+		0498889F1A303282001FA97F /* CPUserInforCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUserInforCenter.h; sourceTree = "<group>"; };
+		049888A01A303282001FA97F /* CPUserInforCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUserInforCenter.m; sourceTree = "<group>"; };
+		049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文字点击态高度固定48@2x.png"; sourceTree = "<group>"; };
 		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -507,6 +512,16 @@
 			name = "API（接口）";
 			sourceTree = "<group>";
 		};
+		0498889E1A303268001FA97F /* userinfor */ = {
+			isa = PBXGroup;
+			children = (
+				0498889F1A303282001FA97F /* CPUserInforCenter.h */,
+				049888A01A303282001FA97F /* CPUserInforCenter.m */,
+			);
+			name = userinfor;
+			path = CPUIView/Model/userinfor;
+			sourceTree = "<group>";
+		};
 		049DF5671A0F493C00F12447 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +687,7 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
+				049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */,
 				048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */,
 				048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */,
 				048742D41A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png */,
@@ -705,6 +721,7 @@
 		04AF384F1A061802008958C7 /* Model（模型） */ = {
 			isa = PBXGroup;
 			children = (
+				0498889E1A303268001FA97F /* userinfor */,
 				04AF38501A06182C008958C7 /* GJBaseAPIInvokeCondition.h */,
 				04AF38511A06182C008958C7 /* GJBaseAPIInvokeCondition.m */,
 				04AF38531A0618C7008958C7 /* CPBaseInterfaceParam.h */,
@@ -1016,6 +1033,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049888A31A304EDD001FA97F /* 文字点击态高度固定48@2x.png in Resources */,
 				048742D21A2F185100CC92DE /* 向下展开.png in Resources */,
 				04FA58C81A2D782800BAA19E /* 登陆注册输入框@2x.png in Resources */,
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
@@ -1109,6 +1127,7 @@
 				04FA58D41A2DBC6E00BAA19E /* CPBaseTextFileCell.m in Sources */,
 				04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */,
 				04CAC21D19F7EFBF005291D3 /* GJFilterView.m in Sources */,
+				049888A11A303282001FA97F /* CPUserInforCenter.m in Sources */,
 				04A0DA4A1A04D48D008C4E12 /* YAJL_GTMBase64.m in Sources */,
 				049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */,
 				04A198571A209AAC00EC6587 /* CPUserCenterVC.m in Sources */,

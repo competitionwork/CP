@@ -20,6 +20,7 @@
     #import "Global.h"
     #import "UIView+Addition.h"
     #import "CPBaseViewController.h"
+    #import "CPUIViewControllerClassify.h"
 #endif
 
 

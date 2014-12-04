@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CPLoginView.h"
 
 @implementation AppDelegate
 
@@ -19,13 +20,33 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    _MastTableView = [[CPMastViewController alloc]init];
+    _MastVC = [[CPMastViewController alloc]init];
     
-    self.window.rootViewController = _MastTableView;
+    self.window.rootViewController = _MastVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    
     [self.window makeKeyAndVisible];
+    
+    [self showLoginView];
+
     return YES;
+}
+
+-(void)showLoginView{
+    
+    if (!self.userInforCenter.isLoginSuccess) {
+        
+        CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
+        UINavigationController * navController = [[UINavigationController alloc]initWithRootViewController:loginView];
+        
+        
+        [self.MastVC.selectedViewController presentViewController:navController animated:YES completion:^{
+            
+        }];
+    }
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -149,6 +170,13 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#define mark 
+
++ (AppDelegate *)sharedAppDelegate {
+    AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    return app;
 }
 
 @end

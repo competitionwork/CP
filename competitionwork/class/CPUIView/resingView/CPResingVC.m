@@ -12,6 +12,9 @@
 #import "CPUserHeadPictureView.h"
 #import "CPCheckBox.h"
 #import "CPAPIHelper_setting.h"
+#import "CPPersonalInformationVC.h"
+
+
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface CPResingVC ()
@@ -247,9 +250,15 @@
     
     [[CPAPIHelper_setting sharedInstance]api_reg_withParams:dictParmars whenSuccess:^(id result) {
         DLog(@"reg==%@",result);
+        
+        
+        
     } andFailed:^(id err) {
         
     }];
+    
+    CPPersonalInformationVC * personal = [[CPPersonalInformationVC alloc]init];
+    [self.navigationController pushViewController:personal animated:YES];
 
 }
 

@@ -35,6 +35,7 @@
     //    self.view.backgroundColor = [UIColor yellowColor];
     [self _initTabbar];
     [self _initViewController];
+    self.selectedIndex = 1;
     // Do any additional setup after loading the view.
 }
 

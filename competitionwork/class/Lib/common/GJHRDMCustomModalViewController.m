@@ -484,3 +484,32 @@ static const CGFloat kDeep = 0.80;
 
 
 @end
+
+@implementation UIViewController (ganjiUIViewControllerCustomModalItem)
+@dynamic customModalViewController;
+
+- (id)customModalViewController
+{
+    if ([self.parentViewController isKindOfClass:[CPBaseViewController class]]) {
+        return (CPBaseViewController *)self.parentViewController;
+    }
+    if (self.navigationController) {
+        if ([self.navigationController.parentViewController isKindOfClass:[CPBaseViewController class]]) {
+            return (CPBaseViewController *)self.navigationController.parentViewController;
+        }
+    }
+    if ([self.parentViewController isKindOfClass:[GJHRDMCustomModalViewController class]]) {
+        return (GJHRDMCustomModalViewController *)self.parentViewController;
+    }
+    if (self.navigationController) {
+        if ([self.navigationController.parentViewController isKindOfClass:[GJHRDMCustomModalViewController class]]) {
+            return (GJHRDMCustomModalViewController *)self.navigationController.parentViewController;
+        }
+    }
+    return nil;
+}
+
+- (UIView *)modalView {
+    return nil;
+}
+@end
