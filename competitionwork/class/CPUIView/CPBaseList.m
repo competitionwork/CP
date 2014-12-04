@@ -14,7 +14,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DLog(@">>>>>>> : %d",indexPath.row);
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DLog(@">>>>>>> : %ld",(long)indexPath.row);
 }
 
 #pragma mark datasource
@@ -32,7 +33,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"cell-%d",indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"cell-%ld",(long)indexPath.row];
     return cell;
 }
 

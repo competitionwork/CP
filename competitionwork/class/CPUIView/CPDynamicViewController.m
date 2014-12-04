@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "CPMastCompetitionCell.h"
 #import "CPFunctionCollectionCell.h"
+#import "CPMainViewController.h"
 
 //推荐类cell
 #define kCPSECTIONONECELLIDENTIFIER @"1"
@@ -47,8 +48,9 @@
     if (!app.userInforCenter.isLoginSuccess) {
         
         CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
-
+        
         [self.navigationController pushViewController:loginView animated:NO];
+        
     }
     
 }
@@ -171,6 +173,15 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    CPMainViewController * mastVC = [[CPMainViewController alloc]initWithNibName:nil bundle:nil];
+    
+//    AppDelegate * app = [AppDelegate sharedAppDelegate];
+//    [app.MastVC setHidesBottomBarWhenPushed:YES];
+    mastVC.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:mastVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

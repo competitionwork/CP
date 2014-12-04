@@ -8,6 +8,8 @@
 
 #import "CPBaseViewController.h"
 #import "CPUIViewControllerClassify.h"
+#import "AppDelegate.h"
+
 @interface CPBaseViewController ()
 
 @end
@@ -27,6 +29,20 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 
+}
+
+-(BOOL)hidesBottomBarWhenPushed{
+    
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+    
+    if ([super hidesBottomBarWhenPushed]) {
+        [app.MastVC setHidesBottomBarWhenPushed:YES];
+    }else{
+        [app.MastVC setHidesBottomBarWhenPushed:NO];
+    }
+    
+    
+    return [super hidesBottomBarWhenPushed];
 }
 
 - (void)didReceiveMemoryWarning {

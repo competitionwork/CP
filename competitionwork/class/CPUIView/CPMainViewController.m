@@ -56,8 +56,8 @@
     self.title = @"竞赛";
     
     
-    [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
-    [self setNavigationLeftButton:self withSelector:@selector(resing) withTitle:@"注册"];
+//    [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
+//    [self setNavigationLeftButton:self withSelector:@selector(resing) withTitle:@"注册"];
     
     [self.view addSubview:self.filterView];
     
@@ -103,18 +103,18 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)push{
-    CPLoginView * login = [[CPLoginView alloc]initWithNibName:nil
-                                                       bundle:nil];
-    
-    [self.navigationController pushViewController:login animated:YES];
-}
-
--(void)resing{
-    CPPersonalInformationVC * resing = [[CPPersonalInformationVC alloc]initWithNibName:nil bundle:nil];
-    
-    [self.navigationController pushViewController:resing animated:YES];
-}
+//-(void)push{
+//    CPLoginView * login = [[CPLoginView alloc]initWithNibName:nil
+//                                                       bundle:nil];
+//    
+//    [self.navigationController pushViewController:login animated:YES];
+//}
+//
+//-(void)resing{
+//    CPPersonalInformationVC * resing = [[CPPersonalInformationVC alloc]initWithNibName:nil bundle:nil];
+//    
+//    [self.navigationController pushViewController:resing animated:YES];
+//}
 
 - (void)refresh {
     
@@ -291,9 +291,9 @@
     isLoading = YES;
     
     NSDictionary * params = @{@"uid": @"1",
-                              @"c_class" : NSStringFromInt(1),
-                              @"c_level" : NSStringFromInt(1),
-                              @"c_level" : NSStringFromInt(1),
+                              @"c_class" : param[@"type"]?:@"0",
+                              @"c_level" : param[@"leve"]?:@"0",
+                              @"c_time" : param[@"time"]?:@"0",
                               @"page" : NSStringFromInt(1),
                               @"limit":NSStringFromInt(20),
                               @"univs_id":NSStringFromInt(1001)

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPDetailViewController : UIViewController
+@interface CPDetailViewController : CPBaseViewController
 
 @end

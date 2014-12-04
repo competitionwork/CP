@@ -24,7 +24,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.tabBar.barStyle = UIBarStyleBlackOpaque;
         [self.tabBar setHidden:YES];
+
     }
     return self;
 }
@@ -61,11 +63,10 @@
 
 -(void)_initTabbar{
     
-    tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, screenHeight - 49-20, MainScreenWidth, 49)];
-    
+    tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, screenHeight - 49, MainScreenWidth, 49)];
     [self.view addSubview:tabbarView];
     
-    UIImageView * tabbargroundImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_background.png"]];
+    UIImageView * tabbargroundImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_background"]];
     tabbargroundImage.frame = tabbarView.bounds;
     [tabbarView addSubview:tabbargroundImage];
     
@@ -87,6 +88,22 @@
         [tabbarView addSubview:button];
     }
 }
+
+-(void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed{
+    [super setHidesBottomBarWhenPushed:hidesBottomBarWhenPushed];
+    
+    if (hidesBottomBarWhenPushed) {
+        
+        [UIView animateWithDuration:0.27 animations:^{
+            self.tabbarView.alpha = 0;
+        }];
+
+    }else{
+        self.tabbarView.alpha = 1;
+    }
+    self.tabBar.alpha = 0;
+}
+
 -(void)selectedTab:(UIButton*)button{
     self.selectedIndex = button.tag;
     

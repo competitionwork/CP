@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self setNavigationLeftButton:self withSelector:nil withImage:nil withHImgae:nil];
     [self creatTheUserCenterListView];
 }
 

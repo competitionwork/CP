@@ -10,4 +10,6 @@
 
 @interface CPMastViewController : UITabBarController
 
+-(void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed;
+
 @end
