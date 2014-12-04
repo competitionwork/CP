@@ -22,6 +22,10 @@
 		04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */; };
 		04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */; };
 		04372B0A1A2C2E2B007DCBAD /* CPAPIHelper_userURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */; };
+		0465FAA51A30AA5F0022834D /* MastColletionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465FAA41A30AA5F0022834D /* MastColletionCellModel.m */; };
+		0465FAAD1A30B0900022834D /* MastViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465FAAC1A30B0900022834D /* MastViewData.plist */; };
+		0465FAB11A30B7810022834D /* CPFunctionCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465FAAF1A30B7810022834D /* CPFunctionCollectionCell.m */; };
+		0465FAB21A30B7810022834D /* CPFunctionCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0465FAB01A30B7810022834D /* CPFunctionCollectionCell.xib */; };
 		0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C18E1A14FBF800552707 /* CPDetailViewController.m */; };
 		0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1911A1500D700552707 /* CPDetailEntiy.m */; };
 		0478C1951A150E3400552707 /* CPEntersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0478C1941A150E3400552707 /* CPEntersView.m */; };
@@ -46,6 +50,8 @@
 		0498889D1A300DE0001FA97F /* CPPersinalparentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */; };
 		049888A11A303282001FA97F /* CPUserInforCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 049888A01A303282001FA97F /* CPUserInforCenter.m */; };
 		049888A31A304EDD001FA97F /* 文字点击态高度固定48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */; };
+		049888D21A30A04B001FA97F /* CPMastCompetitionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049888D01A30A04B001FA97F /* CPMastCompetitionCell.m */; };
+		049888D31A30A04B001FA97F /* CPMastCompetitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049888D11A30A04B001FA97F /* CPMastCompetitionCell.xib */; };
 		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
@@ -183,6 +189,12 @@
 		04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮-绿@3x.png"; sourceTree = "<group>"; };
 		04372B081A2C2E2B007DCBAD /* CPAPIHelper_userURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_userURL.h; path = API/CPAPIHelper_userURL.h; sourceTree = "<group>"; };
 		04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_userURL.m; path = API/CPAPIHelper_userURL.m; sourceTree = "<group>"; };
+		0465FAA31A30AA5F0022834D /* MastColletionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MastColletionCellModel.h; path = CPUIView/Model/MastColletionCellModel.h; sourceTree = "<group>"; };
+		0465FAA41A30AA5F0022834D /* MastColletionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MastColletionCellModel.m; path = CPUIView/Model/MastColletionCellModel.m; sourceTree = "<group>"; };
+		0465FAAC1A30B0900022834D /* MastViewData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MastViewData.plist; sourceTree = "<group>"; };
+		0465FAAE1A30B7810022834D /* CPFunctionCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPFunctionCollectionCell.h; sourceTree = "<group>"; };
+		0465FAAF1A30B7810022834D /* CPFunctionCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPFunctionCollectionCell.m; sourceTree = "<group>"; };
+		0465FAB01A30B7810022834D /* CPFunctionCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPFunctionCollectionCell.xib; sourceTree = "<group>"; };
 		0478C18D1A14FBF800552707 /* CPDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailViewController.h; sourceTree = "<group>"; };
 		0478C18E1A14FBF800552707 /* CPDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDetailViewController.m; sourceTree = "<group>"; };
 		0478C1901A1500D700552707 /* CPDetailEntiy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDetailEntiy.h; sourceTree = "<group>"; };
@@ -224,6 +236,9 @@
 		0498889F1A303282001FA97F /* CPUserInforCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUserInforCenter.h; sourceTree = "<group>"; };
 		049888A01A303282001FA97F /* CPUserInforCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUserInforCenter.m; sourceTree = "<group>"; };
 		049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文字点击态高度固定48@2x.png"; sourceTree = "<group>"; };
+		049888CF1A30A04B001FA97F /* CPMastCompetitionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPMastCompetitionCell.h; sourceTree = "<group>"; };
+		049888D01A30A04B001FA97F /* CPMastCompetitionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPMastCompetitionCell.m; sourceTree = "<group>"; };
+		049888D11A30A04B001FA97F /* CPMastCompetitionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPMastCompetitionCell.xib; sourceTree = "<group>"; };
 		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -428,7 +443,7 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
-				049888A41A305F19001FA97F /* MastView */,
+				049888A41A305F19001FA97F /* MastView(首页) */,
 				04FA58CB1A2DB83200BAA19E /* resingView(注册) */,
 				04A342301A239912003D4F85 /* loginView(登录) */,
 				04A198481A20533700EC6587 /* userCenter（个人中心） */,
@@ -474,6 +489,15 @@
 			name = Logic;
 			path = competitionwork/class/Logic;
 			sourceTree = SOURCE_ROOT;
+		};
+		0465FAA21A30AA150022834D /* mastColletionCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				0465FAA31A30AA5F0022834D /* MastColletionCellModel.h */,
+				0465FAA41A30AA5F0022834D /* MastColletionCellModel.m */,
+			);
+			name = mastColletionCellModel;
+			sourceTree = "<group>";
 		};
 		0478C18C1A14FBC500552707 /* CPDetailView(详情页) */ = {
 			isa = PBXGroup;
@@ -523,17 +547,24 @@
 			path = CPUIView/Model/userinfor;
 			sourceTree = "<group>";
 		};
-		049888A41A305F19001FA97F /* MastView */ = {
+		049888A41A305F19001FA97F /* MastView(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				049888CF1A30A04B001FA97F /* CPMastCompetitionCell.h */,
+				049888D01A30A04B001FA97F /* CPMastCompetitionCell.m */,
+				049888D11A30A04B001FA97F /* CPMastCompetitionCell.xib */,
+				0465FAAE1A30B7810022834D /* CPFunctionCollectionCell.h */,
+				0465FAAF1A30B7810022834D /* CPFunctionCollectionCell.m */,
+				0465FAB01A30B7810022834D /* CPFunctionCollectionCell.xib */,
 			);
-			name = MastView;
+			name = "MastView(首页)";
 			path = CPUIView/MastView;
 			sourceTree = "<group>";
 		};
 		049DF5671A0F493C00F12447 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				0465FAAC1A30B0900022834D /* MastViewData.plist */,
 				04A523D51A1A419000FE9500 /* OldImage */,
 				049DF5681A0F493C00F12447 /* CPfilters.plist */,
 			);
@@ -730,6 +761,7 @@
 		04AF384F1A061802008958C7 /* Model（模型） */ = {
 			isa = PBXGroup;
 			children = (
+				0465FAA21A30AA150022834D /* mastColletionCellModel */,
 				0498889E1A303268001FA97F /* userinfor */,
 				04AF38501A06182C008958C7 /* GJBaseAPIInvokeCondition.h */,
 				04AF38511A06182C008958C7 /* GJBaseAPIInvokeCondition.m */,
@@ -1064,7 +1096,10 @@
 				04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */,
 				048742CF1A2F181900CC92DE /* 单条点击@2x.png in Resources */,
 				048742D51A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png in Resources */,
+				0465FAB21A30B7810022834D /* CPFunctionCollectionCell.xib in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
+				049888D31A30A04B001FA97F /* CPMastCompetitionCell.xib in Resources */,
+				0465FAAD1A30B0900022834D /* MastViewData.plist in Resources */,
 				048742D91A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png in Resources */,
 				04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */,
 				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
@@ -1145,10 +1180,12 @@
 				048742C81A2F0C8600CC92DE /* CPPersonalTableViewCell.m in Sources */,
 				048742E01A2F5C1100CC92DE /* UIView+SnapTools.m in Sources */,
 				04FF96651A2E0261005CCAEF /* CPBaseButton.m in Sources */,
+				0465FAA51A30AA5F0022834D /* MastColletionCellModel.m in Sources */,
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
 				04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */,
 				04CAC20E19F7EFBF005291D3 /* AFJSONRequestOperation.m in Sources */,
+				049888D21A30A04B001FA97F /* CPMastCompetitionCell.m in Sources */,
 				04C885A81A2EE2C300E441CA /* CPAPIHelper_setting.m in Sources */,
 				04CAC21519F7EFBF005291D3 /* GJFilterBar.m in Sources */,
 				04CAC21319F7EFBF005291D3 /* UIImageView+AFNetworking.m in Sources */,
@@ -1180,6 +1217,7 @@
 				04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */,
 				0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */,
 				04FA58CE1A2DB90D00BAA19E /* CPResingVC.m in Sources */,
+				0465FAB11A30B7810022834D /* CPFunctionCollectionCell.m in Sources */,
 				04AF38481A060907008958C7 /* CPBaseList.m in Sources */,
 				04CAC21719F7EFBF005291D3 /* GJFilterFullOptionListViewController.m in Sources */,
 				04FF966A1A2E26F7005CCAEF /* CPUserHeadPictureView.m in Sources */,

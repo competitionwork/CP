@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPDynamicViewController : CPBaseViewController
+@interface CPDynamicViewController : CPBaseViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @end

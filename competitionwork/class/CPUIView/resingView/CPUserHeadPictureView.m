@@ -86,9 +86,9 @@
 -(void)setHeadWithImage:(UIImage*)image{
     
     _headImageV.image = image;
-    [[_headImageV.po_frameBuilder setHeight:63.5]setWidth:64];
+    [[_headImageV.po_frameBuilder setHeight:64]setWidth:64];
     _headImageV.layer.masksToBounds =YES;
-    _headImageV.layer.cornerRadius =31.0;
+    _headImageV.layer.cornerRadius =32.0;
     _headImageV.layer.borderColor = [UIColor whiteColor].CGColor;
     _headImageV.layer.borderWidth =3.0f;
     _headImageV.layer.rasterizationScale = [UIScreen mainScreen].scale;
