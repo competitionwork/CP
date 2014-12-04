@@ -12,6 +12,7 @@
 #import "CPBaseButton.h"
 #import "CPAPIHelper_userURL.h"
 #import "AppDelegate.h"
+#import "CPPersinalparentVC.h"
 
 @interface CPPersonalInformationVC ()
 
@@ -129,9 +130,9 @@
 
 -(void)showViewWith:(NSIndexPath*)indexPath{
     
-    UIViewController * con = [[UIViewController alloc]initWithNibName:nil
+    CPPersinalparentVC * con = [[CPPersinalparentVC alloc]initWithNibName:nil
                                                                bundle:nil];
-    con.view.backgroundColor = [UIColor yellowColor];
+    con.view.backgroundColor = [UIColor whiteColor];
     
     UINavigationController * navController = [[UINavigationController alloc]initWithRootViewController:con];
     navController.navigationBarHidden = YES;
@@ -144,6 +145,12 @@
         
     }];
     
+    [con setPersinalclickBlock:^(id data){
+        
+        [model dismissRootViewControllerWithCompletion:^{
+        }];
+        
+    }];
 
 }
 

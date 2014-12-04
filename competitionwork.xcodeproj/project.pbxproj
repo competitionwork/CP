@@ -43,6 +43,7 @@
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
+		0498889D1A300DE0001FA97F /* CPPersinalparentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */; };
 		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
@@ -216,6 +217,8 @@
 		0496675B1A04AB1F0090EE5E /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		0496675C1A04AB1F0090EE5E /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		049667611A04B6AA0090EE5E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		0498889B1A300DE0001FA97F /* CPPersinalparentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPersinalparentVC.h; sourceTree = "<group>"; };
+		0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPersinalparentVC.m; sourceTree = "<group>"; };
 		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -928,6 +931,8 @@
 				048742C41A2F051400CC92DE /* CPPersonalInformationVC.m */,
 				048742C61A2F0C8600CC92DE /* CPPersonalTableViewCell.h */,
 				048742C71A2F0C8600CC92DE /* CPPersonalTableViewCell.m */,
+				0498889B1A300DE0001FA97F /* CPPersinalparentVC.h */,
+				0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */,
 			);
 			name = "resingView(注册)";
 			path = CPUIView/resingView;
@@ -1095,6 +1100,7 @@
 				04AF38521A06182C008958C7 /* GJBaseAPIInvokeCondition.m in Sources */,
 				04A3422E1A2398F7003D4F85 /* CPBaseViewController.m in Sources */,
 				04A3422F1A2398F7003D4F85 /* CPUIViewControllerClassify.m in Sources */,
+				0498889D1A300DE0001FA97F /* CPPersinalparentVC.m in Sources */,
 				0478C18F1A14FBF800552707 /* CPDetailViewController.m in Sources */,
 				0478C1921A1500D700552707 /* CPDetailEntiy.m in Sources */,
 				04CAC21F19F7EFBF005291D3 /* GJCommonWidgetHelper.m in Sources */,
