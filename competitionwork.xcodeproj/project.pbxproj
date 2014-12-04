@@ -428,6 +428,7 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
+				049888A41A305F19001FA97F /* MastView */,
 				04FA58CB1A2DB83200BAA19E /* resingView(注册) */,
 				04A342301A239912003D4F85 /* loginView(登录) */,
 				04A198481A20533700EC6587 /* userCenter（个人中心） */,
@@ -520,6 +521,14 @@
 			);
 			name = userinfor;
 			path = CPUIView/Model/userinfor;
+			sourceTree = "<group>";
+		};
+		049888A41A305F19001FA97F /* MastView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MastView;
+			path = CPUIView/MastView;
 			sourceTree = "<group>";
 		};
 		049DF5671A0F493C00F12447 /* resources */ = {

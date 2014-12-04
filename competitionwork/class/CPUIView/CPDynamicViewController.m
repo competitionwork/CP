@@ -7,6 +7,8 @@
 //
 
 #import "CPDynamicViewController.h"
+#import "CPLoginView.h"
+#import "AppDelegate.h"
 
 @interface CPDynamicViewController ()
 
@@ -18,8 +20,21 @@
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
     // Do any additional setup after loading the view from its nib.
-    
+    [self showLoginView];
     [self setNavigationLeftButton:self withSelector:nil withImage:nil withHImgae:nil];
+}
+
+-(void)showLoginView{
+    
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+    
+    if (!app.userInforCenter.isLoginSuccess) {
+        
+        CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
+
+        [self.navigationController pushViewController:loginView animated:NO];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

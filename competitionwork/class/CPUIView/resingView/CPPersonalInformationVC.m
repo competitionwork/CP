@@ -171,6 +171,13 @@
     } andFailed:^(id err) {
         
     }];
+    
+    [self returnToRootView];
+    
+}
+
+-(void)returnToRootView{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 -(void)creatData{

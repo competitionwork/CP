@@ -29,25 +29,11 @@
     
     [self.window makeKeyAndVisible];
     
-    [self showLoginView];
 
     return YES;
 }
 
--(void)showLoginView{
-    
-    if (!self.userInforCenter.isLoginSuccess) {
-        
-        CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
-        UINavigationController * navController = [[UINavigationController alloc]initWithRootViewController:loginView];
-        
-        
-        [self.MastVC.selectedViewController presentViewController:navController animated:YES completion:^{
-            
-        }];
-    }
-    
-}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
