@@ -14,6 +14,6 @@
 @property(nonatomic,getter = isHiddenTopBorder) BOOL hiddenTopBorder;
 @property(nonatomic,getter = isHiddenDownBorder) BOOL hiddenDownBorder;
 
-
++ (CGFloat)heightForRow;
 
 @end

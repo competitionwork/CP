@@ -9,6 +9,9 @@
 #import "CPBaseList.h"
 #import "RefreshView.h"
 @interface CPMainListViewController : CPBaseList<UITableViewDataSource,UITableViewDelegate,RefreshViewDelegate>
+
+@property (nonatomic) BOOL hasMoreData;
+
 @property (nonatomic, copy) void(^clickIndex)(CPListCellCommonEntiy * clickEntiy);
 @property (nonatomic, copy) void(^scrollViewWillBeginDragging)(UIScrollView * scrollView);
 @property (nonatomic, copy) void(^scrollViewDidScroll)(UIScrollView * scrollView);

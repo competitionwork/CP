@@ -21,6 +21,7 @@
 //#import "CPResingVC.h"
 #import "CPPersonalInformationVC.h"
 #import "CPUIViewControllerClassify.h"
+#import "GJListMoreCell.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
 {
@@ -37,9 +38,11 @@
 
 @property(nonatomic,strong) RefreshView * refreshView;
 
-@property(nonatomic,assign) BOOL showRefreshLoadingView;
+@property(nonatomic,) BOOL showRefreshLoadingView;
 
+@property (nonatomic) BOOL isRefresh;
 
+@property (nonatomic,assign) NSInteger pageIndex;
 
 
 @end
@@ -90,6 +93,7 @@
     
     [self.listController setScrollViewDidScroll:^(UIScrollView *ScrollView) {
         [weakself scrollViewDidScroll:ScrollView];
+        
     }];
     
     [self.listController setScrollViewDidEndDraggingWillDecelerate:^(UIScrollView *ScrollView, BOOL decelerate) {
@@ -100,7 +104,6 @@
     
     [self layoutSubvies];
     
-    // Do any additional setup after loading the view from its nib.
 }
 
 //-(void)push{
@@ -116,10 +119,7 @@
 //    [self.navigationController pushViewController:resing animated:YES];
 //}
 
-- (void)refresh {
-    
-    [self loadDataByPageIndex:0];
-}
+
 
 -(void)reloadData
 {
@@ -256,11 +256,14 @@
     }
     self.tabelView.dataSource = _listController;
     self.tabelView.delegate = _listController;
-    
-    
-    
+        
 }
 
+- (void)refresh {
+    self.isRefresh = YES;
+    [_refreshView startLoading];
+    [self loadDataByPageIndex:0];
+}
 
 -(void)refreashData
 {
@@ -269,10 +272,6 @@
 
 -(void)loadDataByPageIndex:(NSUInteger)pageIndex
 {
-    [_refreshView startLoading];
-    //    self.listDataRequestParam.currentPageIndex = pageIndex;
-    //
-    //    self.listDataRequestParam.queryParams.pageIndex = NSStringFromInt(pageIndex);
     
     NSArray * paramArray = [self filterParamsFromOptionNode:self.rootNode];
     NSMutableDictionary * paramDict = [NSMutableDictionary dictionaryWithCapacity:0];
@@ -281,6 +280,8 @@
         [paramDict setObject:obj[@"value"] forKey:obj[@"name"]];
         
     }];
+    _pageIndex = pageIndex;
+    [paramDict setObject:NSStringFromInt(pageIndex) forKey:@"page"];
     
     [self loadDataByParam:paramDict];
 }
@@ -294,7 +295,7 @@
                               @"c_class" : param[@"type"]?:@"0",
                               @"c_level" : param[@"leve"]?:@"0",
                               @"c_time" : param[@"time"]?:@"0",
-                              @"page" : NSStringFromInt(1),
+                              @"page" : param[@"page"],
                               @"limit":NSStringFromInt(20),
                               @"univs_id":NSStringFromInt(1001)
                               };
@@ -340,11 +341,11 @@
     
     NSArray *postdata = result[@"contests"];
     NSInteger totalCount = [result[@"all_num"] integerValue];
-    if (pageIndex && self.postData.count > 0) {
+    if (postdata.count > 0 && self.postData.count > 0 && _isRefresh) {
         [self.postData removeAllObjects];
+        _isRefresh = NO;
     }
     [self.postData addObjectsFromArray:postdata];
-    
     
     NSMutableArray *data = [NSMutableArray array];
     for (NSDictionary *dic in self.postData) {
@@ -354,6 +355,13 @@
         [data addObject:entity];
         
     }
+    
+    if (totalCount > self.postData.count) {
+        self.listController.hasMoreData = YES;
+    }else{
+        self.listController.hasMoreData = NO;
+    }
+    
     self.listController.listCellData = data;
     
     self.tabelView.backgroundColor = MainBackColor;
@@ -411,9 +419,14 @@
 // 拖动过程中
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [_refreshView scrollViewDidScroll:scrollView];
-    if (!isLoading) {
+    if (!isLoading && self.listController.hasMoreData) {
         if (scrollView.contentOffset.y > (scrollView.contentSize.height - scrollView.frame.size.height)) {
             self.showRefreshLoadingView = NO;
+            
+            GJListMoreCell *cell = (GJListMoreCell *)[_tabelView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:([self.tabelView numberOfRowsInSection:0] - 1) inSection:0]];
+            cell.animationing = YES;
+            _pageIndex = ++_pageIndex;
+            [self loadDataByPageIndex:_pageIndex];
         }
     }
 }
@@ -424,6 +437,7 @@
 }
 
 - (void)refreshViewDidCallBack {
+    self.isRefresh = YES;
     [self loadDataByPageIndex:0];
 }
 

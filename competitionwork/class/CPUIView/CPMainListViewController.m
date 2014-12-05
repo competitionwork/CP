@@ -10,6 +10,7 @@
 #import "CPListCellCommonEntiy.h"
 #import "CPMainListCellTableViewCell.h"
 #import "CPDetailViewController.h"
+#import "GJListMoreCell.h"
 
 @implementation CPMainListViewController
 
@@ -20,7 +21,7 @@
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     
     CPListCellCommonEntiy *cellEntity = [self listDataEntityAtIndex:indexPath];
-    NSDictionary *dic = cellEntity.dataEntity;
+//    NSDictionary *dic = cellEntity.dataEntity;
     
 
     if (clickIndex) {
@@ -37,7 +38,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSUInteger count = self.listCellData.count;
+    NSUInteger count =  self.listCellData.count;
+    
+    if (_hasMoreData) {
+        return ++count;
+    }
     
     return count;
 }
@@ -45,8 +50,21 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *normalCellId = @"xiaoquCell";
-    NSDictionary *cellEntityDict = [self listDataEntityAndKey:[self listDataEntityAtIndex:indexPath]];
-    CPListCellCommonEntiy * cellEntity = [self listDataEntityAtIndex:indexPath];
+    static NSString *moreCellId = @"moreCell";
+
+    NSDictionary *cellEntityDict = nil;
+    CPListCellCommonEntiy * cellEntity = nil;
+    
+    if (indexPath.row == self.listCellData.count) {
+        cellEntity = [[CPListCellCommonEntiy alloc]init];
+        cellEntity.cellStyle = CPPostListCellStyleMoreCell;
+        
+    }else{
+        
+        cellEntityDict = [self listDataEntityAndKey:[self listDataEntityAtIndex:indexPath]];
+        cellEntity = [self listDataEntityAtIndex:indexPath];
+    }
+
     
     switch (cellEntity.cellStyle) {
         case CPPostListCellStyleNormal:
@@ -60,16 +78,20 @@
             }
             cell.content = cellEntityDict;
             
-//            GetPostListCellFormate *formate = [GetPostListCellFormate shareFormate];
-//            cell.content = [formate cellDictionaryForListWithContent:cellEntity.dataEntity withMasterId:GJMasterIdFangchan_7 withMajorId:101];
-            
-            //            cell.textLabel.text = NSStringFromFormat(@"%d", indexPath.row);
             return cell;
             
         }
             break;
         case CPPostListCellStyleMoreCell:
-            
+        {
+            GJListMoreCell *cell = [tableView dequeueReusableCellWithIdentifier:moreCellId];
+            if (!cell) {
+                
+                cell = [[GJListMoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:moreCellId];
+                
+            }
+            return cell;
+        }
             break;
         case CPPostListCellStyleLocationCell:
             
@@ -153,6 +175,7 @@
     if (_scrollViewDidScroll) {
         _scrollViewDidScroll(scrollView);
     }
+
 }
 
 // 拖动结束后

@@ -10,7 +10,7 @@
 #import "GJUserCenterListViewCell.h"
 #import "CPListCellEntity.h"
 #import "UIView+borders.h"
-
+#import "GJUserCenterHeadViewCell.h"
 
 #define KCELLHIGHT 60
 
@@ -85,28 +85,59 @@
     
     static NSString * cellIdntifier = @"userCenterCell";
     
-    GJUserCenterListViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdntifier];
-    
-    if (!cell) {
-        cell = [[GJUserCenterListViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdntifier];
-        cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, KCELLHIGHT)];
-        cell.backgroundView.backgroundColor = [UIColor whiteColor];
-        cell.textLabel.backgroundColor = [UIColor clearColor];
+    if (indexPath.section == 0) {
+        
+        GJUserCenterHeadViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdntifier];
+        
+        if (!cell) {
+            cell = [[GJUserCenterHeadViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdntifier];
+            cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, KCELLHIGHT)];
+            cell.backgroundView.backgroundColor = [UIColor whiteColor];
+            cell.textLabel.backgroundColor = [UIColor clearColor];
+        }
+        
+        CPListCellEntity * entity = [self entityOfCellAtIndex:indexPath];
+        
+        cell.textLabel.text = entity.title;
+        cell.imageView.image = entity.image;
+        
+        cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
+        
+        cell.hiddenBottomBorder = [self isLastCellInSection:indexPath];
+        cell.hiddenDownBorder = ![self isLastCellInSection:indexPath];
+        
+        return cell;
+
+    }else{
+        GJUserCenterListViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdntifier];
+        
+        if (!cell) {
+            cell = [[GJUserCenterListViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdntifier];
+            cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, KCELLHIGHT)];
+            cell.backgroundView.backgroundColor = [UIColor whiteColor];
+            cell.textLabel.backgroundColor = [UIColor clearColor];
+        }
+        
+        CPListCellEntity * entity = [self entityOfCellAtIndex:indexPath];
+        
+        cell.textLabel.text = entity.title;
+        cell.imageView.image = entity.image;
+        
+        cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
+        
+        cell.hiddenBottomBorder = [self isLastCellInSection:indexPath];
+        cell.hiddenDownBorder = ![self isLastCellInSection:indexPath];
+        
+        return cell;
     }
     
-    CPListCellEntity * entity = [self entityOfCellAtIndex:indexPath];
     
-    cell.textLabel.text = entity.title;
-    cell.imageView.image = entity.image;
     
-    cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
-    
-    cell.hiddenBottomBorder = [self isLastCellInSection:indexPath];
-    cell.hiddenDownBorder = ![self isLastCellInSection:indexPath];
+ 
     
     //    [cell setBorderIn:UIViewBorderPositionBottom];
     
-    return cell;
+    return nil;
     
 }
 
@@ -117,7 +148,13 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return KCELLHIGHT;
+    if (indexPath.section == 0) {
+        return [GJUserCenterHeadViewCell heightForRow];
+    }else{
+        return [GJUserCenterListViewCell heightForRow];
+    }
+    
+    return [GJUserCenterListViewCell heightForRow];
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

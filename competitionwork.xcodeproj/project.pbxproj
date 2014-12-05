@@ -52,6 +52,8 @@
 		049888A31A304EDD001FA97F /* 文字点击态高度固定48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */; };
 		049888D21A30A04B001FA97F /* CPMastCompetitionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 049888D01A30A04B001FA97F /* CPMastCompetitionCell.m */; };
 		049888D31A30A04B001FA97F /* CPMastCompetitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049888D11A30A04B001FA97F /* CPMastCompetitionCell.xib */; };
+		0499677C1A3195DD00551CB8 /* GJListMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499677B1A3195DD00551CB8 /* GJListMoreCell.m */; };
+		0499677F1A31A50800551CB8 /* GJUserCenterHeadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499677E1A31A50800551CB8 /* GJUserCenterHeadViewCell.m */; };
 		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
@@ -239,6 +241,10 @@
 		049888CF1A30A04B001FA97F /* CPMastCompetitionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPMastCompetitionCell.h; sourceTree = "<group>"; };
 		049888D01A30A04B001FA97F /* CPMastCompetitionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPMastCompetitionCell.m; sourceTree = "<group>"; };
 		049888D11A30A04B001FA97F /* CPMastCompetitionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPMastCompetitionCell.xib; sourceTree = "<group>"; };
+		0499677A1A3195DD00551CB8 /* GJListMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJListMoreCell.h; sourceTree = "<group>"; };
+		0499677B1A3195DD00551CB8 /* GJListMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJListMoreCell.m; sourceTree = "<group>"; };
+		0499677D1A31A50800551CB8 /* GJUserCenterHeadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJUserCenterHeadViewCell.h; sourceTree = "<group>"; };
+		0499677E1A31A50800551CB8 /* GJUserCenterHeadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJUserCenterHeadViewCell.m; sourceTree = "<group>"; };
 		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -443,6 +449,7 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
+				049967791A3195DD00551CB8 /* PostList */,
 				049888A41A305F19001FA97F /* MastView(首页) */,
 				04FA58CB1A2DB83200BAA19E /* resingView(注册) */,
 				04A342301A239912003D4F85 /* loginView(登录) */,
@@ -561,6 +568,16 @@
 			path = CPUIView/MastView;
 			sourceTree = "<group>";
 		};
+		049967791A3195DD00551CB8 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				0499677A1A3195DD00551CB8 /* GJListMoreCell.h */,
+				0499677B1A3195DD00551CB8 /* GJListMoreCell.m */,
+			);
+			name = PostList;
+			path = CPUIView/PostList;
+			sourceTree = "<group>";
+		};
 		049DF5671A0F493C00F12447 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +672,8 @@
 				04A1984A1A2053AB00EC6587 /* CPUserCenterListVeiw.m */,
 				04A198521A2091B100EC6587 /* GJUserCenterListViewCell.h */,
 				04A198531A2091B100EC6587 /* GJUserCenterListViewCell.m */,
+				0499677D1A31A50800551CB8 /* GJUserCenterHeadViewCell.h */,
+				0499677E1A31A50800551CB8 /* GJUserCenterHeadViewCell.m */,
 				047CB77E1A20BC9C00D693C8 /* CPListCellEntity.h */,
 				047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */,
 			);
@@ -1144,6 +1163,7 @@
 				04A0DA491A04D48D008C4E12 /* NSObject+YAJL.m in Sources */,
 				04A0DA461A04D48D008C4E12 /* yajl_gen.c in Sources */,
 				0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */,
+				0499677F1A31A50800551CB8 /* GJUserCenterHeadViewCell.m in Sources */,
 				04A0DA481A04D48D008C4E12 /* yajl_parser.c in Sources */,
 				04CAC21C19F7EFBF005291D3 /* GJFilterSingleLevelWithSectionOptionSelectorView.m in Sources */,
 				04AF385B1A061A30008958C7 /* CPPostDataRequestParam.m in Sources */,
@@ -1202,6 +1222,7 @@
 				04AF38551A0618C7008958C7 /* CPBaseInterfaceParam.m in Sources */,
 				04A0DA4B1A04D48D008C4E12 /* YAJLDocument.m in Sources */,
 				04CAC1A519F7EF82005291D3 /* main.m in Sources */,
+				0499677C1A3195DD00551CB8 /* GJListMoreCell.m in Sources */,
 				04A0DA441A04D48D008C4E12 /* yajl_buf.c in Sources */,
 				0425015119F7F8E50038E188 /* CPDynamicViewController.m in Sources */,
 				04CAC21B19F7EFBF005291D3 /* GJFilterSingleLevelOptionSelectorView.m in Sources */,
@@ -1296,7 +1317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1329,7 +1350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1341,11 +1362,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iOS Development: huang junjie (R38SAZA43D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: huang junjie (R38SAZA43D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1357,11 +1379,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iOS Development: huang junjie (R38SAZA43D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: huang junjie (R38SAZA43D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

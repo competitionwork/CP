@@ -8,6 +8,7 @@
 
 #import "GJUserCenterListViewCell.h"
 #import "GJCommonWidgetHelper.h"
+#import "CPUtil.h"
 
 @interface GJUserCenterListViewCell ()
 
@@ -16,6 +17,8 @@
 @property (nonatomic,strong) UIView *TopBorder;
 
 @property (nonatomic,strong) UIView *downBorder;
+
+@property (nonatomic,strong) UIImageView *arrowImage;
 
 @end
 @implementation GJUserCenterListViewCell
@@ -30,7 +33,9 @@
         
         [self.contentView addSubview:self.downBorder];
         
-        self.selectedBackgroundView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 60)];
+        [self.contentView addSubview:self.arrowImage];
+        
+        self.selectedBackgroundView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 60)];
         self.selectedBackgroundView.backgroundColor=RGBCOLOR(229, 229, 229);
     }
     return self;
@@ -70,6 +75,15 @@
     return _downBorder;
 }
 
+-(UIImageView *)arrowImage{
+    if (!_arrowImage) {
+        UIImage * arrow = [CPUtil getRightGrayArrowImage];
+        _arrowImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, arrow.size.width, arrow.size.height)];
+        _arrowImage.image = arrow;
+    }
+    return _arrowImage;
+}
+
 -(void)setHiddenBottomBorder:(BOOL)hiddenBottomBorder
 {
     self.bottomBorder.hidden = hiddenBottomBorder;
@@ -93,12 +107,18 @@
     [[[self.bottomBorder.po_frameBuilder setHeight:0.5] alignToBottomInSuperviewWithInset:0] alignRightInSuperviewWithInset:0];
     
     [[[self.downBorder.po_frameBuilder setHeight:0.5] alignToBottomInSuperviewWithInset:0] alignRightInSuperviewWithInset:0];
-    [[[self.imageView.po_frameBuilder setSizeWithWidth:59 height:46] alignLeftInSuperviewWithInset:0] alignToTopInSuperviewWithInset:0];
+    [[[[self.imageView.po_frameBuilder setSizeWithWidth:59 height:46] alignLeftInSuperviewWithInset:0] alignToTopInSuperviewWithInset:0]centerVerticallyInSuperview];
     self.imageView.contentMode = UIViewContentModeCenter;
     [self.textLabel.po_frameBuilder alignLeftInSuperviewWithInset:54];
     self.textLabel.font = [UIFont systemFontOfSize:14];
     self.textLabel.textColor = RGBCOLOR(39, 39, 39);
     self.textLabel.highlightedTextColor = self.textLabel.textColor;
+    
+    [[self.arrowImage.po_frameBuilder alignRightInSuperviewWithInset:20]centerVerticallyInSuperview];
+}
+
++ (CGFloat)heightForRow{
+    return 60;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -106,5 +126,7 @@
     [super setSelected:selected animated:animated];
     
 }
+
+
 
 @end
