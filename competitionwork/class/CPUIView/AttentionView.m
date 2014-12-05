@@ -27,16 +27,19 @@
         self.AttentionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self addSubview:self.AttentionButton];
         self.AttentionButton.frame = self.bounds;
-        [[self.AttentionButton.po_frameBuilder setWidth:63.5] setX:0.5];
-        [self.AttentionButton setImage:[UIImage imageNamed:@"列表页-电话"] forState:UIControlStateNormal];
-        [self.AttentionButton setImage:[UIImage imageNamed:@"列表页-电话-点击"] forState:UIControlStateHighlighted];
-        self.AttentionButton.backgroundColor = [UIColor grayColor];
+        [[[[[self.AttentionButton.po_frameBuilder setWidth:48.5] setHeight:23] setX:0.5]alignToTopInSuperviewWithInset:8]centerHorizontallyInSuperview];
+        [self.AttentionButton setBackgroundImage:[UIImage imageNamed:@"关注"] forState:UIControlStateNormal];
+        [self.AttentionButton setBackgroundImage:[UIImage imageNamed:@"关注"] forState:UIControlStateHighlighted];
+        [self.AttentionButton setTitle:@"关注" forState:UIControlStateNormal];
+        [self.AttentionButton setTitle:@"关注" forState:UIControlStateHighlighted];
+        self.AttentionButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        self.AttentionButton.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
 - (UIImage *)buttonHightlightedImage {
-    UIImageView *view = [[UIImageView alloc] initWithFrame:(CGRect){0,0,64,85}];
+    UIImageView *view = [[UIImageView alloc] initWithFrame:(CGRect){0,0,97,46}];
     view.backgroundColor = GJColor(229, 229, 229, 1);
     UIGraphicsBeginImageContext(view.bounds.size);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];

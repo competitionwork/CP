@@ -118,6 +118,7 @@
         
         competitionCell.titleLabel.text = ItemDict[@"title"];
         competitionCell.backGroundImage.backgroundColor = [self colorWithHexString:ItemDict[@"bgNormalColor"]];
+        competitionCell.backGroundImage.image = [UIImage imageNamed:ItemDict[@"back_image"]];
         
     }else if ([cell.reuseIdentifier isEqualToString:kCPSECTIONTWOCELLIDENTIFIER]){
         
@@ -126,9 +127,10 @@
         CPFunctionCollectionCell * competitionCell = (CPFunctionCollectionCell*)cell;
         
         competitionCell.titleLabel.text = ItemDict[@"title"];
-        competitionCell.iconImage.backgroundColor = [self colorWithHexString:ItemDict[@"bgNormalColor"]];
+        competitionCell.iconImage.backgroundColor = [UIColor clearColor];
+        competitionCell.iconImage.image = [UIImage imageNamed:ItemDict[@"back_image"]];
+
     }
-//    cell.backgroundColor = [UIColor blueColor];
     
     return cell;
 }
@@ -177,8 +179,6 @@
     
     CPMainViewController * mastVC = [[CPMainViewController alloc]initWithNibName:nil bundle:nil];
     
-//    AppDelegate * app = [AppDelegate sharedAppDelegate];
-//    [app.MastVC setHidesBottomBarWhenPushed:YES];
     mastVC.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:mastVC animated:YES];
@@ -186,7 +186,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -228,20 +227,20 @@
 -(void)creatTheData{
     
 
-    self.DataArray  = @[@{@"title":@"数学建模",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831"},
+    self.DataArray  = @[@{@"title":@"数学建模",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"六宫格二_03"},
+                        @{@"title":@"数学建模",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"六宫格二_05"},
+                        @{@"title":@"数学建模",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"六宫格二_07"},
+                        @{@"title":@"数学建模",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"六宫格二_13"},
+                        @{@"title":@"数学建模",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"六宫格二_15"},
+                        @{@"title":@"数学建模",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"六宫格二_16"},
                         ];
     
-    self.founctionData  = @[@{@"title":@"聊天",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3"},
-                        @{@"title":@"每日精华",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0"},
-                        @{@"title":@"排名",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2"},
-                        @{@"title":@"我关注的人",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462"},
-                        @{@"title":@"我关注的竞赛",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09"},
-                        @{@"title":@"发布竞赛",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831"},
+    self.founctionData  = @[@{@"title":@"聊天",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"mast_1"},
+                        @{@"title":@"每日精华",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"mast_2"},
+                        @{@"title":@"排名",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"mast_3"},
+                        @{@"title":@"我关注的人",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"mast_4"},
+                        @{@"title":@"我关注的竞赛",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"mast_5"},
+                        @{@"title":@"发布竞赛",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"mast_6"},
                         ];
 
     

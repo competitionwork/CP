@@ -14,15 +14,22 @@
  */
 static CGFloat SpaceToLeft          = 8;    // 距离左侧边缘的空白距离
 static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
-static CGFloat imageWidth           = 80;   // 图片的宽度
-static CGFloat imageHeight          = 60;   // 图片的高度
-static CGFloat SpaceForLabel        = 8;    // Label之间间隔
-static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
+
 
 #define TitleFont           [UIFont systemFontOfSize:14]
 #define GrayFont            [UIFont systemFontOfSize:12]
 #define PriceFont           [UIFont systemFontOfSize:12]
 #define TianLvFont          [UIFont systemFontOfSize:12]
+
+@interface CPMainListCellTableViewCell ()
+
+@property (nonatomic,strong) UIImageView *pImage;
+
+@property (nonatomic,strong) UIImageView *timeImage;
+
+@property (nonatomic,strong) UIImageView *ingImage;
+
+@end
 
 @implementation CPMainListCellTableViewCell
 
@@ -68,7 +75,17 @@ static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
         self.left4Label.textColor = GrayColor;
         [self.contentView addSubview:self.left4Label];
         
-        self.attentionView = [[AttentionView alloc]initWithFrame:CGRectMake(0, 0, 64, 85)];
+        
+        self.pImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"人数"]];
+        [self.contentView addSubview:self.pImage];
+        
+        self.timeImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"时间"]];
+        [self.contentView addSubview:self.timeImage];
+        
+        self.ingImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"正在进行中"]];
+        [self.contentView addSubview:self.ingImage];
+        
+        self.attentionView = [[AttentionView alloc]initWithFrame:CGRectMake(0, 0, 50, 40)];
         [self.contentView addSubview:self.attentionView];
         
     }
@@ -112,21 +129,28 @@ static CGFloat SpaceForLabelAndIcon = 5;    // label和icon的间距
     [[[_left1Label.po_frameBuilder setSizeWithWidth:150 height:20] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self spaceToTop:_content]-4];
     _left1Label.text = [_content objectForKey:@"left1"];
     
+    [[[[self.pImage.po_frameBuilder alignLeftInSuperviewWithInset:SpaceToLeft]setY:[self yForLabelOfLine2:_content]]setWidth:14.5]setHeight:12.5];
+    
     labelText = _content[@"left2"];
-    [[[[_left2Label.po_frameBuilder setHeight:16] setWidth:[self widthForLabel:_left2Label withText:labelText]] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self yForLabelOfLine2:_content]];
+    [[[[_left2Label.po_frameBuilder setHeight:16] setWidth:[self widthForLabel:_left2Label withText:labelText]] setY:[self yForLabelOfLine2:_content]]alignRightOfView:self.pImage offset:5];
     _left2Label.text = labelText;
+    
+    [[[[self.timeImage.po_frameBuilder alignLeftInSuperviewWithInset:SpaceToLeft]setY:[self yForLabelOfLine3:_content]]setWidth:14.5]setHeight:12.5];
+
     
     labelText = _content[@"left3"];
     CGFloat width3 = [self widthForLabel:_left3Label withText:[_content objectForKey:@"left3"]];
     _left3Label.text = labelText;
-    [[[_left3Label.po_frameBuilder setSizeWithWidth:width3 height:16] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self yForLabelOfLine3:_content]];
+    [[[_left3Label.po_frameBuilder setSizeWithWidth:width3 height:16] setY:[self yForLabelOfLine3:_content]]alignRightOfView:self.timeImage offset:5];
     
     labelText = _content[@"left4"];
     CGFloat width4 = [self widthForLabel:_left4Label withText:[_content objectForKey:@"left4"]];
     _left4Label.text = labelText;
-    [[[_left4Label.po_frameBuilder setSizeWithWidth:width4 height:16] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self yForLabelOfLine3:_content] +20];
+    [[[_left4Label.po_frameBuilder setSizeWithWidth:width4 height:16] setY:[self yForLabelOfLine3:_content] +20]alignRightOfView:self.timeImage offset:5];
+    
+    [[[[self.ingImage.po_frameBuilder alignRightOfView:self.left4Label offset:5]setY:[self yForLabelOfLine3:_content]]setWidth:44]setHeight:15];
         
-    [_attentionView.po_frameBuilder alignRightInSuperviewWithInset:SpaceToRight];
+    [_attentionView.po_frameBuilder alignRightInSuperviewWithInset:5];
 
 }
 

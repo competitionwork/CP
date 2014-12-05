@@ -68,13 +68,16 @@
     
     UIImageView * tabbargroundImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tabbar_background"]];
     tabbargroundImage.frame = tabbarView.bounds;
+    tabbargroundImage.backgroundColor = RGBCOLOR(179, 179, 179);
+    tabbargroundImage.alpha = 0.5f;
     [tabbarView addSubview:tabbargroundImage];
     
     
-    NSArray * images = @[@"tabbar_home.png",@"tabbar_message_center.png",@"tabbar_message_center.png"];
-    NSArray * imageHights = @[@"tabbar_home_highlighted.png",@"tabbar_message_center_highlighted.png",@"tabbar_message_center_highlighted.png"];
+    NSArray * images = @[@"jj1",@"lt1",@"wd1"];
+    NSArray * imageHights = @[@"jj2",@"lt2",@"wd2"];
     
     for (int i = 0; i<images.count; i++) {
+                
         NSString * backImage = [images objectAtIndex:i];
         NSString * hightImage = [imageHights objectAtIndex:i];
         

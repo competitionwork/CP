@@ -18,10 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setNavigationBackButton:self withSelector:@selector(goBack)];
     
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     [UIColor colorWithRed:255.0 green:255.0 blue:255.0 alpha:1], UITextAttributeTextColor,
+                                                                     [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1], UITextAttributeTextShadowColor,
+                                                                     [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
+                                                                     [UIFont fontWithName:@"Arial-Bold" size:0.0], UITextAttributeFont,
+                                                                     nil]];
     [self.navigationController.navigationBar setBackgroundImage:getimagePINGPU([UIImage imageNamed:@"title平铺X64"]) forBarMetrics:UIBarMetricsDefault];
-    // Do any additional setup after loading the view.
     
 }
 
