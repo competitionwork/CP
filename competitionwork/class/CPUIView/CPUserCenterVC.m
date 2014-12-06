@@ -9,6 +9,7 @@
 #import "CPUserCenterVC.h"
 #import "CPUserCenterListVeiw.h"
 #import "CPListCellEntity.h"
+#import "PeopleCenter.h"
 
 
 
@@ -36,9 +37,7 @@
     
     self.centerListData = @[
                             @[
-                                [CPListCellEntity listCellWithTitle:@"我是学霸" imageName:@"tabbar_home" target:self callback:@selector(Account) userinfo:nil],
-                                
-                                
+                                [CPListCellEntity listCellWithTitle:@"我是学霸" imageName:@"tabbar_home" target:self callback:@selector(myCenter) userinfo:nil],
                                 ],
                             @[
                                 [CPListCellEntity listCellWithTitle:@"账户" imageName:@"tabbar_home" target:self callback:@selector(Account) userinfo:nil],
@@ -51,6 +50,14 @@
     [self.ListView reloadDate];
     
     
+}
+
+-(void)myCenter{
+    PeopleCenter * people = [[PeopleCenter alloc]initWithNibName:nil bundle:nil];
+    
+    people.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:people animated:YES];
 }
 
 -(void)Account{

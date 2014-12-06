@@ -74,6 +74,8 @@
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
+		0497D4061A3307B500BD8504 /* PeopleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497D4051A3307B500BD8504 /* PeopleCenter.m */; };
+		0497D4091A330A6A00BD8504 /* PeopleHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497D4081A330A6A00BD8504 /* PeopleHeadView.m */; };
 		0498889D1A300DE0001FA97F /* CPPersinalparentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */; };
 		049888A11A303282001FA97F /* CPUserInforCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 049888A01A303282001FA97F /* CPUserInforCenter.m */; };
 		049888A31A304EDD001FA97F /* 文字点击态高度固定48@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */; };
@@ -286,6 +288,10 @@
 		0496675B1A04AB1F0090EE5E /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		0496675C1A04AB1F0090EE5E /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		049667611A04B6AA0090EE5E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		0497D4041A3307B500BD8504 /* PeopleCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleCenter.h; sourceTree = "<group>"; };
+		0497D4051A3307B500BD8504 /* PeopleCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleCenter.m; sourceTree = "<group>"; };
+		0497D4071A330A6A00BD8504 /* PeopleHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHeadView.h; sourceTree = "<group>"; };
+		0497D4081A330A6A00BD8504 /* PeopleHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleHeadView.m; sourceTree = "<group>"; };
 		0498889B1A300DE0001FA97F /* CPPersinalparentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPersinalparentVC.h; sourceTree = "<group>"; };
 		0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPersinalparentVC.m; sourceTree = "<group>"; };
 		0498889F1A303282001FA97F /* CPUserInforCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUserInforCenter.h; sourceTree = "<group>"; };
@@ -630,6 +636,17 @@
 			name = "API（接口）";
 			sourceTree = "<group>";
 		};
+		0497D4031A33072700BD8504 /* peopleCenter */ = {
+			isa = PBXGroup;
+			children = (
+				0497D4041A3307B500BD8504 /* PeopleCenter.h */,
+				0497D4051A3307B500BD8504 /* PeopleCenter.m */,
+				0497D4071A330A6A00BD8504 /* PeopleHeadView.h */,
+				0497D4081A330A6A00BD8504 /* PeopleHeadView.m */,
+			);
+			name = peopleCenter;
+			sourceTree = "<group>";
+		};
 		0498889E1A303268001FA97F /* userinfor */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +772,7 @@
 		04A198481A20533700EC6587 /* userCenter（个人中心） */ = {
 			isa = PBXGroup;
 			children = (
+				0497D4031A33072700BD8504 /* peopleCenter */,
 				04A198491A2053AB00EC6587 /* CPUserCenterListVeiw.h */,
 				04A1984A1A2053AB00EC6587 /* CPUserCenterListVeiw.m */,
 				04A198521A2091B100EC6587 /* GJUserCenterListViewCell.h */,
@@ -1263,6 +1281,7 @@
 				04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */,
 				048742DD1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m in Sources */,
 				048742C51A2F051400CC92DE /* CPPersonalInformationVC.m in Sources */,
+				0497D4091A330A6A00BD8504 /* PeopleHeadView.m in Sources */,
 				047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
@@ -1316,6 +1335,7 @@
 				04CAC22519F7EFBF005291D3 /* JSONKit.m in Sources */,
 				04A0DA4C1A04D48D008C4E12 /* YAJLGen.m in Sources */,
 				04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */,
+				0497D4061A3307B500BD8504 /* PeopleCenter.m in Sources */,
 				04CAC20E19F7EFBF005291D3 /* AFJSONRequestOperation.m in Sources */,
 				049888D21A30A04B001FA97F /* CPMastCompetitionCell.m in Sources */,
 				04C885A81A2EE2C300E441CA /* CPAPIHelper_setting.m in Sources */,
@@ -1474,8 +1494,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iOS Development: huang junjie (R38SAZA43D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: huang junjie (R38SAZA43D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";
@@ -1491,8 +1511,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iOS Development: huang junjie (R38SAZA43D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: huang junjie (R38SAZA43D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";
