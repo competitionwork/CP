@@ -74,6 +74,7 @@
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
+		049750321A33637E00F11F3F /* CPOccupationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049750311A33637E00F11F3F /* CPOccupationView.m */; };
 		0497D4061A3307B500BD8504 /* PeopleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497D4051A3307B500BD8504 /* PeopleCenter.m */; };
 		0497D4091A330A6A00BD8504 /* PeopleHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0497D4081A330A6A00BD8504 /* PeopleHeadView.m */; };
 		0498889D1A300DE0001FA97F /* CPPersinalparentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498889C1A300DE0001FA97F /* CPPersinalparentVC.m */; };
@@ -116,6 +117,9 @@
 		049BADFD1A33405400988863 /* yen.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDC1A33405400988863 /* yen.png */; };
 		049BADFE1A33405400988863 /* yhm.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDD1A33405400988863 /* yhm.png */; };
 		049BADFF1A33405400988863 /* yy.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDE1A33405400988863 /* yy.png */; };
+		049BAE011A33445600988863 /* CenterBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BAE001A33445600988863 /* CenterBack.png */; };
+		049BAE041A334BF000988863 /* CPEducationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049BAE031A334BF000988863 /* CPEducationView.m */; };
+		049BAE081A334C9900988863 /* PeopleCoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 049BAE071A334C9900988863 /* PeopleCoreModel.m */; };
 		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
@@ -321,6 +325,8 @@
 		0496675B1A04AB1F0090EE5E /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		0496675C1A04AB1F0090EE5E /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		049667611A04B6AA0090EE5E /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		049750301A33637E00F11F3F /* CPOccupationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPOccupationView.h; sourceTree = "<group>"; };
+		049750311A33637E00F11F3F /* CPOccupationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPOccupationView.m; sourceTree = "<group>"; };
 		0497D4041A3307B500BD8504 /* PeopleCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleCenter.h; sourceTree = "<group>"; };
 		0497D4051A3307B500BD8504 /* PeopleCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleCenter.m; sourceTree = "<group>"; };
 		0497D4071A330A6A00BD8504 /* PeopleHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleHeadView.h; sourceTree = "<group>"; };
@@ -370,6 +376,11 @@
 		049BADDC1A33405400988863 /* yen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yen.png; sourceTree = "<group>"; };
 		049BADDD1A33405400988863 /* yhm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yhm.png; sourceTree = "<group>"; };
 		049BADDE1A33405400988863 /* yy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yy.png; sourceTree = "<group>"; };
+		049BAE001A33445600988863 /* CenterBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CenterBack.png; sourceTree = "<group>"; };
+		049BAE021A334BF000988863 /* CPEducationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPEducationView.h; sourceTree = "<group>"; };
+		049BAE031A334BF000988863 /* CPEducationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPEducationView.m; sourceTree = "<group>"; };
+		049BAE061A334C9900988863 /* PeopleCoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleCoreModel.h; sourceTree = "<group>"; };
+		049BAE071A334C9900988863 /* PeopleCoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleCoreModel.m; sourceTree = "<group>"; };
 		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -658,6 +669,7 @@
 		04942BB31A3209BB00AEA797 /* NewImage */ = {
 			isa = PBXGroup;
 			children = (
+				049BAE001A33445600988863 /* CenterBack.png */,
 				049BADBE1A33405400988863 /* ♀1.png */,
 				049BADBF1A33405400988863 /* ♂.png */,
 				049BADC01A33405400988863 /* 2.png */,
@@ -742,6 +754,10 @@
 				0497D4051A3307B500BD8504 /* PeopleCenter.m */,
 				0497D4071A330A6A00BD8504 /* PeopleHeadView.h */,
 				0497D4081A330A6A00BD8504 /* PeopleHeadView.m */,
+				049BAE021A334BF000988863 /* CPEducationView.h */,
+				049BAE031A334BF000988863 /* CPEducationView.m */,
+				049750301A33637E00F11F3F /* CPOccupationView.h */,
+				049750311A33637E00F11F3F /* CPOccupationView.m */,
 			);
 			name = peopleCenter;
 			sourceTree = "<group>";
@@ -778,6 +794,16 @@
 			);
 			name = PostList;
 			path = CPUIView/PostList;
+			sourceTree = "<group>";
+		};
+		049BAE051A334C6300988863 /* UserCenterModel */ = {
+			isa = PBXGroup;
+			children = (
+				049BAE061A334C9900988863 /* PeopleCoreModel.h */,
+				049BAE071A334C9900988863 /* PeopleCoreModel.m */,
+			);
+			name = UserCenterModel;
+			path = CPUIView/Model/UserCenterModel;
 			sourceTree = "<group>";
 		};
 		049DF5671A0F493C00F12447 /* resources */ = {
@@ -983,6 +1009,7 @@
 		04AF384F1A061802008958C7 /* Model（模型） */ = {
 			isa = PBXGroup;
 			children = (
+				049BAE051A334C6300988863 /* UserCenterModel */,
 				0465FAA21A30AA150022834D /* mastColletionCellModel */,
 				0498889E1A303268001FA97F /* userinfor */,
 				04AF38501A06182C008958C7 /* GJBaseAPIInvokeCondition.h */,
@@ -1367,6 +1394,7 @@
 				048742D91A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png in Resources */,
 				049431201A3209BE00AEA797 /* jj1.png in Resources */,
 				049BADF01A33405400988863 /* fx.png in Resources */,
+				049BAE011A33445600988863 /* CenterBack.png in Resources */,
 				049BADE71A33405400988863 /* 圆角矩形-4.png in Resources */,
 				049BADE01A33405400988863 /* ♂.png in Resources */,
 				049431181A3209BE00AEA797 /* +.png in Resources */,
@@ -1419,6 +1447,7 @@
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
 				04CAC21019F7EFBF005291D3 /* AFPropertyListRequestOperation.m in Sources */,
 				04CAC22319F7EFBF005291D3 /* POViewFrameBuilder.m in Sources */,
+				049BAE081A334C9900988863 /* PeopleCoreModel.m in Sources */,
 				04CAC22119F7EFBF005291D3 /* UIButton+eventHandler.m in Sources */,
 				0417F1351A0A6F560067CAED /* filterManage.m in Sources */,
 				04A0DA471A04D48D008C4E12 /* yajl_lex.c in Sources */,
@@ -1431,6 +1460,7 @@
 				04CAC21C19F7EFBF005291D3 /* GJFilterSingleLevelWithSectionOptionSelectorView.m in Sources */,
 				04AF385B1A061A30008958C7 /* CPPostDataRequestParam.m in Sources */,
 				0478C1981A15118700552707 /* CPDetailItemView.m in Sources */,
+				049750321A33637E00F11F3F /* CPOccupationView.m in Sources */,
 				04CAC1A919F7EF82005291D3 /* AppDelegate.m in Sources */,
 				04CAC21419F7EFBF005291D3 /* GJChooseButton.m in Sources */,
 				04A0DA451A04D48D008C4E12 /* yajl_encode.c in Sources */,
@@ -1491,6 +1521,7 @@
 				0425015119F7F8E50038E188 /* CPDynamicViewController.m in Sources */,
 				04CAC21B19F7EFBF005291D3 /* GJFilterSingleLevelOptionSelectorView.m in Sources */,
 				04CAC21A19F7EFBF005291D3 /* GJFilterOptionListHotBrandCell.m in Sources */,
+				049BAE041A334BF000988863 /* CPEducationView.m in Sources */,
 				04CAC21E19F7EFBF005291D3 /* GJOptionNode.m in Sources */,
 				0425016019F804270038E188 /* GJError.m in Sources */,
 				0478C1951A150E3400552707 /* CPEntersView.m in Sources */,

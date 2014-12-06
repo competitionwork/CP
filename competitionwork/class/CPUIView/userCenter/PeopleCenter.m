@@ -8,6 +8,10 @@
 
 #import "PeopleCenter.h"
 #import "PeopleHeadView.h"
+#import "CPEducationView.h"
+#import "CPOccupationView.h"
+
+
 @interface PeopleCenter ()
 
 @end
@@ -16,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kBackgroudGrayColor;
     self.title = @"我是学霸";
     
     [self creatTheUIVIew];
@@ -27,8 +31,14 @@
     
     PeopleHeadView * peopleHead = [[PeopleHeadView alloc]initWithFrame:CGRectMake(0 , 0, MainScreenWidth, 150)];
     [self.view addSubview:peopleHead];
-    peopleHead.backgroundColor = [UIColor yellowColor];
     
+    CPEducationView * education = [[CPEducationView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth - 16, 150) withData:nil];
+    [self.view addSubview:education];
+    [[education.po_frameBuilder alignToBottomOfView:peopleHead offset:15]centerHorizontallyInSuperview];
+    
+    CPOccupationView * occupation = [[CPOccupationView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth - 16, 120) withData:nil];
+    [self.view addSubview:occupation];
+    [[occupation.po_frameBuilder alignToBottomOfView:education offset:15]centerHorizontallyInSuperview];
 }
 
 - (void)didReceiveMemoryWarning {

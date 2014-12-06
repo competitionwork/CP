@@ -14,7 +14,11 @@
 
 @property (nonatomic,strong) UIImageView *peopleHeadView;
 
+@property (nonatomic,strong) UIImageView *sexImage;
+
 @property (nonatomic,strong) UILabel *nameLabel;
+
+@property (nonatomic,strong) UILabel *ageLabel;
 
 @end
 
@@ -29,7 +33,12 @@
         [self addSubview:self.peopleHeadView];
         
         [self addSubview:self.nameLabel];
+        [self setNameLabelStr:@"我是学霸"];
         
+        [self addSubview:self.sexImage];
+        
+        [self addSubview:self.ageLabel];
+        [self setAgeLabelStr:@"22岁  水瓶座"];
     }
     
     return self;
@@ -41,6 +50,7 @@
     if (!_backGroundImage) {
         
         _backGroundImage = [[UIImageView alloc]initWithFrame:self.bounds];
+        _backGroundImage.image = [UIImage imageNamed:@"CenterBack"];
         
     }
     return _backGroundImage;
@@ -63,24 +73,65 @@
     return _peopleHeadView;
 }
 
+-(UIImageView *)sexImage{
+    
+    if (!_sexImage) {
+        _sexImage = [[UIImageView alloc]init];
+    }
+    
+    return _sexImage;
+}
+
 -(UILabel *)nameLabel{
     
     if (!_nameLabel) {
+        
         _nameLabel = [[UILabel alloc]init];
         _nameLabel.textColor = [UIColor whiteColor];
-        _nameLabel.font = [UIFont systemFontOfSize:14];
+        _nameLabel.font = [UIFont boldSystemFontOfSize:14];
+        
     }
     return _nameLabel;
 }
 
+-(void)setNameLabelStr:(NSString *)name{
+    
+    if (_nameLabel.text != name) {
+        _nameLabel.text = name;
+        [_nameLabel sizeToFit];
+        [self layoutSubviews];
+    }
+}
 
+-(UILabel *)ageLabel{
+    if (!_ageLabel) {
+        _ageLabel = [[UILabel alloc]init];
+        _ageLabel.textColor = [UIColor whiteColor];
+        _ageLabel.font = [UIFont systemFontOfSize:14];
+    }
+    return _ageLabel;
+}
+
+-(void)setAgeLabelStr:(NSString *)age{
+    
+    if (_ageLabel.text != age) {
+        _ageLabel.text = age;
+        [_ageLabel sizeToFit];
+        [self layoutSubviews];
+    }
+}
 
 -(void)layoutSubviews{
     
     [[self.peopleHeadView.po_frameBuilder alignToTopInSuperviewWithInset:8]centerHorizontallyInSuperview];
     
-    [[self.nameLabel.po_frameBuilder alignToBottomOfView:self.peopleHeadView offset:5]centerVerticallyInSuperview];
-    self.nameLabel.text = @"";
+    [[self.nameLabel.po_frameBuilder alignToBottomOfView:self.peopleHeadView offset:5]centerHorizontallyInSuperview];
+    
+    UIImage * sex = [UIImage imageNamed:@"nan"];
+    self.sexImage.image = sex;
+    [[[[self.sexImage.po_frameBuilder setHeight:sex.size.height/2]setWidth:sex.size.width/2]alignToBottomOfView:self.nameLabel offset:8]setX:self.nameLabel.centerX - 50];
+    
+    [[self.ageLabel.po_frameBuilder alignRightOfView:self.sexImage offset:5]setY:self.sexImage.frame.origin.y];
     
 }
 /*
