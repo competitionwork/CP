@@ -83,6 +83,39 @@
 		049888D31A30A04B001FA97F /* CPMastCompetitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049888D11A30A04B001FA97F /* CPMastCompetitionCell.xib */; };
 		0499677C1A3195DD00551CB8 /* GJListMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499677B1A3195DD00551CB8 /* GJListMoreCell.m */; };
 		0499677F1A31A50800551CB8 /* GJUserCenterHeadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499677E1A31A50800551CB8 /* GJUserCenterHeadViewCell.m */; };
+		049BADDF1A33405400988863 /* ♀1.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADBE1A33405400988863 /* ♀1.png */; };
+		049BADE01A33405400988863 /* ♂.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADBF1A33405400988863 /* ♂.png */; };
+		049BADE11A33405400988863 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC01A33405400988863 /* 2.png */; };
+		049BADE21A33405400988863 /* 7-拷贝-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC11A33405400988863 /* 7-拷贝-4.png */; };
+		049BADE31A33405400988863 /* 登录2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC21A33405400988863 /* 登录2.png */; };
+		049BADE41A33405400988863 /* 即将结束.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC31A33405400988863 /* 即将结束.png */; };
+		049BADE51A33405400988863 /* 椭圆-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC41A33405400988863 /* 椭圆-1.png */; };
+		049BADE61A33405400988863 /* 我的列表色块.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC51A33405400988863 /* 我的列表色块.png */; };
+		049BADE71A33405400988863 /* 圆角矩形-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC61A33405400988863 /* 圆角矩形-4.png */; };
+		049BADE81A33405400988863 /* 圆角矩形-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC71A33405400988863 /* 圆角矩形-6.png */; };
+		049BADE91A33405400988863 /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC81A33405400988863 /* book.png */; };
+		049BADEA1A33405400988863 /* bq.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADC91A33405400988863 /* bq.png */; };
+		049BADEB1A33405400988863 /* calendar-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADCA1A33405400988863 /* calendar-2.png */; };
+		049BADEC1A33405400988863 /* dhk.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADCB1A33405400988863 /* dhk.png */; };
+		049BADED1A33405400988863 /* dhk2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADCC1A33405400988863 /* dhk2.png */; };
+		049BADEE1A33405400988863 /* dl.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADCD1A33405400988863 /* dl.png */; };
+		049BADEF1A33405400988863 /* fk.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADCE1A33405400988863 /* fk.png */; };
+		049BADF01A33405400988863 /* fx.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADCF1A33405400988863 /* fx.png */; };
+		049BADF11A33405400988863 /* gz.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD01A33405400988863 /* gz.png */; };
+		049BADF21A33405400988863 /* hy.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD11A33405400988863 /* hy.png */; };
+		049BADF31A33405400988863 /* k.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD21A33405400988863 /* k.png */; };
+		049BADF41A33405400988863 /* lt.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD31A33405400988863 /* lt.png */; };
+		049BADF51A33405400988863 /* mm.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD41A33405400988863 /* mm.png */; };
+		049BADF61A33405400988863 /* nan.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD51A33405400988863 /* nan.png */; };
+		049BADF71A33405400988863 /* nv.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD61A33405400988863 /* nv.png */; };
+		049BADF81A33405400988863 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD71A33405400988863 /* qr.png */; };
+		049BADF91A33405400988863 /* srk.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD81A33405400988863 /* srk.png */; };
+		049BADFA1A33405400988863 /* tj.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADD91A33405400988863 /* tj.png */; };
+		049BADFB1A33405400988863 /* tx.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDA1A33405400988863 /* tx.png */; };
+		049BADFC1A33405400988863 /* wd.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDB1A33405400988863 /* wd.png */; };
+		049BADFD1A33405400988863 /* yen.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDC1A33405400988863 /* yen.png */; };
+		049BADFE1A33405400988863 /* yhm.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDD1A33405400988863 /* yhm.png */; };
+		049BADFF1A33405400988863 /* yy.png in Resources */ = {isa = PBXBuildFile; fileRef = 049BADDE1A33405400988863 /* yy.png */; };
 		049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 049DF5681A0F493C00F12447 /* CPfilters.plist */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
@@ -304,6 +337,39 @@
 		0499677B1A3195DD00551CB8 /* GJListMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJListMoreCell.m; sourceTree = "<group>"; };
 		0499677D1A31A50800551CB8 /* GJUserCenterHeadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJUserCenterHeadViewCell.h; sourceTree = "<group>"; };
 		0499677E1A31A50800551CB8 /* GJUserCenterHeadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJUserCenterHeadViewCell.m; sourceTree = "<group>"; };
+		049BADBE1A33405400988863 /* ♀1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "♀1.png"; sourceTree = "<group>"; };
+		049BADBF1A33405400988863 /* ♂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "♂.png"; sourceTree = "<group>"; };
+		049BADC01A33405400988863 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		049BADC11A33405400988863 /* 7-拷贝-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7-拷贝-4.png"; sourceTree = "<group>"; };
+		049BADC21A33405400988863 /* 登录2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录2.png"; sourceTree = "<group>"; };
+		049BADC31A33405400988863 /* 即将结束.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "即将结束.png"; sourceTree = "<group>"; };
+		049BADC41A33405400988863 /* 椭圆-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆-1.png"; sourceTree = "<group>"; };
+		049BADC51A33405400988863 /* 我的列表色块.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的列表色块.png"; sourceTree = "<group>"; };
+		049BADC61A33405400988863 /* 圆角矩形-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-4.png"; sourceTree = "<group>"; };
+		049BADC71A33405400988863 /* 圆角矩形-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆角矩形-6.png"; sourceTree = "<group>"; };
+		049BADC81A33405400988863 /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		049BADC91A33405400988863 /* bq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bq.png; sourceTree = "<group>"; };
+		049BADCA1A33405400988863 /* calendar-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-2.png"; sourceTree = "<group>"; };
+		049BADCB1A33405400988863 /* dhk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dhk.png; sourceTree = "<group>"; };
+		049BADCC1A33405400988863 /* dhk2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dhk2.png; sourceTree = "<group>"; };
+		049BADCD1A33405400988863 /* dl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dl.png; sourceTree = "<group>"; };
+		049BADCE1A33405400988863 /* fk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fk.png; sourceTree = "<group>"; };
+		049BADCF1A33405400988863 /* fx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fx.png; sourceTree = "<group>"; };
+		049BADD01A33405400988863 /* gz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gz.png; sourceTree = "<group>"; };
+		049BADD11A33405400988863 /* hy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hy.png; sourceTree = "<group>"; };
+		049BADD21A33405400988863 /* k.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = k.png; sourceTree = "<group>"; };
+		049BADD31A33405400988863 /* lt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lt.png; sourceTree = "<group>"; };
+		049BADD41A33405400988863 /* mm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mm.png; sourceTree = "<group>"; };
+		049BADD51A33405400988863 /* nan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nan.png; sourceTree = "<group>"; };
+		049BADD61A33405400988863 /* nv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nv.png; sourceTree = "<group>"; };
+		049BADD71A33405400988863 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
+		049BADD81A33405400988863 /* srk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = srk.png; sourceTree = "<group>"; };
+		049BADD91A33405400988863 /* tj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tj.png; sourceTree = "<group>"; };
+		049BADDA1A33405400988863 /* tx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tx.png; sourceTree = "<group>"; };
+		049BADDB1A33405400988863 /* wd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wd.png; sourceTree = "<group>"; };
+		049BADDC1A33405400988863 /* yen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yen.png; sourceTree = "<group>"; };
+		049BADDD1A33405400988863 /* yhm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yhm.png; sourceTree = "<group>"; };
+		049BADDE1A33405400988863 /* yy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yy.png; sourceTree = "<group>"; };
 		049DF5681A0F493C00F12447 /* CPfilters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CPfilters.plist; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -592,6 +658,39 @@
 		04942BB31A3209BB00AEA797 /* NewImage */ = {
 			isa = PBXGroup;
 			children = (
+				049BADBE1A33405400988863 /* ♀1.png */,
+				049BADBF1A33405400988863 /* ♂.png */,
+				049BADC01A33405400988863 /* 2.png */,
+				049BADC11A33405400988863 /* 7-拷贝-4.png */,
+				049BADC21A33405400988863 /* 登录2.png */,
+				049BADC31A33405400988863 /* 即将结束.png */,
+				049BADC41A33405400988863 /* 椭圆-1.png */,
+				049BADC51A33405400988863 /* 我的列表色块.png */,
+				049BADC61A33405400988863 /* 圆角矩形-4.png */,
+				049BADC71A33405400988863 /* 圆角矩形-6.png */,
+				049BADC81A33405400988863 /* book.png */,
+				049BADC91A33405400988863 /* bq.png */,
+				049BADCA1A33405400988863 /* calendar-2.png */,
+				049BADCB1A33405400988863 /* dhk.png */,
+				049BADCC1A33405400988863 /* dhk2.png */,
+				049BADCD1A33405400988863 /* dl.png */,
+				049BADCE1A33405400988863 /* fk.png */,
+				049BADCF1A33405400988863 /* fx.png */,
+				049BADD01A33405400988863 /* gz.png */,
+				049BADD11A33405400988863 /* hy.png */,
+				049BADD21A33405400988863 /* k.png */,
+				049BADD31A33405400988863 /* lt.png */,
+				049BADD41A33405400988863 /* mm.png */,
+				049BADD51A33405400988863 /* nan.png */,
+				049BADD61A33405400988863 /* nv.png */,
+				049BADD71A33405400988863 /* qr.png */,
+				049BADD81A33405400988863 /* srk.png */,
+				049BADD91A33405400988863 /* tj.png */,
+				049BADDA1A33405400988863 /* tx.png */,
+				049BADDB1A33405400988863 /* wd.png */,
+				049BADDC1A33405400988863 /* yen.png */,
+				049BADDD1A33405400988863 /* yhm.png */,
+				049BADDE1A33405400988863 /* yy.png */,
 				0494361F1A320F6A00AEA797 /* title平铺X64@2x.png */,
 				049436131A320B8500AEA797 /* mast_1.png */,
 				049436141A320B8500AEA797 /* mast_2.png */,
@@ -1197,13 +1296,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049BADE81A33405400988863 /* 圆角矩形-6.png in Resources */,
 				049888A31A304EDD001FA97F /* 文字点击态高度固定48@2x.png in Resources */,
+				049BADEB1A33405400988863 /* calendar-2.png in Resources */,
 				048742D21A2F185100CC92DE /* 向下展开.png in Resources */,
 				04FA58C81A2D782800BAA19E /* 登陆注册输入框@2x.png in Resources */,
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
+				049BADDF1A33405400988863 /* ♀1.png in Resources */,
 				04CAC1AE19F7EF82005291D3 /* Images.xcassets in Resources */,
+				049BADE61A33405400988863 /* 我的列表色块.png in Resources */,
 				048742D71A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png in Resources */,
+				049BADF11A33405400988863 /* gz.png in Resources */,
+				049BADE41A33405400988863 /* 即将结束.png in Resources */,
 				049431221A3209BE00AEA797 /* lt1.png in Resources */,
+				049BADFC1A33405400988863 /* wd.png in Resources */,
+				049BADED1A33405400988863 /* dhk2.png in Resources */,
 				0494360C1A3209BF00AEA797 /* 六宫格二_13.png in Resources */,
 				0494361A1A320B8500AEA797 /* mast_2.png in Resources */,
 				04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */,
@@ -1211,45 +1318,68 @@
 				04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */,
 				04FF966C1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png in Resources */,
 				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
+				049BADFD1A33405400988863 /* yen.png in Resources */,
+				049BADE51A33405400988863 /* 椭圆-1.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
 				049436101A3209BF00AEA797 /* 时间.png in Resources */,
 				049436081A3209BF00AEA797 /* 人数.png in Resources */,
+				049BADF31A33405400988863 /* k.png in Resources */,
+				049BADF91A33405400988863 /* srk.png in Resources */,
+				049BADE31A33405400988863 /* 登录2.png in Resources */,
 				048742CE1A2F181900CC92DE /* 单条点击.png in Resources */,
+				049BADFF1A33405400988863 /* yy.png in Resources */,
+				049BADEF1A33405400988863 /* fk.png in Resources */,
 				0494360E1A3209BF00AEA797 /* 六宫格二_16.png in Resources */,
 				04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */,
+				049BADF51A33405400988863 /* mm.png in Resources */,
+				049BADEA1A33405400988863 /* bq.png in Resources */,
 				048742D31A2F185100CC92DE /* 向下展开@2x.png in Resources */,
 				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
 				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
 				049436201A320F6A00AEA797 /* title平铺X64@2x.png in Resources */,
 				04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */,
 				04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */,
+				049BADFE1A33405400988863 /* yhm.png in Resources */,
 				048742CF1A2F181900CC92DE /* 单条点击@2x.png in Resources */,
+				049BADEE1A33405400988863 /* dl.png in Resources */,
 				048742D51A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png in Resources */,
+				049BADF61A33405400988863 /* nan.png in Resources */,
 				049436091A3209BF00AEA797 /* 六宫格二_03.png in Resources */,
 				049436111A3209BF00AEA797 /* 横线.png in Resources */,
 				0465FAB21A30B7810022834D /* CPFunctionCollectionCell.xib in Resources */,
 				049436121A3209BF00AEA797 /* 正在进行中.png in Resources */,
+				049BADE91A33405400988863 /* book.png in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
 				049888D31A30A04B001FA97F /* CPMastCompetitionCell.xib in Resources */,
+				049BADF41A33405400988863 /* lt.png in Resources */,
 				0494361B1A320B8500AEA797 /* mast_3.png in Resources */,
 				0465FAAD1A30B0900022834D /* MastViewData.plist in Resources */,
+				049BADF71A33405400988863 /* nv.png in Resources */,
 				049436051A3209BF00AEA797 /* wd1.png in Resources */,
 				0494360F1A3209BF00AEA797 /* 关注.png in Resources */,
 				0494361C1A320B8500AEA797 /* mast_4.png in Resources */,
 				0494360D1A3209BF00AEA797 /* 六宫格二_15.png in Resources */,
+				049BADE21A33405400988863 /* 7-拷贝-4.png in Resources */,
 				049436061A3209BF00AEA797 /* wd2.png in Resources */,
+				049BADFA1A33405400988863 /* tj.png in Resources */,
+				049BADE11A33405400988863 /* 2.png in Resources */,
 				049431211A3209BE00AEA797 /* jj2.png in Resources */,
 				048742D91A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png in Resources */,
 				049431201A3209BE00AEA797 /* jj1.png in Resources */,
+				049BADF01A33405400988863 /* fx.png in Resources */,
+				049BADE71A33405400988863 /* 圆角矩形-4.png in Resources */,
+				049BADE01A33405400988863 /* ♂.png in Resources */,
 				049431181A3209BE00AEA797 /* +.png in Resources */,
 				0494360B1A3209BF00AEA797 /* 六宫格二_07.png in Resources */,
 				049436071A3209BF00AEA797 /* ys.png in Resources */,
 				04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */,
 				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
 				04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */,
+				049BADFB1A33405400988863 /* tx.png in Resources */,
 				0494361D1A320B8500AEA797 /* mast_5.png in Resources */,
 				04C885B01A2EEF3A00E441CA /* 投递简历-选中@2x.png in Resources */,
 				04C885AF1A2EEF3A00E441CA /* 投递简历-未选中@2x.png in Resources */,
+				049BADEC1A33405400988863 /* dhk.png in Resources */,
 				04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */,
 				049436191A320B8500AEA797 /* mast_1.png in Resources */,
 				04A523E41A1A419100FE9500 /* xiaolvAnimation4@2x.png in Resources */,
@@ -1257,7 +1387,9 @@
 				0425015219F7F8E50038E188 /* CPDynamicViewController.xib in Resources */,
 				049431231A3209BE00AEA797 /* lt2.png in Resources */,
 				0494361E1A320B8500AEA797 /* mast_6.png in Resources */,
+				049BADF81A33405400988863 /* qr.png in Resources */,
 				0494360A1A3209BF00AEA797 /* 六宫格二_05.png in Resources */,
+				049BADF21A33405400988863 /* hy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
