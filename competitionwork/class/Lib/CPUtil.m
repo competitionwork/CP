@@ -217,7 +217,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 15)];
     label.tag = 999999;
-    label.textAlignment = UITextAlignmentCenter;
+    label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     label.font = [UIFont systemFontOfSize:14.0f];
     label.textColor = GrayColor;
@@ -248,7 +248,7 @@
         return urlString;
     }
     
-    NSString *urlStringRet = [NSString stringWithFormat:@"%@_%d-%dc_%@", stringComponentArray[0], width, height, stringComponentArray[2]];
+    NSString *urlStringRet = [NSString stringWithFormat:@"%@_%ld-%ldc_%@", stringComponentArray[0], (long)width, (long)height, stringComponentArray[2]];
     
     return urlStringRet;
 }
@@ -453,7 +453,7 @@
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.text = @"新";
     titleLabel.font = [UIFont systemFontOfSize:10];
-    titleLabel.textAlignment = UITextAlignmentCenter;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
     
     [icon addSubview:titleLabel];
     return icon ;

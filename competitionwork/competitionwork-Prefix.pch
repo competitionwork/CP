@@ -21,6 +21,7 @@
     #import "UIView+Addition.h"
     #import "CPBaseViewController.h"
     #import "CPUIViewControllerClassify.h"
+    #import "CPSystemUtil.h"
 #endif
 
 

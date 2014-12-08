@@ -17,10 +17,10 @@
         NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"CPMastCompetitionCell" owner:self options:nil];
         self = nibs.firstObject;
         
-        
     }
     return self;
 }
+
 
 - (void)awakeFromNib {
     // Initialization code

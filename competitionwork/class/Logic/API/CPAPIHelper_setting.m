@@ -53,7 +53,7 @@
 
 +(NSString *)baseURL
 {
-    return @"http://www.worldjingsai.com/api/settings/";
+    return @"http://apitest.worldjingsai.com/api/settings/";
 }
 
 @end

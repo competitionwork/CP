@@ -69,7 +69,7 @@
     //    [self download];
     
     [self.view addSubview:self.tabelView];
-    self.tabelView.frame  = self.view.bounds;
+    self.tabelView.frame  = CGRectMake(0, 0, self.view.width, self.view.height - 49);
     self.tabelView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     
     [self setListController:nil];

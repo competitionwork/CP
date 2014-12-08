@@ -25,6 +25,11 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+/*自动消失提示框*/
+-(void)showFloatMessge:(NSString*)message;
+
 + (AppDelegate *)sharedAppDelegate;
+
+
 
 @end

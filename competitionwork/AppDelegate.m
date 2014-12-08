@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "CPLoginView.h"
+#import "CPFloatView.h"
+
+#define KFLOAT_TAG 8848
 
 @implementation AppDelegate
 
@@ -26,7 +29,8 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self.MastVC setNeedsStatusBarAppearanceUpdate];
     [self.window makeKeyAndVisible];
     
 
@@ -158,11 +162,22 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-#define mark 
+#define mark
 
 + (AppDelegate *)sharedAppDelegate {
     AppDelegate * app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     return app;
+}
+
+-(void)showFloatMessge:(NSString*)message
+{
+    int width = 200;
+    int height = 30;
+    CPFloatView *floatView1 = (CPFloatView *)[self.window viewWithTag:KFLOAT_TAG];
+    [floatView1 removeFromSuperview];
+    CPFloatView* floatView = [[CPFloatView alloc] initWithFrame:CGRectMake((MainScreenWidth-width)/2, MainScreenHeight - 120-height, width, height+3) withMessage:message];
+    floatView.tag = KFLOAT_TAG;
+    [floatView showInView:self.window];
 }
 
 @end

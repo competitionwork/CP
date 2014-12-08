@@ -170,9 +170,18 @@
                               @"password":@"245464546fsfsseg",
                               };
     
+    NSMutableDictionary * dictParmars = [NSMutableDictionary dictionaryWithCapacity:0];
+    
+    [dictParmars setObject:@"email" forKey:[[self.userNameView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:@"password" forKey:[[self.passwordView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+
+    if ([self.userNameView textString]== nil && [self.passwordView textString]== nil) {
+        [dictParmars setValuesForKeysWithDictionary:parmat];
+    }
+    
     __weak typeof(*&self) weakSelf = self;
     
-    [[CPAPIHelper_userURL sharedInstance]api_login_withParams:parmat whenSuccess:^(id result) {
+    [[CPAPIHelper_userURL sharedInstance]api_login_withParams:dictParmars whenSuccess:^(id result) {
         
         [weakSelf goBackModel];
         
@@ -192,14 +201,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+
 
 @end

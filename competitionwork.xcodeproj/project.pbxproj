@@ -22,6 +22,9 @@
 		04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */; };
 		04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */; };
 		04372B0A1A2C2E2B007DCBAD /* CPAPIHelper_userURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */; };
+		043889421A35C85F00A33212 /* CPSystemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 043889411A35C85E00A33212 /* CPSystemUtil.m */; };
+		043889451A35CBA800A33212 /* CPFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043889441A35CBA800A33212 /* CPFloatView.m */; };
+		043889471A35CE7B00A33212 /* tip-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 043889461A35CE7B00A33212 /* tip-bg@2x.png */; };
 		0465FAA51A30AA5F0022834D /* MastColletionCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465FAA41A30AA5F0022834D /* MastColletionCellModel.m */; };
 		0465FAAD1A30B0900022834D /* MastViewData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0465FAAC1A30B0900022834D /* MastViewData.plist */; };
 		0465FAB11A30B7810022834D /* CPFunctionCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465FAAF1A30B7810022834D /* CPFunctionCollectionCell.m */; };
@@ -276,6 +279,11 @@
 		04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮-绿@3x.png"; sourceTree = "<group>"; };
 		04372B081A2C2E2B007DCBAD /* CPAPIHelper_userURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_userURL.h; path = API/CPAPIHelper_userURL.h; sourceTree = "<group>"; };
 		04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_userURL.m; path = API/CPAPIHelper_userURL.m; sourceTree = "<group>"; };
+		043889401A35C85E00A33212 /* CPSystemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSystemUtil.h; sourceTree = "<group>"; };
+		043889411A35C85E00A33212 /* CPSystemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSystemUtil.m; sourceTree = "<group>"; };
+		043889431A35CBA800A33212 /* CPFloatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPFloatView.h; sourceTree = "<group>"; };
+		043889441A35CBA800A33212 /* CPFloatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPFloatView.m; sourceTree = "<group>"; };
+		043889461A35CE7B00A33212 /* tip-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tip-bg@2x.png"; sourceTree = "<group>"; };
 		0465FAA31A30AA5F0022834D /* MastColletionCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MastColletionCellModel.h; path = CPUIView/Model/MastColletionCellModel.h; sourceTree = "<group>"; };
 		0465FAA41A30AA5F0022834D /* MastColletionCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MastColletionCellModel.m; path = CPUIView/Model/MastColletionCellModel.m; sourceTree = "<group>"; };
 		0465FAAC1A30B0900022834D /* MastViewData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MastViewData.plist; sourceTree = "<group>"; };
@@ -709,6 +717,7 @@
 		04942BB31A3209BB00AEA797 /* NewImage */ = {
 			isa = PBXGroup;
 			children = (
+				043889461A35CE7B00A33212 /* tip-bg@2x.png */,
 				0496C4EB1A3591F9000E7CC3 /* 登录背景.png */,
 				0496C4BC1A3549A2000E7CC3 /* sex1.png */,
 				0496C4BD1A3549A2000E7CC3 /* sex2.png */,
@@ -1099,6 +1108,8 @@
 			children = (
 				04C885AA1A2EED3B00E441CA /* CPCheckBox.h */,
 				04C885AB1A2EED3B00E441CA /* CPCheckBox.m */,
+				043889431A35CBA800A33212 /* CPFloatView.h */,
+				043889441A35CBA800A33212 /* CPFloatView.m */,
 			);
 			name = ToolVIew;
 			path = competitionwork/class/CPUIView/ToolVIew;
@@ -1264,6 +1275,8 @@
 				049667611A04B6AA0090EE5E /* Global.h */,
 				048742C91A2F122E00CC92DE /* CPUtil.h */,
 				048742CA1A2F122E00CC92DE /* CPUtil.m */,
+				043889401A35C85E00A33212 /* CPSystemUtil.h */,
+				043889411A35C85E00A33212 /* CPSystemUtil.m */,
 				0496675B1A04AB1F0090EE5E /* Constant.h */,
 				0496675C1A04AB1F0090EE5E /* Constant.m */,
 			);
@@ -1452,6 +1465,7 @@
 				0465FAB21A30B7810022834D /* CPFunctionCollectionCell.xib in Resources */,
 				049436121A3209BF00AEA797 /* 正在进行中.png in Resources */,
 				049BADE91A33405400988863 /* book.png in Resources */,
+				043889471A35CE7B00A33212 /* tip-bg@2x.png in Resources */,
 				0425014D19F7F86D0038E188 /* CPMainViewController.xib in Resources */,
 				049888D31A30A04B001FA97F /* CPMastCompetitionCell.xib in Resources */,
 				0496C4DD1A357ABB000E7CC3 /* 注册账号.png in Resources */,
@@ -1550,6 +1564,7 @@
 				0478C1981A15118700552707 /* CPDetailItemView.m in Sources */,
 				049750321A33637E00F11F3F /* CPOccupationView.m in Sources */,
 				04CAC1A919F7EF82005291D3 /* AppDelegate.m in Sources */,
+				043889451A35CBA800A33212 /* CPFloatView.m in Sources */,
 				04CAC21419F7EFBF005291D3 /* GJChooseButton.m in Sources */,
 				04A0DA451A04D48D008C4E12 /* yajl_encode.c in Sources */,
 				0425014C19F7F86D0038E188 /* CPMainViewController.m in Sources */,
@@ -1571,6 +1586,7 @@
 				04A198541A2091B100EC6587 /* GJUserCenterListViewCell.m in Sources */,
 				04FA58D41A2DBC6E00BAA19E /* CPBaseTextFileCell.m in Sources */,
 				04AF38581A06195A008958C7 /* NSObject+GJExtand.m in Sources */,
+				043889421A35C85F00A33212 /* CPSystemUtil.m in Sources */,
 				04CAC21D19F7EFBF005291D3 /* GJFilterView.m in Sources */,
 				049888A11A303282001FA97F /* CPUserInforCenter.m in Sources */,
 				04A0DA4A1A04D48D008C4E12 /* YAJL_GTMBase64.m in Sources */,

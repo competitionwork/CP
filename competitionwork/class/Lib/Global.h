@@ -24,22 +24,17 @@
 
 /* 颜色 */
 #define CPHighLightedColor GJColor(229,229,229,1) // 点击态
-
-
 #define TitleColor [UIColor colorWithRed:0x33/255.0 green:0x33/255.0 blue:0x33/255.0 alpha:1.0]
 #define GrayColor [UIColor colorWithRed:0x99/255.0 green:0x99/255.0 blue:0x99/255.0 alpha:1.0]
 #define MainBackColor [UIColor colorWithRed:0xf5/255.0 green:0xf5/255.0 blue:0xf5/255.0 alpha:1.0f]
-
 #define GJColor(r, g, b, al) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:al]
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
-
 
 #define kBlackColor GJColor(64, 64, 64, 1)//深黑色字体的颜色
 #define kCellButtomLineColor GJColor(217,217,217,1)//分割线
 #define kDeepGrayColor GJColor(149,149,149,1)//字体 深灰
 #define kGanjiGreenColor GJColor(83,188,44,1)//赶集的标准绿色
 #define kCPBlueColor GJColor(40, 120, 212, 1)//竞赛蓝色
-
 #define kButtonHightLightColor GJColor(230,230,230,1)//button 点击态颜色
 
 #define PriceColor [UIColor colorWithRed:0xf7/255.0 green:0x7f/255.0 blue:0x00/255.0 alpha:1.0] //好房子列表，价格的颜色
