@@ -27,8 +27,8 @@
     
     self.frame = CGRectMake(13, 22, MainScreenWidth - 26, 40);
     self.titleLabel.font = [UIFont systemFontOfSize:16];
-    UIImage *uprightBtn = [UIImage imageNamed:@"按钮-绿"];
-    UIImage *huprightBtn = [UIImage imageNamed:@"按钮-绿-点击"];
+    UIImage *uprightBtn = [UIImage imageNamed:@"qr"];
+    UIImage *huprightBtn = [UIImage imageNamed:@"qr"];
     [self setBackgroundImage:[uprightBtn stretchableImageWithLeftCapWidth:floorf(uprightBtn.size.width / 2) topCapHeight:uprightBtn.size.height / 2] forState:UIControlStateNormal];
     [self setBackgroundImage:[huprightBtn stretchableImageWithLeftCapWidth:floorf(huprightBtn.size.width / 2) topCapHeight:huprightBtn.size.height / 2] forState:UIControlStateHighlighted];
     [self setTitle:title forState:UIControlStateNormal];

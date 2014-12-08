@@ -14,12 +14,20 @@ typedef enum {
     CPTEXEVIEWDOWN,
     CPTEXEVIEWMIN,
     CPTEXEVIEWONE,
+    CPTEXEVIEWEMPTY,
 } CPTEXEVIEMODEL;
 
 
 @class CPBaseLabelCellModel;
 
 @interface CPBaseTextFileCell : UIView
+
+@property (nonatomic, strong) UIView* bottomBorder;
+
+@property(nonatomic,getter = isHiddenBottomBorder) BOOL hiddenBottomBorder;
+@property(nonatomic,getter = isHiddenTopBorder) BOOL hiddenTopBorder;
+@property(nonatomic,getter = isHiddenDownBorder) BOOL hiddenDownBorder;
+
 -(instancetype)initWithFrame:(CGRect)frame andEntity:(CPBaseLabelCellModel*)entity withModel:(CPTEXEVIEMODEL)model;
 -(NSString *)textString;
 -(void)setTextFontMunber:(int)number;

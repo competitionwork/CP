@@ -12,4 +12,8 @@
 
 -(void)setHidesBottomBarWhenPushed:(BOOL)hidesBottomBarWhenPushed;
 
+-(void)hidesBottomBar;
+
+-(void)showBottomBar;
+
 @end

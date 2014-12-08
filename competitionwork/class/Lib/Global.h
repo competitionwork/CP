@@ -38,6 +38,7 @@
 #define kCellButtomLineColor GJColor(217,217,217,1)//分割线
 #define kDeepGrayColor GJColor(149,149,149,1)//字体 深灰
 #define kGanjiGreenColor GJColor(83,188,44,1)//赶集的标准绿色
+#define kCPBlueColor GJColor(40, 120, 212, 1)//竞赛蓝色
 
 #define kButtonHightLightColor GJColor(230,230,230,1)//button 点击态颜色
 

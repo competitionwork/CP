@@ -35,6 +35,10 @@
         
         [self.contentView addSubview:self.arrowImage];
         
+        [self.contentView addSubview:self.leftImageView];
+        
+        [self.contentView addSubview:self.titleLabel];
+        
         self.selectedBackgroundView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, 60)];
         self.selectedBackgroundView.backgroundColor=RGBCOLOR(229, 229, 229);
     }
@@ -84,6 +88,28 @@
     return _arrowImage;
 }
 
+-(UIImageView *)leftImageView{
+    
+    if (!_leftImageView) {
+        _leftImageView = [[UIImageView alloc]init];
+//        _leftImageView.contentMode = UIViewContentModeCenter;
+        
+    }
+    return _leftImageView;
+    
+}
+
+-(UILabel *)titleLabel{
+    
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc]init];
+        _titleLabel.font = [UIFont systemFontOfSize:14];
+        _titleLabel.textColor = RGBCOLOR(39, 39, 39);
+        _titleLabel.highlightedTextColor = _titleLabel.textColor;
+    }
+    return _titleLabel;
+}
+
 -(void)setHiddenBottomBorder:(BOOL)hiddenBottomBorder
 {
     self.bottomBorder.hidden = hiddenBottomBorder;
@@ -102,17 +128,16 @@
     [self.contentView bringSubviewToFront:self.bottomBorder];
     [self.contentView bringSubviewToFront:self.TopBorder];
     
-    [[[self.bottomBorder.po_frameBuilder setHeight:0.5] alignToTopInSuperviewWithInset:0] alignRightInSuperviewWithInset:0];
+    [[[self.TopBorder.po_frameBuilder setHeight:0.5] alignToTopInSuperviewWithInset:0] alignRightInSuperviewWithInset:0];
     
     [[[self.bottomBorder.po_frameBuilder setHeight:0.5] alignToBottomInSuperviewWithInset:0] alignRightInSuperviewWithInset:0];
     
     [[[self.downBorder.po_frameBuilder setHeight:0.5] alignToBottomInSuperviewWithInset:0] alignRightInSuperviewWithInset:0];
-    [[[[self.imageView.po_frameBuilder setSizeWithWidth:59 height:46] alignLeftInSuperviewWithInset:0] alignToTopInSuperviewWithInset:0]centerVerticallyInSuperview];
-    self.imageView.contentMode = UIViewContentModeCenter;
-    [self.textLabel.po_frameBuilder alignLeftInSuperviewWithInset:54];
-    self.textLabel.font = [UIFont systemFontOfSize:14];
-    self.textLabel.textColor = RGBCOLOR(39, 39, 39);
-    self.textLabel.highlightedTextColor = self.textLabel.textColor;
+    
+    [[[[self.leftImageView.po_frameBuilder setSizeWithWidth:30 height:29] alignLeftInSuperviewWithInset:8] alignToTopInSuperviewWithInset:0]centerVerticallyInSuperview];
+    
+    [[[[self.titleLabel.po_frameBuilder setHeight:24] setWidth:150] alignLeftInSuperviewWithInset:54]centerVerticallyInSuperview];
+
     
     [[self.arrowImage.po_frameBuilder alignRightInSuperviewWithInset:20]centerVerticallyInSuperview];
 }

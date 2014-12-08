@@ -10,4 +10,11 @@
 
 @implementation CPResingBaseCellView
 
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+    [self.bottomBorder.po_frameBuilder alignLeftInSuperviewWithInset:35];
+}
+
 @end

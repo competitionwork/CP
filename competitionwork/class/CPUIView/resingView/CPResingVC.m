@@ -92,14 +92,14 @@
         CPBaseLabelCellModel * model = [[CPBaseLabelCellModel alloc]init];
         model.pleceHolde = (NSString*)obj;
         
-        CPResingBaseCellView * resingView = [[CPResingBaseCellView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth-20, 45) andEntity:model withModel:textModel];
+        CPResingBaseCellView * resingView = [[CPResingBaseCellView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 45) andEntity:model withModel:textModel];
         [resingView setTextFontMunber:14];
         [self.view addSubview:resingView];
         
         switch (idx) {
             case 0:{
                 self.mailView = resingView;
-                [[self.mailView.po_frameBuilder alignToTopInSuperviewWithInset:110]centerHorizontallyInSuperview];
+                [[self.mailView.po_frameBuilder alignToTopInSuperviewWithInset:130]centerHorizontallyInSuperview];
 
             }
                 break;
@@ -144,7 +144,7 @@
     UILabel * textColocrLabel = [[UILabel alloc]init];
     textColocrLabel.text = @"使用条款与私隐策略";
     textColocrLabel.font = [UIFont systemFontOfSize:13];
-    textColocrLabel.textColor = [UIColor blueColor];
+    textColocrLabel.textColor = GJColor(40, 120, 212, 1);
     [textColocrLabel sizeToFit];
     
     [self.view addSubview:textColocrLabel];

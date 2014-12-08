@@ -14,6 +14,7 @@
 @property(nonatomic,copy) NSString *subTitle;
 @property(nonatomic,strong) UIImage *image;
 @property(nonatomic,strong) NSString   *imageURL;
+@property (nonatomic,strong) NSString *age;
 @property(nonatomic,strong) NSDictionary *userInfo;
 @property(nonatomic,strong) NSString * time;
 @property(nonatomic,strong) id dataEntity;

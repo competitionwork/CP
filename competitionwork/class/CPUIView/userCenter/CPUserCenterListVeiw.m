@@ -98,8 +98,10 @@
         
         CPListCellEntity * entity = [self entityOfCellAtIndex:indexPath];
         
-        cell.textLabel.text = entity.title;
-        cell.imageView.image = entity.image;
+        cell.textStrLabel.text = entity.title;
+        cell.leftImage.image = entity.image;
+        cell.sexImage.image = [UIImage imageNamed:@"sex2"];
+        cell.ageLabel.text = @"24";
         
         cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
         
@@ -120,8 +122,8 @@
         
         CPListCellEntity * entity = [self entityOfCellAtIndex:indexPath];
         
-        cell.textLabel.text = entity.title;
-        cell.imageView.image = entity.image;
+        cell.titleLabel.text = entity.title;
+        cell.leftImageView.image = entity.image;
         
         cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
         

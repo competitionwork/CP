@@ -196,7 +196,7 @@
     _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, kLeftZoneWidth, 43)];
     _titleLabel.backgroundColor = [UIColor clearColor];
     _titleLabel.font = [UIFont systemFontOfSize:14];
-    _titleLabel.textColor = [UIColor colorWithRed:85 / 255.0 green:187 / 255.0 blue:34 / 255.0 alpha:1.0];
+    _titleLabel.textColor = kCPBlueColor;
     self.detailTextLabel.textColor = self.detailTextLabel.highlightedTextColor = [UIColor blackColor];
     _titleLabel.tag = 112120;
     self.detailTextLabel.font = [UIFont systemFontOfSize:14];

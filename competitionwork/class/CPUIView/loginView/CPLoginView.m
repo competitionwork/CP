@@ -10,6 +10,7 @@
 #import "CPBaseLoginView.h"
 #import "CPAPIHelper_userURL.h"
 #import "CPResingVC.h"
+#import "AppDelegate.h"
 
 @interface CPLoginView ()
 
@@ -27,8 +28,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavigationBackButton:self withSelector:@selector(goBackModel)];
-    self.view.backgroundColor = MainBackColor;
+//    self.view.backgroundColor = MainBackColor;
+    UIImageView * imageb = [[UIImageView alloc]initWithFrame:self.view.bounds];
+    imageb.image = [UIImage imageNamed:@"登录背景"];
+    [self.view addSubview:imageb];
     [self creatTheVIew];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+    
+    [app.MastVC hidesBottomBar];
+    
+    self.navigationController.navigationBarHidden = YES;
+    
 }
 
 -(void)goBackModel{
@@ -47,32 +62,41 @@
 -(void)creatTheVIew{
     
     UIImageView * imageTitleView = [[UIImageView alloc]initWithImage:nil];
-    imageTitleView.backgroundColor = [UIColor blueColor];
+    imageTitleView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:imageTitleView];
     [[[[imageTitleView.po_frameBuilder setHeight:100]setWidth:200]alignToTopInSuperviewWithInset:20] centerHorizontallyInSuperview];
     
+    UIImage * imageLabelBack = [UIImage imageNamed:@"登陆注册输入框"];
+    UIImageView * imageLabelBackView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth-30, 100)];
+    imageLabelBackView.image = [imageLabelBack stretchableImageWithLeftCapWidth:imageLabelBack.size.width/2 topCapHeight:imageLabelBack.size.height/2];;
+    [self.view addSubview:imageLabelBackView];
+    [[imageLabelBackView.po_frameBuilder alignToBottomOfView:imageTitleView offset:40]centerHorizontallyInSuperview];
     
     CPBaseLabelCellModel * name = [[CPBaseLabelCellModel alloc]init];
     name.pleceHolde = @"用户名称";
-    name.image = [UIImage imageNamed:@"tabbar_home_selected"];
-    self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-50, 50) andEntity:name withModel:CPTEXEVIEWUP];
+    name.image = [UIImage imageNamed:@"yhm"];
+    self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-30, 50) andEntity:name withModel:CPTEXEVIEWEMPTY];
     [self.view addSubview:self.userNameView];
-    [[self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:20]centerHorizontallyInSuperview];
+    [[self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:40]centerHorizontallyInSuperview];
+    [self.userNameView setHiddenTopBorder:YES];
+
     
     
     CPBaseLabelCellModel * password = [[CPBaseLabelCellModel alloc]init];
     password.pleceHolde = @"密码";
-    password.image = [UIImage imageNamed:@"tabbar_home_selected"];
-    self.passwordView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-50, 50) andEntity:password withModel:CPTEXEVIEWDOWN];
+    password.image = [UIImage imageNamed:@"mm"];
+    self.passwordView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-30, 50) andEntity:password withModel:CPTEXEVIEWEMPTY];
     [self.view addSubview:self.passwordView];
-    [[[[self.passwordView.po_frameBuilder alignToBottomOfView:self.userNameView offset:1]setHeight:50]setWidth:MainScreenWidth - 50]centerHorizontallyInSuperview];
+    [[self.passwordView.po_frameBuilder alignToBottomOfView:self.userNameView offset:1]centerHorizontallyInSuperview];
+    [self.passwordView setHiddenDownBorder:YES];
+
     
     
     self.logonButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _logonButton.frame = CGRectMake(13, 22, MainScreenWidth - 26, 40);
     _logonButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    UIImage *uprightBtn = [UIImage imageNamed:@"按钮-绿"];
-    UIImage *huprightBtn = [UIImage imageNamed:@"按钮-绿-点击"];
+    UIImage *uprightBtn = [UIImage imageNamed:@"qr"];
+    UIImage *huprightBtn = [UIImage imageNamed:@"qr"];
     [_logonButton setBackgroundImage:[uprightBtn stretchableImageWithLeftCapWidth:floorf(uprightBtn.size.width / 2) topCapHeight:uprightBtn.size.height / 2] forState:UIControlStateNormal];
     [_logonButton setBackgroundImage:[huprightBtn stretchableImageWithLeftCapWidth:floorf(huprightBtn.size.width / 2) topCapHeight:huprightBtn.size.height / 2] forState:UIControlStateHighlighted];
     [_logonButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -83,21 +107,56 @@
     [[self.logonButton.po_frameBuilder alignToBottomOfView:self.passwordView offset:30]centerHorizontallyInSuperview];
     
     
-    UIButton * resingBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 50)];
-    [resingBtn setTitle:@"注册" forState:UIControlStateNormal];
+    UIButton * resingBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 80)];
+    [resingBtn setTitle:@"" forState:UIControlStateNormal];
     [resingBtn setTitleColor:GJColor(128, 128, 128, 1) forState:UIControlStateNormal];
     UIImage *backImage = [UIImage imageNamed:@"文字点击态高度固定48"];
     [resingBtn setBackgroundImage:[backImage stretchableImageWithLeftCapWidth:backImage.size.width / 2 topCapHeight:backImage.size.height / 2] forState:UIControlStateHighlighted];
     [resingBtn addTarget:self action:@selector(resingAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:resingBtn];
-    [[[[resingBtn.po_frameBuilder alignToBottomOfView:_logonButton offset:50]alignRightInSuperviewWithInset:40] setHeight:30]setWidth:50];
+    [[[[resingBtn.po_frameBuilder alignToBottomInSuperviewWithInset:0]alignRightInSuperviewWithInset:110] setHeight:30]setWidth:80];
+    
+    UILabel * labelResing = [[UILabel alloc]initWithFrame:resingBtn.frame];
+    labelResing.font = [UIFont systemFontOfSize:12];
+    NSMutableAttributedString * strAttributed = [[NSMutableAttributedString alloc]initWithString:@"注册新账户"];
+    NSRange rage = {0,[strAttributed length]};
+    [strAttributed addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:rage];
+    labelResing.attributedText = strAttributed;
+    labelResing.textAlignment = NSTextAlignmentCenter;
+    labelResing.textColor = GJColor(128, 128, 128, 1);
+    [self.view addSubview:labelResing];
+    
+    [self forgetsThePasswordButton];
+}
+
+-(void)forgetsThePasswordButton{
+    
+    UIButton * resingBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 30, 80)];
+    [resingBtn setTitle:@"" forState:UIControlStateNormal];
+    [resingBtn setTitleColor:GJColor(128, 128, 128, 1) forState:UIControlStateNormal];
+    UIImage *backImage = [UIImage imageNamed:@"文字点击态高度固定48"];
+    [resingBtn setBackgroundImage:[backImage stretchableImageWithLeftCapWidth:backImage.size.width / 2 topCapHeight:backImage.size.height / 2] forState:UIControlStateHighlighted];
+    [resingBtn addTarget:self action:@selector(forgetsThePasswordTouch:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:resingBtn];
+    [[[[resingBtn.po_frameBuilder alignToBottomInSuperviewWithInset:0]alignLeftInSuperviewWithInset:30] setHeight:30]setWidth:80];
+    
+    UILabel * labelResing = [[UILabel alloc]initWithFrame:resingBtn.frame];
+    labelResing.font = [UIFont systemFontOfSize:12];
+    labelResing.text = @"忘记密码";
+    labelResing.textAlignment = NSTextAlignmentCenter;
+    labelResing.textColor = GJColor(128, 128, 128, 1);
+    [self.view addSubview:labelResing];
+
+}
+
+-(void)forgetsThePasswordTouch:(id)sender{
     
 }
 
 -(void)resingAction:(id)sender{
     
     CPResingVC * resingV = [[CPResingVC alloc]init];
-    
+    resingV.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:resingV animated:YES];
     
 }
@@ -120,6 +179,12 @@
     } andFailed:^(id err) {
         
     }];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

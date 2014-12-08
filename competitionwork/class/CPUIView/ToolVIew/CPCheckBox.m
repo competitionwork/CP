@@ -12,6 +12,8 @@
 
 @property (nonatomic,strong) UIImageView *checkImage;
 
+@property (nonatomic,strong) UIImageView *checkBackImage;
+
 @end
 
 @implementation CPCheckBox
@@ -21,6 +23,8 @@
     if (self = [super initWithFrame:frame]) {
         
         self.userInteractionEnabled = YES;
+        
+        [self addSubview:self.checkBackImage];
         
         [self addSubview:self.checkImage];
         
@@ -35,10 +39,18 @@
 -(UIImageView *)checkImage{
     if (!_checkImage) {
         _checkImage = [[UIImageView alloc]initWithFrame:self.bounds];
-        _checkImage.image = [UIImage imageNamed:@"投递简历-未选中"];
-        _checkImage.highlightedImage = [UIImage imageNamed:@"投递简历-选中"];
+        _checkImage.image = [UIImage imageNamed:@""];
+        _checkImage.highlightedImage = [UIImage imageNamed:@"圆角矩形-6"];
     }
     return _checkImage;
+}
+
+-(UIImageView *)checkBackImage{
+    if (!_checkBackImage) {
+        _checkBackImage = [[UIImageView alloc]initWithFrame:self.bounds];
+        _checkBackImage.image = [UIImage imageNamed:@"k"];
+    }
+    return _checkBackImage;
 }
 
 -(void)changeImage{

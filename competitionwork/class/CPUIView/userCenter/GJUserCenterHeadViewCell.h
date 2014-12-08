@@ -12,4 +12,11 @@
 
 @property (nonatomic,strong) UIImageView *sexImage;
 
+@property (nonatomic,strong) UIImageView *leftImage;
+
+@property (nonatomic,strong) UILabel *textStrLabel;
+
+@property (nonatomic,strong) UILabel *ageLabel;
+
+
 @end

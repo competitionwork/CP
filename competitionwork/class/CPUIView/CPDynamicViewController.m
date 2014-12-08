@@ -35,6 +35,7 @@
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
     // Do any additional setup after loading the view from its nib.
+    self.title = @"环球竞赛网";
     [self showLoginView];
     [self setNavigationLeftButton:self withSelector:nil withImage:nil withHImgae:nil];
     [self creatTheData];
@@ -53,6 +54,12 @@
         
     }
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+    [app.MastVC showBottomBar];
 }
 
 -(void)layoutCollectionView{

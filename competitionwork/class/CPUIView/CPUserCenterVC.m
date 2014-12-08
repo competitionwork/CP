@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"个人中心";
     [self setNavigationLeftButton:self withSelector:nil withImage:nil withHImgae:nil];
     [self creatTheUserCenterListView];
 }
@@ -37,13 +38,13 @@
     
     self.centerListData = @[
                             @[
-                                [CPListCellEntity listCellWithTitle:@"我是学霸" imageName:@"tabbar_home" target:self callback:@selector(myCenter) userinfo:nil],
+                                [CPListCellEntity listCellWithTitle:@"我是学霸" imageName:@"mast_5" target:self callback:@selector(myCenter) userinfo:nil],
                                 ],
                             @[
-                                [CPListCellEntity listCellWithTitle:@"账户" imageName:@"tabbar_home" target:self callback:@selector(Account) userinfo:nil],
-                                [CPListCellEntity listCellWithTitle:@"消息与提醒" imageName:@"tabbar_home" target:self callback:@selector(Account) userinfo:nil],
-                                [CPListCellEntity listCellWithTitle:@"用户反馈" imageName:@"tabbar_home" target:self callback:@selector(Account) userinfo:nil],
-                                [CPListCellEntity listCellWithTitle:@"关于环球竞赛网" imageName:@"tabbar_home" target:self callback:@selector(Account) userinfo:nil]
+                                [CPListCellEntity listCellWithTitle:@"账户" imageName:@"wd" target:self callback:@selector(Account) userinfo:nil],
+                                [CPListCellEntity listCellWithTitle:@"消息与提醒" imageName:@"2" target:self callback:@selector(Account) userinfo:nil],
+                                [CPListCellEntity listCellWithTitle:@"用户反馈" imageName:@"book.png" target:self callback:@selector(Account) userinfo:nil],
+                                [CPListCellEntity listCellWithTitle:@"关于环球竞赛网" imageName:@"fk.png" target:self callback:@selector(Account) userinfo:nil]
                                 ]
                             ];
     self.ListView.listData = self.centerListData;

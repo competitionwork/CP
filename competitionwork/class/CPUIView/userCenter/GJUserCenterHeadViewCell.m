@@ -10,6 +10,7 @@
 
 @interface GJUserCenterHeadViewCell ()
 
+
 @end
 
 @implementation GJUserCenterHeadViewCell
@@ -19,7 +20,13 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self.contentView addSubview:self.sexImage];
-        _sexImage.image = [UIImage imageNamed:@"投递简历-选中"];
+        
+        [self.contentView addSubview:self.leftImage];
+        
+        [self.contentView addSubview:self.textStrLabel];
+        
+        [self.contentView addSubview:self.ageLabel];
+        
     }
     return self;
 }
@@ -31,12 +38,49 @@
     return _sexImage;
 }
 
+-(UIImageView *)leftImage{
+    
+    if (!_leftImage) {
+        _leftImage = [[UIImageView alloc]init];
+    }
+    return _leftImage;
+}
+
+
+
+-(UILabel *)textStrLabel{
+    
+    if (!_textStrLabel) {
+        _textStrLabel = [[UILabel alloc]init];
+        _textStrLabel.font = [UIFont systemFontOfSize:16];
+    }
+    return _textStrLabel;
+    
+}
+
+-(UILabel *)ageLabel{
+    
+    if (!_ageLabel) {
+        _ageLabel = [[UILabel alloc]init];
+        _ageLabel.font = [UIFont systemFontOfSize:13];
+        _ageLabel.textAlignment = NSTextAlignmentLeft;
+        _ageLabel.textColor = [UIColor whiteColor];
+    }
+    return _ageLabel;
+
+}
+
+
 -(void)layoutSubviews{
     [super layoutSubviews];
     
-    [[self.imageView.po_frameBuilder alignLeftInSuperviewWithInset:8]centerVerticallyInSuperview];
-    [[[self.textLabel.po_frameBuilder alignRightOfView:self.imageView offset:5]alignToTopInSuperviewWithInset:5]setHeight:25];
-    [[[[self.sexImage.po_frameBuilder alignToBottomOfView:self.textLabel offset:5]alignRightOfView:self.imageView offset:8]setHeight:20]setWidth:20];
+    [[[[self.leftImage.po_frameBuilder setHeight:50]setWidth:50]alignLeftInSuperviewWithInset:8]centerVerticallyInSuperview];
+    
+    [[[[self.textStrLabel.po_frameBuilder setHeight:25] setWidth:200]alignRightOfView:self.leftImage offset:5]alignToTopInSuperviewWithInset:15];
+    
+    [[[[self.sexImage.po_frameBuilder setHeight:14]setWidth:32] alignToBottomOfView:self.textStrLabel offset:5]alignRightOfView:self.leftImage offset:8];
+    
+    [[[[self.ageLabel.po_frameBuilder setHeight:14]setWidth:20]alignToBottomOfView:self.textStrLabel offset:5]alignRightOfView:self.leftImage offset:21];
     
 }
 

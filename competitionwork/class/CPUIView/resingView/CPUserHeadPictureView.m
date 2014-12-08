@@ -47,8 +47,9 @@
 -(UIImageView *)headImageV{
     if (!_headImageV) {
         
-        _headImageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"个人中心-头像列表"]];
+        _headImageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tx"]];
         _headImageV.userInteractionEnabled = YES;
+        [[_headImageV.po_frameBuilder setWidth:90]setHeight:90];
         
     }
     return _headImageV;
@@ -60,7 +61,7 @@
         
         _headLabel = [[UILabel alloc]init];
         _headLabel.text = @"上传头像";
-        _headLabel.font = [UIFont systemFontOfSize:12];
+        _headLabel.font = [UIFont systemFontOfSize:14];
         [_headLabel sizeToFit];
         _headLabel.textColor = [UIColor grayColor];
         
@@ -86,9 +87,9 @@
 -(void)setHeadWithImage:(UIImage*)image{
     
     _headImageV.image = image;
-    [[_headImageV.po_frameBuilder setHeight:64]setWidth:64];
+    [[_headImageV.po_frameBuilder setHeight:90]setWidth:90];
     _headImageV.layer.masksToBounds =YES;
-    _headImageV.layer.cornerRadius =32.0;
+    _headImageV.layer.cornerRadius =45;
     _headImageV.layer.borderColor = [UIColor whiteColor].CGColor;
     _headImageV.layer.borderWidth =3.0f;
     _headImageV.layer.rasterizationScale = [UIScreen mainScreen].scale;

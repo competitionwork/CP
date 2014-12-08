@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CPBaseViewController.h"
 
-
+typedef void(^loginBackBlock)(void);
 
 @interface CPLoginView : CPBaseViewController
+
+@property (nonatomic,copy) loginBackBlock loginBlock;
 
 @end
