@@ -108,8 +108,6 @@
         itemLabel.highlightedTextColor = GJColor(30, 114, 214, 1);
         
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [button setImage:[UIImage imageNamed:backImage] forState:UIControlStateNormal];
-//        [button setImage:[UIImage imageNamed:hightImage] forState:UIControlStateHighlighted];
         button.frame = CGRectMake(0+(i*(MainScreenWidth/3)), (49-30)/2, MainScreenWidth/3, 30);
         
         button.tag = i;

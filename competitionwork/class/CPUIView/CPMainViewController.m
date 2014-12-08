@@ -22,6 +22,7 @@
 #import "CPPersonalInformationVC.h"
 #import "CPUIViewControllerClassify.h"
 #import "GJListMoreCell.h"
+#import "AppDelegate.h"
 
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
 {
@@ -69,7 +70,7 @@
     //    [self download];
     
     [self.view addSubview:self.tabelView];
-    self.tabelView.frame  = CGRectMake(0, 0, self.view.width, self.view.height - 49);
+    self.tabelView.frame  = CGRectMake(0, 0, self.view.width, self.view.height);
     self.tabelView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     
     [self setListController:nil];
@@ -149,6 +150,8 @@
     CPDetailViewController * detalView = [[CPDetailViewController alloc]init];
     
     detalView.title = entiy.dataEntity[@"contest_name"];
+    
+    detalView.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:detalView animated:YES];
     
@@ -396,12 +399,12 @@
 {
     //    [self.view insertSubview:self.tabelView belowSubview:self.filterView];
     [self.view bringSubviewToFront:_filterView];
-    
-    if (1) {
-        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44]alignToBottomOfView:self.filterView offset:0];
+        
+    if (0) {
+        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44 - self.filterView.frame.size.height]alignToBottomOfView:self.filterView offset:0];
     }
     else {
-        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];
+        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 17 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];
     }
 }
 

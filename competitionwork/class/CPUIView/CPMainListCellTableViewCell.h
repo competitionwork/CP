@@ -33,6 +33,8 @@
 
 @property (nonatomic, strong) UILabel *left4Label;
 
+@property (nonatomic,strong) UILabel *left5Label;
+
 @property (nonatomic, strong) AttentionView * attentionView;
 
 

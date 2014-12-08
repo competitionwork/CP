@@ -117,9 +117,10 @@
     NSDictionary * dictEntiy = entiy.dataEntity;
     NSMutableDictionary * dict = [NSMutableDictionary dictionary];
     [dict setValue:[dictEntiy objectForKey:@"contest_name"] forKey:@"left1"];
-    [dict setValue:[dictEntiy objectForKey:@"organiser"] forKey:@"left2"];
+    [dict setValue:@"举办方:" forKey:@"left2"];
     [dict setValue:[self registTimeFor:dictEntiy] forKey:@"left3"];
     [dict setValue:[self contestTimeFor:dictEntiy] forKey:@"left4"];
+    [dict setValue:[dictEntiy objectForKey:@"organiser"] forKey:@"left5"];
     [dict setValue:dictEntiy forKey:@"entiyDict"];
 
     

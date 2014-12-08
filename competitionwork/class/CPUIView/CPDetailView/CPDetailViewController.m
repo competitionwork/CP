@@ -27,7 +27,8 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.mainScrollView];
     [[[mainScrollView.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:MainScreenHeight];
-    mainScrollView.backgroundColor = MainBackColor;
+    mainScrollView.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = MainBackColor;
     
     [self dowloadViewdata];
 }
@@ -61,7 +62,7 @@
     
     NSInteger high = 0;
     
-    UIImageView * imageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"CenterBack"]];
+    UIImageView * imageV = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"detal2"]];
     imageV.backgroundColor = [UIColor clearColor];
     [self.mainScrollView addSubview:imageV];
     UIView * blackView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 30)];
@@ -74,7 +75,7 @@
     headLabel.text = self.title;
     headLabel.textColor = [UIColor whiteColor];
     headLabel.font = [UIFont boldSystemFontOfSize:12];
-    [self.view addSubview:headLabel];
+    [imageV addSubview:headLabel];
     
     [[[imageV.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:170];
     
@@ -93,10 +94,10 @@
         
         [self.mainScrollView addSubview:entersView];
         
+        [entersView.po_frameBuilder alignToTopInSuperviewWithInset:height];
+        
         [self addLineView:588/2 top:entersView.bottom];
 
-        
-        [entersView.po_frameBuilder alignToTopInSuperviewWithInset:height];
         
         return entersView.height;
 
@@ -123,7 +124,7 @@
     
     [self.mainScrollView addSubview:AttrsView1];
     
-    [AttrsView1.po_frameBuilder alignToTopInSuperviewWithInset:hight];
+    [AttrsView1.po_frameBuilder alignToTopInSuperviewWithInset:hight + 1];
     
     [self addLineView:588/2 top:AttrsView1.bottom];
     

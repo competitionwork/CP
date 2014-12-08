@@ -189,9 +189,9 @@
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
-    CPMainViewController * mastVC = [[CPMainViewController alloc]initWithNibName:nil bundle:nil];
+    CPMainViewController * mastVC = [[CPMainViewController alloc]init];
     
-    mastVC.hidesBottomBarWhenPushed = YES;
+//    mastVC.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:mastVC animated:YES];
 }

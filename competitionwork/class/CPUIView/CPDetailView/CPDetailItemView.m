@@ -61,7 +61,7 @@
                 [laValue setText:value];
                 [laValue setTextColor:BlackColor];
                 [laValue setNumberOfLines:0];
-                [laValue setLineBreakMode:UILineBreakModeWordWrap];
+                [laValue setLineBreakMode:NSLineBreakByWordWrapping];
                 laValue.backgroundColor = [UIColor clearColor];
                 [self addSubview:laValue];
                 [laValue sizeToFit];
@@ -94,7 +94,7 @@
         
         _labelNumber = [[UILabel alloc]init];
         
-        _labelNumber.font = [UIFont systemFontOfSize:12];
+        _labelNumber.font = [UIFont systemFontOfSize:14];
         
         [self addSubview:_labelNumber];
         

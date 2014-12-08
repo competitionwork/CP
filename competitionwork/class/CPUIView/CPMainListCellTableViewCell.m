@@ -75,6 +75,13 @@ static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
         self.left4Label.textColor = GrayColor;
         [self.contentView addSubview:self.left4Label];
         
+        self.left5Label = [[UILabel alloc] initWithFrame:CGRectZero];
+        self.left5Label.textAlignment = NSTextAlignmentLeft;
+        self.left5Label.backgroundColor = [UIColor clearColor];
+        self.left5Label.font = GrayFont;
+        self.left5Label.textColor = kCPBlueColor;
+        [self.contentView addSubview:self.left5Label];
+        
         
         self.pImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"人数"]];
         [self.contentView addSubview:self.pImage];
@@ -135,7 +142,11 @@ static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
     [[[[_left2Label.po_frameBuilder setHeight:16] setWidth:[self widthForLabel:_left2Label withText:labelText]] setY:[self yForLabelOfLine2:_content]]alignRightOfView:self.pImage offset:5];
     _left2Label.text = labelText;
     
-    [[[[self.timeImage.po_frameBuilder alignLeftInSuperviewWithInset:SpaceToLeft]setY:[self yForLabelOfLine3:_content]]setWidth:14.5]setHeight:12.5];
+    labelText = _content[@"left5"];
+    [[[[_left5Label.po_frameBuilder setHeight:16] setWidth:[self widthForLabel:_left5Label withText:labelText]] setY:[self yForLabelOfLine2:_content]]alignRightOfView:self.left2Label offset:5];
+    _left5Label.text = labelText;
+    
+    [[[[self.timeImage.po_frameBuilder alignLeftInSuperviewWithInset:SpaceToLeft]setY:[self yForLabelOfLine3:_content]]setWidth:12.5]setHeight:14.5];
 
     
     labelText = _content[@"left3"];
