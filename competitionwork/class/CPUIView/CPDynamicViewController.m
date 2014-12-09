@@ -50,9 +50,9 @@
     
     if (!app.userInforCenter.isLoginSuccess) {
         
-//        CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
+        CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
         
-        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
+//        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
 
         
         [self.navigationController pushViewController:loginView animated:NO];
