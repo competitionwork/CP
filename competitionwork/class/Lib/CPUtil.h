@@ -130,6 +130,7 @@
  */
 + (UIImageView *)getNewIcon;
 
++ (NSString *)pathForDocumentWithFilename:(NSString*)filename ;
 
 @end
 

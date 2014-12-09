@@ -18,11 +18,14 @@ typedef enum {
 } CPTEXEVIEMODEL;
 
 
+
 @class CPBaseLabelCellModel;
 
 @interface CPBaseTextFileCell : UIView
 
 @property (nonatomic, strong) UIView* bottomBorder;
+
+@property (nonatomic, strong) UITextField * textField;
 
 @property(nonatomic,getter = isHiddenBottomBorder) BOOL hiddenBottomBorder;
 @property(nonatomic,getter = isHiddenTopBorder) BOOL hiddenTopBorder;
@@ -31,6 +34,7 @@ typedef enum {
 -(instancetype)initWithFrame:(CGRect)frame andEntity:(CPBaseLabelCellModel*)entity withModel:(CPTEXEVIEMODEL)model;
 -(NSString *)textString;
 -(void)setTextFontMunber:(int)number;
+-(void)setDelegateWith:(id)delegate;
 
 
 @end

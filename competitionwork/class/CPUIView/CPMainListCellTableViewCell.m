@@ -133,9 +133,9 @@ static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
     
     NSString *labelText = nil;
     
-    [[[_left1Label.po_frameBuilder setSizeWithWidth:150 height:20] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self spaceToTop:_content]-4];
+    [[[_left1Label.po_frameBuilder setSizeWithWidth:250 height:20] alignLeftInSuperviewWithInset:SpaceToLeft] setY:[self spaceToTop:_content]-4];
     _left1Label.text = [_content objectForKey:@"left1"];
-    
+
     [[[[self.pImage.po_frameBuilder alignLeftInSuperviewWithInset:SpaceToLeft]setY:[self yForLabelOfLine2:_content]]setWidth:14.5]setHeight:12.5];
     
     labelText = _content[@"left2"];
@@ -160,6 +160,9 @@ static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
     [[[_left4Label.po_frameBuilder setSizeWithWidth:width4 height:16] setY:[self yForLabelOfLine3:_content] +20]alignRightOfView:self.timeImage offset:5];
     
     [[[[self.ingImage.po_frameBuilder alignRightOfView:self.left4Label offset:5]setY:[self yForLabelOfLine3:_content]]setWidth:44]setHeight:15];
+    
+    
+    
         
     [_attentionView.po_frameBuilder alignRightInSuperviewWithInset:5];
 

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CPListCellCommonEntiy.h"
 @interface CPDetailViewController : CPBaseViewController
+
+@property (nonatomic,strong) CPListCellCommonEntiy *listEntiy;
 
 @end

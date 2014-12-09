@@ -175,6 +175,9 @@
 		04A3422F1A2398F7003D4F85 /* CPUIViewControllerClassify.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */; };
 		04A342351A239913003D4F85 /* CPBaseLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A342321A239913003D4F85 /* CPBaseLoginView.m */; };
 		04A342361A239913003D4F85 /* CPLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A342341A239913003D4F85 /* CPLoginView.m */; };
+		04A3FF531A36E0440059B14C /* CPAPIHelper_schoolURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3FF521A36E0440059B14C /* CPAPIHelper_schoolURL.m */; };
+		04A3FF551A37005E0059B14C /* dataDetail in Resources */ = {isa = PBXBuildFile; fileRef = 04A3FF541A37005E0059B14C /* dataDetail */; };
+		04A3FF581A372D0A0059B14C /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3FF561A372D0A0059B14C /* AutoCoding.m */; };
 		04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523CE1A1A3B1000FE9500 /* RefreshView.m */; };
 		04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */; };
 		04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */; };
@@ -495,6 +498,11 @@
 		04A342321A239913003D4F85 /* CPBaseLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseLoginView.m; sourceTree = "<group>"; };
 		04A342331A239913003D4F85 /* CPLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLoginView.h; sourceTree = "<group>"; };
 		04A342341A239913003D4F85 /* CPLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLoginView.m; sourceTree = "<group>"; };
+		04A3FF511A36E0440059B14C /* CPAPIHelper_schoolURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_schoolURL.h; path = API/CPAPIHelper_schoolURL.h; sourceTree = "<group>"; };
+		04A3FF521A36E0440059B14C /* CPAPIHelper_schoolURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_schoolURL.m; path = API/CPAPIHelper_schoolURL.m; sourceTree = "<group>"; };
+		04A3FF541A37005E0059B14C /* dataDetail */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = dataDetail; sourceTree = "<group>"; };
+		04A3FF561A372D0A0059B14C /* AutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCoding.m; sourceTree = "<group>"; };
+		04A3FF571A372D0A0059B14C /* AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCoding.h; sourceTree = "<group>"; };
 		04A523CD1A1A3B1000FE9500 /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
 		04A523CE1A1A3B1000FE9500 /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
 		04A523D11A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+xiaolvAnimation.h"; sourceTree = "<group>"; };
@@ -828,6 +836,8 @@
 				04372B091A2C2E2B007DCBAD /* CPAPIHelper_userURL.m */,
 				04C885A61A2EE2C300E441CA /* CPAPIHelper_setting.h */,
 				04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */,
+				04A3FF511A36E0440059B14C /* CPAPIHelper_schoolURL.h */,
+				04A3FF521A36E0440059B14C /* CPAPIHelper_schoolURL.m */,
 			);
 			name = "API（接口）";
 			sourceTree = "<group>";
@@ -924,6 +934,7 @@
 				0496C4C01A357ABB000E7CC3 /* APP设计图 */,
 				04942BB31A3209BB00AEA797 /* NewImage */,
 				0465FAAC1A30B0900022834D /* MastViewData.plist */,
+				04A3FF541A37005E0059B14C /* dataDetail */,
 				04A523D51A1A419000FE9500 /* OldImage */,
 				049DF5681A0F493C00F12447 /* CPfilters.plist */,
 			);
@@ -1082,6 +1093,8 @@
 				04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */,
 				04CAC1FA19F7EFBF005291D3 /* GJCommonWidgetHelper.h */,
 				04CAC1FB19F7EFBF005291D3 /* GJCommonWidgetHelper.m */,
+				04A3FF571A372D0A0059B14C /* AutoCoding.h */,
+				04A3FF561A372D0A0059B14C /* AutoCoding.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1481,6 +1494,7 @@
 				0496C4BF1A3549A2000E7CC3 /* sex2.png in Resources */,
 				0496C4D61A357ABB000E7CC3 /* 下拉菜单.png in Resources */,
 				049BADFF1A33405400988863 /* yy.png in Resources */,
+				04A3FF551A37005E0059B14C /* dataDetail in Resources */,
 				049BADEF1A33405400988863 /* fk.png in Resources */,
 				0494360E1A3209BF00AEA797 /* 六宫格二_16.png in Resources */,
 				04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */,
@@ -1663,6 +1677,7 @@
 				04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */,
 				04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */,
 				04CAC21819F7EFBF005291D3 /* GJFilterMultilevelOptionSelectorView.m in Sources */,
+				04A3FF531A36E0440059B14C /* CPAPIHelper_schoolURL.m in Sources */,
 				0425015D19F8031E0038E188 /* CPAPIBaseHelper.m in Sources */,
 				04CAC21919F7EFBF005291D3 /* GJFilterMultilevelWithSectionOptionSelectorView.m in Sources */,
 				04AF38551A0618C7008958C7 /* CPBaseInterfaceParam.m in Sources */,
@@ -1679,6 +1694,7 @@
 				0478C1951A150E3400552707 /* CPEntersView.m in Sources */,
 				04A0DA4D1A04D48D008C4E12 /* YAJLParser.m in Sources */,
 				04CAC20B19F7EFBF005291D3 /* AFHTTPClient.m in Sources */,
+				04A3FF581A372D0A0059B14C /* AutoCoding.m in Sources */,
 				04A342351A239913003D4F85 /* CPBaseLoginView.m in Sources */,
 				0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */,
 				04CAC22419F7EFBF005291D3 /* UIView+POViewFrameBuilder.m in Sources */,
@@ -1809,8 +1825,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanjing Kechuang Network Technology (Beijing) Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shanjing Kechuang Network Technology (Beijing) Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iOS Development: huang junjie (R38SAZA43D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: huang junjie (R38SAZA43D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";

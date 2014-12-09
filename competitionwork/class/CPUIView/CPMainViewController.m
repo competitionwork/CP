@@ -151,6 +151,8 @@
     
     detalView.title = entiy.dataEntity[@"contest_name"];
     
+    detalView.listEntiy = entiy;
+    
     detalView.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:detalView animated:YES];
@@ -307,7 +309,7 @@
         
         isLoading = NO;
         
-        [_refreshView stopLoading];
+//        [_refreshView stopLoading];
         
         DLog(@">>>>>>> : %@",@"获取数据成功!");
         
@@ -324,7 +326,7 @@
         }
         
         
-        [self loadDataSuccess:result forPageIndex:0];
+        [self loadDataSuccess:result forPageIndex:_pageIndex];
         
         
     } andFailed:^(id err) {
@@ -343,7 +345,12 @@
 {
     
     NSArray *postdata = result[@"contests"];
-    NSInteger totalCount = [result[@"all_num"] integerValue];
+    NSInteger totalCount = [result[@"total_page"] integerValue];
+    
+    if (_isRefresh) {
+        [_refreshView stopLoading];
+    }
+
     if (postdata.count > 0 && self.postData.count > 0 && _isRefresh) {
         [self.postData removeAllObjects];
         _isRefresh = NO;
@@ -359,7 +366,7 @@
         
     }
     
-    if (totalCount > self.postData.count) {
+    if (totalCount > _pageIndex) {
         self.listController.hasMoreData = YES;
     }else{
         self.listController.hasMoreData = NO;

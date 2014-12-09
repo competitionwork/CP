@@ -14,4 +14,9 @@ kDefineAPIMethodWithInterfaceWithSuccessAndFailed(lists)
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(add_follow)
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(cancle_follow)
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(view)
+
+/*获取竞赛类型接口*/
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(get_category)
+
+
 @end

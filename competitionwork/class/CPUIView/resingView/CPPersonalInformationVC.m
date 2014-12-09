@@ -14,6 +14,9 @@
 #import "AppDelegate.h"
 #import "CPPersinalparentVC.h"
 
+#import "CPAPIHelper_severURL.h"
+#import "CPAPIHelper_schoolURL.h"
+
 @interface CPPersonalInformationVC ()
 
 @property (nonatomic,strong) UITableView *tableView;

@@ -11,7 +11,7 @@
 
 typedef void(^loginBackBlock)(void);
 
-@interface CPLoginView : CPBaseViewController
+@interface CPLoginView : CPBaseViewController<UITextFieldDelegate>
 
 @property (nonatomic,copy) loginBackBlock loginBlock;
 

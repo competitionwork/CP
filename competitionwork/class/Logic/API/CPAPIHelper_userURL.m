@@ -64,6 +64,27 @@
 
 }
 
+-(void)api_info_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
+    
+    NSString * URL = [NSString stringWithFormat:@"%@info",[self.class baseURL]];
+    
+    [self postDataFromPath:URL params:params whenSuccess:^(id result) {
+        
+        if (success) {
+            success(result);
+        }
+        
+    } andFailed:^(id err) {
+        
+        if (failed) {
+            failed(err);
+        }
+        
+    }];
+    
+}
+
+
 +(NSString *)baseURL
 {
     return @"http://apitest.worldjingsai.com/user/";

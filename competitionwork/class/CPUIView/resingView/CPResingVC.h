@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CPResingVC : CPBaseViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface CPResingVC : CPBaseViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate>
 
 @end

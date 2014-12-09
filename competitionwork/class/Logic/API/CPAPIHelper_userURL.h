@@ -13,4 +13,8 @@
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(login);
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(reg);
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(regprofile);
+
+/*个人信息页面*/
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(info);
+
 @end

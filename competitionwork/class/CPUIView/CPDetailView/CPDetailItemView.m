@@ -46,8 +46,15 @@
             
             for (NSDictionary *attrDict in attrArray) {
                 
-                NSString *value = (NSString *)[attrDict allValues][0];
-                NSString *key = (NSString *)[attrDict allKeys][0];
+                NSString *value =  @" ";
+                NSString *key = @" ";
+                
+                if ([attrDict allValues][0]) {
+                    value = (NSString *)[attrDict allValues][0];
+                }
+                if ([attrDict allKeys][0]) {
+                    key = (NSString *)[attrDict allKeys][0];
+                }
                 UILabel *laName = [[UILabel alloc] initWithFrame:CGRectMake(13, height, 75, 28)] ;
                 [laName setTextColor:GrayColor];
                 [laName setFont:[UIFont systemFontOfSize:14]];
@@ -119,6 +126,19 @@
 
 -(void)layoutSubviews{
     
+//    NSString *path = [NSString stringWithFormat:@"%@/%@/",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0],@"CPSAVE"];
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:nil]) {
+//        [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+//    }
+//    
+//    path = [NSString stringWithFormat:@"%@/dataDetail",path];
+//    [self.EntersDict writeToFile:path atomically:YES];
+    
+    if (self.EntersDict.count == 0) {
+        NSArray * array = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"dataDetail" ofType:@""]];
+        self.EntersDict = array;
+    }
+    
     _labelNumber.text =  [NSString stringWithFormat:@"已经报名参加%lu个人",(unsigned long)self.EntersDict.count];
     [_labelNumber sizeToFit];
     [[_labelNumber.po_frameBuilder alignToTopInSuperviewWithInset:8]alignLeftInSuperviewWithInset:8];
@@ -127,6 +147,7 @@
         
         UIImageView * imageFace = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
         NSString * url = self.EntersDict[idx][@"avatar"];
+        url = [NSString stringWithFormat:@"http://www.worldjingsai.com/%@",url];
         [imageFace setImageWithURL:[NSURL URLWithString:url] placeholderImage:[UIImage imageNamed:@""]];
         
         [self addSubview:imageFace];
@@ -135,6 +156,10 @@
         imageFace.layer.cornerRadius = 25.0;
         
         [[imageFace.po_frameBuilder alignToTopInSuperviewWithInset:35] setX:8+(imageFace.width + 8) * idx];
+        
+        if (idx == 4) {
+            *stop = YES;
+        }
         
     }];
     

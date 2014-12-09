@@ -35,8 +35,15 @@
 
 -(void)dowloadViewdata{
     
+    NSString * strId = @"104";
+    
+    if (self.listEntiy) {
+        strId = _listEntiy.dataEntity[@"contest_id"];
+//        strId = @"62";
+    }
+    
     NSDictionary * paramsDic = @{@"uid":@"123456",
-                                 @"c_id":@"104"
+                                 @"c_id":strId
                                  };
     
     
@@ -111,10 +118,10 @@
     NSMutableDictionary * dictAttrs = [NSMutableDictionary dictionaryWithCapacity:0];
     NSMutableArray * arrayAttrs = [NSMutableArray arrayWithCapacity:0];
     
-    if (_inforDataEntiy.benefit) {
+    if (_inforDataEntiy.contest_name) {
         [arrayAttrs addObject:@{@"竞赛全称":_inforDataEntiy.contest_name}];
     }
-    if (_inforDataEntiy.benefit) {
+    if (_inforDataEntiy.contest_short_name) {
         [arrayAttrs addObject:@{@"竞赛简称":_inforDataEntiy.contest_short_name}];
     }
     
@@ -131,16 +138,16 @@
     [arrayAttrs removeAllObjects];
 
     //
-    if (_inforDataEntiy.benefit) {
-        [arrayAttrs addObject:@{@"报名时间":_inforDataEntiy.contest_name}];
+    if (_inforDataEntiy.regist_start_time) {
+        [arrayAttrs addObject:@{@"报名时间":[self contestTimeFor:_inforDataEntiy.regist_start_time]}];
     }
-    if (_inforDataEntiy.benefit) {
-        [arrayAttrs addObject:@{@"竞赛时间":_inforDataEntiy.contest_name}];
+    if (_inforDataEntiy.contest_start_time) {
+        [arrayAttrs addObject:@{@"竞赛时间":[self contestTimeFor:_inforDataEntiy.contest_start_time]}];
     }
-    if (_inforDataEntiy.benefit) {
+    if (_inforDataEntiy.organiser) {
         [arrayAttrs addObject:@{@"主办方":_inforDataEntiy.organiser}];
     }
-    if (_inforDataEntiy.benefit) {
+    if (_inforDataEntiy.contest_cycle) {
         [arrayAttrs addObject:@{@"竞赛周期":_inforDataEntiy.contest_cycle}];
     }
     
@@ -157,10 +164,10 @@
     [arrayAttrs removeAllObjects];
     
     ///
-    if (_inforDataEntiy.benefit) {
-        [arrayAttrs addObject:@{@"关键词":_inforDataEntiy.contest_keyword}];
+    if (_inforDataEntiy.contest_keyword) {
+        [arrayAttrs addObject:@{@"关键词":[_inforDataEntiy.contest_keyword isEqualToString:@""]?@"竞赛":@"竞赛"}];
     }
-    if (_inforDataEntiy.benefit) {
+    if (_inforDataEntiy.bonus) {
         [arrayAttrs addObject:@{@"总奖金":_inforDataEntiy.bonus}];
     }
     if (_inforDataEntiy.benefit) {
@@ -180,7 +187,7 @@
     [arrayAttrs removeAllObjects];
     
     ///
-    if (_inforDataEntiy.benefit) {
+    if (_inforDataEntiy.contest_name) {
         [arrayAttrs addObject:@{@"竞赛简介":_inforDataEntiy.contest_name}];
     }
     
@@ -255,6 +262,22 @@
     @catch (NSException *exception) {
         
     }
+}
+
+-(NSString *)contestTimeFor:(NSString*)time{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd"];
+    
+    NSDate* registStart = [NSDate dateWithTimeIntervalSince1970:[time intValue]];
+    NSString* startStr = [dateFormatter stringFromDate:registStart];
+    
+//    NSDate* registEnd = [NSDate dateWithTimeIntervalSince1970:[[Item objectForKey:@"contest_end_time"] intValue]];
+//    NSString* endStr = [dateFormatter stringFromDate:registEnd];
+    
+    NSString * str = [NSString stringWithFormat:@"%@",startStr];
+    
+    return str;
 }
 
 - (void)didReceiveMemoryWarning {

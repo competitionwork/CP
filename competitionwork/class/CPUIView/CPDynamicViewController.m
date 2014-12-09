@@ -12,8 +12,10 @@
 #import "CPMastCompetitionCell.h"
 #import "CPFunctionCollectionCell.h"
 #import "CPMainViewController.h"
+#import "CPUserInforCenter.h"
 
 #import "CPDetailViewController.h"//详情页调试
+
 
 //推荐类cell
 #define kCPSECTIONONECELLIDENTIFIER @"1"
@@ -51,7 +53,7 @@
     if (!app.userInforCenter.isLoginSuccess) {
         
         CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
-        
+        [[CPUserInforCenter sharedInstance]loadUserInforData];
 //        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
 
         

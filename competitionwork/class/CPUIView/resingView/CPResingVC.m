@@ -19,6 +19,8 @@
 
 @interface CPResingVC ()
 
+@property (nonatomic,strong) UIScrollView *myScrollView;
+
 @property (nonatomic,strong) CPUserHeadPictureView *headView;
 
 @property (nonatomic,strong) CPResingBaseCellView *mailView;
@@ -42,6 +44,11 @@
 @implementation CPResingVC
 
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self registerForKeyboardNotification];
+}
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -49,7 +56,16 @@
     [self creatTheUI];
 }
 
+-(UIScrollView *)myScrollView{
+    if (!_myScrollView) {
+        _myScrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+    }
+    return _myScrollView;
+}
+
 -(void)creatTheUI{
+    
+    [self.view addSubview:self.myScrollView];
     
     self.headView = [[CPUserHeadPictureView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 100)];
     
@@ -61,7 +77,7 @@
         
     }];
     
-    [self.view addSubview:self.headView];
+    [self.myScrollView addSubview:self.headView];
     
     
     
@@ -94,7 +110,8 @@
         
         CPResingBaseCellView * resingView = [[CPResingBaseCellView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 45) andEntity:model withModel:textModel];
         [resingView setTextFontMunber:14];
-        [self.view addSubview:resingView];
+        [resingView setDelegateWith:self];
+        [self.myScrollView addSubview:resingView];
         
         switch (idx) {
             case 0:{
@@ -138,7 +155,7 @@
     textLabel.font = [UIFont systemFontOfSize:13];
     [textLabel sizeToFit];
     
-    [self.view addSubview:textLabel];
+    [self.myScrollView addSubview:textLabel];
     [[textLabel.po_frameBuilder alignToBottomOfView:self.PasswordAgain offset:8]alignLeftInSuperviewWithInset:30];
     
     UILabel * textColocrLabel = [[UILabel alloc]init];
@@ -147,12 +164,12 @@
     textColocrLabel.textColor = GJColor(40, 120, 212, 1);
     [textColocrLabel sizeToFit];
     
-    [self.view addSubview:textColocrLabel];
+    [self.myScrollView addSubview:textColocrLabel];
     [[textColocrLabel.po_frameBuilder alignRightOfView:textLabel offset:20]setY:textLabel.frame.origin.y];
     
     /*选择按钮*/
     CPCheckBox * checkBox = [[CPCheckBox alloc]initWithFrame:CGRectMake(8, textLabel.frame.origin.y, 15, 15)];
-    [self.view addSubview:checkBox];
+    [self.myScrollView addSubview:checkBox];
     
     self.resingButton = [CPBaseButton buttonWithType:UIButtonTypeCustom];
     [self.resingButton setStylesWithTitle:@"注册"];
@@ -161,9 +178,11 @@
     [self.resingButton setBlock:^(UIButton * btn){
         [weakSelf touchResing:btn];
     }];
-    [self.view addSubview:self.resingButton];
+    [self.myScrollView addSubview:self.resingButton];
     
     [[self.resingButton.po_frameBuilder alignToBottomOfView:self.PasswordAgain offset:40]centerHorizontallyInSuperview];
+    
+    self.myScrollView.contentSize = CGSizeMake(MainScreenWidth, self.resingButton.frame.origin.y +self.resingButton.height +30);
     
     
 }
@@ -263,19 +282,58 @@
 }
 
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+}
+
+
+
+-(void)registerForKeyboardNotification{
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(keyboardBeHide:) name:UIKeyboardDidHideNotification object:nil];
+    
+}
+
+-(void)keyboardWasShown:(NSNotification*)notification{
+    
+    NSDictionary * dictInfor = [notification userInfo];
+    
+    CGSize size = [[dictInfor objectForKey:@"UIKeyboardFrameEndUserInfoKey"]CGRectValue].size;
+    
+//    CGRect rect = self.myScrollView.frame;
+//    rect.size.height = rect.size.height - size.height;
+//    self.myScrollView.frame = rect;
+    
+}
+
+
+-(void)keyboardBeHide:(NSNotification*)notification{
+    
+    NSDictionary * dictInfor = [notification userInfo];
+    
+    CGSize size = [[dictInfor objectForKey:@"UIKeyboardFrameEndUserInfoKey"]CGRectValue].size;
+    
+//    CGRect rect = self.myScrollView.frame;
+//    rect.size.height = rect.size.height + size.height;
+//    self.myScrollView.frame = rect;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 
 

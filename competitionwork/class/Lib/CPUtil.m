@@ -459,6 +459,27 @@
     return icon ;
     
 }
+
++ (NSString *)pathForDocumentWithFilename:(NSString*)filename {
+    NSString *documentsDirectory = [CPUtil getDocumentDirectory];
+    NSString * dataFilePathX = [documentsDirectory stringByAppendingPathComponent:filename];
+    return dataFilePathX;
+}
+
++ (NSString*)getDocumentDirectory
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* path = [paths objectAtIndex:0];
+    
+    path = [path stringByAppendingFormat:@"/1.0"];
+    
+    BOOL pathIsDirectory;
+    NSFileManager* defaultManager = [NSFileManager defaultManager];
+    if (FALSE == [defaultManager fileExistsAtPath:path isDirectory:&pathIsDirectory] || !pathIsDirectory)
+        [defaultManager createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:nil];
+    
+    return path;
+}
 @end
 
 

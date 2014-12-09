@@ -15,8 +15,6 @@
 
 @property (nonatomic, strong) NSString * pleceHolde;
 
-@property (nonatomic, strong) UITextField * textField;
-
 @property (nonatomic, assign) CPTEXEVIEMODEL model;
 
 @property (nonatomic, strong) CPBaseLabelCellModel * entity;
@@ -199,6 +197,11 @@
     return self.textField.text;
 }
 
+
+
+-(void)setDelegateWith:(id)delegate{
+    self.textField.delegate = delegate;
+}
 
 @end
 

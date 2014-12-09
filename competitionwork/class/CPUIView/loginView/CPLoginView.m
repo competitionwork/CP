@@ -30,7 +30,8 @@
     [self setNavigationBackButton:self withSelector:@selector(goBackModel)];
 //    self.view.backgroundColor = MainBackColor;
     UIImageView * imageb = [[UIImageView alloc]initWithFrame:self.view.bounds];
-    imageb.image = [UIImage imageNamed:@"登录背景"];
+    imageb.image = [UIImage imageNamed:@""];
+    imageb.backgroundColor = GJColor(239, 238, 232, 1);
     [self.view addSubview:imageb];
     [self creatTheVIew];
 }
@@ -61,25 +62,26 @@
 
 -(void)creatTheVIew{
     
-    UIImageView * imageTitleView = [[UIImageView alloc]initWithImage:nil];
+    UIImageView * imageTitleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"环球竞赛网"]];
     imageTitleView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:imageTitleView];
-    [[[[imageTitleView.po_frameBuilder setHeight:100]setWidth:200]alignToTopInSuperviewWithInset:20] centerHorizontallyInSuperview];
+    [[[[imageTitleView.po_frameBuilder setHeight:39.5]setWidth:182.5]alignToTopInSuperviewWithInset:55] centerHorizontallyInSuperview];
     
     UIImage * imageLabelBack = [UIImage imageNamed:@"登陆注册输入框"];
     UIImageView * imageLabelBackView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth-30, 100)];
     imageLabelBackView.image = [imageLabelBack stretchableImageWithLeftCapWidth:imageLabelBack.size.width/2 topCapHeight:imageLabelBack.size.height/2];;
     [self.view addSubview:imageLabelBackView];
-    [[imageLabelBackView.po_frameBuilder alignToBottomOfView:imageTitleView offset:40]centerHorizontallyInSuperview];
+    [[imageLabelBackView.po_frameBuilder alignToBottomOfView:imageTitleView offset:70]centerHorizontallyInSuperview];
+    
     
     CPBaseLabelCellModel * name = [[CPBaseLabelCellModel alloc]init];
     name.pleceHolde = @"用户名称";
     name.image = [UIImage imageNamed:@"yhm"];
-    self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-30, 50) andEntity:name withModel:CPTEXEVIEWEMPTY];
+    self.userNameView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 135, MainScreenWidth-30, 50) andEntity:name withModel:CPTEXEVIEWEMPTY];
     [self.view addSubview:self.userNameView];
-    [[self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:40]centerHorizontallyInSuperview];
+    [[self.userNameView.po_frameBuilder alignToBottomOfView:imageTitleView offset:70]centerHorizontallyInSuperview];
     [self.userNameView setHiddenTopBorder:YES];
-
+    [self.userNameView setDelegateWith:self];
     
     
     CPBaseLabelCellModel * password = [[CPBaseLabelCellModel alloc]init];
@@ -89,8 +91,8 @@
     [self.view addSubview:self.passwordView];
     [[self.passwordView.po_frameBuilder alignToBottomOfView:self.userNameView offset:1]centerHorizontallyInSuperview];
     [self.passwordView setHiddenDownBorder:YES];
+    [self.passwordView setDelegateWith:self];
 
-    
     
     self.logonButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _logonButton.frame = CGRectMake(13, 22, MainScreenWidth - 26, 40);
@@ -189,6 +191,23 @@
         
     }];
 }
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+}
+-(BOOL)textFieldShouldEndEditing:(UITextField *)textField{
+    return YES;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    return YES;
+}
+
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
