@@ -158,14 +158,6 @@
 		049E208F1A35F893008C100B /* detal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049E208D1A35F893008C100B /* detal2.png */; };
 		04A07F061A3744AF00760B45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F051A3744AF00760B45 /* logo.png */; };
 		04A07F081A37469A00760B45 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F071A37469A00760B45 /* Default.png */; };
-		04A07F0E1A3747D200760B45 /* 赶集180.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F091A3747D200760B45 /* 赶集180.png */; };
-		04A07F0F1A3747D200760B45 /* 赶集icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F0A1A3747D200760B45 /* 赶集icon120.png */; };
-		04A07F111A3747D200760B45 /* ganji_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F0C1A3747D200760B45 /* ganji_icon.png */; };
-		04A07F121A3747D200760B45 /* ganji_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F0D1A3747D200760B45 /* ganji_icon@2x.png */; };
-		04A07F171A37490500760B45 /* Default-568h@2x-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F131A37490500760B45 /* Default-568h@2x-1.png */; };
-		04A07F181A37490500760B45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F141A37490500760B45 /* Default-568h@2x.png */; };
-		04A07F191A37490500760B45 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F151A37490500760B45 /* Default@2x.png */; };
-		04A07F1A1A37490500760B45 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F161A37490500760B45 /* LaunchImage-800-Portrait-736h@3x.png */; };
 		04A07F1F1A374ACD00760B45 /* 1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1B1A374ACD00760B45 /* 1136.png */; };
 		04A07F201A374ACD00760B45 /* 960.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1C1A374ACD00760B45 /* 960.png */; };
 		04A07F211A374ACD00760B45 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1D1A374ACD00760B45 /* 120.png */; };
@@ -475,14 +467,6 @@
 		049E208D1A35F893008C100B /* detal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detal2.png; sourceTree = "<group>"; };
 		04A07F051A3744AF00760B45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		04A07F071A37469A00760B45 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		04A07F091A3747D200760B45 /* 赶集180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "赶集180.png"; sourceTree = "<group>"; };
-		04A07F0A1A3747D200760B45 /* 赶集icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "赶集icon120.png"; sourceTree = "<group>"; };
-		04A07F0C1A3747D200760B45 /* ganji_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ganji_icon.png; sourceTree = "<group>"; };
-		04A07F0D1A3747D200760B45 /* ganji_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ganji_icon@2x.png"; sourceTree = "<group>"; };
-		04A07F131A37490500760B45 /* Default-568h@2x-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x-1.png"; sourceTree = "<group>"; };
-		04A07F141A37490500760B45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		04A07F151A37490500760B45 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		04A07F161A37490500760B45 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		04A07F1B1A374ACD00760B45 /* 1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1136.png; sourceTree = "<group>"; };
 		04A07F1C1A374ACD00760B45 /* 960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 960.png; sourceTree = "<group>"; };
 		04A07F1D1A374ACD00760B45 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
@@ -1142,14 +1126,6 @@
 		04A523D51A1A419000FE9500 /* OldImage */ = {
 			isa = PBXGroup;
 			children = (
-				04A07F131A37490500760B45 /* Default-568h@2x-1.png */,
-				04A07F141A37490500760B45 /* Default-568h@2x.png */,
-				04A07F151A37490500760B45 /* Default@2x.png */,
-				04A07F161A37490500760B45 /* LaunchImage-800-Portrait-736h@3x.png */,
-				04A07F091A3747D200760B45 /* 赶集180.png */,
-				04A07F0A1A3747D200760B45 /* 赶集icon120.png */,
-				04A07F0C1A3747D200760B45 /* ganji_icon.png */,
-				04A07F0D1A3747D200760B45 /* ganji_icon@2x.png */,
 				049888A21A304EDD001FA97F /* 文字点击态高度固定48@2x.png */,
 				048742D81A2F4DEC00CC92DE /* 标题栏-icon-左箭头-返回@3x.png */,
 				048742D61A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png */,
@@ -1507,7 +1483,6 @@
 				048742D21A2F185100CC92DE /* 向下展开.png in Resources */,
 				04FA58C81A2D782800BAA19E /* 登陆注册输入框@2x.png in Resources */,
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
-				04A07F191A37490500760B45 /* Default@2x.png in Resources */,
 				04CAC1AE19F7EF82005291D3 /* Images.xcassets in Resources */,
 				049BADE61A33405400988863 /* 我的列表色块.png in Resources */,
 				04A07F211A374ACD00760B45 /* 120.png in Resources */,
@@ -1534,8 +1509,6 @@
 				04FF966C1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png in Resources */,
 				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
 				049BADFD1A33405400988863 /* yen.png in Resources */,
-				04A07F121A3747D200760B45 /* ganji_icon@2x.png in Resources */,
-				04A07F1A1A37490500760B45 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				049BADE51A33405400988863 /* 椭圆-1.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
 				049436101A3209BF00AEA797 /* 时间.png in Resources */,
@@ -1552,7 +1525,6 @@
 				0494360E1A3209BF00AEA797 /* 六宫格二_16.png in Resources */,
 				04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */,
 				049BADF51A33405400988863 /* mm.png in Resources */,
-				04A07F181A37490500760B45 /* Default-568h@2x.png in Resources */,
 				049BADEA1A33405400988863 /* bq.png in Resources */,
 				048742D31A2F185100CC92DE /* 向下展开@2x.png in Resources */,
 				0496C4E81A357ABB000E7CC3 /* 设置.png in Resources */,
@@ -1565,7 +1537,6 @@
 				049E208B1A35F442008C100B /* xia.png in Resources */,
 				0496C4D81A357ABB000E7CC3 /* 信息填写.png in Resources */,
 				049BADFE1A33405400988863 /* yhm.png in Resources */,
-				04A07F111A3747D200760B45 /* ganji_icon.png in Resources */,
 				049E208F1A35F893008C100B /* detal2.png in Resources */,
 				048742CF1A2F181900CC92DE /* 单条点击@2x.png in Resources */,
 				04A07F261A374D9000760B45 /* 960(1).png in Resources */,
@@ -1590,7 +1561,6 @@
 				049BADF71A33405400988863 /* nv.png in Resources */,
 				049436051A3209BF00AEA797 /* wd1.png in Resources */,
 				0494360F1A3209BF00AEA797 /* 关注.png in Resources */,
-				04A07F0E1A3747D200760B45 /* 赶集180.png in Resources */,
 				0496C4E31A357ABB000E7CC3 /* 竞赛简介.png in Resources */,
 				0494361C1A320B8500AEA797 /* mast_4.png in Resources */,
 				04A07F251A374D9000760B45 /* 1136(1).png in Resources */,
@@ -1610,7 +1580,6 @@
 				0496C4DE1A357ABB000E7CC3 /* 用户反馈.png in Resources */,
 				04A07F081A37469A00760B45 /* Default.png in Resources */,
 				049BAE011A33445600988863 /* CenterBack.png in Resources */,
-				04A07F171A37490500760B45 /* Default-568h@2x-1.png in Resources */,
 				049BADE71A33405400988863 /* 圆角矩形-4.png in Resources */,
 				049431181A3209BE00AEA797 /* +.png in Resources */,
 				0494360B1A3209BF00AEA797 /* 六宫格二_07.png in Resources */,
@@ -1626,7 +1595,6 @@
 				049E20861A35F442008C100B /* 中.png in Resources */,
 				04C885B01A2EEF3A00E441CA /* 投递简历-选中@2x.png in Resources */,
 				04C885AF1A2EEF3A00E441CA /* 投递简历-未选中@2x.png in Resources */,
-				04A07F0F1A3747D200760B45 /* 赶集icon120.png in Resources */,
 				049BADEC1A33405400988863 /* dhk.png in Resources */,
 				0496C4E61A357ABB000E7CC3 /* 竞赛详细分享.png in Resources */,
 				04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */,
