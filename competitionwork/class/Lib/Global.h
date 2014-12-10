@@ -67,6 +67,8 @@
 #define privatePhoneKey @"JRDS43!@87wej*&m(98"
 
 
+//*图片URL域名*/
+#define IMAGE_URL @"http://www.worldjingsai.com/"
 
 //API
 #define DEFINE_SINGLETON_FOR_HEADER(className) \

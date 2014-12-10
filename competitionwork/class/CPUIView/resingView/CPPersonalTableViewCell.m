@@ -181,6 +181,7 @@
     self.textLabel.font = [UIFont systemFontOfSize:14];
     self.textLabel.textColor = RGBCOLOR(39, 39, 39);
     self.textLabel.highlightedTextColor = self.textLabel.textColor;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

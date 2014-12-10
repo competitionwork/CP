@@ -14,12 +14,14 @@
 
 @property (nonatomic,strong) UILabel *textInput;
 
+@property (nonatomic,strong) NSString *placeHolder;
+
 @property(nonatomic,getter = isHiddenBottomBorder) BOOL hiddenBottomBorder;
 
 @property(nonatomic,getter = isHiddenTopBorder) BOOL hiddenTopBorder;
 
 @property(nonatomic,getter = isHiddenDownBorder) BOOL hiddenDownBorder;
 
-
+@property (nonatomic,strong) NSString *Number;
 
 @end

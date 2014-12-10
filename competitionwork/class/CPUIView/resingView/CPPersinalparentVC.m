@@ -48,7 +48,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return self.persinalArray?self.persinalArray.count:1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -60,7 +60,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.textLabel.text = @"科技大学";
+    CPPersinalparentModel * item = [self.persinalArray objectAtIndex:indexPath.row  ];
+    cell.textLabel.text =item.Title;
+    
     
     return cell;
 }
@@ -68,11 +70,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    NSDictionary * dict = [self.persinalArray objectAtIndex:indexPath.row];
+    CPPersinalparentModel * item = [self.persinalArray objectAtIndex:indexPath.row];
     
     if (self.persinalclickBlock) {
         
-        _persinalclickBlock(dict);
+        _persinalclickBlock(item);
 
     }
 }
@@ -91,5 +93,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+@end
+
+@implementation CPPersinalparentModel
+
+
 
 @end

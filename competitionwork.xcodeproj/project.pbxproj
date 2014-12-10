@@ -74,6 +74,10 @@
 		0494361D1A320B8500AEA797 /* mast_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 049436171A320B8500AEA797 /* mast_5.png */; };
 		0494361E1A320B8500AEA797 /* mast_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 049436181A320B8500AEA797 /* mast_6.png */; };
 		049436201A320F6A00AEA797 /* title平铺X64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0494361F1A320F6A00AEA797 /* title平铺X64@2x.png */; };
+		0494A5241A381C29005475EB /* CPAPIHelper_journalURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494A5231A381C29005475EB /* CPAPIHelper_journalURL.m */; };
+		0494A52B1A381DD7005475EB /* CPDailyEssenceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494A52A1A381DD7005475EB /* CPDailyEssenceVC.m */; };
+		0494A52F1A381F56005475EB /* CPEssenceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0494A52D1A381F56005475EB /* CPEssenceTableViewCell.m */; };
+		0494A5301A381F56005475EB /* CPEssenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0494A52E1A381F56005475EB /* CPEssenceTableViewCell.xib */; };
 		049667571A04A6790090EE5E /* CPAPIHelper_severURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */; };
 		0496675A1A04A8E20090EE5E /* CPDESCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 049667591A04A8E20090EE5E /* CPDESCode.m */; };
 		0496675D1A04AB1F0090EE5E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0496675C1A04AB1F0090EE5E /* Constant.m */; };
@@ -369,6 +373,13 @@
 		049436171A320B8500AEA797 /* mast_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mast_5.png; sourceTree = "<group>"; };
 		049436181A320B8500AEA797 /* mast_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mast_6.png; sourceTree = "<group>"; };
 		0494361F1A320F6A00AEA797 /* title平铺X64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title平铺X64@2x.png"; sourceTree = "<group>"; };
+		0494A5221A381C29005475EB /* CPAPIHelper_journalURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_journalURL.h; path = API/CPAPIHelper_journalURL.h; sourceTree = "<group>"; };
+		0494A5231A381C29005475EB /* CPAPIHelper_journalURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_journalURL.m; path = API/CPAPIHelper_journalURL.m; sourceTree = "<group>"; };
+		0494A5291A381DD7005475EB /* CPDailyEssenceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDailyEssenceVC.h; sourceTree = "<group>"; };
+		0494A52A1A381DD7005475EB /* CPDailyEssenceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDailyEssenceVC.m; sourceTree = "<group>"; };
+		0494A52C1A381F56005475EB /* CPEssenceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPEssenceTableViewCell.h; sourceTree = "<group>"; };
+		0494A52D1A381F56005475EB /* CPEssenceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPEssenceTableViewCell.m; sourceTree = "<group>"; };
+		0494A52E1A381F56005475EB /* CPEssenceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPEssenceTableViewCell.xib; sourceTree = "<group>"; };
 		049667551A04A6790090EE5E /* CPAPIHelper_severURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPAPIHelper_severURL.h; path = API/CPAPIHelper_severURL.h; sourceTree = "<group>"; };
 		049667561A04A6790090EE5E /* CPAPIHelper_severURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPAPIHelper_severURL.m; path = API/CPAPIHelper_severURL.m; sourceTree = "<group>"; };
 		049667581A04A8E20090EE5E /* CPDESCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDESCode.h; sourceTree = "<group>"; };
@@ -680,6 +691,7 @@
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
+				0494A5281A381DD7005475EB /* DailyEssence */,
 				049967791A3195DD00551CB8 /* PostList */,
 				049888A41A305F19001FA97F /* MastView(首页) */,
 				04FA58CB1A2DB83200BAA19E /* resingView(注册) */,
@@ -851,6 +863,19 @@
 			path = NewImage;
 			sourceTree = "<group>";
 		};
+		0494A5281A381DD7005475EB /* DailyEssence */ = {
+			isa = PBXGroup;
+			children = (
+				0494A5291A381DD7005475EB /* CPDailyEssenceVC.h */,
+				0494A52A1A381DD7005475EB /* CPDailyEssenceVC.m */,
+				0494A52C1A381F56005475EB /* CPEssenceTableViewCell.h */,
+				0494A52D1A381F56005475EB /* CPEssenceTableViewCell.m */,
+				0494A52E1A381F56005475EB /* CPEssenceTableViewCell.xib */,
+			);
+			name = DailyEssence;
+			path = CPUIView/DailyEssence;
+			sourceTree = "<group>";
+		};
 		049667541A04A6390090EE5E /* API（接口） */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,6 +887,8 @@
 				04C885A71A2EE2C300E441CA /* CPAPIHelper_setting.m */,
 				04A3FF511A36E0440059B14C /* CPAPIHelper_schoolURL.h */,
 				04A3FF521A36E0440059B14C /* CPAPIHelper_schoolURL.m */,
+				0494A5221A381C29005475EB /* CPAPIHelper_journalURL.h */,
+				0494A5231A381C29005475EB /* CPAPIHelper_journalURL.m */,
 			);
 			name = "API（接口）";
 			sourceTree = "<group>";
@@ -1488,6 +1515,7 @@
 				04A07F211A374ACD00760B45 /* 120.png in Resources */,
 				048742D71A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png in Resources */,
 				0496C4E21A357ABB000E7CC3 /* 竞赛样式2.png in Resources */,
+				0494A5301A381F56005475EB /* CPEssenceTableViewCell.xib in Resources */,
 				049BADF11A33405400988863 /* gz.png in Resources */,
 				0496C4BE1A3549A2000E7CC3 /* sex1.png in Resources */,
 				0496C4D91A357ABB000E7CC3 /* 充值密码.png in Resources */,
@@ -1709,6 +1737,8 @@
 				04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */,
 				04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */,
 				04CAC21819F7EFBF005291D3 /* GJFilterMultilevelOptionSelectorView.m in Sources */,
+				0494A5241A381C29005475EB /* CPAPIHelper_journalURL.m in Sources */,
+				0494A52B1A381DD7005475EB /* CPDailyEssenceVC.m in Sources */,
 				04A3FF531A36E0440059B14C /* CPAPIHelper_schoolURL.m in Sources */,
 				0425015D19F8031E0038E188 /* CPAPIBaseHelper.m in Sources */,
 				04CAC21919F7EFBF005291D3 /* GJFilterMultilevelWithSectionOptionSelectorView.m in Sources */,
@@ -1729,6 +1759,7 @@
 				04A3FF581A372D0A0059B14C /* AutoCoding.m in Sources */,
 				04A342351A239913003D4F85 /* CPBaseLoginView.m in Sources */,
 				0417F1381A0A863D0067CAED /* UIButton+Block.m in Sources */,
+				0494A52F1A381F56005475EB /* CPEssenceTableViewCell.m in Sources */,
 				04CAC22419F7EFBF005291D3 /* UIView+POViewFrameBuilder.m in Sources */,
 				04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */,
 				0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */,

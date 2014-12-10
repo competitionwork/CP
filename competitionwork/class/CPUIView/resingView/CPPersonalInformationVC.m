@@ -17,13 +17,20 @@
 #import "CPAPIHelper_severURL.h"
 #import "CPAPIHelper_schoolURL.h"
 
+
 @interface CPPersonalInformationVC ()
 
 @property (nonatomic,strong) UITableView *tableView;
 
-@property (nonatomic,strong) NSArray *DataArray;
+@property (nonatomic,strong) NSMutableArray *DataArray;
 
 @property (nonatomic,strong) CPBaseButton *personalButton;
+
+@property (nonatomic,strong) NSMutableArray *schoolArray;
+
+@property (nonatomic,strong) NSMutableArray *yearArray;
+
+@property (nonatomic,strong) NSMutableArray *classesArray;
 
 
 @end
@@ -34,7 +41,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"信息填写";
-
+    
+    [self updateTheShoolData];
+    
     [self creatData];
     [self.view addSubview:self.tableView];
 }
@@ -75,6 +84,7 @@
     
     cell.titleLabel.text = item[@"title"];
     cell.textInput.text = item[@"Input"];
+    cell.Number = item[@"number"];
     
     if (indexPath.row == 0) {
         
@@ -126,14 +136,16 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    [self showViewWith:indexPath];
+    
+    [self GetSchoolDataIndex:indexPath] ;
     
 }
 
--(void)showViewWith:(NSIndexPath*)indexPath{
+-(void)showViewWith:(NSIndexPath*)indexPath andArray:(NSArray*)data{
     
     CPPersinalparentVC * con = [[CPPersinalparentVC alloc]initWithNibName:nil
                                                                bundle:nil];
+    con.persinalArray = data;
     con.view.backgroundColor = [UIColor whiteColor];
     
     UINavigationController * navController = [[UINavigationController alloc]initWithRootViewController:con];
@@ -147,11 +159,22 @@
         
     }];
     
-    [con setPersinalclickBlock:^(id data){
+    __weak typeof(*&self) weakSelf = self;
+
+    
+    NSMutableDictionary * item = [self.DataArray objectAtIndex:indexPath.row];
+    
+    [con setPersinalclickBlock:^(CPPersinalparentModel * data){
         
         [model dismissRootViewControllerWithCompletion:^{
             
         }];
+        
+        [item setObject:data.Title forKey:@"Input"];
+        [item setObject:data.number forKey:@"number"];
+
+        
+        [weakSelf.tableView reloadData];
         
     }];
 
@@ -167,6 +190,7 @@
                              @"college_id":@"1001001",
                              @"degree_id":@"5",
                              @"begin_year":@"2014",
+                             @"c_ classes":@"1"
                              };
     
     [[CPAPIHelper_userURL sharedInstance]api_regprofile_withParams:param whenSuccess:^(id result) {
@@ -185,14 +209,178 @@
 
 -(void)creatData{
     
-    self.DataArray = @[@{@"title":@"选择学校",@"Input":@"清华大学"},
-                       @{@"title":@"选择学校",@"Input":@"清华大学"},
-                       @{@"title":@"选择学校",@"Input":@"清华大学"},
-                       @{@"title":@"选择学校",@"Input":@"清华大学"},
+    NSArray * array = @[@{@"title":@"选择学校",@"Input":@"清华大学",@"number":@"1001"},
+                       @{@"title":@"选择院系",@"Input":@"中国语音文学系",@"number":@"1001001"},
+                       @{@"title":@"入学时间",@"Input":@"2014年",@"number":@"2014"},
+                       @{@"title":@"学    历",@"Input":@"大学生",@"number":@"5"},
+                       @{@"title":@"竞赛选择",@"Input":@"数学建模",@"number":@"1"},
                       ];
+    NSMutableArray * muarray = [[NSMutableArray alloc]initWithCapacity:0];
+    [array enumerateObjectsUsingBlock:^(NSDictionary *  obj, NSUInteger idx, BOOL *stop) {
+        NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:obj];
+        [muarray addObject:dict];
+    }];
+    
+    self.DataArray = muarray;
+    
+    
+}
+
+-(void)GetSchoolDataIndex:(NSIndexPath*)IndexPath{
+    
+    switch (IndexPath.row) {
+        case 0:{
+            
+            [[CPAPIHelper_schoolURL sharedInstance]api_get_univs_withParams:nil whenSuccess:^(id result) {
+                DLog(@"api_get_univs_withParams = %@",result);
+                if (result && result[@"univs"] && !self.schoolArray) {
+                    self.schoolArray = [[NSMutableArray alloc]init];
+                    NSDictionary * dictResult = result[@"univs"];
+                    [dictResult enumerateKeysAndObjectsWithOptions:NSEnumerationReverse usingBlock:^(id key, id obj, BOOL *stop) {
+                        
+                        CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
+                        model.Title = obj;
+                        model.number = key;
+                        
+                        [self.schoolArray addObject:model];
+                        
+                    }];
+                    
+                    
+                }
+                [self showViewWith:IndexPath andArray:self.schoolArray];
+
+                
+            } andFailed:^(id err) {
+                
+            }];
+
+        }
+            break;
+        case 1:{
+            
+            NSDictionary* item = [self.DataArray objectAtIndex:IndexPath.row];
+            NSDictionary * dictParams = @{@"univs_id":item[@"number"],
+                                          };
+            
+            
+            [[CPAPIHelper_schoolURL sharedInstance]api_get_academy_withParams:dictParams whenSuccess:^(id result) {
+                DLog(@"api_get_acadamy_withParams = %@",result);
+                
+            } andFailed:^(id err) {
+                
+            }];
+        }
+            break;
+        case 2:{
+            
+            self.yearArray = [[NSMutableArray alloc]init];
+            
+            for (int i = 2014; i >= 2001; i--) {
+                
+                CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
+                model.Title = [NSString stringWithFormat:@"%d年",i];
+                model.number = NSStringFromInt(i);
+                [self.yearArray addObject:model];
+            }
+            
+            [self showViewWith:IndexPath andArray:self.yearArray];
+
+            
+        }
+            break;
+        case 3:{
+            
+            NSArray * array = @[@"专科生",@"本科生",@"研究生",@"博士生",];
+            
+            NSMutableArray * showArray = [[NSMutableArray alloc]init];
+            [array enumerateObjectsUsingBlock:^(NSString * obj, NSUInteger idx, BOOL *stop) {
+                
+                CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
+                model.Title = obj;
+                int intnumber = idx;
+                model.number = [NSString stringWithFormat:@"%d",intnumber];
+                [showArray addObject:model];
+            }];
+            
+            [self showViewWith:IndexPath andArray:showArray];
+                
+            }
+            break;
+        case 4:{
+            
+            [[CPAPIHelper_severURL sharedInstance]api_get_category_withParams:nil whenSuccess:^(id result) {
+                
+                DLog(@"api_get_category_withParams = %@",result);
+                if (result && result[@"classes"] && !self.classesArray) {
+                    self.classesArray = [[NSMutableArray alloc]init];
+                    NSDictionary * dictResult = result[@"classes"];
+                    [dictResult enumerateKeysAndObjectsWithOptions:NSEnumerationReverse usingBlock:^(id key, id obj, BOOL *stop) {
+                        
+                        CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
+                        model.Title = obj;
+                        model.number = key;
+                        
+                        [self.classesArray addObject:model];
+                        
+                    }];
+                    
+                    
+                }
+                [self showViewWith:IndexPath andArray:self.classesArray];
+                
+
+
+                
+            } andFailed:^(id err) {
+                
+            }];
+                
+            }
+            break;
+        default:
+            break;
+    }
+    
+   
 }
 
 
+-(void)updateTheShoolData{
+    
+    
+    
 
+    
+    
+}
 
+/*
+code = 0;
+data =     {
+    univs =         {
+        1001 = "清华大学";
+        1002 = "北京大学";
+        1003 = "中国人民大学";
+        1004 = "北京航空航天大学";
+        1005 = "北京邮电大学";
+        1006 = "北京师范大学";
+        1007 = "中国传媒大学";
+        1008 = "北京语言大学";
+        1009 = "北京科技大学";
+        1010 = "中国农业大学";
+        1011 = "北京理工大学";
+        1012 = "北京林业大学";
+        1013 = "北京交通大学";
+        1014 = "中国矿业大学（北京）";
+        1015 = "北京信息科技大学";
+        1016 = "北京工业大学";
+        1017 = "北京化工大学";
+        1018 = "中国政法大学";
+        1019 = "对外经贸大学";
+        1020 = "中央民族大学";
+    };
+};
+msg = "";
+*/
 @end

@@ -112,6 +112,8 @@
     }
 }
 
+
+
 +(void)load{
     
     [[NSUserDefaults standardUserDefaults]objectForKey:KISLOGIN_SUCCESS];

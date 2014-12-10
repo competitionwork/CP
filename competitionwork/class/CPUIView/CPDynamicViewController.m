@@ -13,6 +13,7 @@
 #import "CPFunctionCollectionCell.h"
 #import "CPMainViewController.h"
 #import "CPUserInforCenter.h"
+#import "CPDailyEssenceVC.h"
 
 #import "CPDetailViewController.h"//详情页调试
 
@@ -189,13 +190,28 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 1 ) {
+        
+        if (indexPath.row == 1) {
+            
+            CPDailyEssenceVC * VC = [[CPDailyEssenceVC alloc]initWithNibName:nil bundle:nil];
+            VC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:VC animated:YES];
+            
+            
+            
+        }
+    }else{
+        [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+        
+        CPMainViewController * mastVC = [[CPMainViewController alloc]init];
+        
+        //    mastVC.hidesBottomBarWhenPushed = YES;
+        
+        [self.navigationController pushViewController:mastVC animated:YES];
+    }
     
-    CPMainViewController * mastVC = [[CPMainViewController alloc]init];
-    
-//    mastVC.hidesBottomBarWhenPushed = YES;
-    
-    [self.navigationController pushViewController:mastVC animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {

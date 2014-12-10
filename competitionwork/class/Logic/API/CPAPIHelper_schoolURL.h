@@ -17,6 +17,6 @@
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(get_univs);
 
 /*获取学院接口*/
-kDefineAPIMethodWithInterfaceWithSuccessAndFailed(get_acadamy);
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(get_academy);
 
 @end

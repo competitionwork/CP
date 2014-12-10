@@ -21,9 +21,9 @@
     return Instance;
 }
 
--(void)api_get_acadamy_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
+-(void)api_get_academy_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
     
-    NSString * URL = [NSString stringWithFormat:@"%@get_acadamy/",[self.class baseURL]];
+    NSString * URL = [NSString stringWithFormat:@"%@get_acadamy",[self.class baseURL]];
     [self postDataFromPath:URL params:params whenSuccess:^(id result) {
         if (success) {
             success(result);
@@ -38,7 +38,7 @@
 
 -(void)api_get_univs_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
     
-    NSString * URL = [NSString stringWithFormat:@"%@get_univs/",[self.class baseURL]];
+    NSString * URL = [NSString stringWithFormat:@"%@get_univs",[self.class baseURL]];
     [self postDataFromPath:URL params:params whenSuccess:^(id result) {
         if (success) {
             success(result);
