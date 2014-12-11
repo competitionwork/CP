@@ -11,7 +11,8 @@
 
 #define KISLOGIN_SUCCESS @"LoginSuccess"
 
-@class CPUserInforCenterModel;
+@class CPPeopleInforCenterModel;
+@class CPUserInforModel;
 
 @interface CPUserInforCenter : NSObject
 
@@ -21,12 +22,16 @@
 
 -(void)loadUserInforData;
 
--(CPUserInforCenterModel*)getUserData;
+-(CPPeopleInforCenterModel*)getPeopleData;
+
+-(CPUserInforModel*)getUsetData;
+
+-(void)setUserData:(CPUserInforModel*)data;
 
 @end
 
 
-@interface CPUserInforCenterModel : CPBaseModeObject<NSCopying,NSCoding>
+@interface CPPeopleInforCenterModel : CPBaseModeObject<NSCopying,NSCoding>
 
 @property (nonatomic,strong) NSString *is_follow;
 
@@ -60,3 +65,33 @@
 @property (nonatomic,strong) NSString *username;
 
 @end
+
+@interface CPUserInforModel : CPBaseModeObject<NSCopying,NSCoding>
+
+@property (nonatomic,strong) NSString *uid;
+@property (nonatomic,strong) NSString *utoken;
+@property (nonatomic,strong) NSString *email;
+@property (nonatomic,strong) NSString *real_name;
+@property (nonatomic,strong) NSString *sex;
+@property (nonatomic,strong) NSString *univs_id;
+@property (nonatomic,strong) NSString *univs_name;
+@property (nonatomic,strong) NSString *group_type;
+@property (nonatomic,strong) NSString *gid;
+
+
+
+
+
+
+
+
+@end
+
+
+
+
+
+
+
+
+

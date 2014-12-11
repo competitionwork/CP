@@ -23,10 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"每日精华";
     [self downLoadTheEssenceData];
     [self.view addSubview:self.myTableView];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
+    self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
 
@@ -87,12 +89,20 @@
     cell.authorLabel.text = item[@"univs_name"];
     cell.timeLabel.text = item[@"create_time"];
     
+    cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
+    cell.hiddenBottomBorder = indexPath.row == (self.essenceData.count - 1);
+    
     return cell;
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 80;
+    return 70;
 }
 
 - (void)didReceiveMemoryWarning {

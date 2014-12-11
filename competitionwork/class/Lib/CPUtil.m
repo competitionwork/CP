@@ -480,6 +480,11 @@
     
     return path;
 }
+
++ (NSString*)URLEncode:(NSString*)str
+{
+    return (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)[str mutableCopy] , NULL, CFSTR("￼=,!$&'()*+;@?\n\"<>#\t :/"),kCFStringEncodingUTF8)) ;
+}
 @end
 
 

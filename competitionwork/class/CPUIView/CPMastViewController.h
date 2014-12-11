@@ -16,4 +16,6 @@
 
 -(void)showBottomBar;
 
+-(BOOL)tabbarViewIsHide;
+
 @end

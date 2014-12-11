@@ -54,7 +54,7 @@
     if (!app.userInforCenter.isLoginSuccess) {
         
         CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
-        [[CPUserInforCenter sharedInstance]loadUserInforData];
+//        [[CPUserInforCenter sharedInstance]loadUserInforData];
 //        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
 
         
@@ -206,7 +206,7 @@
         
         CPMainViewController * mastVC = [[CPMainViewController alloc]init];
         
-        //    mastVC.hidesBottomBarWhenPushed = YES;
+            mastVC.hidesBottomBarWhenPushed = YES;
         
         [self.navigationController pushViewController:mastVC animated:YES];
     }

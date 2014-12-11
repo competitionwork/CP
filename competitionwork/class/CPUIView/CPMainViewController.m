@@ -55,7 +55,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = MainBackColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.title = @"竞赛";
     
@@ -396,7 +396,7 @@
 
 -(UITableView *)tabelView{
     if (!_tabelView) {
-        _tabelView = [[UITableView alloc]initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain];
+        _tabelView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     }
     return _tabelView;
 }
@@ -406,9 +406,12 @@
 {
     //    [self.view insertSubview:self.tabelView belowSubview:self.filterView];
     [self.view bringSubviewToFront:_filterView];
-        
-    if (0) {
-        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 44 - self.filterView.frame.size.height]alignToBottomOfView:self.filterView offset:0];
+    
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+
+    
+    if ([app.MastVC tabbarViewIsHide]) {
+        [[self.tabelView.po_frameBuilder setHeight:self.view.height- self.filterView.frame.size.height]alignToBottomOfView:self.filterView offset:0];
     }
     else {
         [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 17 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];

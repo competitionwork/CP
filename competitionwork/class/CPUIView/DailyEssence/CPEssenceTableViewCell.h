@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CPBaseCell.h"
 
-@interface CPEssenceTableViewCell : UITableViewCell
+@interface CPEssenceTableViewCell : CPBaseCell
 @property (strong, nonatomic) IBOutlet UIImageView *leftImage;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *authorLabel;

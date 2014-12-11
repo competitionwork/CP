@@ -134,10 +134,13 @@
         
         [UIView animateWithDuration:0.27 animations:^{
             self.tabbarView.alpha = 0;
+            self.tabbarView.hidden = YES;
         }];
 
     }else{
         self.tabbarView.alpha = 1;
+        self.tabbarView.hidden = NO;
+
     }
 }
 
@@ -225,6 +228,10 @@
         
     }];
     
+}
+
+-(BOOL)tabbarViewIsHide{
+    return self.tabbarView.alpha == 0?YES:NO;
 }
 
 - (void)didReceiveMemoryWarning {

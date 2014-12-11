@@ -132,6 +132,10 @@
 
 + (NSString *)pathForDocumentWithFilename:(NSString*)filename ;
 
+//Encode密码
++ (NSString*)URLEncode:(NSString*)str;
+
+
 @end
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F92C3A1A398C30002B399C /* CPBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C391A398C30002B399C /* CPBaseCell.m */; };
+		02F92C3E1A39947C002B399C /* CPAttentionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C3D1A39947C002B399C /* CPAttentionView.m */; };
 		0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F12E1A08DC440067CAED /* CPBaseModeObject.m */; };
 		0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1311A08DCE90067CAED /* CPMainListCellModel.m */; };
 		0417F1351A0A6F560067CAED /* filterManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1341A0A6F560067CAED /* filterManage.m */; };
@@ -280,6 +282,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F92C381A398C30002B399C /* CPBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseCell.h; sourceTree = "<group>"; };
+		02F92C391A398C30002B399C /* CPBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseCell.m; sourceTree = "<group>"; };
+		02F92C3C1A39947C002B399C /* CPAttentionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAttentionView.h; sourceTree = "<group>"; };
+		02F92C3D1A39947C002B399C /* CPAttentionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAttentionView.m; sourceTree = "<group>"; };
 		0417F12D1A08DC440067CAED /* CPBaseModeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseModeObject.h; path = CPUIView/Model/CPBaseModeObject.h; sourceTree = "<group>"; };
 		0417F12E1A08DC440067CAED /* CPBaseModeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseModeObject.m; path = CPUIView/Model/CPBaseModeObject.m; sourceTree = "<group>"; };
 		0417F1301A08DCE90067CAED /* CPMainListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellModel.h; path = CPUIView/Model/CPMainListCellModel.h; sourceTree = "<group>"; };
@@ -688,10 +694,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02F92C3B1A399457002B399C /* AttentionView */ = {
+			isa = PBXGroup;
+			children = (
+				02F92C3C1A39947C002B399C /* CPAttentionView.h */,
+				02F92C3D1A39947C002B399C /* CPAttentionView.m */,
+			);
+			name = AttentionView;
+			path = CPUIView/AttentionView;
+			sourceTree = "<group>";
+		};
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
-				0494A5281A381DD7005475EB /* DailyEssence */,
+				02F92C3B1A399457002B399C /* AttentionView */,
+				0494A5281A381DD7005475EB /* DailyEssence(每日精华) */,
 				049967791A3195DD00551CB8 /* PostList */,
 				049888A41A305F19001FA97F /* MastView(首页) */,
 				04FA58CB1A2DB83200BAA19E /* resingView(注册) */,
@@ -863,7 +880,7 @@
 			path = NewImage;
 			sourceTree = "<group>";
 		};
-		0494A5281A381DD7005475EB /* DailyEssence */ = {
+		0494A5281A381DD7005475EB /* DailyEssence(每日精华) */ = {
 			isa = PBXGroup;
 			children = (
 				0494A5291A381DD7005475EB /* CPDailyEssenceVC.h */,
@@ -872,7 +889,7 @@
 				0494A52D1A381F56005475EB /* CPEssenceTableViewCell.m */,
 				0494A52E1A381F56005475EB /* CPEssenceTableViewCell.xib */,
 			);
-			name = DailyEssence;
+			name = "DailyEssence(每日精华)";
 			path = CPUIView/DailyEssence;
 			sourceTree = "<group>";
 		};
@@ -1095,6 +1112,8 @@
 				04A3422D1A2398F7003D4F85 /* CPUIViewControllerClassify.m */,
 				04FA58D21A2DBC6E00BAA19E /* CPBaseTextFileCell.h */,
 				04FA58D31A2DBC6E00BAA19E /* CPBaseTextFileCell.m */,
+				02F92C381A398C30002B399C /* CPBaseCell.h */,
+				02F92C391A398C30002B399C /* CPBaseCell.m */,
 				04FF96631A2E0261005CCAEF /* CPBaseButton.h */,
 				04FF96641A2E0261005CCAEF /* CPBaseButton.m */,
 			);
@@ -1665,6 +1684,7 @@
 				04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */,
 				048742DD1A2F5B8000CC92DE /* GJHRDMCustomModalViewController.m in Sources */,
 				048742C51A2F051400CC92DE /* CPPersonalInformationVC.m in Sources */,
+				02F92C3A1A398C30002B399C /* CPBaseCell.m in Sources */,
 				0497D4091A330A6A00BD8504 /* PeopleHeadView.m in Sources */,
 				047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
@@ -1675,6 +1695,7 @@
 				04CAC22119F7EFBF005291D3 /* UIButton+eventHandler.m in Sources */,
 				0417F1351A0A6F560067CAED /* filterManage.m in Sources */,
 				04A0DA471A04D48D008C4E12 /* yajl_lex.c in Sources */,
+				02F92C3E1A39947C002B399C /* CPAttentionView.m in Sources */,
 				048742CB1A2F122E00CC92DE /* CPUtil.m in Sources */,
 				04A0DA491A04D48D008C4E12 /* NSObject+YAJL.m in Sources */,
 				04A0DA461A04D48D008C4E12 /* yajl_gen.c in Sources */,

@@ -11,6 +11,9 @@
 #import "CPAPIHelper_userURL.h"
 #import "CPResingVC.h"
 #import "AppDelegate.h"
+#import "CPUtil.h"
+#import "CPUserInforCenter.h"
+#import "CPDESCode.h"
 
 @interface CPLoginView ()
 
@@ -168,24 +171,49 @@
     //    NSDictionary * parmat = @{@"email":self.userNameView.textString,
     //                              @"password":self.passwordView.textString,
     //                              };
-    NSDictionary * parmat = @{@"email":@"2345@qq.com",
-                              @"password":@"245464546fsfsseg",
+    
+    NSString * atr = @"hjj342155";
+    atr = [CPDESCode md5:atr];
+    NSDictionary * parmat = @{@"email":@"496047736@qq.com",
+                              @"password":@"e67c10a4c8fbfc0c400e047bb9a056a1",
                               };
     
     NSMutableDictionary * dictParmars = [NSMutableDictionary dictionaryWithCapacity:0];
     
-    [dictParmars setObject:@"email" forKey:[[self.userNameView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-    [dictParmars setObject:@"password" forKey:[[self.passwordView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:[[self.userNameView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"email"];
+    [dictParmars setObject:[[self.passwordView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"password"];
+    
+#ifdef DEBUG 
+    [dictParmars setValuesForKeysWithDictionary:parmat];
+#else
+    
+    if ([[self.userNameView textString]isEqualToString:@""] ) {
+        [CPSystemUtil showAlertViewWithAlertString:@"请输入邮箱"];
+    }else if ([[self.passwordView textString]isEqualToString:@""]){
+        [CPSystemUtil showAlertViewWithAlertString:@"请输入密码"];
 
-    if ([self.userNameView textString]== nil && [self.passwordView textString]== nil) {
-        [dictParmars setValuesForKeysWithDictionary:parmat];
     }
+    
+#endif
     
     __weak typeof(*&self) weakSelf = self;
     
     [[CPAPIHelper_userURL sharedInstance]api_login_withParams:dictParmars whenSuccess:^(id result) {
         
-        [weakSelf goBackModel];
+        if ([result[@"code"]intValue]== 0) {
+            
+            CPUserInforModel * userInfor = [[CPUserInforModel alloc]init];
+            
+            [userInfor reflectDataFromOtherObject:result];
+            
+            [[CPUserInforCenter sharedInstance]setUserData:userInfor];
+            
+            [[CPUserInforCenter sharedInstance]loadUserInforData];
+            
+            [weakSelf goBackModel];
+
+        }
+        
         
     } andFailed:^(id err) {
         
@@ -223,3 +251,22 @@
 
 
 @end
+
+/*
+ 
+ {
+ "data": {
+ "uid": "400007",
+ "utoken": "fqzGIQSW$~",
+ "email": "496047736@qq.com",
+ "real_name": "任立峰",
+ "sex": "2",
+ "univs_id": "1022",
+ "univs_name": "",
+ "group_type": "2",
+ "gid": "3"
+ },
+ "code": 0,
+ "msg": ""
+ }
+ */

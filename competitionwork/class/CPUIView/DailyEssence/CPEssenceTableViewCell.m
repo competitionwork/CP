@@ -32,6 +32,7 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     // Initialization code
     self.authorLabel.textColor = kCPBlueColor;
 
