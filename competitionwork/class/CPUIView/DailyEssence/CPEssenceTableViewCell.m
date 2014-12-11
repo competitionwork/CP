@@ -33,6 +33,12 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.authorLabel.textColor = kCPBlueColor;
+
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
