@@ -18,5 +18,8 @@ kDefineAPIMethodWithInterfaceWithSuccessAndFailed(view)
 /*获取竞赛类型接口*/
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(get_category)
 
+/*获取我关注的竞赛*/
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(myfocus)
+
 
 @end

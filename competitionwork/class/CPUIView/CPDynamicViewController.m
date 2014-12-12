@@ -16,6 +16,7 @@
 #import "CPDailyEssenceVC.h"
 
 #import "CPDetailViewController.h"//详情页调试
+#import "CPAttentionView.h"
 
 
 //推荐类cell
@@ -56,9 +57,10 @@
         CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
 //        [[CPUserInforCenter sharedInstance]loadUserInforData];
 //        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
-
+        CPAttentionView * attention = [[CPAttentionView alloc]init];
         
-        [self.navigationController pushViewController:loginView animated:NO];
+        
+        [self.navigationController pushViewController:attention animated:NO];
         
     }
     

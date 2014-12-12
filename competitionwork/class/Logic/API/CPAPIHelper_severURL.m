@@ -106,9 +106,27 @@
         
     }];
 
-    
 }
 
+
+-(void)api_myfocus_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
+    
+    NSString * URL = [NSString stringWithFormat:@"%@myfocus",[self.class baseURL]];
+    
+    [self postDataFromPath:URL params:params whenSuccess:^(id result) {
+        
+        if (success) {
+            success(result);
+        }
+        
+    } andFailed:^(id err) {
+        
+        if (failed) {
+            failed(err);
+        }
+        
+    }];
+}
 
 +(NSString *)baseURL
 {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPAttentionView : CPBaseViewController<UITableViewDataSource,UITableViewDelegate>
+@interface CPAttentionView : CPBaseViewController
 
 @end

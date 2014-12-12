@@ -208,3 +208,10 @@ static inline UIImage* getimagePINGPU(UIImage *image)
 
 
 @end
+
+
+@implementation UIViewController (Loading)
+
+
+
+@end

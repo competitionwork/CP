@@ -7,6 +7,7 @@
 //
 
 #import "PeopleHeadView.h"
+#import "CPUserInforCenter.h"
 
 @interface PeopleHeadView ()
 
@@ -28,12 +29,14 @@
     
     if (self = [super initWithFrame:frame]) {
         
+        CPPeopleInforCenterModel *people = [[CPUserInforCenter sharedInstance]getPeopleData];
+        
         [self addSubview:self.backGroundImage];
         
         [self addSubview:self.peopleHeadView];
         
         [self addSubview:self.nameLabel];
-        [self setNameLabelStr:@"我是学霸"];
+        [self setNameLabelStr:people.real_name];
         
         [self addSubview:self.sexImage];
         

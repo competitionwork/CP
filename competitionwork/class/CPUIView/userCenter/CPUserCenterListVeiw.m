@@ -11,6 +11,8 @@
 #import "CPListCellEntity.h"
 #import "UIView+borders.h"
 #import "GJUserCenterHeadViewCell.h"
+#import "CPUserInforCenter.h"
+#import "UIImageView+AFNetworking.h"
 
 #define KCELLHIGHT 60
 
@@ -96,11 +98,18 @@
             cell.textLabel.backgroundColor = [UIColor clearColor];
         }
         
-        CPListCellEntity * entity = [self entityOfCellAtIndex:indexPath];
+         CPPeopleInforCenterModel * userinfo = [[CPUserInforCenter sharedInstance]getPeopleData];
         
-        cell.textStrLabel.text = entity.title;
-        cell.leftImage.image = entity.image;
-        cell.sexImage.image = [UIImage imageNamed:@"sex2"];
+                
+        cell.textStrLabel.text = userinfo.real_name;
+        [cell.leftImage setImageWithURL:[NSURL URLWithString:userinfo.avatar] placeholderImage:nil];
+        UIImage * sex = [UIImage imageNamed:@""];
+        if ([userinfo.sex intValue]== 1) {
+            sex = [UIImage imageNamed:@"sex1"];
+        }else{
+            sex = [UIImage imageNamed:@"sex2"];
+        }
+        cell.sexImage.image = sex;
         cell.ageLabel.text = @"24";
         
         cell.hiddenTopBorder = indexPath.row == 0?NO:YES;
