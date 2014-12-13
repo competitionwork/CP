@@ -11,7 +11,7 @@
 @implementation GJError
 -(id)initWithDisplayMessage:(NSString *)message
 {
-    return [self initWithDisplayMessage:@"" withErrorCode:-1];
+    return [self initWithDisplayMessage:message withErrorCode:-1];
 }
 -(id)initWithDisplayMessage:(NSString *)message withErrorCode:(NSInteger)code
 {
@@ -22,6 +22,6 @@
 }
 -(NSString *)description
 {
-    return [NSString stringWithFormat:@"<errorCode:%d - reason:%@>",self.code,self.DisplayMessage];
+    return [NSString stringWithFormat:@"<errorCode:%ld - reason:%@>",(long)self.code,self.DisplayMessage];
 }
 @end

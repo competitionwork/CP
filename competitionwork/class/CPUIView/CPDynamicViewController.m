@@ -14,6 +14,7 @@
 #import "CPMainViewController.h"
 #import "CPUserInforCenter.h"
 #import "CPDailyEssenceVC.h"
+#import "CPAttentionView.h"
 
 #import "CPDetailViewController.h"//详情页调试
 #import "CPAttentionView.h"
@@ -57,10 +58,10 @@
         CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
 //        [[CPUserInforCenter sharedInstance]loadUserInforData];
 //        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
-        CPAttentionView * attention = [[CPAttentionView alloc]init];
+//        CPAttentionView * attention = [[CPAttentionView alloc]init];
         
         
-        [self.navigationController pushViewController:attention animated:NO];
+        [self.navigationController pushViewController:loginView animated:NO];
         
     }
     
@@ -200,8 +201,10 @@
             VC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:VC animated:YES];
             
-            
-            
+        }else if (indexPath.row == 4){
+            CPAttentionView * attentionView = [[CPAttentionView alloc]init];
+            attentionView.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:attentionView animated:YES];
         }
     }else{
         [collectionView deselectItemAtIndexPath:indexPath animated:YES];

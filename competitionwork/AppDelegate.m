@@ -23,6 +23,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    
     _MastVC = [[CPMastViewController alloc]init];
     
     self.window.rootViewController = _MastVC;
@@ -37,7 +38,12 @@
     return YES;
 }
 
-
+-(CPUserInforCenter *)userInforCenter{
+    if (!_userInforCenter) {
+        _userInforCenter = [[CPUserInforCenter alloc]init];
+    }
+    return _userInforCenter;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

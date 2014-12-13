@@ -61,7 +61,11 @@
 
 -(BOOL)getSelectCheckBox{
     
-    _checkBlock();
+    if (self.checkBlock) {
+        
+        _checkBlock();
+
+    }
     
     return _checkImage.highlighted;
 }

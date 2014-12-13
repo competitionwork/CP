@@ -8,6 +8,7 @@
 
 #import "CPUserHeadPictureView.h"
 #import "CPAPIHelper_setting.h"
+#import "CPUserInforCenter.h"
 
 @interface CPUserHeadPictureView()
 
@@ -118,10 +119,11 @@
     
     NSData *imageData = UIImageJPEGRepresentation(headimage, 0.8);
     
-    NSDictionary * params = @{@"uid":@"2345",
-                              @"utoken":@"143436sfds",
+    CPUserInforModel * userInfor = [[CPUserInforCenter sharedInstance]getUsetData];
+    
+    NSDictionary * params = @{@"uid":userInfor.uid,
+                              @"utoken":userInfor.utoken,
                               @"user_file":imageData,
-                              
                               };
 
     __weak typeof(*&self) weakSelf = self;

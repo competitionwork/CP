@@ -91,6 +91,7 @@
     password.pleceHolde = @"密码";
     password.image = [UIImage imageNamed:@"mm"];
     self.passwordView = [[CPBaseLoginView alloc]initWithFrame:CGRectMake(0, 100, MainScreenWidth-30, 50) andEntity:password withModel:CPTEXEVIEWEMPTY];
+    self.passwordView.textField.secureTextEntry = YES;
     [self.view addSubview:self.passwordView];
     [[self.passwordView.po_frameBuilder alignToBottomOfView:self.userNameView offset:1]centerHorizontallyInSuperview];
     [self.passwordView setHiddenDownBorder:YES];
@@ -172,19 +173,22 @@
     //                              @"password":self.passwordView.textString,
     //                              };
     
-    NSString * atr = @"hjj342155";
-    atr = [CPDESCode md5:atr];
-    NSDictionary * parmat = @{@"email":@"496047736@qq.com",
-                              @"password":@"e67c10a4c8fbfc0c400e047bb9a056a1",
-                              };
+//    NSString * atr = @"hjj342155";
+//    atr = [CPDESCode md5:atr];
+//    NSDictionary * parmat = @{@"email":@"flag1",
+//                              @"password":@"e67c10a4c8fbfc0c400e047bb9a056a1",
+//                              };
+//    NSDictionary * parmat = @{@"email":@"hjjwinner@163.com",
+//                              @"password":atr,
+//                              };
     
     NSMutableDictionary * dictParmars = [NSMutableDictionary dictionaryWithCapacity:0];
     
     [dictParmars setObject:[[self.userNameView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"email"];
-    [dictParmars setObject:[[self.passwordView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"password"];
+    [dictParmars setObject:[CPDESCode md5:[[self.passwordView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]] forKey:@"password"];
     
 #ifdef DEBUG 
-    [dictParmars setValuesForKeysWithDictionary:parmat];
+//    [dictParmars setValuesForKeysWithDictionary:parmat];
 #else
     
     if ([[self.userNameView textString]isEqualToString:@""] ) {
@@ -209,6 +213,8 @@
             [[CPUserInforCenter sharedInstance]setUserData:userInfor];
             
             [[CPUserInforCenter sharedInstance]loadUserInforData];
+            
+            [[CPUserInforCenter sharedInstance]setIsLoginSuccess:YES];
             
             [weakSelf goBackModel];
 

@@ -68,19 +68,27 @@
 -(instancetype)init{
     if (self = [super init]) {
         
+        self.isLoginSuccess = [[[NSUserDefaults standardUserDefaults]objectForKey:KISLOGIN_SUCCESS]boolValue ];
+
+        
         NSString *peoplePath = [CPUtil pathForDocumentWithFilename:KPEOPLE_DATA];
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:peoplePath isDirectory:nil]) {
             self.peopleCenterModel = (CPPeopleInforCenterModel*)[NSObject objectWithContentsOfFile:peoplePath];
 
+        }else{
+            self.peopleCenterModel = [[CPPeopleInforCenterModel alloc]init];
+            self.isLoginSuccess = NO;
         }
         NSString *userPath = [CPUtil pathForDocumentWithFilename:KUSER_DATA];
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:userPath isDirectory:nil]) {
             self.userInfor = (CPUserInforModel*)[NSObject objectWithContentsOfFile:userPath];
             
+        }else{
+            self.userInfor = [[CPUserInforModel alloc]init];
+            self.isLoginSuccess = NO;
         }
-        [[NSUserDefaults standardUserDefaults]objectForKey:KISLOGIN_SUCCESS];
 
 
     }
@@ -126,7 +134,10 @@
     
 }
 
-
+-(void)setIsLoginSuccess:(BOOL)isLoginSuccess{
+    _isLoginSuccess = isLoginSuccess;
+    [[NSUserDefaults standardUserDefaults]setBool:isLoginSuccess forKey:KISLOGIN_SUCCESS];
+}
 
 -(CPPeopleInforCenterModel *)peopleCenterModel{
     
@@ -140,11 +151,14 @@
 
 -(CPUserInforModel *)userInfor{
     
+    @synchronized(self){
+
     if (!_userInfor) {
         _userInfor = [[CPUserInforModel alloc]init];
     }
     
     return _userInfor;
+    }
 }
 
 

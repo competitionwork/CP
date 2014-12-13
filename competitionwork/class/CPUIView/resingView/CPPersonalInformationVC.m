@@ -17,6 +17,7 @@
 #import "CPAPIHelper_severURL.h"
 #import "CPAPIHelper_schoolURL.h"
 
+#import "CPUserInforCenter.h"
 
 @interface CPPersonalInformationVC ()
 
@@ -28,9 +29,12 @@
 
 @property (nonatomic,strong) NSMutableArray *schoolArray;
 
+@property (nonatomic,strong) NSMutableArray *academyArray;
+
 @property (nonatomic,strong) NSMutableArray *yearArray;
 
 @property (nonatomic,strong) NSMutableArray *classesArray;
+
 
 
 @end
@@ -145,6 +149,7 @@
     
     CPPersinalparentVC * con = [[CPPersinalparentVC alloc]initWithNibName:nil
                                                                bundle:nil];
+    con.hidesBottomBarWhenPushed = YES;
     con.persinalArray = data;
     con.view.backgroundColor = [UIColor whiteColor];
     
@@ -162,7 +167,7 @@
     __weak typeof(*&self) weakSelf = self;
 
     
-    NSMutableDictionary * item = [self.DataArray objectAtIndex:indexPath.row];
+    __block NSMutableDictionary * item = [self.DataArray objectAtIndex:indexPath.row];
     
     [con setPersinalclickBlock:^(CPPersinalparentModel * data){
         
@@ -184,22 +189,34 @@
 -(void)uploadThePersonalinformation{
     DLog(@"按钮按下");
     
-    NSDictionary * param = @{@"uid":@"2345",
-                             @"utoken":@"143436sfds",
-                             @"school_id":@"1001",
-                             @"college_id":@"1001001",
-                             @"degree_id":@"5",
-                             @"begin_year":@"2014",
-                             @"c_ classes":@"1"
+    CPUserInforModel * userInfor =[[CPUserInforCenter sharedInstance]getUsetData];
+    
+
+    
+    NSDictionary * param = @{@"uid":userInfor.uid,
+                             @"utoken":userInfor.utoken,
+                             @"school_id":[self.DataArray objectAtIndex:0][@"number"],
+                             @"college_id":[self.DataArray objectAtIndex:1][@"number"],
+                             @"degree_id":[self.DataArray objectAtIndex:2][@"number"],
+                             @"begin_year":[self.DataArray objectAtIndex:3][@"number"],
+                             @"c_ classes":[self.DataArray objectAtIndex:4][@"number"]
                              };
     
+    
+    
     [[CPAPIHelper_userURL sharedInstance]api_regprofile_withParams:param whenSuccess:^(id result) {
+//        if (result[@"code"]&&[result[@"code"] intValue] == 0 ) {
+        
+            [self returnToRootView];
+
+//        }else{
+//            [CPSystemUtil showAlertViewWithAlertString:result[@"message"]];
+//        }
         DLog(@"信息%@",result);
     } andFailed:^(id err) {
         
     }];
     
-    [self returnToRootView];
     
 }
 
@@ -233,7 +250,7 @@
             
             [[CPAPIHelper_schoolURL sharedInstance]api_get_univs_withParams:nil whenSuccess:^(id result) {
                 DLog(@"api_get_univs_withParams = %@",result);
-                if (result && result[@"univs"] && !self.schoolArray) {
+                if (result && result[@"univs"] ) {
                     self.schoolArray = [[NSMutableArray alloc]init];
                     NSDictionary * dictResult = result[@"univs"];
                     [dictResult enumerateKeysAndObjectsWithOptions:NSEnumerationReverse usingBlock:^(id key, id obj, BOOL *stop) {
@@ -259,13 +276,29 @@
             break;
         case 1:{
             
-            NSDictionary* item = [self.DataArray objectAtIndex:IndexPath.row];
+            NSDictionary* item = [self.DataArray objectAtIndex:IndexPath.row-1];
             NSDictionary * dictParams = @{@"univs_id":item[@"number"],
                                           };
             
             
             [[CPAPIHelper_schoolURL sharedInstance]api_get_academy_withParams:dictParams whenSuccess:^(id result) {
                 DLog(@"api_get_acadamy_withParams = %@",result);
+                if (result && result[@"academys"] ) {
+                    self.academyArray = [[NSMutableArray alloc]init];
+                    NSDictionary * dictResult = result[@"academys"];
+                    [dictResult enumerateKeysAndObjectsWithOptions:NSEnumerationReverse usingBlock:^(id key, id obj, BOOL *stop) {
+                        
+                        CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
+                        model.Title = obj;
+                        model.number = key;
+                        
+                        [self.academyArray addObject:model];
+                        
+                    }];
+                    
+                    
+                }
+                [self showViewWith:IndexPath andArray:self.academyArray];
                 
             } andFailed:^(id err) {
                 
@@ -291,14 +324,14 @@
             break;
         case 3:{
             
-            NSArray * array = @[@"专科生",@"本科生",@"研究生",@"博士生",];
+            NSArray * array = @[@"专科生",@"本科生",@"研究生",@"博士生",@"更高"];
             
             NSMutableArray * showArray = [[NSMutableArray alloc]init];
             [array enumerateObjectsUsingBlock:^(NSString * obj, NSUInteger idx, BOOL *stop) {
                 
                 CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
                 model.Title = obj;
-                int intnumber = idx;
+                int intnumber = idx + 5;
                 model.number = [NSString stringWithFormat:@"%d",intnumber];
                 [showArray addObject:model];
             }];

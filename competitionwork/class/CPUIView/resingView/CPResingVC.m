@@ -13,7 +13,11 @@
 #import "CPCheckBox.h"
 #import "CPAPIHelper_setting.h"
 #import "CPPersonalInformationVC.h"
-
+#import "CPDESCode.h"
+#import "CPAPIHelper_userURL.h"
+#import "CPUserInforCenter.h"
+#import "GJError.h"
+#import "UIView+TipViewForUsual.h"
 
 #import <AssetsLibrary/AssetsLibrary.h>
 
@@ -36,6 +40,8 @@
 @property (nonatomic,strong) CPBaseButton *resingButton;
 
 @property (nonatomic,strong) UIImagePickerController *pickerController;
+
+@property (nonatomic,strong) CPCheckBox *checkBox;
 
 
 @end
@@ -168,8 +174,8 @@
     [[textColocrLabel.po_frameBuilder alignRightOfView:textLabel offset:20]setY:textLabel.frame.origin.y];
     
     /*选择按钮*/
-    CPCheckBox * checkBox = [[CPCheckBox alloc]initWithFrame:CGRectMake(8, textLabel.frame.origin.y, 15, 15)];
-    [self.myScrollView addSubview:checkBox];
+    self.checkBox = [[CPCheckBox alloc]initWithFrame:CGRectMake(8, textLabel.frame.origin.y, 15, 15)];
+    [self.myScrollView addSubview:self.checkBox];
     
     self.resingButton = [CPBaseButton buttonWithType:UIButtonTypeCustom];
     [self.resingButton setStylesWithTitle:@"注册"];
@@ -251,44 +257,67 @@
     
     NSMutableDictionary * dictParmars = [NSMutableDictionary dictionaryWithCapacity:0];
     
-    [dictParmars setObject:@"email" forKey:[[self.mailView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-    [dictParmars setObject:@"real_name" forKey:[[self.maneView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-    [dictParmars setObject:@"tel" forKey:[[self.ConfirmationView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-    [dictParmars setObject:@"password" forKey:[[self.Password textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
-    [dictParmars setObject:@"password_c" forKey:[[self.PasswordAgain textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    [dictParmars setObject:[[self.mailView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"email"];
+    [dictParmars setObject:[[self.maneView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"real_name"];
+    [dictParmars setObject:[[self.ConfirmationView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"tel"];
+    [dictParmars setObject:[CPDESCode md5:[[self.Password textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]] forKey:@"password"];
+    [dictParmars setObject:[CPDESCode md5:[[self.PasswordAgain textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]] forKey:@"password_c"];
 
-    [dictParmars setObject:@"sex" forKey:@"1"];
+//    [dictParmars setObject:@"1" forKey:@"sex"];
+//    [dictParmars setObject:@"12345@qq.com" forKey:@"email"];
+//    [dictParmars setObject:@"张三" forKey:@"real_name"];
+//    [dictParmars setObject:@"13000000000" forKey:@"tel"];
+//    [dictParmars setObject:[CPDESCode md5:[[self.Password textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]] forKey:@"password"];
+//    [dictParmars setObject:[CPDESCode md5:@"h123456"] forKey:@"password_c"];
     
-    [dictParmars setObject:@"email" forKey:@"12345@qq.com"];
-    [dictParmars setObject:@"real_name" forKey:@"张三"];
-    [dictParmars setObject:@"tel" forKey:@"13000000000"];
-    [dictParmars setObject:@"password" forKey:@"h123456"];
-    [dictParmars setObject:@"password_c" forKey:@"h123456"];
+    if (![self.checkBox getSelectCheckBox]) {
+        [CPSystemUtil showAlertViewWithAlertString:@"请阅读并同意"];
+        return;
+    }
     
-    
-    
-    [[CPAPIHelper_setting sharedInstance]api_reg_withParams:dictParmars whenSuccess:^(id result) {
+    [self.view showTipView:TipViewLoading withText:KLODING_STR forEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+
+    [[CPAPIHelper_userURL sharedInstance]api_reg_withParams:dictParmars whenSuccess:^(id result) {
+        [self.view hideTipView];
         DLog(@"reg==%@",result);
+        if (result&&result[@"user"]) {
+            
+            CPUserInforModel * user = [[CPUserInforCenter sharedInstance]getUsetData];
+            user.uid = result[@"user"][@"uid"];
+            user.sex = result[@"user"][@"sex"];
+            user.email = result[@"user"][@"email"];
+            user.real_name = result[@"user"][@"real_name"];
+            user.utoken = result[@"user"][@"utoken"];
+            
+            CPPersonalInformationVC * personal = [[CPPersonalInformationVC alloc]init];
+            [self.navigationController pushViewController:personal animated:YES];
+
+            [[CPUserInforCenter sharedInstance]setIsLoginSuccess:YES];
+
+        }else{
+            [CPSystemUtil showAlertViewWithAlertString:result[@"msg"]];
+        }
+
+
+    } andFailed:^(GJError* err) {
         
-        
-        
-    } andFailed:^(id err) {
+        [CPSystemUtil showAlertViewWithAlertString:err.DisplayMessage];
         
     }];
     
-    CPPersonalInformationVC * personal = [[CPPersonalInformationVC alloc]init];
-    [self.navigationController pushViewController:personal animated:YES];
 
 }
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
     [textField resignFirstResponder];
     return YES;
 }
 
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
+
     
 }
 

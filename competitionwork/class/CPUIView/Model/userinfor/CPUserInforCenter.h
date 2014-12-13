@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CPBaseModeObject.h"
 
-#define KISLOGIN_SUCCESS @"LoginSuccess"
+#define KISLOGIN_SUCCESS @"LoginSuccess7"
 
 @class CPPeopleInforCenterModel;
 @class CPUserInforModel;

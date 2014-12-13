@@ -23,7 +23,7 @@
 
 -(void)api_get_academy_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
     
-    NSString * URL = [NSString stringWithFormat:@"%@get_acadamy",[self.class baseURL]];
+    NSString * URL = [NSString stringWithFormat:@"%@get_academy",[self.class baseURL]];
     [self postDataFromPath:URL params:params whenSuccess:^(id result) {
         if (success) {
             success(result);

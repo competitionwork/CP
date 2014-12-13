@@ -9,6 +9,7 @@
 #import "AttentionView.h"
 #import "UIButton+Block.h"
 #import "CPAPIHelper_severURL.h"
+#import "CPUserInforCenter.h"
 
 @interface AttentionView ()
 
@@ -62,18 +63,19 @@
     
     [self.AttentionButton setAction:kUIButtonBlockTouchInside withBlock:^{
         
+        CPUserInforModel * userinfo = [[CPUserInforCenter sharedInstance]getUsetData];
         
-        NSDictionary * params = @{@"uid":weakSelf.content[@"contest_id"],
-                                  @"c_id":@""
+        NSDictionary * params = @{@"uid":userinfo.uid,
+                                  @"c_id":weakSelf.content[@"contest_id"]
                                   };
         
         DLog(@"点击关注%@",weakSelf.content);
         
-        if (weakSelf.isFollow) {
+        if (!weakSelf.isFollow) {
             
             [[CPAPIHelper_severURL sharedInstance]api_add_follow_withParams:params whenSuccess:^(id result) {
                 
-                weakSelf.isFollow = !weakSelf.isFollow;
+                weakSelf.isFollow = YES;
                 
             } andFailed:^(id err) {
                 
@@ -83,7 +85,7 @@
             
             [[CPAPIHelper_severURL sharedInstance]api_cancle_follow_withParams:params whenSuccess:^(id result) {
                 
-                weakSelf.isFollow = !weakSelf.isFollow;
+                weakSelf.isFollow = NO;
 
                 
             } andFailed:^(id err) {
