@@ -8,6 +8,7 @@
 
 #import "CPEducationView.h"
 #import "PeopleCoreModel.h"
+#import "CPUserInforCenter.h"
 
 @interface CPEducationView ()
 
@@ -36,11 +37,13 @@
         
         self.myModel = model;
         
+        CPPeopleInforCenterModel * user = [[CPUserInforCenter sharedInstance]getPeopleData];
+        
         self.backgroundColor = [UIColor whiteColor];
         [self CreatNormalView];
         
         [self addSubview:self.schoolLabel];
-        [self setSchoolLabelStr:@"北京理工大学珠海学院 信工程系999999"];
+        [self setSchoolLabelStr:user.school_name];
         
         [self addSubview:self.leveLabel];
         [self setLeveLabelStr:@"2014级"];
@@ -86,6 +89,7 @@
 -(UILabel *)schoolLabel{
     
     if (!_schoolLabel) {
+        
         _schoolLabel = [[UILabel alloc]init];
         _schoolLabel.font = [UIFont systemFontOfSize:16];
         
