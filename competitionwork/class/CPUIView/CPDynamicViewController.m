@@ -15,9 +15,11 @@
 #import "CPUserInforCenter.h"
 #import "CPDailyEssenceVC.h"
 #import "CPAttentionView.h"
+#import "CPHotViewVC.h"
 
 #import "CPDetailViewController.h"//详情页调试
 #import "CPAttentionView.h"
+#import "CPAboutVC.h"
 
 
 //推荐类cell
@@ -54,12 +56,12 @@
     AppDelegate * app = [AppDelegate sharedAppDelegate];
     
     if (!app.userInforCenter.isLoginSuccess) {
-        
+    
         CPLoginView * loginView = [[CPLoginView alloc]initWithNibName:nil bundle:nil];
 //        [[CPUserInforCenter sharedInstance]loadUserInforData];
 //        CPDetailViewController * loginView = [[CPDetailViewController alloc]initWithNibName:nil bundle:nil];
 //        CPAttentionView * attention = [[CPAttentionView alloc]init];
-        
+//        CPAboutVC * about = [[CPAboutVC alloc]init];
         
         [self.navigationController pushViewController:loginView animated:NO];
         
@@ -201,6 +203,12 @@
             VC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:VC animated:YES];
             
+        }else if (indexPath.row == 3){
+            
+            CPHotViewVC * attentionView = [[CPHotViewVC alloc]init];
+            attentionView.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:attentionView animated:YES];
+            
         }else if (indexPath.row == 4){
             CPAttentionView * attentionView = [[CPAttentionView alloc]init];
             attentionView.hidesBottomBarWhenPushed = YES;
@@ -209,10 +217,12 @@
     }else{
         [collectionView deselectItemAtIndexPath:indexPath animated:YES];
         
+        NSDictionary * dict = [self.DataArray objectAtIndex:indexPath.row];
+        
         CPMainViewController * mastVC = [[CPMainViewController alloc]init];
-        
-            mastVC.hidesBottomBarWhenPushed = YES;
-        
+        mastVC.DefaultFilter = [NSDictionary dictionaryWithObject:dict[@"type"] forKey:@"type"];
+        mastVC.hidesBottomBarWhenPushed = YES;
+        mastVC.title = dict[@"title"];
         [self.navigationController pushViewController:mastVC animated:YES];
     }
     
@@ -262,18 +272,18 @@
 -(void)creatTheData{
     
 
-    self.DataArray  = @[@{@"title":@"数学建模",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"六宫格二_03"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"六宫格二_05"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"六宫格二_07"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"六宫格二_13"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"六宫格二_15"},
-                        @{@"title":@"数学建模",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"六宫格二_16"},
+    self.DataArray  = @[@{@"title":@"程序设计",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"六宫格二_03",@"type":@"0"},
+                        @{@"title":@"数学建模",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"六宫格二_05",@"type":@"1"},
+                        @{@"title":@"机器人",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"六宫格二_07",@"type":@"2"},
+                        @{@"title":@"电子&自动化",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"六宫格二_13",@"type":@"3"},
+                        @{@"title":@"计算机&信息技术",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"六宫格二_15",@"type":@"4"},
+                        @{@"title":@"工程机械",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"六宫格二_16",@"type":@"7"},
                         ];
     
     self.founctionData  = @[@{@"title":@"聊天",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"mast_1"},
                         @{@"title":@"每日精华",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"mast_2"},
                         @{@"title":@"排名",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"mast_3"},
-                        @{@"title":@"我关注的人",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"mast_4"},
+                        @{@"title":@"热门竞赛",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"mast_4"},
                         @{@"title":@"我关注的竞赛",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"mast_5"},
                         @{@"title":@"发布竞赛",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"mast_6"},
                         ];

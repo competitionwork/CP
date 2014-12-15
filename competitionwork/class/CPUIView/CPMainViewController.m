@@ -53,12 +53,17 @@
 @synthesize rootNode;
 @synthesize pushController;
 
+-(instancetype)init{
+    if (self = [super init]) {
+        self.title = @"竞赛";
+
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.title = @"竞赛";
-    
     
 //    [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
 //    [self setNavigationLeftButton:self withSelector:@selector(resing) withTitle:@"注册"];
@@ -294,13 +299,26 @@
 -(void)loadDataByParam:(NSDictionary *)param
 {
     
+    NSMutableDictionary * resetDict = [[NSMutableDictionary alloc]initWithDictionary:param];
+    
+    if (self.DefaultFilter) {
+        
+        [self.DefaultFilter enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+           
+            if (![param objectForKey:key]) {
+                [resetDict setObject:obj forKey:key];
+            }
+            
+        }];
+    }
+    
     isLoading = YES;
     
     NSDictionary * params = @{@"uid": @"1",
-                              @"c_class" : param[@"type"]?:@"0",
-                              @"c_level" : param[@"leve"]?:@"0",
-                              @"c_time" : param[@"time"]?:@"0",
-                              @"page" : param[@"page"],
+                              @"c_class" : resetDict[@"type"]?:@"0",
+                              @"c_level" : resetDict[@"leve"]?:@"0",
+                              @"c_time" : resetDict[@"time"]?:@"0",
+                              @"page" : resetDict[@"page"],
                               @"limit":NSStringFromInt(20),
                               @"univs_id":NSStringFromInt(1001)
                               };

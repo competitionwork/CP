@@ -87,7 +87,9 @@
 
 +(NSString *)baseURL
 {
-    return @"http://apitest.worldjingsai.com/user/";
+//    return @"http://apitest.worldjingsai.com/user/";
+    return [NSString stringWithFormat:@"%@/user/",SEVERURL];
+
 }
 
 @end

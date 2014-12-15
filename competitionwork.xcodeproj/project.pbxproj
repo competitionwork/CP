@@ -11,6 +11,8 @@
 		02F92C3E1A39947C002B399C /* CPAttentionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C3D1A39947C002B399C /* CPAttentionView.m */; };
 		02F92C411A3A9B86002B399C /* UIView+TipViewForUsual.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C401A3A9B86002B399C /* UIView+TipViewForUsual.m */; };
 		02F92C441A3A9C56002B399C /* UIView+GanJiExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C431A3A9C56002B399C /* UIView+GanJiExtent.m */; };
+		02F92C521A3E9A3C002B399C /* CPAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C501A3E9A3C002B399C /* CPAboutVC.m */; };
+		02F92C571A3EE2D9002B399C /* CPHotViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C561A3EE2D9002B399C /* CPHotViewVC.m */; };
 		0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F12E1A08DC440067CAED /* CPBaseModeObject.m */; };
 		0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1311A08DCE90067CAED /* CPMainListCellModel.m */; };
 		0417F1351A0A6F560067CAED /* filterManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1341A0A6F560067CAED /* filterManage.m */; };
@@ -292,6 +294,10 @@
 		02F92C401A3A9B86002B399C /* UIView+TipViewForUsual.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TipViewForUsual.m"; sourceTree = "<group>"; };
 		02F92C421A3A9C56002B399C /* UIView+GanJiExtent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GanJiExtent.h"; sourceTree = "<group>"; };
 		02F92C431A3A9C56002B399C /* UIView+GanJiExtent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GanJiExtent.m"; sourceTree = "<group>"; };
+		02F92C4F1A3E9A3C002B399C /* CPAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAboutVC.h; sourceTree = "<group>"; };
+		02F92C501A3E9A3C002B399C /* CPAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAboutVC.m; sourceTree = "<group>"; };
+		02F92C551A3EE2D9002B399C /* CPHotViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPHotViewVC.h; sourceTree = "<group>"; };
+		02F92C561A3EE2D9002B399C /* CPHotViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPHotViewVC.m; sourceTree = "<group>"; };
 		0417F12D1A08DC440067CAED /* CPBaseModeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseModeObject.h; path = CPUIView/Model/CPBaseModeObject.h; sourceTree = "<group>"; };
 		0417F12E1A08DC440067CAED /* CPBaseModeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseModeObject.m; path = CPUIView/Model/CPBaseModeObject.m; sourceTree = "<group>"; };
 		0417F1301A08DCE90067CAED /* CPMainListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellModel.h; path = CPUIView/Model/CPMainListCellModel.h; sourceTree = "<group>"; };
@@ -710,9 +716,20 @@
 			path = CPUIView/AttentionView;
 			sourceTree = "<group>";
 		};
+		02F92C541A3EE2BF002B399C /* CPHotView */ = {
+			isa = PBXGroup;
+			children = (
+				02F92C551A3EE2D9002B399C /* CPHotViewVC.h */,
+				02F92C561A3EE2D9002B399C /* CPHotViewVC.m */,
+			);
+			name = CPHotView;
+			path = CPUIView/CPHotView;
+			sourceTree = "<group>";
+		};
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
+				02F92C541A3EE2BF002B399C /* CPHotView */,
 				02F92C3B1A399457002B399C /* AttentionView */,
 				0494A5281A381DD7005475EB /* DailyEssence(每日精华) */,
 				049967791A3195DD00551CB8 /* PostList */,
@@ -800,6 +817,7 @@
 		04942BB31A3209BB00AEA797 /* NewImage */ = {
 			isa = PBXGroup;
 			children = (
+				049E208C1A35F893008C100B /* 环球竞赛网.png */,
 				04A07F231A374D9000760B45 /* 1136(1).png */,
 				04A07F241A374D9000760B45 /* 960(1).png */,
 				04A07F1B1A374ACD00760B45 /* 1136.png */,
@@ -808,7 +826,6 @@
 				04A07F1E1A374ACD00760B45 /* 180.png */,
 				04A07F071A37469A00760B45 /* Default.png */,
 				04A07F051A3744AF00760B45 /* logo.png */,
-				049E208C1A35F893008C100B /* 环球竞赛网.png */,
 				049E208D1A35F893008C100B /* detal2.png */,
 				049E20781A35F442008C100B /* 上.png */,
 				049E20791A35F442008C100B /* 矢量智能对象.png */,
@@ -1104,6 +1121,8 @@
 				0499677E1A31A50800551CB8 /* GJUserCenterHeadViewCell.m */,
 				047CB77E1A20BC9C00D693C8 /* CPListCellEntity.h */,
 				047CB77F1A20BC9C00D693C8 /* CPListCellEntity.m */,
+				02F92C4F1A3E9A3C002B399C /* CPAboutVC.h */,
+				02F92C501A3E9A3C002B399C /* CPAboutVC.m */,
 			);
 			name = "userCenter（个人中心）";
 			path = competitionwork/class/CPUIView/userCenter;
@@ -1699,6 +1718,7 @@
 				02F92C411A3A9B86002B399C /* UIView+TipViewForUsual.m in Sources */,
 				047CB7801A20BC9C00D693C8 /* CPListCellEntity.m in Sources */,
 				04CAC20D19F7EFBF005291D3 /* AFImageRequestOperation.m in Sources */,
+				02F92C521A3E9A3C002B399C /* CPAboutVC.m in Sources */,
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
 				04CAC21019F7EFBF005291D3 /* AFPropertyListRequestOperation.m in Sources */,
 				04CAC22319F7EFBF005291D3 /* POViewFrameBuilder.m in Sources */,
@@ -1762,6 +1782,7 @@
 				04CAC21519F7EFBF005291D3 /* GJFilterBar.m in Sources */,
 				04CAC21319F7EFBF005291D3 /* UIImageView+AFNetworking.m in Sources */,
 				04CAC21619F7EFBF005291D3 /* GJFilterBarItem.m in Sources */,
+				02F92C571A3EE2D9002B399C /* CPHotViewVC.m in Sources */,
 				04CAC20F19F7EFBF005291D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				04CAC20C19F7EFBF005291D3 /* AFHTTPRequestOperation.m in Sources */,
 				04A342361A239913003D4F85 /* CPLoginView.m in Sources */,
@@ -1929,6 +1950,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1946,6 +1968,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -21,5 +21,7 @@ kDefineAPIMethodWithInterfaceWithSuccessAndFailed(get_category)
 /*获取我关注的竞赛*/
 kDefineAPIMethodWithInterfaceWithSuccessAndFailed(myfocus)
 
+/*热门竞赛*/
+kDefineAPIMethodWithInterfaceWithSuccessAndFailed(hot_contest)
 
 @end

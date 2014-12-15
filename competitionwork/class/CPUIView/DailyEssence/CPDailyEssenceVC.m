@@ -9,6 +9,7 @@
 #import "CPDailyEssenceVC.h"
 #import "CPEssenceTableViewCell.h"
 #import "CPAPIHelper_journalURL.h"
+#import "CPUserInforCenter.h"
 
 @interface CPDailyEssenceVC ()
 
@@ -99,6 +100,20 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    CPUserInforModel * user = [[CPUserInforCenter sharedInstance]getUsetData];
+    
+    NSDictionary * item = [self.essenceData objectAtIndex:indexPath.row];
+    
+    NSDictionary * params = @{@"journal_id":item[@""],
+                              @"uid":user.uid,
+                              };
+    
+    [[CPAPIHelper_journalURL sharedInstance]api_view_withParams:params whenSuccess:^(id result) {
+        
+    } andFailed:^(id err) {
+        
+    }];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

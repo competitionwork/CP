@@ -53,7 +53,9 @@
 
 +(NSString *)baseURL
 {
-    return @"http://apitest.worldjingsai.com/settings/";
+//    return @"http://apitest.worldjingsai.com/settings/";
+    return [NSString stringWithFormat:@"%@/settings/",SEVERURL];
+
 }
 
 @end

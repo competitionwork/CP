@@ -53,8 +53,9 @@
 }
 +(NSString *)baseURL{
     
-    return @"http://apitest.worldjingsai.com/journal/";
-    
+//    return @"http://apitest.worldjingsai.com/journal/";
+    return [NSString stringWithFormat:@"%@/journal/",SEVERURL];
+
 }
 
 @end

@@ -128,9 +128,29 @@
     }];
 }
 
+-(void)api_hot_contest_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed{
+    
+    NSString * URL = [NSString stringWithFormat:@"%@myfocus",[self.class baseURL]];
+    
+    [self postDataFromPath:URL params:params whenSuccess:^(id result) {
+        
+        if (success) {
+            success(result);
+        }
+        
+    } andFailed:^(id err) {
+        
+        if (failed) {
+            failed(err);
+        }
+        
+    }];
+    
+}
+
 +(NSString *)baseURL
 {
-    return @"http://apitest.worldjingsai.com/contest/";
+    return [NSString stringWithFormat:@"%@/contest/",SEVERURL];
 }
 
 @end

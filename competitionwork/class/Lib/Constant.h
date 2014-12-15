@@ -14,6 +14,7 @@ extern NSString* APPID;
 
 extern NSString* APPKEY;
 
+extern NSString* SEVERURL;
 
 @interface Constant : NSObject
 

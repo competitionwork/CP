@@ -10,8 +10,9 @@
 #import "CPUserCenterListVeiw.h"
 #import "CPListCellEntity.h"
 #import "PeopleCenter.h"
-
-
+#import "CPAboutVC.h"
+#import "CPLoginView.h"
+#import "AppDelegate.h"
 
 @interface CPUserCenterVC ()
 
@@ -41,10 +42,10 @@
                                 [CPListCellEntity listCellWithTitle:@"我是学霸" imageName:@"mast_5" target:self callback:@selector(myCenter) userinfo:nil],
                                 ],
                             @[
-                                [CPListCellEntity listCellWithTitle:@"账户" imageName:@"wd" target:self callback:@selector(Account) userinfo:nil],
                                 [CPListCellEntity listCellWithTitle:@"消息与提醒" imageName:@"2" target:self callback:@selector(Account) userinfo:nil],
                                 [CPListCellEntity listCellWithTitle:@"用户反馈" imageName:@"book.png" target:self callback:@selector(Account) userinfo:nil],
-                                [CPListCellEntity listCellWithTitle:@"关于环球竞赛网" imageName:@"fk.png" target:self callback:@selector(Account) userinfo:nil]
+                                [CPListCellEntity listCellWithTitle:@"关于环球竞赛网" imageName:@"fk.png" target:self callback:@selector(aboutView) userinfo:nil],
+                                [CPListCellEntity listCellWithTitle:@"切换账户" imageName:@"wd" target:self callback:@selector(loginout) userinfo:nil],
                                 ]
                             ];
     self.ListView.listData = self.centerListData;
@@ -66,6 +67,22 @@
     DLog(@"点击了账户");
 }
 
+
+-(void)aboutView{
+    
+    CPAboutVC * about = [[CPAboutVC alloc]init];
+    about.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:about animated:YES];
+}
+
+-(void)loginout{
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+    app.userInforCenter.isLoginSuccess = NO;
+    
+    CPLoginView * login = [[CPLoginView alloc]init];
+    login.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:login animated:NO];
+}
 
 -(CPUserCenterListVeiw *)ListView{
     if (!_ListView) {

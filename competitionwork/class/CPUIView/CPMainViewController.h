@@ -17,4 +17,6 @@
 
 @property (nonatomic,strong) UITableView * tabelView;
 
+@property (nonatomic,strong) NSDictionary * DefaultFilter;
+
 @end
