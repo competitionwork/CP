@@ -13,6 +13,9 @@
 #import "CPAboutVC.h"
 #import "CPLoginView.h"
 #import "AppDelegate.h"
+#import "CPUserInforCenter.h"
+
+
 
 @interface CPUserCenterVC ()
 
@@ -55,9 +58,15 @@
 }
 
 -(void)myCenter{
+    
+    CPUserInforModel * user = [[CPUserInforCenter sharedInstance]getUsetData];
+    
+    
     PeopleCenter * people = [[PeopleCenter alloc]initWithNibName:nil bundle:nil];
     
     people.hidesBottomBarWhenPushed = YES;
+    
+    people.title = user.real_name;
     
     [self.navigationController pushViewController:people animated:YES];
 }

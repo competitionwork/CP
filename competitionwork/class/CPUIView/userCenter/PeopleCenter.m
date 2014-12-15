@@ -20,9 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = kBackgroudGrayColor;
-    self.title = @"我是学霸";
-    
+    self.view.backgroundColor = kBackgroudGrayColor;    
     [self creatTheUIVIew];
     
 }
