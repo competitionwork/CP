@@ -8,6 +8,7 @@
 
 #import "PeopleHeadView.h"
 #import "CPUserInforCenter.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface PeopleHeadView ()
 
@@ -34,6 +35,7 @@
         [self addSubview:self.backGroundImage];
         
         [self addSubview:self.peopleHeadView];
+        [self.peopleHeadView setImageWithURL:[NSURL URLWithString:people.avatar] placeholderImage:[UIImage imageNamed:@""]];
         
         [self addSubview:self.nameLabel];
         [self setNameLabelStr:people.real_name];
@@ -41,7 +43,19 @@
         [self addSubview:self.sexImage];
         
         [self addSubview:self.ageLabel];
-        [self setAgeLabelStr:@"22岁  水瓶座"];
+//        [self setAgeLabelStr:@"22岁  水瓶座"];
+        if ([people.birthday intValue] == 0) {
+            [self setAgeLabelStr:@" "];
+
+        }else{
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"YYYY"];
+            NSString* startStr = [dateFormatter stringFromDate:[NSDate date]];
+            
+            NSString * age = [NSString stringWithFormat:@"%d",[startStr intValue] - [people.birthday intValue]];
+            [self setAgeLabelStr:age];
+        }
+
     }
     
     return self;
@@ -126,17 +140,33 @@
 
 -(void)layoutSubviews{
     
+    
     [[self.peopleHeadView.po_frameBuilder alignToTopInSuperviewWithInset:8]centerHorizontallyInSuperview];
     
     [[self.nameLabel.po_frameBuilder alignToBottomOfView:self.peopleHeadView offset:5]centerHorizontallyInSuperview];
     
+    CPPeopleInforCenterModel *people = [[CPUserInforCenter sharedInstance]getPeopleData];
+    
     UIImage * sex = [UIImage imageNamed:@"nan"];
+
+    
+    if ([people.sex intValue] == 2) {
+        sex = [UIImage imageNamed:@"nv"];
+
+    }else{
+        sex = [UIImage imageNamed:@"nan"];
+
+    }
     self.sexImage.image = sex;
     [[[[self.sexImage.po_frameBuilder setHeight:sex.size.height/2]setWidth:sex.size.width/2]alignToBottomOfView:self.nameLabel offset:8]setX:self.nameLabel.centerX - 50];
     
     [[self.ageLabel.po_frameBuilder alignRightOfView:self.sexImage offset:5]setY:self.sexImage.frame.origin.y];
     
 }
+
+
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

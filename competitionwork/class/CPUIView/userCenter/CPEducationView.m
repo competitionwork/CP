@@ -46,21 +46,28 @@
         [self setSchoolLabelStr:user.school_name];
         
         [self addSubview:self.leveLabel];
-        [self setLeveLabelStr:@"2014级"];
+        [self setLeveLabelStr:[NSString stringWithFormat:@"%@级",user.begin_date]];
         
         [self addSubview:self.studentLabel];
-        [self setStudentLabelStr:@"大学生"];
+        [self setStudentLabelStr:[self returnStudentStr:[user.degree intValue]]];
         
         [self addSubview:self.specializedLabel];
-        [self setSpecializedLabelStr:@"计算机专业"];
+        [self setSpecializedLabelStr:user.college_name];
 
         [self addSubview:self.classLabel];
-        [self setClassLabelStr:@"学生会主席"];
+        [self setClassLabelStr:@" "];
 
         
     }
     
     return self;
+}
+
+-(NSString*)returnStudentStr:(int)number{
+    NSString * str = @" ";
+    if (number == 5) {
+        str
+    }
 }
 
 -(void)CreatNormalView{
