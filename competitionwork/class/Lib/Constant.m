@@ -13,6 +13,8 @@ NSString* APPID = @"1001";
 
 NSString* APPKEY = @"JRDS43!@87wej*&m(98";
 
+NSString* versionId = @"1.0.0";
+
 
 NSString* SEVERURL = @"http://apitest.worldjingsai.com";
 

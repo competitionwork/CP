@@ -197,19 +197,19 @@
     
     if (indexPath.section == 1 ) {
         
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             
             CPDailyEssenceVC * VC = [[CPDailyEssenceVC alloc]initWithNibName:nil bundle:nil];
             VC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:VC animated:YES];
             
-        }else if (indexPath.row == 3){
+        }else if (indexPath.row == 1){
             
             CPHotViewVC * attentionView = [[CPHotViewVC alloc]init];
             attentionView.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:attentionView animated:YES];
             
-        }else if (indexPath.row == 4){
+        }else if (indexPath.row == 2){
             CPAttentionView * attentionView = [[CPAttentionView alloc]init];
             attentionView.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:attentionView animated:YES];
@@ -280,12 +280,13 @@
                         @{@"title":@"工程机械",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"六宫格二_16",@"type":@"7"},
                         ];
     
-    self.founctionData  = @[@{@"title":@"聊天",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"mast_1"},
+    self.founctionData  = @[
                         @{@"title":@"每日精华",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"mast_2"},
-                        @{@"title":@"排名",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"mast_3"},
-                        @{@"title":@"热门竞赛",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"mast_4"},
+                        @{@"title":@"热门竞赛",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"mast_1"},
                         @{@"title":@"我关注的竞赛",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"mast_5"},
+                         @{@"title":@"排名",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"mast_3"},
                         @{@"title":@"发布竞赛",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"mast_6"},
+                        @{@"title":@"校园大使",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"mast_4"},
                         ];
 
     

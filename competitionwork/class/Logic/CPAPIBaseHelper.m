@@ -69,7 +69,8 @@
     [severParams setObject:APPID forKey:@"appid"];
     [severParams setObject:postTime forKey:@"time"];
     [severParams setObject:postToken forKey:@"token"];
-    
+    [severParams setObject:versionId forKey:@"versionId"];
+
     [severParams enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         
          [paramsMutableString appendFormat:@"&%@=%@",key,obj];
