@@ -105,12 +105,18 @@
     
     NSDictionary * item = [self.essenceData objectAtIndex:indexPath.row];
     
-    NSDictionary * params = @{@"journal_id":item[@""],
+    NSDictionary * params = @{@"journal_id":item[@"journal_id"],
                               @"uid":user.uid,
                               };
     
     [[CPAPIHelper_journalURL sharedInstance]api_view_withParams:params whenSuccess:^(id result) {
+        DLog(@"%@",result);
         
+        if(result){
+            UIWebView * Web = [[UIWebView alloc]initWithFrame:self.view.bounds];
+            [Web loadHTMLString:[result description]baseURL:nil];
+            [self.view addSubview:Web];
+        }
     } andFailed:^(id err) {
         
     }];

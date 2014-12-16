@@ -39,7 +39,7 @@
 -(void)api_view_withParams:(NSDictionary *)params whenSuccess:(APIHelperLoadSuccessBlock)success andFailed:(APIHelperLoadFailedBlock)failed
 
 {
-    NSString * URL = [NSString stringWithFormat:@"%@view/",[self.class baseURL]];
+    NSString * URL = [NSString stringWithFormat:@"%@view/%@",[self.class baseURL],params[@"journal_id"]];
     [self postDataFromPath:URL params:params whenSuccess:^(id result) {
         if (success) {
             success(result);

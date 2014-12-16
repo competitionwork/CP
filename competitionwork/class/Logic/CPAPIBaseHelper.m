@@ -160,8 +160,12 @@
             }
             return ;
         }
-        NSObject *data=responseDic[@"data"];
-        
+        NSObject *data=nil;
+        if (responseDic[@"data"]) {
+            data=responseDic[@"data"];
+        }else{
+            data = responseDic;
+        }
         DLog(@"请求成功，数据:%@",data);
         [self runAtMainthread:^{
             if(success){

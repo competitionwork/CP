@@ -39,9 +39,7 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    
-    self.title = @"我关注的竞赛";
-    
+        
     self.tabelView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     
     self.tabelView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
@@ -49,7 +47,7 @@
     self.tabelView.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tabelView];
-    
+//    self.tabelView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tabelView.delegate = self.listVC;
     self.tabelView.dataSource = self.listVC;
     
