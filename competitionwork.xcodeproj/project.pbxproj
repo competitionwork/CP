@@ -199,17 +199,6 @@
 		04A3FF581A372D0A0059B14C /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A3FF561A372D0A0059B14C /* AutoCoding.m */; };
 		04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523CE1A1A3B1000FE9500 /* RefreshView.m */; };
 		04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */; };
-		04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */; };
-		04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */; };
-		04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */; };
-		04A523E41A1A419100FE9500 /* xiaolvAnimation4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523D91A1A419000FE9500 /* xiaolvAnimation4@2x.png */; };
-		04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DA1A1A419000FE9500 /* xiaolvAnimation5@2x.png */; };
-		04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DB1A1A419000FE9500 /* xiaolvAnimation6@2x.png */; };
-		04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DC1A1A419000FE9500 /* xiaolvAnimation7@2x.png */; };
-		04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DD1A1A419000FE9500 /* 跑1@2x.png */; };
-		04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DE1A1A419000FE9500 /* 跑2@2x.png */; };
-		04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523DF1A1A419000FE9500 /* 跑3@2x.png */; };
-		04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A523E01A1A419000FE9500 /* 跑4@2x.png */; };
 		04A523ED1A1A5ABD00FE9500 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */; };
 		04AF38481A060907008958C7 /* CPBaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF38471A060907008958C7 /* CPBaseList.m */; };
 		04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF384A1A060976008958C7 /* CPMainListViewController.m */; };
@@ -554,17 +543,6 @@
 		04A523CE1A1A3B1000FE9500 /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
 		04A523D11A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+xiaolvAnimation.h"; sourceTree = "<group>"; };
 		04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+xiaolvAnimation.m"; sourceTree = "<group>"; };
-		04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation1@2x.png"; sourceTree = "<group>"; };
-		04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation2@2x.png"; sourceTree = "<group>"; };
-		04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation3@2x.png"; sourceTree = "<group>"; };
-		04A523D91A1A419000FE9500 /* xiaolvAnimation4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation4@2x.png"; sourceTree = "<group>"; };
-		04A523DA1A1A419000FE9500 /* xiaolvAnimation5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation5@2x.png"; sourceTree = "<group>"; };
-		04A523DB1A1A419000FE9500 /* xiaolvAnimation6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation6@2x.png"; sourceTree = "<group>"; };
-		04A523DC1A1A419000FE9500 /* xiaolvAnimation7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiaolvAnimation7@2x.png"; sourceTree = "<group>"; };
-		04A523DD1A1A419000FE9500 /* 跑1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑1@2x.png"; sourceTree = "<group>"; };
-		04A523DE1A1A419000FE9500 /* 跑2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑2@2x.png"; sourceTree = "<group>"; };
-		04A523DF1A1A419000FE9500 /* 跑3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑3@2x.png"; sourceTree = "<group>"; };
-		04A523E01A1A419000FE9500 /* 跑4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑4@2x.png"; sourceTree = "<group>"; };
 		04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		04AF38461A060907008958C7 /* CPBaseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseList.h; path = competitionwork/class/CPUIView/CPBaseList.h; sourceTree = SOURCE_ROOT; };
 		04AF38471A060907008958C7 /* CPBaseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseList.m; path = competitionwork/class/CPUIView/CPBaseList.m; sourceTree = SOURCE_ROOT; };
@@ -1219,17 +1197,6 @@
 				04FA58C71A2D782800BAA19E /* 登陆注册输入框@2x.png */,
 				04372B041A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png */,
 				04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */,
-				04A523D61A1A419000FE9500 /* xiaolvAnimation1@2x.png */,
-				04A523D71A1A419000FE9500 /* xiaolvAnimation2@2x.png */,
-				04A523D81A1A419000FE9500 /* xiaolvAnimation3@2x.png */,
-				04A523D91A1A419000FE9500 /* xiaolvAnimation4@2x.png */,
-				04A523DA1A1A419000FE9500 /* xiaolvAnimation5@2x.png */,
-				04A523DB1A1A419000FE9500 /* xiaolvAnimation6@2x.png */,
-				04A523DC1A1A419000FE9500 /* xiaolvAnimation7@2x.png */,
-				04A523DD1A1A419000FE9500 /* 跑1@2x.png */,
-				04A523DE1A1A419000FE9500 /* 跑2@2x.png */,
-				04A523DF1A1A419000FE9500 /* 跑3@2x.png */,
-				04A523E01A1A419000FE9500 /* 跑4@2x.png */,
 			);
 			path = OldImage;
 			sourceTree = "<group>";
@@ -1579,14 +1546,10 @@
 				0494360C1A3209BF00AEA797 /* 六宫格二_13.png in Resources */,
 				0496C4DC1A357ABB000E7CC3 /* 每日精华.png in Resources */,
 				0494361A1A320B8500AEA797 /* mast_2.png in Resources */,
-				04A523E61A1A419100FE9500 /* xiaolvAnimation6@2x.png in Resources */,
-				04A523EA1A1A419100FE9500 /* 跑3@2x.png in Resources */,
 				0496C4E11A357ABB000E7CC3 /* 竞赛样式1.png in Resources */,
-				04A523E81A1A419100FE9500 /* 跑1@2x.png in Resources */,
 				04A07F061A3744AF00760B45 /* logo.png in Resources */,
 				049E20851A35F442008C100B /* 圆角矩形-5.png in Resources */,
 				04FF966C1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png in Resources */,
-				04A523E31A1A419100FE9500 /* xiaolvAnimation3@2x.png in Resources */,
 				049BADFD1A33405400988863 /* yen.png in Resources */,
 				049BADE51A33405400988863 /* 椭圆-1.png in Resources */,
 				049DF56A1A0F493C00F12447 /* CPfilters.plist in Resources */,
@@ -1608,10 +1571,7 @@
 				048742D31A2F185100CC92DE /* 向下展开@2x.png in Resources */,
 				0496C4E81A357ABB000E7CC3 /* 设置.png in Resources */,
 				049E208A1A35F442008C100B /* USER1.png in Resources */,
-				04A523E51A1A419100FE9500 /* xiaolvAnimation5@2x.png in Resources */,
-				04A523E71A1A419100FE9500 /* xiaolvAnimation7@2x.png in Resources */,
 				049436201A320F6A00AEA797 /* title平铺X64@2x.png in Resources */,
-				04A523E21A1A419100FE9500 /* xiaolvAnimation2@2x.png in Resources */,
 				04372B071A2C1DB8007DCBAD /* 按钮-绿@3x.png in Resources */,
 				049E208B1A35F442008C100B /* xia.png in Resources */,
 				0496C4D81A357ABB000E7CC3 /* 信息填写.png in Resources */,
@@ -1665,8 +1625,6 @@
 				049436071A3209BF00AEA797 /* ys.png in Resources */,
 				04372B061A2C1DB8007DCBAD /* 按钮-绿-点击@3x.png in Resources */,
 				049E208E1A35F893008C100B /* 环球竞赛网.png in Resources */,
-				04A523EB1A1A419100FE9500 /* 跑4@2x.png in Resources */,
-				04A523E11A1A419100FE9500 /* xiaolvAnimation1@2x.png in Resources */,
 				0496C4DB1A357ABB000E7CC3 /* 我的关注.png in Resources */,
 				049BADFB1A33405400988863 /* tx.png in Resources */,
 				0494361D1A320B8500AEA797 /* mast_5.png in Resources */,
@@ -1676,9 +1634,7 @@
 				04C885AF1A2EEF3A00E441CA /* 投递简历-未选中@2x.png in Resources */,
 				049BADEC1A33405400988863 /* dhk.png in Resources */,
 				0496C4E61A357ABB000E7CC3 /* 竞赛详细分享.png in Resources */,
-				04A523E91A1A419100FE9500 /* 跑2@2x.png in Resources */,
 				049436191A320B8500AEA797 /* mast_1.png in Resources */,
-				04A523E41A1A419100FE9500 /* xiaolvAnimation4@2x.png in Resources */,
 				0496C4EA1A357ABB000E7CC3 /* 重置密码确认框.png in Resources */,
 				0496C4EC1A3591F9000E7CC3 /* 登录背景.png in Resources */,
 				0494311F1A3209BE00AEA797 /* 7-拷贝-3.png in Resources */,

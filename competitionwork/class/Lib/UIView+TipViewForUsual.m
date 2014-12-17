@@ -85,11 +85,12 @@
         label.numberOfLines = 0;
         label.text = text;
         [label sizeToFit];
-        [tipview addSubview:imgView];
+//        [tipview addSubview:imgView];
         [imgView addSubview:label];
         imgView.tag = imageViewTag;
         label.tag = labelViewTag;
-        tipview.backgroundColor = [UIColor clearColor];
+        tipview.backgroundColor = [UIColor blackColor];
+        tipview.alpha = 0.5;
         [label.po_frameBuilder alignToBottomInSuperviewWithInset:-label.height-5];
     }
     if (iPhone5) {
@@ -155,13 +156,14 @@
         [subLabel sizeToFit];
         
         [imgView addSubview:subLabel];
-        [tipview addSubview:imgView];
+//        [tipview addSubview:imgView];
         [imgView addSubview:label];
         
         subLabel.tag = subLabelViewTag;
         imgView.tag = imageViewTag;
         label.tag = labelViewTag;
-        tipview.backgroundColor = [UIColor clearColor];
+        tipview.backgroundColor = [UIColor blackColor];
+        tipview.alpha = 0.5;
         [label.po_frameBuilder alignToBottomInSuperviewWithInset:-label.height-5];
         [label.po_frameBuilder centerHorizontallyInSuperview];
         [subLabel.po_frameBuilder centerHorizontallyInSuperview];

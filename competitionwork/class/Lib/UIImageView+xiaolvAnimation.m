@@ -10,6 +10,10 @@
 
 @implementation UIImageView (xiaolvAnimation)
 + (UIImageView *)listViewRefreshAnimation {
+    
+    return [[UIImageView alloc]init];
+    
+    
     UIImageView *animationView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiaolvAnimation1"]];
     animationView.size = (CGSize){76,45};
     NSMutableArray *animationArr = [NSMutableArray array];

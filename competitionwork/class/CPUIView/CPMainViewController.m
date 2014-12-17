@@ -24,6 +24,8 @@
 #import "GJListMoreCell.h"
 #import "AppDelegate.h"
 
+#import "UIView+TipViewForUsual.h"
+
 @interface CPMainViewController ()<GJFilterViewDatasource,GJFilterViewDelegate,RefreshViewDelegate>
 {
     BOOL isLoading;
@@ -43,7 +45,7 @@
 
 @property (nonatomic) BOOL isRefresh;
 
-@property (nonatomic,assign) NSInteger pageIndex;
+@property (nonatomic,assign) int pageIndex;
 
 
 @end
@@ -64,6 +66,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.pageIndex = 1;
     
 //    [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
 //    [self setNavigationLeftButton:self withSelector:@selector(resing) withTitle:@"注册"];
@@ -272,15 +276,15 @@
 - (void)refresh {
     self.isRefresh = YES;
     [_refreshView startLoading];
-    [self loadDataByPageIndex:0];
+    [self loadDataByPageIndex:1];
 }
 
 -(void)refreashData
 {
-    [self loadDataByPageIndex:0];
+    [self loadDataByPageIndex:1];
 }
 
--(void)loadDataByPageIndex:(NSUInteger)pageIndex
+-(void)loadDataByPageIndex:(int)pageIndex
 {
     
     NSArray * paramArray = [self filterParamsFromOptionNode:self.rootNode];
@@ -298,6 +302,7 @@
 
 -(void)loadDataByParam:(NSDictionary *)param
 {
+    [self.view showTipView:TipViewLoading withText:KLODING_STR forEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     
     NSMutableDictionary * resetDict = [[NSMutableDictionary alloc]initWithDictionary:param];
     
@@ -324,7 +329,7 @@
                               };
     
     [[CPAPIHelper_severURL sharedInstance] api_lists_withParams:params whenSuccess:^(NSDictionary * result) {
-        
+        [self.view hideTipView];
         isLoading = NO;
         
 //        [_refreshView stopLoading];
@@ -354,12 +359,14 @@
         DLog(@">>>>>>> : %@ , %@",@"获取数据失败",err);
         
         DLog(@"%@",err);
+        [self.view hideTipView];
+
         
     }];
     
 }
 
--(void)loadDataSuccess:(id)result forPageIndex:(NSUInteger)pageIndex
+-(void)loadDataSuccess:(id)result forPageIndex:(int)pageIndex
 {
     
     NSArray *postdata = result[@"contests"];
@@ -469,7 +476,7 @@
 
 - (void)refreshViewDidCallBack {
     self.isRefresh = YES;
-    [self loadDataByPageIndex:0];
+    [self loadDataByPageIndex:1];
 }
 
 

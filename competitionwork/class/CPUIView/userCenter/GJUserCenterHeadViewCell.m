@@ -41,7 +41,12 @@
 -(UIImageView *)leftImage{
     
     if (!_leftImage) {
-        _leftImage = [[UIImageView alloc]init];
+        _leftImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+        _leftImage.layer.masksToBounds = YES;
+        _leftImage.layer.cornerRadius = 25;
+        _leftImage.backgroundColor = [UIColor blackColor];
+        _leftImage.layer.borderColor = [UIColor whiteColor].CGColor;
+        _leftImage.layer.borderWidth = 3.0f;
     }
     return _leftImage;
 }

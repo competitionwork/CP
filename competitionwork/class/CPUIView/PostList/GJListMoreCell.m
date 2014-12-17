@@ -54,7 +54,7 @@
         _messageLabel.backgroundColor = [UIColor clearColor];
         _messageLabel.size = (CGSize){100,16};
         _messageLabel.text = CellSelectGetMoreInfoTip;
-        _messageLabel.textAlignment = UITextAlignmentLeft;
+        _messageLabel.textAlignment = NSTextAlignmentLeft;
         [self.contentView addSubview:_messageLabel];
         
     }
