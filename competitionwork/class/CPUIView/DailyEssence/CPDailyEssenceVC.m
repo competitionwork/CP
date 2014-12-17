@@ -11,6 +11,9 @@
 #import "CPAPIHelper_journalURL.h"
 #import "CPUserInforCenter.h"
 
+#define WEBVIEW_TAG 1000456
+
+
 @interface CPDailyEssenceVC ()
 
 @property (nonatomic,strong) UITableView *myTableView;
@@ -25,6 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"每日精华";
+    [self setNavigationBackButton:self withSelector:@selector(back:)];
     [self downLoadTheEssenceData];
     [self.view addSubview:self.myTableView];
     self.myTableView.delegate = self;
@@ -32,7 +36,27 @@
     self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
+-(void)back:(id)sender{
+    if ([self.view viewWithTag:WEBVIEW_TAG]) {
+        CATransition *animation = [CATransition animation];
+        animation.duration = 0.5f;
+        animation.timingFunction = UIViewAnimationCurveEaseInOut;
+        animation.fillMode = kCAFillModeForwards;
+        animation.type = kCATransitionPush;
+        animation.subtype = kCATransitionFromLeft;
+        
+        [self.view.layer addAnimation:animation forKey:@"animation"];
+        [self performSelector:@selector(removeWebView:) withObject:[NSNumber numberWithInt:WEBVIEW_TAG] afterDelay:0.2];
 
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+
+-(void)removeWebView:(NSNumber *)number {
+    [[self.view viewWithTag:[number intValue]] removeFromSuperview];
+}
 
 -(void)downLoadTheEssenceData{
     
@@ -113,9 +137,24 @@
         DLog(@"%@",result);
         
         if(result){
+            
             UIWebView * Web = [[UIWebView alloc]initWithFrame:self.view.bounds];
+            Web.tag = 1000456;
             [Web loadHTMLString:[result description]baseURL:nil];
+            
+            CATransition *animation = [CATransition animation];
+            animation.duration = 0.5f;
+            animation.removedOnCompletion = YES;
+            animation.timingFunction = UIViewAnimationCurveEaseInOut;
+            animation.fillMode = kCAFillModeForwards;
+            animation.type = kCATransitionPush;
+            animation.subtype = kCATransitionFromRight;
+            
             [self.view addSubview:Web];
+            [self.view.layer addAnimation:animation forKey:@"animation"];
+            
+            
+            
         }
     } andFailed:^(id err) {
         
