@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define LOADING_VIEW_TAG 1000023
+//#define LOADING_VIEW_TAG 1000023
 
 
 @interface UIViewController(CPNavigation)

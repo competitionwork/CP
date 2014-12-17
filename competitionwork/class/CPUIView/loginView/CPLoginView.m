@@ -14,6 +14,8 @@
 #import "CPUtil.h"
 #import "CPUserInforCenter.h"
 #import "CPDESCode.h"
+#import "GJError.h"
+#import "CPSystemUtil.h"
 
 @interface CPLoginView ()
 
@@ -187,9 +189,9 @@
     [dictParmars setObject:[[self.userNameView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] forKey:@"email"];
     [dictParmars setObject:[CPDESCode md5:[[self.passwordView textString] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]] forKey:@"password"];
     
-#ifdef DEBUG 
+//#ifdef DEBUG 
 //    [dictParmars setValuesForKeysWithDictionary:parmat];
-#else
+//#else
     
     if ([[self.userNameView textString]isEqualToString:@""] ) {
         [CPSystemUtil showAlertViewWithAlertString:@"请输入邮箱"];
@@ -198,7 +200,7 @@
 
     }
     
-#endif
+//#endif
     
     __weak typeof(*&self) weakSelf = self;
     
@@ -221,8 +223,8 @@
         }
         
         
-    } andFailed:^(id err) {
-        
+    } andFailed:^(GJError * err) {
+        [CPSystemUtil showAlertViewWithAlertString:err.DisplayMessage];
     }];
 }
 

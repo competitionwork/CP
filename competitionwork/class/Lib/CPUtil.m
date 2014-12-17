@@ -365,7 +365,7 @@
             ++num;
         }
     }
-#define LOADING_VIEW_TAG 9527
+//#define LOADING_VIEW_TAG 9527
     
     return aView;
 }

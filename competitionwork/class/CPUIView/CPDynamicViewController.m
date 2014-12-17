@@ -51,6 +51,11 @@
     [self layoutCollectionView];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.colletionView.frame = CGRectMake(0, 0, MainScreenWidth, self.view.height);
+}
+
 -(void)showLoginView{
     
     AppDelegate * app = [AppDelegate sharedAppDelegate];
@@ -272,12 +277,12 @@
 -(void)creatTheData{
     
 
-    self.DataArray  = @[@{@"title":@"程序设计",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"六宫格二_03",@"type":@"0"},
+    self.DataArray  = @[@{@"title":@"程序设计",@"bgNormalColor":@"4877ff",@"bgClickColor":@"476fe3",@"back_image":@"六宫格二_03",@"type":@"2"},
                         @{@"title":@"数学建模",@"bgNormalColor":@"2bdffc",@"bgClickColor":@"30ace0",@"back_image":@"六宫格二_05",@"type":@"1"},
-                        @{@"title":@"机器人",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"六宫格二_07",@"type":@"2"},
-                        @{@"title":@"电子&自动化",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"六宫格二_13",@"type":@"3"},
-                        @{@"title":@"计算机&信息技术",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"六宫格二_15",@"type":@"4"},
-                        @{@"title":@"工程机械",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"六宫格二_16",@"type":@"7"},
+                        @{@"title":@"机器人",@"bgNormalColor":@"8f79ff",@"bgClickColor":@"8370e2",@"back_image":@"六宫格二_07",@"type":@"4"},
+                        @{@"title":@"电子&自动化",@"bgNormalColor":@"20c968",@"bgClickColor":@"25b462",@"back_image":@"六宫格二_13",@"type":@"5"},
+                        @{@"title":@"计算机&信息技术",@"bgNormalColor":@"f4c300",@"bgClickColor":@"d9af09",@"back_image":@"六宫格二_15",@"type":@"6"},
+                        @{@"title":@"工程机械",@"bgNormalColor":@"ee5c2e",@"bgClickColor":@"d45831",@"back_image":@"六宫格二_16",@"type":@"9"},
                         ];
     
     self.founctionData  = @[
@@ -291,6 +296,8 @@
 
     
 }
+
+
 
 /*
 #pragma mark - Navigation

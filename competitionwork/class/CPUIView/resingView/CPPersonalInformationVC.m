@@ -331,7 +331,7 @@
                 
                 CPPersinalparentModel * model = [[CPPersinalparentModel alloc]init];
                 model.Title = obj;
-                int intnumber = idx + 5;
+                int intnumber = (int)idx + 5;
                 model.number = [NSString stringWithFormat:@"%d",intnumber];
                 [showArray addObject:model];
             }];

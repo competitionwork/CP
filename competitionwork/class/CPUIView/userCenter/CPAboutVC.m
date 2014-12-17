@@ -322,10 +322,10 @@
 
 -(void)gotoItunes:(id)sender
 {
-    UIButton *btn = (UIButton *)sender;
+//    UIButton *btn = (UIButton *)sender;
     //708
-    NSString* customIdAssist = @"708";
-    NSArray* paras = [NSArray arrayWithObject:customIdAssist];
+//    NSString* customIdAssist = @"708";
+//    NSArray* paras = [NSArray arrayWithObject:customIdAssist];
     NSString *appUrl = @"";
 //    if (btn.tag == LanRenZhaoFangBtnTag) {
 //        appUrl = @"";//@"https://itunes.apple.com/cn/app/gan-ji-lan-ren-zhao-fang-zu/id717596972?mt=8";

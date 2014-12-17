@@ -17,4 +17,22 @@
     [alertView show];
 }
 
+
++ (void)showAlertViewWithAlertTitle:(NSString *)title
+                            message:(NSString*)message
+                           delegate:(id)delegate
+                  cancelButtonTitle:(NSString*)cancelButtonTitile
+                   otherButtonTitle:(NSString*)otherButtonTitle
+                                tag:(NSInteger)tag
+{
+
+
+    NSString *showTitle = title ? : @""; //iOS8适配
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:showTitle message:message delegate:delegate cancelButtonTitle:cancelButtonTitile otherButtonTitles:otherButtonTitle  , nil];
+    alertView.tag = tag;
+    alertView.delegate = delegate;
+    [alertView show];
+
+}
+
 @end

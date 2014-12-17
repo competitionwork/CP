@@ -45,8 +45,8 @@
                                 [CPListCellEntity listCellWithTitle:@"我是学霸" imageName:@"mast_5" target:self callback:@selector(myCenter) userinfo:nil],
                                 ],
                             @[
-                                [CPListCellEntity listCellWithTitle:@"消息与提醒" imageName:@"2" target:self callback:@selector(Account) userinfo:nil],
-                                [CPListCellEntity listCellWithTitle:@"用户反馈" imageName:@"book.png" target:self callback:@selector(Account) userinfo:nil],
+//                                [CPListCellEntity listCellWithTitle:@"消息与提醒" imageName:@"2" target:self callback:@selector(Account) userinfo:nil],
+//                                [CPListCellEntity listCellWithTitle:@"用户反馈" imageName:@"book.png" target:self callback:@selector(Account) userinfo:nil],
                                 [CPListCellEntity listCellWithTitle:@"关于环球竞赛网" imageName:@"fk.png" target:self callback:@selector(aboutView) userinfo:nil],
                                 [CPListCellEntity listCellWithTitle:@"切换账户" imageName:@"wd" target:self callback:@selector(loginout) userinfo:nil],
                                 ]
@@ -85,12 +85,8 @@
 }
 
 -(void)loginout{
-    AppDelegate * app = [AppDelegate sharedAppDelegate];
-    app.userInforCenter.isLoginSuccess = NO;
+    [CPSystemUtil showAlertViewWithAlertTitle:@"提示" message:@"是否切换账号" delegate:self cancelButtonTitle:@"确认" otherButtonTitle:@"取消" tag:100010];
     
-    CPLoginView * login = [[CPLoginView alloc]init];
-    login.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:login animated:NO];
 }
 
 -(CPUserCenterListVeiw *)ListView{
@@ -116,6 +112,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#define UIAlertViewDelegate 
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex == 0) {
+        
+        AppDelegate * app = [AppDelegate sharedAppDelegate];
+        app.userInforCenter.isLoginSuccess = NO;
+        
+        CPLoginView * login = [[CPLoginView alloc]init];
+        login.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:login animated:NO];
+        
+    }else if(buttonIndex == 1){
+        
+    }
 }
 
 /*

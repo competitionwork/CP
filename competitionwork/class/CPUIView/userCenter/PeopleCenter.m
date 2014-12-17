@@ -28,6 +28,11 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.scrollview.frame = self.view.bounds;
+}
+
 -(UIScrollView *)scrollview{
     if (!_scrollview) {
         _scrollview = [[UIScrollView alloc]initWithFrame:self.view.bounds];

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPUserCenterVC : CPBaseViewController
+@interface CPUserCenterVC : CPBaseViewController<UIAlertViewDelegate>
 
 @end

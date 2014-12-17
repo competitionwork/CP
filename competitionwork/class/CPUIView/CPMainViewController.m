@@ -72,6 +72,13 @@
 //    [self setNavigationRightButton:self withSelector:@selector(push) withTitle:@"按钮"];
 //    [self setNavigationLeftButton:self withSelector:@selector(resing) withTitle:@"注册"];
     
+    AppDelegate * app = [AppDelegate sharedAppDelegate];
+    
+    
+    if (![app.MastVC tabbarViewIsHide]) {
+        [self setNavigationLeftButton:self withSelector:nil withTitle:nil];
+    }
+    
     [self.view addSubview:self.filterView];
     
     [self.filterView.po_frameBuilder alignToTopInSuperviewWithInset:0];
@@ -439,7 +446,7 @@
         [[self.tabelView.po_frameBuilder setHeight:self.view.height- self.filterView.frame.size.height]alignToBottomOfView:self.filterView offset:0];
     }
     else {
-        [[self.tabelView.po_frameBuilder setHeight:MainScreenHeight - 17 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];
+        [[self.tabelView.po_frameBuilder setHeight:self.view.height - 17 - self.filterView.frame.size.height] alignToBottomOfView:self.filterView offset:0];
     }
 }
 

@@ -44,7 +44,7 @@
 
 
 /* 视图View_TAG */
-#define LOADING_VIEW_TAG 9527
+#define LOADING_VIEW_TAG 1000023
 
 
 
@@ -57,7 +57,7 @@
 
 #define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 
-#define IOS7 [GJSystemUtil DeviceSystemVersionIsiOS7]
+//#define IOS7 [GJSystemUtil DeviceSystemVersionIsiOS7]
 
 
 
