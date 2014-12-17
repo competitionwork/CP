@@ -122,7 +122,10 @@
     [dict setValue:[self contestTimeFor:dictEntiy] forKey:@"left4"];
     [dict setValue:[dictEntiy objectForKey:@"organiser"] forKey:@"left5"];
     [dict setValue:dictEntiy forKey:@"entiyDict"];
+    [dict setValue:[dictEntiy objectForKey:@"is_ follow"] forKey:@"is_ follow"];
 
+    [dict setObject:[self returnState:dictEntiy] forKey:@"State"];
+    
     
     return dict;
 }
@@ -142,6 +145,17 @@
     NSString * str = [NSString stringWithFormat:@"报名时间:%@-%@",startStr,endStr];
     
     return str;
+}
+
+-(NSString*)returnState:(NSDictionary*)Item{
+    int time = [[NSDate date] timeIntervalSince1970];
+    int startime = [[Item objectForKey:@"contest_end_time"] intValue];
+    if (time > startime) {
+        return @"1";
+    }else{
+        return @"2";
+    }
+    
 }
 
 -(NSString *)contestTimeFor:(NSDictionary*)Item{

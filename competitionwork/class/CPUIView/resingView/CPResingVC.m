@@ -74,7 +74,8 @@
     [self.view addSubview:self.myScrollView];
     
     self.headView = [[CPUserHeadPictureView alloc]initWithFrame:CGRectMake(0, 0, MainScreenWidth, 100)];
-    
+    self.headView.hidden = YES;
+    self.headView.userInteractionEnabled = NO;
     __weak typeof(*&self) weakSelf = self;
     
     [self.headView setBlock:^(UIImageView * image){

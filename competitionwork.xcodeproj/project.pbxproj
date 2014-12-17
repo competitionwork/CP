@@ -13,6 +13,7 @@
 		02F92C441A3A9C56002B399C /* UIView+GanJiExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C431A3A9C56002B399C /* UIView+GanJiExtent.m */; };
 		02F92C521A3E9A3C002B399C /* CPAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C501A3E9A3C002B399C /* CPAboutVC.m */; };
 		02F92C571A3EE2D9002B399C /* CPHotViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C561A3EE2D9002B399C /* CPHotViewVC.m */; };
+		02F92C591A41366A002B399C /* 已关注.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F92C581A41366A002B399C /* 已关注.png */; };
 		0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F12E1A08DC440067CAED /* CPBaseModeObject.m */; };
 		0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1311A08DCE90067CAED /* CPMainListCellModel.m */; };
 		0417F1351A0A6F560067CAED /* filterManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1341A0A6F560067CAED /* filterManage.m */; };
@@ -298,6 +299,7 @@
 		02F92C501A3E9A3C002B399C /* CPAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAboutVC.m; sourceTree = "<group>"; };
 		02F92C551A3EE2D9002B399C /* CPHotViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPHotViewVC.h; sourceTree = "<group>"; };
 		02F92C561A3EE2D9002B399C /* CPHotViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPHotViewVC.m; sourceTree = "<group>"; };
+		02F92C581A41366A002B399C /* 已关注.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已关注.png"; sourceTree = "<group>"; };
 		0417F12D1A08DC440067CAED /* CPBaseModeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseModeObject.h; path = CPUIView/Model/CPBaseModeObject.h; sourceTree = "<group>"; };
 		0417F12E1A08DC440067CAED /* CPBaseModeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseModeObject.m; path = CPUIView/Model/CPBaseModeObject.m; sourceTree = "<group>"; };
 		0417F1301A08DCE90067CAED /* CPMainListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellModel.h; path = CPUIView/Model/CPMainListCellModel.h; sourceTree = "<group>"; };
@@ -895,6 +897,7 @@
 				049431111A3209BE00AEA797 /* 六宫格二_13.png */,
 				049431121A3209BE00AEA797 /* 六宫格二_15.png */,
 				049431131A3209BE00AEA797 /* 六宫格二_16.png */,
+				02F92C581A41366A002B399C /* 已关注.png */,
 				049431141A3209BE00AEA797 /* 关注.png */,
 				049431151A3209BE00AEA797 /* 时间.png */,
 				049431161A3209BE00AEA797 /* 横线.png */,
@@ -1687,6 +1690,7 @@
 				049BADF81A33405400988863 /* qr.png in Resources */,
 				0496C4E41A357ABB000E7CC3 /* 竞赛简介详细.png in Resources */,
 				0494360A1A3209BF00AEA797 /* 六宫格二_05.png in Resources */,
+				02F92C591A41366A002B399C /* 已关注.png in Resources */,
 				0496C4E51A357ABB000E7CC3 /* 竞赛详细内容.png in Resources */,
 				049E20841A35F442008C100B /* 矢量智能对象1.png in Resources */,
 				049BADF21A33405400988863 /* hy.png in Resources */,

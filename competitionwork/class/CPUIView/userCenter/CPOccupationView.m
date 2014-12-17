@@ -7,7 +7,7 @@
 //
 
 #import "CPOccupationView.h"
-
+#import "CPUserInforCenter.h"
 @interface CPOccupationView ()
 
 @property (nonatomic,strong) PeopleCoreModel *myModel;
@@ -26,16 +26,18 @@
     
     if (self = [super initWithFrame:frame]) {
         
+        CPPeopleInforCenterModel * user = [[CPUserInforCenter sharedInstance]getPeopleData];
+        
         self.myModel = model;
         
         self.backgroundColor = [UIColor whiteColor];
         [self CreatNormalView];
         
         [self addSubview:self.muBiaoLabel];
-        [self setMuBiaoLabelStr:@"目标行业：金融管理系"];
+        [self setMuBiaoLabelStr:[NSString stringWithFormat:@"家乡:%@",user.hometown_province]];
         
         [self addSubview:self.zhuanTaiLabel];
-        [self setZhuanTaiLabelStr:@"目前状态：学生会主席"];        
+        [self setZhuanTaiLabelStr:[NSString stringWithFormat:@"住址:%@",user.address_province]];
         
     }
     
@@ -49,7 +51,7 @@
     [self addSubview:_imageBlock];
     
     UILabel * labelBlock = [[UILabel alloc]initWithFrame:_imageBlock.bounds];
-    labelBlock.text = @"规划";
+    labelBlock.text = @"信息";
     labelBlock.textAlignment = NSTextAlignmentCenter;
     labelBlock.textColor = [UIColor whiteColor];
     [_imageBlock addSubview:labelBlock];

@@ -14,7 +14,6 @@
 @interface AttentionView ()
 
 
-@property (nonatomic) UIButton *AttentionButton;
 
 
 @end
@@ -30,9 +29,9 @@
         self.AttentionButton.frame = self.bounds;
         [[[[[self.AttentionButton.po_frameBuilder setWidth:48.5] setHeight:23] setX:0.5]alignToTopInSuperviewWithInset:8]centerHorizontallyInSuperview];
         [self.AttentionButton setBackgroundImage:[UIImage imageNamed:@"关注"] forState:UIControlStateNormal];
-        [self.AttentionButton setBackgroundImage:[UIImage imageNamed:@"关注"] forState:UIControlStateHighlighted];
+        [self.AttentionButton setBackgroundImage:[UIImage imageNamed:@"已关注"] forState:UIControlStateHighlighted];
         [self.AttentionButton setTitle:@"关注" forState:UIControlStateNormal];
-        [self.AttentionButton setTitle:@"关注" forState:UIControlStateHighlighted];
+        [self.AttentionButton setTitle:@"已关注" forState:UIControlStateHighlighted];
         self.AttentionButton.titleLabel.font = [UIFont systemFontOfSize:12];
         self.AttentionButton.backgroundColor = [UIColor clearColor];
     }
@@ -76,6 +75,7 @@
             [[CPAPIHelper_severURL sharedInstance]api_add_follow_withParams:params whenSuccess:^(id result) {
                 
                 weakSelf.isFollow = YES;
+                weakSelf.AttentionButton.highlighted = YES;
                 
             } andFailed:^(id err) {
                 
@@ -86,6 +86,7 @@
             [[CPAPIHelper_severURL sharedInstance]api_cancle_follow_withParams:params whenSuccess:^(id result) {
                 
                 weakSelf.isFollow = NO;
+                weakSelf.AttentionButton.highlighted = NO;
 
                 
             } andFailed:^(id err) {

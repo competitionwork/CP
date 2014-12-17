@@ -66,8 +66,21 @@
 -(NSString*)returnStudentStr:(int)number{
     NSString * str = @" ";
     if (number == 5) {
-        str
+        str = @"专科";
+    }else if (number == 6){
+        str = @"本科";
+
+    }else if (number == 7){
+        str = @"硕士";
+
+    }else if (number == 8){
+        str = @"博士";
+
+    }else if(number == 9){
+        str = @"更多";
+
     }
+    return str;
 }
 
 -(void)CreatNormalView{

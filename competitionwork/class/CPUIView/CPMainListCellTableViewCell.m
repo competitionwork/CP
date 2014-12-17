@@ -159,6 +159,10 @@ static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
     _left4Label.text = labelText;
     [[[_left4Label.po_frameBuilder setSizeWithWidth:width4 height:16] setY:[self yForLabelOfLine3:_content] +20]alignRightOfView:self.timeImage offset:5];
     
+    
+    if ([_content[@"State"]isEqualToString:@"1"]) {
+        self.ingImage.image = [UIImage imageNamed:@""];
+    }
     [[[[self.ingImage.po_frameBuilder alignRightOfView:self.left4Label offset:5]setY:[self yForLabelOfLine3:_content]]setWidth:44]setHeight:15];
     
     

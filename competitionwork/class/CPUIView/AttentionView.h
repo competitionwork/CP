@@ -16,6 +16,9 @@
 
 @property (nonatomic) NSDictionary *content;
 
+@property (nonatomic) UIButton *AttentionButton;
+
+
 
 + (CGFloat)widthForPhoneView:(NSDictionary *)aContent;
 
