@@ -16,6 +16,7 @@
 #import "CPDailyEssenceVC.h"
 #import "CPAttentionView.h"
 #import "CPHotViewVC.h"
+#import "CPIntroductionVC.h"
 
 #import "CPDetailViewController.h"//详情页调试
 #import "CPAttentionView.h"
@@ -218,6 +219,17 @@
             CPAttentionView * attentionView = [[CPAttentionView alloc]init];
             attentionView.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:attentionView animated:YES];
+        }else{
+            
+            NSDictionary * dict = [self.founctionData objectAtIndex:indexPath.row];
+
+            
+            CPIntroductionVC * introduction = [[CPIntroductionVC alloc]init];
+            introduction.title = dict[@"title"];
+            introduction.imageIndex = (int)indexPath.row;
+            introduction.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:introduction animated:YES];
+            
         }
     }else{
         [collectionView deselectItemAtIndexPath:indexPath animated:YES];

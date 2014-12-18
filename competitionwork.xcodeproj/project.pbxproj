@@ -14,6 +14,9 @@
 		02F92C521A3E9A3C002B399C /* CPAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C501A3E9A3C002B399C /* CPAboutVC.m */; };
 		02F92C571A3EE2D9002B399C /* CPHotViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C561A3EE2D9002B399C /* CPHotViewVC.m */; };
 		02F92C591A41366A002B399C /* 已关注.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F92C581A41366A002B399C /* 已关注.png */; };
+		02F92C5D1A42F13B002B399C /* CPIntroductionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F92C5C1A42F13B002B399C /* CPIntroductionVC.m */; };
+		02F92C601A42F7C4002B399C /* 引导发布.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02F92C5E1A42F7C4002B399C /* 引导发布.jpg */; };
+		02F92C611A42F7C4002B399C /* 引导排名.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02F92C5F1A42F7C4002B399C /* 引导排名.jpg */; };
 		0417F12F1A08DC440067CAED /* CPBaseModeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F12E1A08DC440067CAED /* CPBaseModeObject.m */; };
 		0417F1321A08DCE90067CAED /* CPMainListCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1311A08DCE90067CAED /* CPMainListCellModel.m */; };
 		0417F1351A0A6F560067CAED /* filterManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F1341A0A6F560067CAED /* filterManage.m */; };
@@ -289,6 +292,10 @@
 		02F92C551A3EE2D9002B399C /* CPHotViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPHotViewVC.h; sourceTree = "<group>"; };
 		02F92C561A3EE2D9002B399C /* CPHotViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPHotViewVC.m; sourceTree = "<group>"; };
 		02F92C581A41366A002B399C /* 已关注.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "已关注.png"; sourceTree = "<group>"; };
+		02F92C5B1A42F13B002B399C /* CPIntroductionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPIntroductionVC.h; sourceTree = "<group>"; };
+		02F92C5C1A42F13B002B399C /* CPIntroductionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPIntroductionVC.m; sourceTree = "<group>"; };
+		02F92C5E1A42F7C4002B399C /* 引导发布.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "引导发布.jpg"; sourceTree = "<group>"; };
+		02F92C5F1A42F7C4002B399C /* 引导排名.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "引导排名.jpg"; sourceTree = "<group>"; };
 		0417F12D1A08DC440067CAED /* CPBaseModeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseModeObject.h; path = CPUIView/Model/CPBaseModeObject.h; sourceTree = "<group>"; };
 		0417F12E1A08DC440067CAED /* CPBaseModeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseModeObject.m; path = CPUIView/Model/CPBaseModeObject.m; sourceTree = "<group>"; };
 		0417F1301A08DCE90067CAED /* CPMainListCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListCellModel.h; path = CPUIView/Model/CPMainListCellModel.h; sourceTree = "<group>"; };
@@ -686,31 +693,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02F92C3B1A399457002B399C /* AttentionView */ = {
+		02F92C3B1A399457002B399C /* AttentionView(关注) */ = {
 			isa = PBXGroup;
 			children = (
 				02F92C3C1A39947C002B399C /* CPAttentionView.h */,
 				02F92C3D1A39947C002B399C /* CPAttentionView.m */,
 			);
-			name = AttentionView;
+			name = "AttentionView(关注)";
 			path = CPUIView/AttentionView;
 			sourceTree = "<group>";
 		};
-		02F92C541A3EE2BF002B399C /* CPHotView */ = {
+		02F92C541A3EE2BF002B399C /* CPHotView(热门) */ = {
 			isa = PBXGroup;
 			children = (
 				02F92C551A3EE2D9002B399C /* CPHotViewVC.h */,
 				02F92C561A3EE2D9002B399C /* CPHotViewVC.m */,
 			);
-			name = CPHotView;
+			name = "CPHotView(热门)";
 			path = CPUIView/CPHotView;
+			sourceTree = "<group>";
+		};
+		02F92C5A1A42F114002B399C /* CPIntroductionView */ = {
+			isa = PBXGroup;
+			children = (
+				02F92C5B1A42F13B002B399C /* CPIntroductionVC.h */,
+				02F92C5C1A42F13B002B399C /* CPIntroductionVC.m */,
+			);
+			name = CPIntroductionView;
+			path = CPUIView/CPIntroductionView;
 			sourceTree = "<group>";
 		};
 		0425014219F7F0910038E188 /* CPUIView */ = {
 			isa = PBXGroup;
 			children = (
-				02F92C541A3EE2BF002B399C /* CPHotView */,
-				02F92C3B1A399457002B399C /* AttentionView */,
+				02F92C5A1A42F114002B399C /* CPIntroductionView */,
+				02F92C541A3EE2BF002B399C /* CPHotView(热门) */,
+				02F92C3B1A399457002B399C /* AttentionView(关注) */,
 				0494A5281A381DD7005475EB /* DailyEssence(每日精华) */,
 				049967791A3195DD00551CB8 /* PostList */,
 				049888A41A305F19001FA97F /* MastView(首页) */,
@@ -797,6 +815,8 @@
 		04942BB31A3209BB00AEA797 /* NewImage */ = {
 			isa = PBXGroup;
 			children = (
+				02F92C5E1A42F7C4002B399C /* 引导发布.jpg */,
+				02F92C5F1A42F7C4002B399C /* 引导排名.jpg */,
 				049E208C1A35F893008C100B /* 环球竞赛网.png */,
 				04A07F231A374D9000760B45 /* 1136(1).png */,
 				04A07F241A374D9000760B45 /* 960(1).png */,
@@ -1543,6 +1563,7 @@
 				0496C4E01A357ABB000E7CC3 /* 竞技选手.png in Resources */,
 				049BADED1A33405400988863 /* dhk2.png in Resources */,
 				049E20821A35F442008C100B /* 上.png in Resources */,
+				02F92C611A42F7C4002B399C /* 引导排名.jpg in Resources */,
 				0494360C1A3209BF00AEA797 /* 六宫格二_13.png in Resources */,
 				0496C4DC1A357ABB000E7CC3 /* 每日精华.png in Resources */,
 				0494361A1A320B8500AEA797 /* mast_2.png in Resources */,
@@ -1568,6 +1589,7 @@
 				04FF96671A2E268F005CCAEF /* 个人中心-头像@2x.png in Resources */,
 				049BADF51A33405400988863 /* mm.png in Resources */,
 				049BADEA1A33405400988863 /* bq.png in Resources */,
+				02F92C601A42F7C4002B399C /* 引导发布.jpg in Resources */,
 				048742D31A2F185100CC92DE /* 向下展开@2x.png in Resources */,
 				0496C4E81A357ABB000E7CC3 /* 设置.png in Resources */,
 				049E208A1A35F442008C100B /* USER1.png in Resources */,
@@ -1682,6 +1704,7 @@
 				04CAC1AC19F7EF82005291D3 /* competitionwork.xcdatamodeld in Sources */,
 				04CAC21019F7EFBF005291D3 /* AFPropertyListRequestOperation.m in Sources */,
 				04CAC22319F7EFBF005291D3 /* POViewFrameBuilder.m in Sources */,
+				02F92C5D1A42F13B002B399C /* CPIntroductionVC.m in Sources */,
 				049BAE081A334C9900988863 /* PeopleCoreModel.m in Sources */,
 				04CAC22119F7EFBF005291D3 /* UIButton+eventHandler.m in Sources */,
 				0417F1351A0A6F560067CAED /* filterManage.m in Sources */,
