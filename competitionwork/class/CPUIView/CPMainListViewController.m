@@ -122,7 +122,7 @@
     [dict setValue:[self contestTimeFor:dictEntiy] forKey:@"left4"];
     [dict setValue:[dictEntiy objectForKey:@"organiser"] forKey:@"left5"];
     [dict setValue:dictEntiy forKey:@"entiyDict"];
-    [dict setValue:[dictEntiy objectForKey:@"is_ follow"] forKey:@"is_ follow"];
+    [dict setValue:[dictEntiy objectForKey:@"is_follow"] forKey:@"is_follow"];
 
     [dict setObject:[self returnState:dictEntiy] forKey:@"State"];
     

@@ -53,12 +53,23 @@
     [self setNeedsLayout];
 }
 
+-(void)setIsFollow:(BOOL)isFollow{
+    _isFollow = isFollow;
+    
+    if (isFollow) {
+        self.AttentionButton.highlighted = YES;
+    }else{
+        self.AttentionButton.highlighted = NO;
+    }
+    [self layoutSubviews];
+}
+
 -(void)layoutSubviews{
     [super layoutSubviews];
     
    __weak typeof(self) weakSelf = self;
     
-    
+
     
     [self.AttentionButton setAction:kUIButtonBlockTouchInside withBlock:^{
         

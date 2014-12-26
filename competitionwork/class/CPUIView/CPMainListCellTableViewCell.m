@@ -167,7 +167,11 @@ static CGFloat SpaceToRight         = 8;    // 距离右侧边缘的空白距离
     
     
     
-        
+    if ([_content[@"is_follow"] intValue]) {
+        _attentionView.isFollow = YES;
+    }else{
+        _attentionView.isFollow = NO;
+    }
     [_attentionView.po_frameBuilder alignRightInSuperviewWithInset:5];
 
 }

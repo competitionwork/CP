@@ -153,7 +153,7 @@
     labelResing.text = @"忘记密码";
     labelResing.textAlignment = NSTextAlignmentCenter;
     labelResing.textColor = GJColor(128, 128, 128, 1);
-    [self.view addSubview:labelResing];
+//    [self.view addSubview:labelResing];
 
 }
 

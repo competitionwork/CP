@@ -170,14 +170,6 @@
 		049E208B1A35F442008C100B /* xia.png in Resources */ = {isa = PBXBuildFile; fileRef = 049E20811A35F442008C100B /* xia.png */; };
 		049E208E1A35F893008C100B /* 环球竞赛网.png in Resources */ = {isa = PBXBuildFile; fileRef = 049E208C1A35F893008C100B /* 环球竞赛网.png */; };
 		049E208F1A35F893008C100B /* detal2.png in Resources */ = {isa = PBXBuildFile; fileRef = 049E208D1A35F893008C100B /* detal2.png */; };
-		04A07F061A3744AF00760B45 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F051A3744AF00760B45 /* logo.png */; };
-		04A07F081A37469A00760B45 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F071A37469A00760B45 /* Default.png */; };
-		04A07F1F1A374ACD00760B45 /* 1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1B1A374ACD00760B45 /* 1136.png */; };
-		04A07F201A374ACD00760B45 /* 960.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1C1A374ACD00760B45 /* 960.png */; };
-		04A07F211A374ACD00760B45 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1D1A374ACD00760B45 /* 120.png */; };
-		04A07F221A374ACD00760B45 /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F1E1A374ACD00760B45 /* 180.png */; };
-		04A07F251A374D9000760B45 /* 1136(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F231A374D9000760B45 /* 1136(1).png */; };
-		04A07F261A374D9000760B45 /* 960(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 04A07F241A374D9000760B45 /* 960(1).png */; };
 		04A0DA421A04D48D008C4E12 /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2A1A04D48D008C4E12 /* yajl.c */; };
 		04A0DA431A04D48D008C4E12 /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2B1A04D48D008C4E12 /* yajl_alloc.c */; };
 		04A0DA441A04D48D008C4E12 /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DA2D1A04D48D008C4E12 /* yajl_buf.c */; };
@@ -203,6 +195,13 @@
 		04A523D01A1A3B1000FE9500 /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523CE1A1A3B1000FE9500 /* RefreshView.m */; };
 		04A523D31A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */; };
 		04A523ED1A1A5ABD00FE9500 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */; };
+		04A6C9731A47ACD800214BE1 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C96C1A47ACD800214BE1 /* 120.png */; };
+		04A6C9741A47ACD800214BE1 /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C96D1A47ACD800214BE1 /* 180.png */; };
+		04A6C9751A47ACD800214BE1 /* 57.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C96E1A47ACD800214BE1 /* 57.png */; };
+		04A6C9761A47ACD800214BE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C96F1A47ACD800214BE1 /* Default-568h@2x.png */; };
+		04A6C9771A47ACD800214BE1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C9701A47ACD800214BE1 /* Default.png */; };
+		04A6C9781A47ACD800214BE1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C9711A47ACD800214BE1 /* Default@2x.png */; };
+		04A6C97A1A47B47200214BE1 /* 114@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A6C9791A47B47200214BE1 /* 114@2x.png */; };
 		04AF38481A060907008958C7 /* CPBaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF38471A060907008958C7 /* CPBaseList.m */; };
 		04AF384B1A060976008958C7 /* CPMainListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF384A1A060976008958C7 /* CPMainListViewController.m */; };
 		04AF384E1A060A3C008958C7 /* CPListCellCommonEntiy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF384D1A060A3C008958C7 /* CPListCellCommonEntiy.m */; };
@@ -492,14 +491,6 @@
 		049E20811A35F442008C100B /* xia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xia.png; sourceTree = "<group>"; };
 		049E208C1A35F893008C100B /* 环球竞赛网.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "环球竞赛网.png"; sourceTree = "<group>"; };
 		049E208D1A35F893008C100B /* detal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detal2.png; sourceTree = "<group>"; };
-		04A07F051A3744AF00760B45 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		04A07F071A37469A00760B45 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		04A07F1B1A374ACD00760B45 /* 1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1136.png; sourceTree = "<group>"; };
-		04A07F1C1A374ACD00760B45 /* 960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 960.png; sourceTree = "<group>"; };
-		04A07F1D1A374ACD00760B45 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
-		04A07F1E1A374ACD00760B45 /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
-		04A07F231A374D9000760B45 /* 1136(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1136(1).png"; sourceTree = "<group>"; };
-		04A07F241A374D9000760B45 /* 960(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "960(1).png"; sourceTree = "<group>"; };
 		04A0DA241A04D48D008C4E12 /* YAJL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAJL.h; sourceTree = "<group>"; };
 		04A0DA271A04D48D008C4E12 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
 		04A0DA281A04D48D008C4E12 /* yajl_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_gen.h; sourceTree = "<group>"; };
@@ -551,6 +542,13 @@
 		04A523D11A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+xiaolvAnimation.h"; sourceTree = "<group>"; };
 		04A523D21A1A3F9500FE9500 /* UIImageView+xiaolvAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+xiaolvAnimation.m"; sourceTree = "<group>"; };
 		04A523EC1A1A5ABD00FE9500 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04A6C96C1A47ACD800214BE1 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
+		04A6C96D1A47ACD800214BE1 /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 180.png; sourceTree = "<group>"; };
+		04A6C96E1A47ACD800214BE1 /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
+		04A6C96F1A47ACD800214BE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		04A6C9701A47ACD800214BE1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		04A6C9711A47ACD800214BE1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		04A6C9791A47B47200214BE1 /* 114@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "114@2x.png"; sourceTree = "<group>"; };
 		04AF38461A060907008958C7 /* CPBaseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPBaseList.h; path = competitionwork/class/CPUIView/CPBaseList.h; sourceTree = SOURCE_ROOT; };
 		04AF38471A060907008958C7 /* CPBaseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CPBaseList.m; path = competitionwork/class/CPUIView/CPBaseList.m; sourceTree = SOURCE_ROOT; };
 		04AF38491A060976008958C7 /* CPMainListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CPMainListViewController.h; path = competitionwork/class/CPUIView/CPMainListViewController.h; sourceTree = SOURCE_ROOT; };
@@ -818,14 +816,6 @@
 				02F92C5E1A42F7C4002B399C /* 引导发布.jpg */,
 				02F92C5F1A42F7C4002B399C /* 引导排名.jpg */,
 				049E208C1A35F893008C100B /* 环球竞赛网.png */,
-				04A07F231A374D9000760B45 /* 1136(1).png */,
-				04A07F241A374D9000760B45 /* 960(1).png */,
-				04A07F1B1A374ACD00760B45 /* 1136.png */,
-				04A07F1C1A374ACD00760B45 /* 960.png */,
-				04A07F1D1A374ACD00760B45 /* 120.png */,
-				04A07F1E1A374ACD00760B45 /* 180.png */,
-				04A07F071A37469A00760B45 /* Default.png */,
-				04A07F051A3744AF00760B45 /* logo.png */,
 				049E208D1A35F893008C100B /* detal2.png */,
 				049E20781A35F442008C100B /* 上.png */,
 				049E20791A35F442008C100B /* 矢量智能对象.png */,
@@ -1023,6 +1013,7 @@
 		049DF5671A0F493C00F12447 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				04A6C96A1A47ACD800214BE1 /* icon */,
 				0496C4C01A357ABB000E7CC3 /* APP设计图 */,
 				04942BB31A3209BB00AEA797 /* NewImage */,
 				0465FAAC1A30B0900022834D /* MastViewData.plist */,
@@ -1219,6 +1210,20 @@
 				04372B051A2C1DB8007DCBAD /* 按钮-绿@3x.png */,
 			);
 			path = OldImage;
+			sourceTree = "<group>";
+		};
+		04A6C96A1A47ACD800214BE1 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				04A6C9791A47B47200214BE1 /* 114@2x.png */,
+				04A6C96C1A47ACD800214BE1 /* 120.png */,
+				04A6C96D1A47ACD800214BE1 /* 180.png */,
+				04A6C96E1A47ACD800214BE1 /* 57.png */,
+				04A6C96F1A47ACD800214BE1 /* Default-568h@2x.png */,
+				04A6C9701A47ACD800214BE1 /* Default.png */,
+				04A6C9711A47ACD800214BE1 /* Default@2x.png */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 		04AF384F1A061802008958C7 /* Model（模型） */ = {
@@ -1550,7 +1555,6 @@
 				04CAC1A319F7EF82005291D3 /* InfoPlist.strings in Resources */,
 				04CAC1AE19F7EF82005291D3 /* Images.xcassets in Resources */,
 				049BADE61A33405400988863 /* 我的列表色块.png in Resources */,
-				04A07F211A374ACD00760B45 /* 120.png in Resources */,
 				048742D71A2F1D8800CC92DE /* 右箭头-icon-灰@3x.png in Resources */,
 				0496C4E21A357ABB000E7CC3 /* 竞赛样式2.png in Resources */,
 				0494A5301A381F56005475EB /* CPEssenceTableViewCell.xib in Resources */,
@@ -1568,7 +1572,7 @@
 				0496C4DC1A357ABB000E7CC3 /* 每日精华.png in Resources */,
 				0494361A1A320B8500AEA797 /* mast_2.png in Resources */,
 				0496C4E11A357ABB000E7CC3 /* 竞赛样式1.png in Resources */,
-				04A07F061A3744AF00760B45 /* logo.png in Resources */,
+				04A6C9741A47ACD800214BE1 /* 180.png in Resources */,
 				049E20851A35F442008C100B /* 圆角矩形-5.png in Resources */,
 				04FF966C1A2E2C24005CCAEF /* 个人中心-头像列表@2x.png in Resources */,
 				049BADFD1A33405400988863 /* yen.png in Resources */,
@@ -1600,11 +1604,11 @@
 				049BADFE1A33405400988863 /* yhm.png in Resources */,
 				049E208F1A35F893008C100B /* detal2.png in Resources */,
 				048742CF1A2F181900CC92DE /* 单条点击@2x.png in Resources */,
-				04A07F261A374D9000760B45 /* 960(1).png in Resources */,
 				049BADEE1A33405400988863 /* dl.png in Resources */,
 				049E20891A35F442008C100B /* Shape-26.png in Resources */,
 				048742D51A2F1D5200CC92DE /* 10%透明点击态蒙层@2x.png in Resources */,
 				049BADF61A33405400988863 /* nan.png in Resources */,
+				04A6C9771A47ACD800214BE1 /* Default.png in Resources */,
 				049436091A3209BF00AEA797 /* 六宫格二_03.png in Resources */,
 				049436111A3209BF00AEA797 /* 横线.png in Resources */,
 				049E20831A35F442008C100B /* 矢量智能对象.png in Resources */,
@@ -1617,18 +1621,18 @@
 				0496C4DD1A357ABB000E7CC3 /* 注册账号.png in Resources */,
 				049BADF41A33405400988863 /* lt.png in Resources */,
 				0494361B1A320B8500AEA797 /* mast_3.png in Resources */,
-				04A07F1F1A374ACD00760B45 /* 1136.png in Resources */,
 				0465FAAD1A30B0900022834D /* MastViewData.plist in Resources */,
 				049BADF71A33405400988863 /* nv.png in Resources */,
 				049436051A3209BF00AEA797 /* wd1.png in Resources */,
 				0494360F1A3209BF00AEA797 /* 关注.png in Resources */,
 				0496C4E31A357ABB000E7CC3 /* 竞赛简介.png in Resources */,
 				0494361C1A320B8500AEA797 /* mast_4.png in Resources */,
-				04A07F251A374D9000760B45 /* 1136(1).png in Resources */,
+				04A6C97A1A47B47200214BE1 /* 114@2x.png in Resources */,
 				0494360D1A3209BF00AEA797 /* 六宫格二_15.png in Resources */,
 				049BADE21A33405400988863 /* 7-拷贝-4.png in Resources */,
-				04A07F221A374ACD00760B45 /* 180.png in Resources */,
+				04A6C9751A47ACD800214BE1 /* 57.png in Resources */,
 				0496C4D71A357ABB000E7CC3 /* 会话窗口.png in Resources */,
+				04A6C9731A47ACD800214BE1 /* 120.png in Resources */,
 				049436061A3209BF00AEA797 /* wd2.png in Resources */,
 				0496C4DA1A357ABB000E7CC3 /* 我的.png in Resources */,
 				049BADFA1A33405400988863 /* tj.png in Resources */,
@@ -1639,7 +1643,6 @@
 				049BADF01A33405400988863 /* fx.png in Resources */,
 				049E20871A35F442008C100B /* button.png in Resources */,
 				0496C4DE1A357ABB000E7CC3 /* 用户反馈.png in Resources */,
-				04A07F081A37469A00760B45 /* Default.png in Resources */,
 				049BAE011A33445600988863 /* CenterBack.png in Resources */,
 				049BADE71A33405400988863 /* 圆角矩形-4.png in Resources */,
 				049431181A3209BE00AEA797 /* +.png in Resources */,
@@ -1650,7 +1653,6 @@
 				0496C4DB1A357ABB000E7CC3 /* 我的关注.png in Resources */,
 				049BADFB1A33405400988863 /* tx.png in Resources */,
 				0494361D1A320B8500AEA797 /* mast_5.png in Resources */,
-				04A07F201A374ACD00760B45 /* 960.png in Resources */,
 				049E20861A35F442008C100B /* 中.png in Resources */,
 				04C885B01A2EEF3A00E441CA /* 投递简历-选中@2x.png in Resources */,
 				04C885AF1A2EEF3A00E441CA /* 投递简历-未选中@2x.png in Resources */,
@@ -1666,6 +1668,8 @@
 				049431231A3209BE00AEA797 /* lt2.png in Resources */,
 				0494361E1A320B8500AEA797 /* mast_6.png in Resources */,
 				049BADF81A33405400988863 /* qr.png in Resources */,
+				04A6C9781A47ACD800214BE1 /* Default@2x.png in Resources */,
+				04A6C9761A47ACD800214BE1 /* Default-568h@2x.png in Resources */,
 				0496C4E41A357ABB000E7CC3 /* 竞赛简介详细.png in Resources */,
 				0494360A1A3209BF00AEA797 /* 六宫格二_05.png in Resources */,
 				02F92C591A41366A002B399C /* 已关注.png in Resources */,
@@ -1943,8 +1947,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanjing Kechuang Network Technology (Beijing) Co., Ltd.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shanjing Kechuang Network Technology (Beijing) Co., Ltd.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: huang junjie (98S4JCHLA8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: huang junjie (98S4JCHLA8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "competitionwork/competitionwork-Prefix.pch";
 				INFOPLIST_FILE = "competitionwork/competitionwork-Info.plist";

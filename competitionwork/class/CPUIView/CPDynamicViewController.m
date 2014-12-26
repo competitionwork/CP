@@ -109,7 +109,7 @@
             return 6;
             break;
         case 1:
-            return 6;
+            return 5;
             break;
         default:
             break;

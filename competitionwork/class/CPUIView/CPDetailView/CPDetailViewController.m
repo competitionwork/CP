@@ -10,6 +10,7 @@
 #import "CPAPIHelper_severURL.h"
 #import "CPDetailEntiy.h"
 #import "CPDetailItemView.h"
+#import "CPUserInforCenter.h"
 
 
 @interface CPDetailViewController ()
@@ -42,7 +43,9 @@
 //        strId = @"62";
     }
     
-    NSDictionary * paramsDic = @{@"uid":@"123456",
+    CPUserInforModel * user = [[CPUserInforCenter sharedInstance]getUsetData];
+    
+    NSDictionary * paramsDic = @{@"uid":user.uid,
                                  @"c_id":strId
                                  };
     
@@ -86,9 +89,9 @@
     
     [[[imageV.po_frameBuilder alignToTopInSuperviewWithInset:0]setWidth:MainScreenWidth]setHeight:170];
     
-    high += [self EntersViewItemView:imageV.height];
+//    high += [self EntersViewItemView:imageV.height];
 
-    high +=[self formatDetailDataWithHight:270];
+    high +=[self formatDetailDataWithHight:170];
     
     [self.mainScrollView setContentSize:CGSizeMake(MainScreenWidth, high)];
 }

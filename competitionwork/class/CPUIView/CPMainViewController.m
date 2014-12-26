@@ -326,7 +326,10 @@
     
     isLoading = YES;
     
-    NSDictionary * params = @{@"uid": @"1",
+    CPPeopleInforCenterModel * people = [[CPUserInforCenter sharedInstance]getPeopleData];
+    
+    
+    NSDictionary * params = @{@"uid": people.uid,
                               @"c_class" : resetDict[@"type"]?:@"0",
                               @"c_level" : resetDict[@"leve"]?:@"0",
                               @"c_time" : resetDict[@"time"]?:@"0",
