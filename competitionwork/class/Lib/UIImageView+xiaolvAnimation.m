@@ -29,16 +29,17 @@
 
 +(UIImageView *)loadViewAnimation
 {
-    UIImageView *animationView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"跑1"]];
-    animationView.size = (CGSize){260/2,300/2};
-    NSMutableArray *animationArr = [NSMutableArray array];
-    for (int i = 1; i <= 4 ; i ++) {
-        NSString *imageName = [NSString stringWithFormat:@"跑%d",i];
-        UIImage *image = [UIImage imageNamed:imageName];
-        [animationArr addObject:image];
-    }
-    animationView.animationImages = animationArr;
-    animationView.animationDuration = 0.25;
-    return animationView;
+    return [[UIImageView alloc]init];
+//    UIImageView *animationView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"跑1"]];
+//    animationView.size = (CGSize){260/2,300/2};
+//    NSMutableArray *animationArr = [NSMutableArray array];
+//    for (int i = 1; i <= 4 ; i ++) {
+//        NSString *imageName = [NSString stringWithFormat:@"跑%d",i];
+//        UIImage *image = [UIImage imageNamed:imageName];
+//        [animationArr addObject:image];
+//    }
+//    animationView.animationImages = animationArr;
+//    animationView.animationDuration = 0.25;
+//    return animationView;
 }
 @end
